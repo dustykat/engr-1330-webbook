@@ -1,8 +1,97 @@
-site_name: ENGR-1330 Computational Thinking and Data Science
+site_name: Computational Thinking and Data Science
+# navigation/site structure 
 nav:
-    - Home: index.md
-    - About: about.md
-    - Lesson 0: lesson0.md
-    - Lesson 1: lesson1.md
-    - Lesson 2: lesson2.md
-theme: readthedocs
+  - Home: index.md
+#  - About: about.md
+  - Syllabus: syllabus.md
+  - Lessons:
+      - Lesson 1 Topic:
+          - Lesson 1: lesson1.md
+          - Workshop 1.1: workshop1.md
+      - Lesson 2 Topic:
+          - Lesson 2: lesson2.md
+          - Workshop 1.1: workshop1.md
+      - Lesson 3 Topic:
+          - Lesson 3: lesson3.md
+          - Workshop 1.1: workshop1.md
+      - Lesson 8 Pandas:
+          - Lesson 8: lesson8.md
+          - Workshop 1.1: workshop1.md
+          
+  - Readings: readings.md
+  - Homework: 
+      - Week 1 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md
+      - Week 2 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md
+      - Week 3 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md
+      - Week 4 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 5 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 6 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 7 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 8 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 9 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 10 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 11 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 12 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 13 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 14 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 15 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md
+  - Exams:
+      - Exam 1 :
+          - Exam 1 Deploy: Lesson0.md
+          - Exam 1 Solution: Lesson0.md
+      - Exam 2:
+          - Exam 2 Deploy: Lesson0.md
+          - Exam 2 Solution: Lesson0.md
+      - Exam 3:
+          - Exam 3 Deploy: Lesson0.md
+          - Exam 3 Solution: Lesson0.md
+
+# nesting as pulldown??
+
+# active theme (mkdocs/readthedocs are free, they work differently wrt code blocks)
+theme:
+    name: mkdocs
+    highlightjs: true
+    hljs_languages:
+        - python
+
+# extensions to enable nice typesets 
+markdown_extensions:
+  - extra
+  - tables
+  - mdx_math:
+      enable_dollar_delimiter: True
+  - fenced_code # easier than indenting
+extra_javascript:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+  - mathjaxhelper.js  # this file needs to be in the docs directory for site build
