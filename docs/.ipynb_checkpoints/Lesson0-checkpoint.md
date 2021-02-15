@@ -1,27 +1,15 @@
-# Placeholder File
+# ENGR 1330 Computational Thinking with Data Science 
+Last GitHub Commit Date: 13 January 2021
+## Lesson 0 Introduction to Computational Thinking with Data Science: 
+- Syllabus Review
+- Computational Thinking
+  - Fundamental Concepts
+  - Practices
+- Data Science 
+  - Fundamental Concepts
+  - Practices
+- Computational Environment
+   - JupyterLab (iPython) as a programming environment 
+   - Programming as a problem solving process
+- The CCMR Approach
 
-## Lesson Structure 
-
-### Lesson title and introduction
-
-#### Lesson Objectives
-
-##### ABET Criteria (as relevant to the lesson)
-
-### Begin Lesson
-- Get relevant files
-- Explain/demonstrate
-- ...
-
-## Workshop (Laboratory) Structure
-
-### Workshop title and description
-
-#### Workshop Objectives
-
-##### ABET Criteria (as relevant to the workshop)
-
-### Begin Workshop
-- Get relevant files
-- Explain/demonstrate
-- ...
