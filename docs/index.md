@@ -1,6 +1,9 @@
 # WCOE ENGR 1330 Workbook (Draft)
 
-by Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and  Mona Rizvi
+<p style="text-align:center">by <br><br>Theodore G. Cleveland and Farhang Forghanparast<br></p>
+
+<p style="text-align:center">contributions from :<br> Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and  Mona Rizvi </p>
+
 
 ## Introduction
  

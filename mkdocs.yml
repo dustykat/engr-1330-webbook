@@ -4,22 +4,22 @@ nav:
   - Home: index.md
 #  - About: about.md
   - Syllabus: syllabus.md
-  - Lessons:
-      - Lesson 1 Topic:
-          - Lesson 1: lesson1.md
-          - Workshop 1.1: workshop1.md
-      - Lesson 2 Topic:
-          - Lesson 2: lesson2.md
-          - Workshop 1.1: workshop1.md
-      - Lesson 3 Topic:
-          - Lesson 3: lesson3.md
-          - Workshop 1.1: workshop1.md
-      - Lesson 8 Pandas:
-          - Lesson 8: lesson8.md
-          - Workshop 1.1: workshop1.md
+  - Lessons & Workshops:
+      - Lesson 0 Introduction:
+          - Lesson 0: lesson0/lesson0.md
+          - Workshop 0: 8-Labs/Lab0/Lab0_Dev.md
+      - Lesson 1 Programming Fundamentals :
+          - Lesson 1: lesson1/lesson1.md
+          - Workshop 1: 8-Labs/Lab1/Lab1_Dev.md
+      - Lesson 2 Data Structures:
+          - Lesson 2: lesson2/lesson2.md
+          - Workshop 2: 8-Labs/Lab2/Lab2_Dev.md
+      - Lesson 7 Package Pandas:
+          - Lesson 7: lesson7/lesson7.md
+          - Workshop 7: 8-Labs/Lab7/Lab7_Dev.md
           
-  - Readings: readings.md
-  - Homework: 
+#  - Readings: readings.md
+  - Homework & Exams: 
       - Week 1 Topic:
          - Deploy : untitled.md
          - Solution : untitled.md
@@ -65,7 +65,6 @@ nav:
       - Week 15 Topic:
          - Deploy : untitled.md
          - Solution : untitled.md
-  - Exams:
       - Exam 1 :
           - Exam 1 Deploy: Lesson0.md
           - Exam 1 Solution: Lesson0.md

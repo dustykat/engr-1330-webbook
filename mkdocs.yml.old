@@ -1,0 +1,9 @@
+site_name: ENGR-1330 Computational Thinking and Data Science
+nav:
+  - Home: index.md
+  - About: about.md
+  - Lesson 0: lesson0.md
+  - Lesson 1: lesson1.md
+  - Lesson 2: lesson2.md
+  - Lesson 3: ENGR-1330-Lesson3.md
+theme: readthedocs
