@@ -14,6 +14,9 @@ nav:
       - Lesson 2 Data Structures:
           - Lesson 2: lesson2/lesson2.md
           - Workshop 2: 8-Labs/Lab2/Lab2_Dev.md
+      - Lesson 6 Package NumPy:
+          - Lesson 6: lesson6/lesson6.md
+          - Workshop 6: 8-Labs/Lab6/Lab6_Dev.md
       - Lesson 7 Package Pandas:
           - Lesson 7: lesson7/lesson7.md
           - Workshop 7: 8-Labs/Lab7/Lab7_Dev.md
