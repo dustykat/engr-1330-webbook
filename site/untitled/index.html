@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Solution - Computational Thinking and Data Science</title>
+        <title>Exam 3 Solution - Computational Thinking and Data Science</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -46,7 +46,7 @@
                                 <a href="..">Home</a>
                             </li>
                             <li >
-                                <a href="../syllabus/">Syllabus</a>
+                                <a href="../syllabus/syllabus/">Syllabus</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons & Workshops <b class="caret"></b></a>
@@ -118,6 +118,20 @@
             
 <li >
     <a href="../8-Labs/Lab7/Lab7_Dev/">Workshop 7</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 8 Package MatPlotLib</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../lesson8/lesson8/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../8-Labs/Lab8/Lab8_Dev/">Workshop 8</a>
 </li>
     </ul>
   </li>
@@ -331,7 +345,7 @@
     <a href="./">Deploy</a>
 </li>
             
-<li class="active">
+<li >
     <a href="./">Solution</a>
 </li>
     </ul>
@@ -342,11 +356,11 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Lesson0/">Exam 1 Deploy</a>
+    <a href="./">Exam 1 Deploy</a>
 </li>
             
 <li >
-    <a href="../Lesson0/">Exam 1 Solution</a>
+    <a href="./">Exam 1 Solution</a>
 </li>
     </ul>
   </li>
@@ -356,11 +370,11 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Lesson0/">Exam 2 Deploy</a>
+    <a href="./">Exam 2 Deploy</a>
 </li>
             
 <li >
-    <a href="../Lesson0/">Exam 2 Solution</a>
+    <a href="./">Exam 2 Solution</a>
 </li>
     </ul>
   </li>
@@ -370,11 +384,11 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Lesson0/">Exam 3 Deploy</a>
+    <a href="./">Exam 3 Deploy</a>
 </li>
             
-<li >
-    <a href="../Lesson0/">Exam 3 Solution</a>
+<li class="active">
+    <a href="./">Exam 3 Solution</a>
 </li>
     </ul>
   </li>
@@ -393,8 +407,8 @@
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../Lesson0/">
+                            <li class="disabled">
+                                <a rel="prev" >
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -406,12 +420,44 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#placeholder-file">Placeholder file</a></li>
+        <li class="main active"><a href="#about-this-document">About this document</a></li>
+            <li><a href="#on-line-book-authors-notes">On-Line Book Author's Notes</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="placeholder-file">Placeholder file</h1></div>
+<h1 id="about-this-document">About this document</h1>
+<p>Put something here about the document, authors, copyright (GPL or MIT Open License)</p>
+<h2 id="on-line-book-authors-notes">On-Line Book Author's Notes</h2>
+<ul>
+<li>Inserting Code Fragments</li>
+</ul>
+<p>To insert a code fragment such as <code>print('Hello World')</code> simply indent in the source file used to generate the document</p>
+<pre><code>print('hello world')
+</code></pre>
+<p>These fragments can be cut-and-paste into a JupyterLab notebook.</p>
+<ul>
+<li>Inserting Images</li>
+</ul>
+<p>If the image is taken from a URL, use the following:</p>
+<pre><code>![image-name (a local tag)](url_to_image_source)
+</code></pre>
+<p>Such as:</p>
+<pre><code>![image-name](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqn40YbupkMAzY63jYtA6auEmjRfCOvCd0FA&amp;usqp=CAU)
+</code></pre>
+<p>Which will render a black swan:</p>
+<p><img alt="image-name" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqn40YbupkMAzY63jYtA6auEmjRfCOvCd0FA&amp;usqp=CAU" /></p>
+<p>If the image is local to the host replace the url with the path to the image.</p>
+<ul>
+<li>Inserting URL links</li>
+</ul>
+<p>This is a variation of images, but without the <code>!</code>, such as</p>
+<pre><code>[link-name-that-will-display](url_to_link_destimation)
+</code></pre>
+<p>For example the code below will link to the black swan search results:</p>
+<pre><code>[link-to-images-of-black-swans](https://www.google.com/search?q=images+of+black+swan&amp;client=safari&amp;rls=en&amp;sxsrf=ALeKk03oIoQ387TWjJoKzX-D_b7o1to43Q:1613002985584&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=L2P5MiS1ICLTxM%252CC6BDdJoXT9KcEM%252C_&amp;vet=1&amp;usg=AI4_-kTXrBMpj__xL5IkGCshrXTp04fX3w&amp;sa=X&amp;ved=2ahUKEwiCneivyODuAhVJBs0KHY88CaAQ9QF6BAgUEAE&amp;biw=1447&amp;bih=975#imgrc=i_lxoojURNE3XM)
+</code></pre>
+<p><a href="https://www.google.com/search?q=images+of+black+swan&amp;client=safari&amp;rls=en&amp;sxsrf=ALeKk03oIoQ387TWjJoKzX-D_b7o1to43Q:1613002985584&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=L2P5MiS1ICLTxM%252CC6BDdJoXT9KcEM%252C_&amp;vet=1&amp;usg=AI4_-kTXrBMpj__xL5IkGCshrXTp04fX3w&amp;sa=X&amp;ved=2ahUKEwiCneivyODuAhVJBs0KHY88CaAQ9QF6BAgUEAE&amp;biw=1447&amp;bih=975#imgrc=i_lxoojURNE3XM">link-to-images-of-black-swans</a></p></div>
         </div>
 
         <footer class="col-md-12">

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Workshop 8 - Computational Thinking and Data Science</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Computational Thinking and Data Science</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../syllabus/syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons & Workshops <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 0 Introduction</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../Lab0/Lab0_Dev/">Workshop 0</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 1 Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson1/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../Lab1/Lab1_Dev/">Workshop 1</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 2 Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson2/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../Lab2/Lab2_Dev/">Workshop 2</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 6 Package NumPy</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson6/lesson6/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../Lab6/Lab6_Dev/">Workshop 6</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 7 Package Pandas</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson7/lesson7/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../Lab7/Lab7_Dev/">Workshop 7</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Lesson 8 Package MatPlotLib</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson8/lesson8/">Lesson 8</a>
+</li>
+            
+<li class="active">
+    <a href="./">Workshop 8</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homework & Exams <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 1 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 2 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 3 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 4 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 5 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 6 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 7 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 8 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 9 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 10 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 11 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 12 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 13 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 14 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Week 15 Topic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Exam 1 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Exam 1 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Exam 2 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Exam 2 Solution</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Exam 3</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../untitled/">Exam 3 Deploy</a>
+</li>
+            
+<li >
+    <a href="../../../untitled/">Exam 3 Solution</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../../lesson8/lesson8/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../../untitled/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laboratory-8-matplotlib-for-jam">Laboratory 8: Matplotlib for Jam! </a></li>
+            <li><a href="#full-name">Full name:</a></li>
+            <li><a href="#r">R#:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook:</a></li>
+            <li><a href="#date">Date:</a></li>
+            <li><a href="#matplotlip-and-visual-display-of-data">Matplotlip and Visual Display of Data</a></li>
+            <li><a href="#this-is-a-matplotlib-cheat-sheet">This is a Matplotlib Cheat Sheet</a></li>
+            <li><a href="#exercise-bins-bins-bins">Exercise: Bins, Bins, Bins!  </a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="laboratory-8-matplotlib-for-jam"><font color=darkred>Laboratory 8: Matplotlib for Jam! </font></h1>
+<pre><code class="python"># Preamble script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>atomickitty
+sensei
+/opt/jupyterhub/bin/python3
+3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0]
+sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
+</code></pre>
+<h2 id="full-name">Full name:</h2>
+<h2 id="r">R#:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook:</h2>
+<h2 id="date">Date:</h2>
+<hr />
+<p><img alt="" src="https://envato-shoebox-0.imgix.net/485c/f17a-904a-4a3d-a3aa-3c09708b07ea/rykibreadsa1.jpg?auto=compress%2Cformat&amp;fit=max&amp;mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&amp;markalign=center%2Cmiddle&amp;markalpha=18&amp;w=700&amp;s=95061aa27f6c3a88147f5c13061cf255" /></p>
+<p><img alt="" src="https://matplotlib.org/1.4.2/mpl_examples/api/logo2.hires.png" /> <br></p>
+<h2 id="matplotlip-and-visual-display-of-data"><font color=purple>Matplotlip and Visual Display of Data</font></h2>
+<p>This lesson will introduce the <code>matplotlib</code> external module package, and examine how to construct
+line charts, scatter plots, bar charts, and histograms using methods in <code>matplotlib</code> and <code>pandas</code></p>
+<p>The theory of histograms will appear in later lessons, here we only show how to construct one using <code>matplotlib</code></p>
+<h3 id="about-matplotlib"><font color=purple>About <code>matplotlib</code></font></h3>
+<p>Quoting from: https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py</p>
+<p><code>matplotlib.pyplot</code> is a collection of functions that make matplotlib work like MATLAB. Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc.</p>
+<p>In <code>matplotlib.pyplot</code> various states are preserved across function calls, so that it keeps track of things like the current figure and plotting area, and the plotting functions are directed to the current axes (please note that "axes" here and in most places in the documentation refers to the axes part of a figure and not the strict mathematical term for more than one axis).</p>
+<h3 id="background"><font color=purple>Background</font></h3>
+<p>Data are not always numerical. 
+Data can music (audio files), or places on a map (georeferenced attributes files), images (various imge files, e.g. .png, jpeg)</p>
+<p>They can also be categorical into which you can place individuals:
+- The individuals are cartons of ice-cream, and the category is the flavor in the carton
+- The individuals are professional basketball players, and the category is the player's team.</p>
+<h3 id="bar-graphs"><font color=purple>Bar Graphs</font></h3>
+<p>Bar charts (graphs) are good display tools to graphically represent categorical information.
+The bars are evenly spaced and of constant width. 
+The height/length of each bar is proportional to the <code>relative frequency</code> of the corresponding category.</p>
+<p><code>Relative frequency</code> is the ratio of how many things in the category to how many things in the whole collection.</p>
+<p>The example below uses <code>matplotlib</code> to create a box plot for the ice cream analogy, the example is adapted from an example at https://www.geeksforgeeks.org/bar-plot-in-matplotlib/</p>
+<pre><code class="python">ice_cream = {'Chocolate':16, 'Strawberry':5, 'Vanilla':9} # build a data model 
+import matplotlib.pyplot # the python plotting library
+
+flavors = list(ice_cream.keys()) # make a list object based on flavors
+cartons = list(ice_cream.values()) # make a list object based on carton count -- assumes 1:1 association!
+
+myfigure = matplotlib.pyplot.figure(figsize = (10,5)) # generate a object from the figure class, set aspect ratio
+
+# Built the plot
+matplotlib.pyplot.bar(flavors, cartons, color ='maroon', width = 0.4) 
+matplotlib.pyplot.xlabel(&quot;Flavors&quot;) 
+matplotlib.pyplot.ylabel(&quot;No. of Cartons in Stock&quot;) 
+matplotlib.pyplot.title(&quot;Current Ice Cream in Storage&quot;) 
+matplotlib.pyplot.show() 
+</code></pre>
+
+<p><img alt="png" src="../output_7_0.png" /></p>
+<p>Lets tidy up the script so it is more understandable, a small change in the import statement makes a simpler to read (for humans) script - also changed the bar colors just 'cause!</p>
+<pre><code class="python">ice_cream = {'Chocolate':16, 'Strawberry':5, 'Vanilla':9} # build a data model 
+import matplotlib.pyplot as plt # the python plotting library
+
+flavors = list(ice_cream.keys()) # make a list object based on flavors
+cartons = list(ice_cream.values()) # make a list object based on carton count -- assumes 1:1 association!
+
+myfigure = plt.figure(figsize = (10,5)) # generate a object from the figure class, set aspect ratio
+
+# Built the plot
+plt.bar(flavors, cartons, color ='orange', width = 0.4) 
+plt.xlabel(&quot;Flavors&quot;) 
+plt.ylabel(&quot;No. of Cartons in Stock&quot;) 
+plt.title(&quot;Current Ice Cream in Storage&quot;) 
+plt.show() 
+</code></pre>
+
+<p><img alt="png" src="../output_9_0.png" /></p>
+<p>Using pandas, we can build bar charts a bit easier.</p>
+<pre><code class="python">import pandas as pd
+
+my_data = {
+    &quot;Flavor&quot;: ['Chocolate', 'Strawberry', 'Vanilla'],
+    &quot;Number of Cartons&quot;: [16, 5, 9]
+          }
+df = pd.DataFrame(my_data)
+df.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Flavor</th>
+      <th>Number of Cartons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Chocolate</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Strawberry</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Vanilla</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">df.plot.bar(x='Flavor', y='Number of Cartons', color='magenta' )
+</code></pre>
+
+<pre><code>&lt;AxesSubplot:xlabel='Flavor'&gt;
+</code></pre>
+<p><img alt="png" src="../output_12_1.png" /></p>
+<pre><code class="python">df.plot.bar(x='Flavor', y='Number of Cartons', color=&quot;red&quot;) # rotate the category labels
+</code></pre>
+
+<pre><code>&lt;AxesSubplot:xlabel='Flavor'&gt;
+</code></pre>
+<p><img alt="png" src="../output_13_1.png" /></p>
+<hr>
+
+<h3 id="example-language-bars">Example- Language Bars!</h3>
+<p>Consider the data set "data" defined as</p>
+<pre><code>data = {'C':20, 'C++':15, 'Java':30, 'Python':35}
+</code></pre>
+<p>which lists student count by programming language in some school.</p>
+<p>Produce a bar chart of number of students in each language, where language is the classification, and student count is the variable.</p>
+<pre><code class="python"># Code and run your solution here
+
+import numpy as np 
+import matplotlib.pyplot as plt  
+
+
+# creating the dataset 
+data = {'C':20, 'C++':15, 'Java':30,  
+        'Python':35} 
+courses = list(data.keys()) 
+values = list(data.values()) 
+
+fig = plt.figure(figsize = (10, 5)) 
+
+# creating the bar plot 
+plt.bar(courses, values, color ='maroon',  
+        width = 0.4) 
+
+plt.xlabel(&quot;Courses offered&quot;) 
+plt.ylabel(&quot;No. of students enrolled&quot;) 
+plt.title(&quot;Students enrolled in different courses&quot;) 
+plt.show() 
+
+</code></pre>
+
+<p><img alt="png" src="../output_15_0.png" /></p>
+<h3 id="plot-it-as-a-horizontal-bar-chart">Plot it as a horizontal bar chart:</h3>
+<pre><code class="python"># Code and run your solution here
+
+# creating the dataset 
+data = {'C':20, 'C++':15, 'Java':30,  
+        'Python':35} 
+courses = list(data.keys()) 
+values = list(data.values()) 
+
+fig = plt.figure(figsize = (10, 5)) 
+
+# creating the bar plot 
+plt.barh(courses, values, color ='maroon',  height = 0.4) 
+
+plt.xlabel(&quot;Courses offered&quot;) 
+plt.ylabel(&quot;No. of students enrolled&quot;) 
+plt.title(&quot;Students enrolled in different courses&quot;) 
+plt.show() 
+</code></pre>
+
+<p><img alt="png" src="../output_17_0.png" /></p>
+<hr />
+<h3 id="line-charts"><font color=purple>Line Charts</font></h3>
+<p>A line chart or line plot or line graph or curve chart is a type of chart which displays information as a series of data points called 'markers' connected by straight line segments.</p>
+<p>It is a basic type of chart common in many fields. It is similar to a scatter plot (below) except that the measurement points are <strong>ordered</strong> (typically by their x-axis value) and joined with straight line segments. </p>
+<p>A line chart is often used to visualize a trend in data over intervals of time – a time series – thus the line is often drawn chronologically. </p>
+<p>The x-axis spacing is sometimes tricky, hence line charts can unintentionally decieve - so be careful that it is the appropriate chart for your application.  </p>
+<hr />
+<h3 id="example-speed-vs-time">Example- Speed vs Time</h3>
+<p>Consider the experimental data below</p>
+<table>
+<thead>
+<tr>
+<th align="right">Elapsed Time (s)</th>
+<th align="right">Speed (m/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">1.0</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="right">2.0</td>
+<td align="right">7</td>
+</tr>
+<tr>
+<td align="right">3.0</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td align="right">4.0</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td align="right">5.0</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td align="right">6.0</td>
+<td align="right">45.6</td>
+</tr>
+</tbody>
+</table>
+<p>Show the relationship between time and speed.  Is the relationship indicating acceleration? How much?</p>
+<pre><code class="python"># Create two lists; time  and speed.
+time = [0,1.0,2.0,3.0,4.0,5.0,6.0]
+speed = [0,3,7,12,20,30,45.6]
+</code></pre>
+
+<pre><code class="python"># Create a line chart of speed on y axis and time on x axis
+mydata = plt.figure(figsize = (10,5)) # build a square drawing canvass from figure class
+plt.plot(time, speed, c='red', marker='v',linewidth=1) # basic line plot
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="../output_20_0.png" /></p>
+<p>From examination of  the plot, estimate the speed at time t = 5.0 (eyeball estimate)</p>
+<hr>
+
+<h3 id="example-add-a-linear-fit">Example- Add a linear fit</h3>
+<p>Using the same series from Exercise 1, Plot the speed vs time (speed on y-axis, time on x-axis) using a line plot. Plot a second line based on the linear model </p>
+<p>
+<script type="math/tex; mode=display">y = mx + b</script>, </p>
+<p>where <script type="math/tex; mode=display">b=0~\text{and}~m=7.6</script>.</p>
+<pre><code class="python"># Code and run your solution here:
+def ymodel(xmodel,slope,intercept):
+    ymodel = slope*xmodel+intercept
+    return(ymodel)
+
+yseries = []
+slope = 7.6
+intercept = 0.0
+
+for i in range(0,len(time)):
+    yseries.append(ymodel(time[i],slope,intercept))
+# Create a markers only line chart
+mydata = plt.figure(figsize = (10,5)) # build a square drawing canvass from figure class
+plt.plot(time, speed, c='red', marker='^',linewidth=0.5) # basic line plot
+plt.plot(time, yseries, c='blue') 
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="../output_23_0.png" /></p>
+<hr>
+
+<h3 id="example-find-a-better-fit">Example- Find a better fit</h3>
+<p>Using trial and error try to improve the 'fit' of the model, by adjusting values of <script type="math/tex; mode=display">m~\text{and}~b</script>.</p>
+<pre><code class="python"># Code and run your solution here:
+yseries = []
+slope = 7.6
+intercept = -8.0
+
+for i in range(0,len(time)):
+    yseries.append(ymodel(time[i],slope,intercept))
+# Create a markers only line chart
+mydata = plt.figure(figsize = (10,5)) # build a square drawing canvass from figure class
+plt.plot(time, speed, c='red', marker='^',linewidth=0) # basic scatter plot
+plt.plot(time, yseries, c='blue') 
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="../output_25_0.png" /></p>
+<hr />
+<h3 id="scatter-plots"><font color=purple>Scatter Plots</font></h3>
+<p>A scatter plot (also called a scatterplot, scatter graph, scatter chart, scattergram, or scatter diagram) is a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data. If the points are coded (color/shape/size), one additional variable can be displayed. The data are displayed as a collection of points, each having the value of one variable determining the position on the horizontal axis and the value of the other variable determining the position on the vertical axis.</p>
+<p>A scatter plot can be used either when one continuous variable that is under the control of the experimenter and the other depends on it or when both continuous variables are independent. If a parameter exists that is systematically incremented and/or decremented by the other, it is called the control parameter or independent variable and is customarily plotted along the horizontal axis. The measured or dependent variable is customarily plotted along the vertical axis. If no dependent variable exists, either type of variable can be plotted on either axis and a scatter plot will illustrate only the degree of correlation (not causation) between two variables.</p>
+<p>A scatter plot can suggest various kinds of correlations between variables with a certain confidence interval. For example, weight and height, weight would be on y axis and height would be on the x axis. 
+Correlations may be positive (rising), negative (falling), or null (uncorrelated). 
+If the pattern of dots slopes from lower left to upper right, it indicates a positive correlation between the variables being studied. 
+If the pattern of dots slopes from upper left to lower right, it indicates a negative correlation. </p>
+<p>A line of best fit (alternatively called 'trendline') can be drawn in order to study the relationship between the variables. An equation for the correlation between the variables can be determined by established best-fit procedures. For a linear correlation, the best-fit procedure is known as linear regression and is guaranteed to generate a correct solution in a finite time. No universal best-fit procedure is guaranteed to generate a  solution for arbitrary relationships. 
+A scatter plot is also very useful when we wish to see how two comparable data sets agree and to show nonlinear relationships between variables.</p>
+<p>Furthermore, if the data are represented by a mixture model of simple relationships, these relationships will be visually evident as superimposed patterns.</p>
+<p>Scatter charts can be built in the form of bubble, marker, or/and line charts.</p>
+<p>Much of the above is verbatim/adapted from: https://en.wikipedia.org/wiki/Scatter_plot</p>
+<hr />
+<h3 id="example-examine-the-dataset-with-heights-of-fathers-mothers-and-sons">Example- Examine the dataset with heights of fathers, mothers and sons</h3>
+<pre><code class="python">df = pd.read_csv('galton_subset.csv')
+df['child']= df['son'] ; df.drop('son', axis=1, inplace = True) # rename son to child - got to imagine there are some daughters
+df.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>father</th>
+      <th>mother</th>
+      <th>child</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>78.5</td>
+      <td>67.0</td>
+      <td>73.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>75.5</td>
+      <td>66.5</td>
+      <td>73.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>75.0</td>
+      <td>64.0</td>
+      <td>71.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>75.0</td>
+      <td>64.0</td>
+      <td>70.5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>75.0</td>
+      <td>58.5</td>
+      <td>72.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># build some lists
+dad = df['father'] ; mom = df['mother'] ; son = df['child']
+</code></pre>
+
+<pre><code class="python">myfamily = plt.figure(figsize = (10, 10)) # build a square drawing canvass from figure class
+plt.scatter(son, dad, c='red') # basic scatter plot
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="../output_30_0.png" /></p>
+<pre><code class="python"># Looks lousy, needs some labels
+myfamily = plt.figure(figsize = (10, 10)) # build a square drawing canvass from figure class
+plt.scatter(son, dad, c='red' , label='Father') # one plot series
+plt.scatter(son, mom, c='blue', label='Mother') # two plot series
+plt.xlabel(&quot;Child's height&quot;)
+plt.ylabel(&quot;Parents' height&quot;)
+plt.legend()
+plt.show() # render the two plots
+</code></pre>
+
+<p><img alt="png" src="../output_31_0.png" /></p>
+<pre><code class="python"># Repeat in pandas - The dataframe already is built
+df.plot.scatter(x=&quot;child&quot;, y=&quot;father&quot;)
+</code></pre>
+
+<pre><code>&lt;AxesSubplot:xlabel='child', ylabel='father'&gt;
+</code></pre>
+<p><img alt="png" src="../output_32_1.png" /></p>
+<pre><code class="python">ax = df.plot.scatter(x=&quot;child&quot;, y=&quot;father&quot;, c=&quot;red&quot;, label='Father')
+df.plot.scatter(x=&quot;child&quot;, y=&quot;mother&quot;, c=&quot;blue&quot;, label='Mother', ax=ax)
+
+ax.set_xlabel(&quot;Child's height&quot;)
+ax.set_ylabel(&quot;Parents' Height&quot;)
+</code></pre>
+
+<pre><code>Text(0, 0.5, "Parents' Height")
+</code></pre>
+<p><img alt="png" src="../output_33_1.png" /></p>
+<hr />
+<h3 id="histograms"><font color=purple>Histograms</font></h3>
+<p>Quoting from https://en.wikipedia.org/wiki/Histogram</p>
+<p>"A histogram is an approximate representation of the distribution of numerical data. It was first introduced by Karl Pearson.[1] To construct a histogram, the first step is to "bin" (or "bucket") the range of values—that is, divide the entire range of values into a series of intervals—and then count how many values fall into each interval. The bins are usually specified as consecutive, non-overlapping intervals of a variable. The bins (intervals) must be adjacent, and are often (but not required to be) of equal size.</p>
+<p>If the bins are of equal size, a rectangle is erected over the bin with height proportional to the frequency—the number of cases in each bin. A histogram may also be normalized to display "relative" frequencies. It then shows the proportion of cases that fall into each of several categories, with the sum of the heights equaling 1.</p>
+<p>However, bins need not be of equal width; in that case, the erected rectangle is defined to have its area proportional to the frequency of cases in the bin. The vertical axis is then not the frequency but frequency density—the number of cases per unit of the variable on the horizontal axis. Examples of variable bin width are displayed on Census bureau data below.</p>
+<p>As the adjacent bins leave no gaps, the rectangles of a histogram touch each other to indicate that the original variable is continuous.</p>
+<p>Histograms give a rough sense of the density of the underlying distribution of the data, and often for density estimation: estimating the probability density function of the underlying variable. The total area of a histogram used for probability density is always normalized to 1. If the length of the intervals on the x-axis are all 1, then a histogram is identical to a relative frequency plot.</p>
+<p>A histogram can be thought of as a simplistic kernel density estimation, which uses a kernel to smooth frequencies over the bins. This yields a smoother probability density function, which will in general more accurately reflect distribution of the underlying variable. The density estimate could be plotted as an alternative to the histogram, and is usually drawn as a curve rather than a set of boxes. Histograms are nevertheless preferred in applications, when their statistical properties need to be modeled. The correlated variation of a kernel density estimate is very difficult to describe mathematically, while it is simple for a histogram where each bin varies independently.</p>
+<p>An alternative to kernel density estimation is the average shifted histogram, which is fast to compute and gives a smooth curve estimate of the density without using kernels.</p>
+<p>The histogram is one of the seven basic tools of quality control.</p>
+<p>Histograms are sometimes confused with bar charts. A histogram is used for continuous data, where the bins represent ranges of data, while a bar chart is a plot of categorical variables. Some authors recommend that bar charts have gaps between the rectangles to clarify the distinction."</p>
+<hr />
+<h3 id="example-explore-the-top_movies-dataset-and-draw-histograms-for-gross-and-year">Example- Explore the "top_movies" dataset and draw histograms for Gross and Year.</h3>
+<pre><code class="python">import pandas as pd
+
+df = pd.read_csv('top_movies.csv')
+df.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Title</th>
+      <th>Studio</th>
+      <th>Gross</th>
+      <th>Gross (Adjusted)</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Star Wars: The Force Awakens</td>
+      <td>Buena Vista (Disney)</td>
+      <td>906723418</td>
+      <td>906723400</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Avatar</td>
+      <td>Fox</td>
+      <td>760507625</td>
+      <td>846120800</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Titanic</td>
+      <td>Paramount</td>
+      <td>658672302</td>
+      <td>1178627900</td>
+      <td>1997</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jurassic World</td>
+      <td>Universal</td>
+      <td>652270625</td>
+      <td>687728000</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Marvel's The Avengers</td>
+      <td>Buena Vista (Disney)</td>
+      <td>623357910</td>
+      <td>668866600</td>
+      <td>2012</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">df[[&quot;Gross&quot;]].hist()
+</code></pre>
+
+<pre><code>array([[&lt;AxesSubplot:title={'center':'Gross'}&gt;]], dtype=object)
+</code></pre>
+<p><img alt="png" src="../output_37_1.png" /></p>
+<pre><code class="python">df[[&quot;Year&quot;]].hist()
+</code></pre>
+
+<pre><code>array([[&lt;AxesSubplot:title={'center':'Year'}&gt;]], dtype=object)
+</code></pre>
+<pre><code class="python">df[[&quot;Gross&quot;]].hist(bins=100)
+</code></pre>
+
+<hr />
+<h2 id="this-is-a-matplotlib-cheat-sheet"><font color=orange>This is a Matplotlib Cheat Sheet</font></h2>
+<p><img alt="" src="https://python-graph-gallery.com/wp-content/uploads/Matplotlib_cheatsheet_datacamp.png" /></p>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/5nj4ZZWl6QwneEaBX4/source.gif" /> <br></p>
+<p><em>Here are some of the resources used for creating this notebook:</em> </p>
+<ul>
+<li><strong>"Discrete distribution as horizontal bar chart"</strong> available at *https://matplotlib.org/stable/gallery/lines_bars_and_markers/horizontal_barchart_distribution.html<br></li>
+<li><strong>"Bar Plot in Matplotlib"</strong> available at *https://www.geeksforgeeks.org/bar-plot-in-matplotlib/<br></li>
+</ul>
+<p><em>Here are some great reads on this topic:</em> 
+- <strong>"Python | Introduction to Matplotlib"</strong> available at <em>https://www.geeksforgeeks.org/python-introduction-matplotlib/<br>
+- <strong>"Visualization with Matplotlib"</strong> available at </em>https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html <br>
+- <strong>"Introduction to Matplotlib — Data Visualization in Python"</strong> by <strong>Ehi Aigiomawu</strong> available at <em>https://heartbeat.fritz.ai/introduction-to-matplotlib-data-visualization-in-python-d9143287ae39 <br>
+- <strong>"Python Plotting With Matplotlib (Guide)"</strong> by <strong>Brad Solomon</strong> available at </em>https://realpython.com/python-matplotlib-guide/ <br></p>
+<p><em>Here are some great videos on these topics:</em> 
+- <strong>"Matplotlib Tutorial (Part 1): Creating and Customizing Our First Plots"</strong> by <strong>Corey Schafer</strong> available at <em>https://www.youtube.com/watch?v=UO98lJQ3QGI <br>
+- <strong>"Intro to Data Analysis / Visualization with Python, Matplotlib and Pandas | Matplotlib Tutorial"</strong> by <strong>CS Dojo</strong> available at </em>https://www.youtube.com/watch?v=a9UrKTVEeZA <br>
+- <strong>"Intro to Data Visualization in Python with Matplotlib! (line graph, bar chart, title, labels, size)"</strong> by <strong>Keith Galli</strong> available at *https://www.youtube.com/watch?v=DAQNHzOcO5A <br></p>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/dNgK7Ws7y176U/200.gif" /> <br></p>
+<h2 id="exercise-bins-bins-bins">Exercise: Bins, Bins, Bins!  <br></h2>
+<h3 id="selecting-the-number-of-bins-is-an-important-decision-when-working-with-histograms-are-there-any-rules-or-recommendations-for-choosing-the-number-or-width-of-bins-what-happens-if-we-use-too-many-or-too-few-bins">Selecting the number of bins is an important decision when working with histograms. Are there any rules or recommendations for choosing the number or width of bins? What happens if we use too many or too few bins?</h3>
+<h4 id="make-sure-to-cite-any-resources-that-you-may-use">* Make sure to cite any resources that you may use.</h4>
+<pre><code class="python">
+</code></pre>
+
+<p><img alt="" src="https://i.pinimg.com/originals/ee/62/06/ee62064e595a225f476e47cf39b9a05d.jpg" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
