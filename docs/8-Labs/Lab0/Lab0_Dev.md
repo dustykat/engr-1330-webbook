@@ -1,6 +1,6 @@
 # <font color=darkred>Laboratory 0: Yes, That's how we count in python!</font>
 
-
+[Link to Content Server](http://54.243.252.9/webbook-engr1330/8-Labs/Lab0/)
 
 ![](https://www.accountingweb.co.uk/sites/default/files/istock-637073764.jpg) <br>
 
@@ -221,3 +221,4 @@ print("This is my first notebook!")
 ```
 
 ![](https://i.pinimg.com/originals/84/44/f5/8444f53fa329b94ddd674ffb2e192fe8.png)
+
