@@ -26,8 +26,12 @@ nav:
           - Workshop 7: 8-Labs/Lab7/Lab7_Dev.md
 #          - Workshop 7 Notebook: 8-Labs/Lab7/Lab7_Dev.ipynb
       - Lesson 8 Package MatPlotLib:
-          - Lesson 7: lesson8/lesson8.md
+          - Lesson 8: lesson8/lesson8.md
           - Workshop 8: 8-Labs/Lab8/Lab8_Dev.md
+#          - Workshop 7 Notebook: 8-Labs/Lab7/Lab7_Dev.ipynb
+      - Lesson 9 Data Modeling I:
+          - Lesson 9: lesson9/lesson9.md
+          - Workshop 9: 8-Labs/Lab9/Lab9_Dev.md
 #          - Workshop 7 Notebook: 8-Labs/Lab7/Lab7_Dev.ipynb
           
 #  - Readings: readings.md
