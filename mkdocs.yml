@@ -36,15 +36,15 @@ nav:
           
 #  - Readings: readings.md
   - Homework & Exams: 
-      - Week 1 Topic:
-         - Deploy : untitled.md
-         - Solution : untitled.md
-      - Week 2 Topic:
-         - Deploy : untitled.md
-         - Solution : untitled.md
-      - Week 3 Topic:
-         - Deploy : untitled.md
-         - Solution : untitled.md
+      - Exercise Set 1 :
+         - Deploy : 2-Homework/ES1/es1-deploy.md
+         - Solution : 2-Homework/ES1/es1-solution.md
+      - Exercise Set 2 :
+         - Deploy : 2-Homework/ES2/es2-deploy.md
+         - Solution : 2-Homework/ES2/es2-solution.md
+      - Exercise Set 3 :
+         - Deploy : 2-Homework/ES3/es3-deploy.md
+         - Solution : 2-Homework/ES3/es3-solution.md
       - Week 4 Topic:
          - Deploy : untitled.md
          - Solution : untitled.md      
