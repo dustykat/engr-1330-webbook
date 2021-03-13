@@ -1,6 +1,6 @@
-# <p style="text-align:center"> ENGR 1330 Computational Thinking and Data Science </p>
+# <p style="text-align:center"> Computational Thinking and Data Science </p>
 
-## <p style="text-align:center">A WebBook </p>
+## <p style="text-align:center">A WebBook to Accompany ENGR 1330 at TTU </p>
 
 <p style="text-align:center">by <br><br>Theodore G. Cleveland and Farhang Forghanparast<br></p>
 
@@ -10,6 +10,13 @@
 ## Introduction
  
 This on-line workbook is a collection of lessons and workshop contents for ENGR-1330 sections taught bt the first two authors; students in other sections are welcome to use this as a resource with proper attribution (check with your instructor regarding what they will consider acceptable) `suggested citation goes here`
+
+The webbook hyperlinks to two additional local (to the host server) resources for a total of three broad categories
+
+|WebBook|WebCourse|WebData|
+|---|---|---|
+|Topical Chapters <br> - subtoic <br> - subtoic|A semester course framework <br> - lessons <br> - workshops(labs) <br> - exercises <br> - exams|Topical |Databases <br> - used in lessons, workshops <br> - Worked stand-alone examples| 
+
 
 The entire course content is served here and can be accessed from **blackboard.ttu.edu** or directly using the public URL.  
 Homeworks and exams must be uploaded to **blackboard.ttu.edu** to be graded.   Solutions are posted after due dates have passed, these links are updated weekly-ish.

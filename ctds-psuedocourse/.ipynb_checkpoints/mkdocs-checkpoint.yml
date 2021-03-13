@@ -1,0 +1,28 @@
+site_name: ENGR-1330 Computational Thinking and Data Science
+# navigation/site structure 
+nav:
+  - Home: index.md
+#  - About: about.md
+  - Workshops :
+      - Lesson 0 : lesson0/lesson0.md
+
+     
+# nesting as pulldown??
+
+# active theme (mkdocs/readthedocs are free, they work differently wrt code blocks)
+theme:
+    name: mkdocs
+    highlightjs: true
+    hljs_languages:
+        - python
+
+# extensions to enable nice typesets 
+markdown_extensions:
+  - extra
+  - tables
+  - mdx_math:
+      enable_dollar_delimiter: True
+  - fenced_code # easier than indenting
+extra_javascript:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+  - mathjaxhelper.js  # this file needs to be in the docs directory for site build
