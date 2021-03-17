@@ -20,6 +20,9 @@ This page is a landing page to access three categories of content; The webbook i
 - Follow this hyperlink to examine the [http://CTDS-WebCourse](http://192.168.1.75:8089)
 - Follow this hyperlink to examine the [http://CTDS-WebData](http://192.168.1.75:8090)
 
+- Follow this hyperlink to examine the [http://CTDS-WebCourse](http://54.243.252.9/webbook-engr1330/redirect2psuedo)
+- Follow this hyperlink to examine the [http://CTDS-WebData](http://54.243.252.9/webbook-engr1330/redirect2database)
+
 At TTU the actual course is accessed from **blackboard.ttu.edu**, using individual instructor content to replace selected (or all) content in the sample course framework. The lead author uses the entire content herein verbatim; other contribuitors adapt the content to their specific sections.  The webbook component is common to all sections.
 
 ## Document History
