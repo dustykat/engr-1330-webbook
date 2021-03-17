@@ -4,8 +4,15 @@ nav:
   - Home: index.md
 #  - About: about.md
   - Databases: untitled.md 
-  - Code Library: untitled.md
-  - Solved Examples: untitled.md
+  - Sample Code Library: 
+      - ./repetition-for-loop/repetition-for-loop.md
+      - ./repetition-while-loop/repetition-while-loop.md
+      - ./conditional-block-if/conditional-block-if.md
+  - Solved Examples:
+      - ./solved-integration/NumericalIntegration.md
+      - ./solved-integration/NumericalIntegrationTabular.md
+      - ./solved-newton/NewtonsMethod.md
+      - ./solved-pipeline/NonLinearSystems.md
 
 
      
