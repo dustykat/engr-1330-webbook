@@ -4,7 +4,18 @@ nav:
   - Home: index.md
 #  - About: about.md
   - Topics :
-      - Introduction: lesson0/lesson0.md
+      - Introduction: 
+         - Computational Thinking : introduction/intro-1.md
+         - How to Build a Program : introduction/intro-2.md
+         - Example 1 Problem Solving - Compute a mean: introduction/intro-3.md
+      - JupyterLab/iPython :
+         - JupyterLab programming environment : jupyterlab_python/jupyterlab-1.md
+      - Numerical Methods :
+         - Useful methods : numerical_methods/num_methods-1.md
+      - Data Models -- Statistical Methods :
+         - placeholder1 : data_models_statistical/datamod-stats1.md
+      #- Data Models -- Machine Learning Methods :      
+     
   - Additional Readings: readings.md
      
 # nesting as pulldown??

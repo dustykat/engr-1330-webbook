@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Numerical Integration of Functional Data - CTDS Databases</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">CTDS Databases</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../untitled/">Databases</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sample Code Library <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../repetition-for-loop/repetition-for-loop/">FOR ... loop</a>
+</li>
+                                    
+<li >
+    <a href="../../repetition-while-loop/repetition-while-loop/">WHILE ... loop</a>
+</li>
+                                    
+<li >
+    <a href="../../conditional-block-if/conditional-block-if/">IF ... (block structure)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solved Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">Numerical Integration of Functional Data</a>
+</li>
+                                    
+<li >
+    <a href="../NumericalIntegrationTabular/">Numerical Integration of Tabular Data</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-newton/NewtonsMethod/">Single Variable Newtons Method</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-pipeline/NonLinearSystems/">Nonlinear Systems of Equations</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../conditional-block-if/conditional-block-if/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../NumericalIntegrationTabular/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#numerical-integration-of-functional-data">Numerical Integration of Functional Data</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#rectangular-panels-in-primatives">Rectangular Panels -- in primatives</a></li>
+            <li><a href="#using-the-math-package">Using the math package</a></li>
+            <li><a href="#trapezoidal-panels">Trapezoidal Panels</a></li>
+            <li><a href="#parabolic-panels">Parabolic Panels</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="numerical-integration-of-functional-data">Numerical Integration of Functional Data</h1>
+<p>At this point we have enough Python to consider doing some useful computations. We
+will start with numerical integration because it is useful and only requires count-controlled
+repetition and single subscript lists.</p>
+<h2 id="background">Background</h2>
+<p>Numerical integration is the numerical approximation of</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+I = \int_a^b f(x)dx
+\end{equation}</script>
+</p>
+<p>Consider the problem of determining the shaded area under the curve <script type="math/tex">y = f(x)</script> from <script type="math/tex">x = a</script> to <script type="math/tex">x = b</script>, as depicted in the figure below, and suppose that analytical integration is not feasible.</p>
+<p><img alt="figure1" src="../schematic_panels.png" /></p>
+<pre><code> Aside: How to embed a figure
+ 1) Upload the file to the notebook directory, for this kind of environment use .png, .jpg
+ 2) Use the markdown syntax  ![](figure-filename). I used "![figure1](panels.png)"
+ 3) The [] is a tag delimiter, I dont know how to use tags yet, its not a caption (bummer!)
+</code></pre>
+<p>The function may be known in tabular form from experimental measurements or it may be known in an analytical form. 
+The function is taken to be continuous within the interval <script type="math/tex">a < x < b</script>. We may divide the area into <script type="math/tex">n</script> vertical panels, each of width <script type="math/tex">\Delta x = (b - a)/n</script>, and then add the areas of all strips to obtain  <script type="math/tex">A~\approx \int ydx</script>.</p>
+<p>A representative panel of area <script type="math/tex">A_i</script> is shown with darker shading in the figure. Three useful numerical approximations are listed in the following sections.  The approximations differ in how the function is represented by the panels --- in all cases the function is approximated by known polynomial models between the panel end points.</p>
+<p>In each case the greater the number of strips, and correspondingly smaller value of <script type="math/tex">\Delta x</script>, the more accurate the approximation. Typically, one can begin with a relatively small number of panels and increase the number until the resulting area approximation stops changing.</p>
+<h2 id="rectangular-panels-in-primatives">Rectangular Panels -- in <code>primatives</code></h2>
+<p>A <code>primative</code> is a structure built with the base python language and avoids packages, in my work it is obvious, the <code>import package.name</code> is absent in the source code.</p>
+<p>The figure below is a schematic of a rectangular panels.  The figure is assuming the function structure is known and can be evaluated at an arbitrary location in the <script type="math/tex">\Delta x</script> dimension.</p>
+<p><img alt="figure2" src="../rect_panels.png" /></p>
+<p>Each panel is treated as a rectangle, as shown by the representative panel whose height <script type="math/tex">y_m</script> is chosen visually so that the small cross-hatched areas are as nearly equal as possible. Thus, we form the sum <script type="math/tex">\sum y_m</script> of the effective heights and multiply by <script type="math/tex">\Delta x</script>. For a function known in analytical form, a value for <script type="math/tex">y_m</script> equal to that of the function at the midpoint <script type="math/tex">x_i + \Delta x /2</script> may be calculated and used in the summation.</p>
+<p>For tabulated functions, we have to choose to either take <script type="math/tex">y_m</script> as the value at the left endpoint or right endpoint.    This limitation is often quite handy when we are trying to integrate a function that is integrable, but undefined on one endpoint.</p>
+<p>Lets try some examples in Python.</p>
+<p>Find the area under the curve <script type="math/tex">y= x\sqrt{1+x^2}</script>  from <script type="math/tex">x = 0</script> to <script type="math/tex">x = 2</script>.</p>
+<p>First lets read in the value for the lowerlimit, we will do some limited error checks to be sure user enters a number, but won't check that the number is non-negative.</p>
+<pre><code class="python"># RectangularPanels.py
+# Numerical Integration
+print (&quot;Program finds area under curve y = x * sqrt(1+x)&quot;)
+# Get input data -- use error checking
+yes = 0
+while yes == 0:
+    x_low = input(&quot;Enter a lower bound x_low \n&quot;)
+    try:
+        x_low = float(x_low)
+        yes = 1
+    except:
+        print (&quot;x_low really needs to be a number, try again \n&quot;)
+# exit the while loop when finally have a valid number
+</code></pre>
+
+<pre><code>Program finds area under curve y = x * sqrt(1+x)
+</code></pre>
+<p>Verify that value is indeed what we entered</p>
+<pre><code class="python">print(x_low)
+</code></pre>
+
+<p>Now do the same for the upper limit, notice how we are using the <code>yes</code> variable.  We set a "fail" value, and demand input until we get "success".  The structure used here is called a <code>try -- exception</code> structure and is very common in programming.   Error checking is really important so that garbled input does not hang things up. </p>
+<pre><code class="python">yes = 0
+while yes == 0:
+    x_high = input(&quot;Enter an upper bound x_high \n&quot;)
+    try:
+        x_high = float(x_high)
+        yes = 1
+    except:
+        print (&quot;x_high really needs to be a number, try again \n&quot;)
+# exit the while loop when finally have a valid number
+</code></pre>
+
+<p>Again verify!</p>
+<pre><code class="python">print(x_high)
+</code></pre>
+
+<p>Now use the try - exception structure to input how many panels we wish to use.  Notice you can enter a negative value which will ultimately break things. Also observe this value is an integer.</p>
+<pre><code class="python">yes = 0
+while yes == 0:
+    how_many = input(&quot;Enter how many panels \n&quot;)
+    try:
+        how_many = int(how_many)
+        yes = 1
+    except:
+        print (&quot;Panels really needs to be a number, try again \n&quot;)
+# exit the while loop when finally have a valid number
+</code></pre>
+
+<p>Again verify!</p>
+<pre><code class="python">print(how_many)
+</code></pre>
+
+<p>Now we can actually perform the integration by evaluating the function at the panel half-widths.
+In this example we are using primitive arithmetic, so the <script type="math/tex">\sqrt{}</script> is accomplished by exponentation, the syntax is <code>c = a ** b</code> is the operation <script type="math/tex">c = a^b</script>.</p>
+<p>The integration uses an accumulator, which is a memory location where subsquent results are added (accumulated) back into the accumulator.  This structure is so common that there are alternate, compact syntax to perform this task, here it is all out in the open.</p>
+<p>The counting loop where we evaluate the function at different <code>x</code> values, starts at 1 and ends at <code>how_many+1</code> because python <code>for</code> loops use an increment skip if equal structure. When the value in <code>range</code> equals <code>how_many</code> the <code>for</code> loop exits (<code>break</code> is implied.)  A loop control structure starting from 0 is shown in the code as a comment line.  Simply uncomment this line, and comment the line just below to have the structure typical in python scripts.  In the start from 1 case, we want to evaluate at the last value of <code>how_many</code>.  </p>
+<pre><code class="python"># OK we should have the three things we need for evaluating the integral
+delta_x = (x_high - x_low)/float(how_many)  # compute panel width
+xx = x_low + delta_x/2 # initial value for x
+### OK THIS IS THE ACTUAL INTEGRATOR PART ###
+accumulated_area = 0.0  # initial value in an accumulator
+#for i in range(0,how_many,1): #note we are counting from 0
+for i in range(1,how_many+1,1): #note we are counting from 1
+    accumulated_area = accumulated_area + ( xx * ( (1+xx**2)**(0.5) ) ) * delta_x
+    xx = xx + delta_x
+### AND WE ARE DONE INTEGRATING #############
+</code></pre>
+
+<p>Finally, we want to report our result</p>
+<pre><code class="python">print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
+      &quot; to x = &quot;,x_high,&quot;\n is approximately: &quot;,accumulated_area)
+# the backslash \
+#       &quot; to x = .....     lets us use multiple lines
+# the \n is a &quot;newline&quot; character 
+</code></pre>
+
+<p>The code implements rudimentary error checking -- it forces us to enter numeric values for the lower and upper values of <script type="math/tex">x</script> as well as the number of panels to use.  It does not check for undefined ranges and such, but you should get the idea -- notice that a large fraction of the entire program is error trapping; this devotion to error trapping is typical for professional programs where you are going to distribute executable modules and not expect the end user to be a programmer.</p>
+<h2 id="using-the-math-package">Using the <code>math</code> package</h2>
+<p>The actual computations are done rather crudely -- there is a math package that would give us the ability to compute the square root as a function call rather than exponentiation to a real values exponent.</p>
+<p>That is illustrated below</p>
+<pre><code class="python"># RectangularPanels.py
+# Numerical Integration
+# Use built-in math functions
+import math  # a package of math functions
+# we are naming an object &quot;sqrt&quot; that will compute the square root
+def sqrt (x):
+        return math.sqrt(x)
+# saves us having to type math.NAME every time we wish to use a function
+# in this program not all that meaningful, but in complex programs handy!
+print (&quot;Program finds area under curve y = x * sqrt(1+x)&quot;)
+# Get input data -- use error checking
+yes = 0
+while yes == 0:
+    x_low = input(&quot;Enter a lower bound x_low \n&quot;)
+    try:
+        x_low = float(x_low)
+        yes = 1
+    except:
+        print (&quot;x_low really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    x_high = input(&quot;Enter an upper bound x_high \n&quot;)
+    try:
+        x_high = float(x_high)
+        yes = 1
+    except:
+        print (&quot;x_high really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    how_many = input(&quot;Enter how many panels \n&quot;)
+    try:
+        how_many = int(how_many)
+        yes = 1
+    except:
+        print (&quot;Panels really needs to be a number, try again \n&quot;)
+delta_x = (x_high - x_low)/float(how_many)  # compute panel width
+accumulated_area = 0.0  # initial value in an accumulator
+xx = x_low + delta_x/2 # initial value for x
+for i in range(1,how_many+1,1): #note we are counting from 1
+    accumulated_area = accumulated_area + ( xx * sqrt(1+xx**2) ) * delta_x
+    xx = xx + delta_x
+print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
+      &quot; to x = &quot;,x_high,&quot;\n is approximately: &quot;,accumulated_area)
+
+
+</code></pre>
+
+<h2 id="trapezoidal-panels">Trapezoidal Panels</h2>
+<p>The trapezoidal panels are approximated as shown in the figure below. </p>
+<p><img alt="" src="../trap_panels.png" /></p>
+<p>The area <script type="math/tex">A_i</script> is the average height <script type="math/tex">(y_i + y_{i+1} )/2</script> times <script type="math/tex">\Delta x</script>. Adding the areas gives the area approximation as tabulated.   For the example with the curvature shown, the approximation will be on the low side. For the reverse curvature, the approximation will be on the high side.  The trapezoidal approximation is commonly used with tabulated values.</p>
+<p>The script below illustrates the trapezoidal method for approximating an integral.  In the example, the left and right panel endpoints in <script type="math/tex">x</script> are set as separate variables <script type="math/tex">x_{left}</script> and <script type="math/tex">x_{right}</script> and incremented by <script type="math/tex">\Delta x</script> as we step through the count-controlled repetition to accumulate the area.  The corresponding <script type="math/tex">y</script> values are computed within the loop and averaged, then multiplied by <script type="math/tex">\Delta x</script> and added to the accumulator.  Finally the <script type="math/tex">x</script> values are incremented --- for grins, we used the += operator on the accumulator</p>
+<pre><code class="python"># TrapezoidalPanels.py
+# Numerical Integration
+# Use built-in math functions
+import math  # a package of math functions
+# we are naming an object &quot;sqrt&quot; that will compute the square root
+def sqrt (x):
+        return math.sqrt(x)
+# saves us having to type math.NAME every time we wish to use a function
+# in this program not all that meaningful, but in complex programs handy!
+print (&quot;Program finds area under curve y = x * sqrt(1+x)&quot;)
+# Get input data -- use error checking
+yes = 0
+while yes == 0:
+    x_low = input(&quot;Enter a lower bound x_low \n&quot;)
+    try:
+        x_low = float(x_low)
+        yes = 1
+    except:
+        print (&quot;x_low really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    x_high = input(&quot;Enter an upper bound x_high \n&quot;)
+    try:
+        x_high = float(x_high)
+        yes = 1
+    except:
+        print (&quot;x_high really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    how_many = input(&quot;Enter how many panels \n&quot;)
+    try:
+        how_many = int(how_many)
+        yes = 1
+    except:
+        print (&quot;Panels really needs to be a number, try again \n&quot;)
+delta_x = (x_high - x_low)/float(how_many)  # compute panel width
+accumulated_area = 0.0      # initial value in an accumulator
+x_left = x_low              # initial value for x_left edge panel
+x_right = x_left + delta_x  # initial value for x_right edge panel
+for i in range(1,how_many+1,1): #note we are counting from 1
+    y_left = ( x_left* sqrt(1+x_left**2) )
+    y_right = ( x_right* sqrt(1+x_right**2) )
+    accumulated_area += + (1./2.) * ( y_left + y_right ) * delta_x
+    x_left += delta_x
+    x_right += delta_x
+print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
+      &quot; to x = &quot;,x_high,&quot;\n is approximately: &quot;,accumulated_area)
+
+</code></pre>
+
+<h2 id="parabolic-panels">Parabolic Panels</h2>
+<p>Parabolic panels approximate the shape of the panel with a parabola.  The area between the chord and the curve (neglected in the trapezoidal solution) may be accounted for by approximating the function with a parabola passing through the points defined by three successive values of <script type="math/tex">y</script>.</p>
+<p><img alt="" src="../para-panels.png" /></p>
+<p>This area may be calculated from the geometry of the parabola and added to the trapezoidal area of the pair of strips to give the area <script type="math/tex">\Delta A</script> of the pair as illustrated. Adding all of the <script type="math/tex">\Delta A</script>s produces the tabulation shown, which is known as Simpson's rule. To use Simpson's rule, the number <script type="math/tex">n</script> of strips must be even.</p>
+<p>The same example as presented for rectangular panels is repeated, except using parabolic panels.  The code is changed yet again because we will evaluate at each end of the panel as well as at an intermediate value.</p>
+<pre><code class="python"># ParabolicPanels.py
+# Numerical Integration
+# Use built-in math functions
+import math  # a package of math functions
+# we are naming an object &quot;sqrt&quot; that will compute the square root
+def sqrt (x):
+        return math.sqrt(x)
+# saves us having to type math.NAME every time we wish to use a function
+# in this program not all that meaningful, but in complex programs handy!
+print (&quot;Program finds area under curve y = x * sqrt(1+x)&quot;)
+# Get input data -- use error checking
+yes = 0
+while yes == 0:
+    x_low = input(&quot;Enter a lower bound x_low \n&quot;)
+    try:
+        x_low = float(x_low)
+        yes = 1
+    except:
+        print (&quot;x_low really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    x_high = input(&quot;Enter an upper bound x_high \n&quot;)
+    try:
+        x_high = float(x_high)
+        yes = 1
+    except:
+        print (&quot;x_high really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    how_many = input(&quot;Enter how many panels \n&quot;)
+    try:
+        how_many = int(how_many)
+        yes = 1
+    except:
+        print (&quot;Panels really needs to be a number, try again \n&quot;)
+delta_x = (x_high - x_low)/float(how_many)  # compute panel width
+accumulated_area = 0.0         # initial value in an accumulator
+x_left   = x_low               # initial value for x_left edge panel
+x_middle = x_left   + delta_x  # initial value for x_middle edge panel
+x_right  = x_middle + delta_x  # initial value for x_right edge panel
+how_many = int(how_many/2)     # using 2 panels every step, so 1/2 many steps -- force integer result 
+for i in range(1,how_many+1,1): #note we are counting from 1
+    y_left   = ( x_left   * sqrt(1+   x_left**2) )
+    y_middle = ( x_middle * sqrt(1+ x_middle**2) )
+    y_right  = ( x_right  * sqrt(1+  x_right**2) )
+    accumulated_area = accumulated_area + \
+                       (1./3.) * ( y_left + 4.* y_middle + y_right ) * delta_x
+    x_left   = x_left   + 2*delta_x
+    x_middle = x_left   +   delta_x
+    x_right  = x_middle +   delta_x
+print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
+      &quot; to x = &quot;,x_high,&quot;\n is approximately: &quot;,accumulated_area)
+
+
+</code></pre>
+
+<p>If we study all the forms of the numerical method we observe that the numerical integration method is really the sum of function values at specific locations in the interval of interest, with each value multiplied by a specific weight.</p>
+<p>In this development the weights were based on polynomials, but other method use different weighting functions.  An extremely important method is called gaussian quadrature. This method is valuable because one can approximate convolution integrals quite effectively using quadrature routines, while the number of function evaluations for a polynomial based approximation could be hopeless.</p>
+<p>When the function values are tabular, we are going to have to accept the rectangular (with adaptations) and trapezoidal as our best tools to approximate an integral because we don't have any really effective way to evaluate the function between the tabulated values.</p>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,6 +1,6 @@
-# ENGR 1330 Psuedo-Course
+# ENGR 1330 Example Course
 
-A fremework for a semester long course in Computational Thinking and Data Science at Texas Tech University
+A framework for a semester long course in Computational Thinking and Data Science at Texas Tech University
 
 For full documentation visit [mkdocs.org](https://mkdocs.org).
 

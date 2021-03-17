@@ -1,1 +1,39 @@
-site_name: My Docs
+site_name: Computational Thinking and Data Science
+# navigation/site structure 
+nav:
+  - Home: index.md
+#  - About: about.md
+  - Topics :
+      - Introduction: 
+         - Computational Thinking : introduction/intro-1.md
+         - How to Build a Program : introduction/intro-2.md
+         - Example 1 Problem Solving - Compute a mean: introduction/intro-3.md
+      - JupyterLab/iPython :
+         - JupyterLab programming environment : jupyterlab_python/jupyterlab-1.md
+      - Numerical Methods :
+         - Useful methods : numerical_methods/num_methods-1.md
+      - Data Models -- Statistical Methods :
+         - placeholder1 : data_models_statistical/datamod-stats1.md
+      #- Data Models -- Machine Learning Methods :      
+     
+  - Additional Readings: readings.md
+     
+# nesting as pulldown??
+
+# active theme (mkdocs/readthedocs are free, they work differently wrt code blocks)
+theme:
+    name: mkdocs
+    highlightjs: true
+    hljs_languages:
+        - python
+
+# extensions to enable nice typesets 
+markdown_extensions:
+  - extra
+  - tables
+  - mdx_math:
+      enable_dollar_delimiter: True
+  - fenced_code # easier than indenting
+extra_javascript:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+  - mathjaxhelper.js  # this file needs to be in the docs directory for site build

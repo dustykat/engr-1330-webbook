@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lesson 1 - ENGR-1330 Example Course</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Example Course</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-1-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Lesson01/lesson0/">Lesson 0</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Lesson 1</a>
+</li>
+                                    
+<li >
+    <a href="../../Lesson03/lesson2/">Lesson 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 4</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+                                    
+<li >
+    <a href="../../Lesson07/lesson6/">Lesson 6</a>
+</li>
+                                    
+<li >
+    <a href="../../Lesson08/lesson7/">Lesson 7</a>
+</li>
+                                    
+<li >
+    <a href="../../Lesson09/lesson8/">Lesson 8</a>
+</li>
+                                    
+<li >
+    <a href="../../Lesson10/lesson9/">Lesson 9</a>
+</li>
+                                    
+<li >
+    <a href="../../Lesson11/lesson10/">Lesson 10</a>
+</li>
+                                    
+<li >
+    <a href="../../Lesson12/lesson11/">Lesson 11</a>
+</li>
+                                    
+<li >
+    <a href="../../Lesson13/lesson12/">Lesson 12</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 13</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 15</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 17</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laboratory <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homework <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../Lesson01/lesson0/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../Lesson03/lesson2/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</a></li>
+            <li><a href="#lesson-1-programming-fundamentals">Lesson 1 Programming Fundamentals:</a></li>
+            <li><a href="#programming-fundamentals">Programming Fundamentals</a></li>
+            <li><a href="#tokens-and-structure">Tokens and Structure</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#operators">Operators</a></li>
+            <li><a href="#arithmetic-operators">Arithmetic Operators</a></li>
+            <li><a href="#data-type">Data Type</a></li>
+            <li><a href="#expressions">Expressions</a></li>
+            <li><a href="#programming-as-a-problem-solving-process">Programming as a problem solving process</a></li>
+            <li><a href="#ccmr-approach">CCMR Approach</a></li>
+            <li><a href="#readings">Readings</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<!-- Script Block to set tables to left alignment -->
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<h1 id="engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</h1>
+<p>Last GitHub Commit Date: 19 January 2021</p>
+<h2 id="lesson-1-programming-fundamentals">Lesson 1 Programming Fundamentals:</h2>
+<ul>
+<li>iPython, tokens, and structure</li>
+<li>Data types (int, float, string, bool)</li>
+<li>Variables, operators, expressions, basic I/O</li>
+<li>String functions and operations</li>
+</ul>
+<h2 id="programming-fundamentals">Programming Fundamentals</h2>
+<p><strong>Computational thinking (CT)</strong> refers to the thought processes involved in expressing solutions as computational steps or algorithms that can be carried out by a computer.  CT is a process for breaking down a problem into smaller parts, looking for patterns in the problems, identifying what kind of information is needed, developing a step-by-step solution, and implementing that solution. Recall the 5 fundamental CT concepts are:</p>
+<ol>
+<li>Decomposition: the process of taking a complex problem and breaking it into more manageable sub-problems. Decomposition often leaves a <strong>framework</strong> of sub-problems that later have to be <strong>assembled (system integration)</strong> to produce a desired solution.</li>
+<li>Pattern Recognition: finding similarities, or shared characteristics of problems.  Allows a complex problem to become easier to solve. Allows use of same solution method ( <strong>automation</strong> ) for each occurrence of the pattern. </li>
+<li>Abstraction : Determine important characteristics of the problem and use these characteristics to create a representation of the problem. </li>
+<li>Algorithms : Step-by-step instructions of how to solve a problem (https://en.wikipedia.org/wiki/Algorithm). Identifies what is to be done, and the order in which they should be done.</li>
+<li>System Integration: the assembly of the parts above into the complete (integrated) solution.  Integration combines parts into a <strong>program</strong> which is the realization of an algorithm using a syntax that the computer can understand. </li>
+</ol>
+<p><strong>Programming</strong> is (generally) writing code in a specific programming language to address a certain problem. In the above list it is largely contained within the algorithms concept.</p>
+<h3 id="ipython">iPython</h3>
+<p>The programming language we will use is Python (actually iPython). Python is an example of a high-level language; there are also low-level languages, sometimes referred to as machine languages or assembly languages. Machine language is the encoding of instructions in binary so that they can be directly executed by the computer. Assembly language uses a slightly easier format to refer to the low level instructions. Loosely speaking, computers can only execute programs written in low-level languages. To be exact, computers can actually only execute programs written in machine language. Thus, programs written in a high-level language (and even those in assembly language) have to be processed before they can run. This extra processing takes some time, which is a small disadvantage of high-level languages. However, the advantages to high-level languages are enormous:</p>
+<ul>
+<li>First, it is much easier to program in a high-level language. Programs written in a high-level language take less time to write, they are shorter and easier to read, and they are more likely to be correct. </li>
+<li>Second, high-level languages are portable, meaning that they can run on different kinds of computers with just a  few modifications. </li>
+<li>Low-level programs can run on only one kind of computer (chipset-specific for sure, in some cases hardware specific) and have to be rewritten to run on other processors. (e.g. x86-64 vs. arm7 vs. aarch64 vs. PowerPC ...)</li>
+</ul>
+<p>Due to these advantages, almost all programs are written in high-level languages. Low-level languages are used only for a few specialized applications.</p>
+<p>Two kinds of programs process high-level languages into low-level languages: interpreters and compilers. An interpreter reads a high-level program and executes it, meaning that it does what the program says. It processes the program a little at a time, alternately reading lines and performing computations.</p>
+<p>As a language, python is a formal language that has certain requirements and structure called "syntax." Syntax rules come in two flavors, pertaining to <strong>tokens</strong> and <strong>structure</strong>. <strong>Tokens</strong> are the basic elements of the language, such as words, numbers, and chemical elements. The second type of syntax rule pertains to the <strong>structure of a statement</strong> specifically in the way the tokens are arranged. </p>
+<h2 id="tokens-and-structure">Tokens and Structure</h2>
+<p>Consider the relativistic equation relating energy, mass, and the speed of light 
+<script type="math/tex; mode=display"> e = m \cdot c^2 </script>
+</p>
+<p>In this equation the tokens are <script type="math/tex">e</script>,<script type="math/tex">m</script>,<script type="math/tex">c</script>,<script type="math/tex">=</script>,<script type="math/tex">\cdot</script>, and the structure is parsed from left to right as into the token named <script type="math/tex">e</script> place the result of the product of the contents of the tokens <script type="math/tex">m</script> and <script type="math/tex">c^2</script>. Given that the speed of light is some universal constant, the only things that can change are the contents of <script type="math/tex">m</script> and the resulting change in <script type="math/tex">e</script>.  </p>
+<p>In the above discourse, the tokens <script type="math/tex">e</script>,<script type="math/tex">m</script>,<script type="math/tex">c</script> are names for things that can have values -- we will call these variables (or constants as appropriate).  The tokens <script type="math/tex">=</script>,<script type="math/tex">\cdot</script>, and <script type="math/tex">~^2</script> are symbols for various arithmetic operations -- we will call these operators.  The structure of the equation is specific -- we will call it a statement.</p>
+<p>When we attempt to write and execute python scripts - we will make various mistakes; these will generate warnings and errors, which we will repair to make a working program.</p>
+<p>Consider our equation:</p>
+<pre><code class="python">#clear all variables# Example 
+Energy = Mass * SpeedOfLight**2 
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-4-1c1f1fa5363a&gt; in &lt;module&gt;
+      1 #clear all variables# Example
+----&gt; 2 Energy = Mass * SpeedOfLight**2
+
+
+NameError: name 'Mass' is not defined
+</code></pre>
+<p>Notice how the interpreter tells us that Mass is undefined - so a simple fix is to define it and try again</p>
+<pre><code class="python"># Example 
+Mass = 1000000
+Energy = Mass * SpeedOfLight**2 
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-5-a4a52966e6df&gt; in &lt;module&gt;
+      1 # Example
+      2 Mass = 1000000
+----&gt; 3 Energy = Mass * SpeedOfLight**2
+
+
+NameError: name 'SpeedOfLight' is not defined
+</code></pre>
+<p>Notice how the interpreter now tells us that SpeedOfLight is undefined - so a simple fix is to define it and try again</p>
+<pre><code class="python"># Example 
+Mass = 1000000  #kilograms
+SpeedOfLight = 299792458  #meters per second
+Energy = Mass * SpeedOfLight**2 
+</code></pre>
+
+<p>Now the script ran without any reported errors, but we have not instructed the program on how to produce output.  To keep the example simple we will just add a generic print statement.</p>
+<pre><code class="python"># Example 
+Mass = 1000000  #kilograms
+SpeedOfLight = 299792458  #meters per second
+Energy = Mass * SpeedOfLight**2 
+print(&quot;Energy is:&quot;, Energy, &quot;Newton meters&quot;)
+</code></pre>
+
+<pre><code>Energy is: 89875517873681764000000 Newton meters
+</code></pre>
+<p>Now lets examine our program.  Identify the tokens that have values, Identify the tokens that are symbols of operations, identify the structure.</p>
+<h2 id="variables">Variables</h2>
+<p>Variables are names given to data that we want to store and manipulate in programs. A variable has a name and a value. The value representation depends on what type of object the variable represents. The utility of variables comes in when we have a structure that is universal, but values of variables within the structure will change - otherwise it would be simple enough to just hardwire the arithmetic.</p>
+<p>Suppose we want to store the time of concentration for some hydrologic calculation. 
+To do so, we can name a variable <code>TimeOfConcentration</code>, and then <code>assign</code> a value to the variable,
+for instance:</p>
+<pre><code>TimeOfConcentration = 0.0
+</code></pre>
+<p>After this assignment statement the variable is created in the program and has a value of 0.0. 
+The use of a decimal point in the initial assignment establishes the variable as a float (a real variable is called a floating point representation -- or just a float).</p>
+<h3 id="naming-rules">Naming Rules</h3>
+<p>Variable names in Python can only contain letters (a - z, A - Z), numerals (0 - 9), or underscores. 
+The first character cannot be a number, otherwise there is considerable freedom in naming. 
+The names can be reasonably long. 
+<code>runTime</code>, <code>run_Time</code>, <code>_run_Time2</code>, <code>_2runTime</code> are all valid names, but <code>2runTime</code> is not valid, and will create an error when you try to use it.</p>
+<pre><code class="python"># Script to illustrate variable names
+runTime = 1
+_2runTime = 2 # change to 2runTime = 2 and rerun script
+runTime2 = 2
+print(runTime,_2runTime,runTime2)
+</code></pre>
+
+<pre><code>1 2 2
+</code></pre>
+<p>There are some reserved words that cannot be used as variable names because they have preassigned meaning in Parseltongue. 
+These words include <code>print</code>, <code>input</code>, <code>if</code>, <code>while</code>, and <code>for</code>. 
+There are several more; the interpreter won't allow you to use these names as variables and will issue an error message when you attempt to run a program with such words used as variables.</p>
+<h2 id="operators">Operators</h2>
+<p>The <code>=</code> sign used in the variable definition is called an assignment operator (or assignment sign). 
+The symbol means that the expression to the right of the symbol is to be evaluated and the result placed into the variable on the left side of the symbol.  The "operation" is assignment, the "=" symbol is the operator name.</p>
+<p>Consider the script below</p>
+<pre><code class="python"># Assignment Operator
+x = 5
+y = 10
+print (x,y)
+x=y # reverse order y=x and re-run, what happens?
+print (x,y)
+</code></pre>
+
+<pre><code>5 10
+10 10
+</code></pre>
+<p>So look at what happened. When we assigned values to the variables named <code>x</code> and <code>y</code>, they started life as 5 and 10. 
+We then wrote those values to the console, and the program returned 5 and 10. 
+Then we assigned <code>y</code> to <code>x</code> which took the value in y and replaced the value that was in x with this value. 
+We then wrote the contents again, and both variables have the value 10.</p>
+<h2 id="arithmetic-operators">Arithmetic Operators</h2>
+<p>In addition to assignment we can also perform arithmetic operations on variables. The
+fundamental arithmetic operators are:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Symbol</th>
+<th align="left">Meaning</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">=</td>
+<td align="left">Assignment</td>
+<td align="left">x=3 Assigns value of 3 to x.</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">Addition</td>
+<td align="left">x+y Adds values in x and y.</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">Subtraction</td>
+<td align="left">x-y Subtracts values in y from x.</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">Multiplication</td>
+<td align="left">x*y Multiplies values in x and y.</td>
+</tr>
+<tr>
+<td align="left">/</td>
+<td align="left">Division</td>
+<td align="left">x/y Divides value in x by value in y.</td>
+</tr>
+<tr>
+<td align="left">//</td>
+<td align="left">Floor division</td>
+<td align="left">x//y Divide x by y, truncate result to whole number.</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">Modulus</td>
+<td align="left">x%y Returns remainder when x is divided by y.</td>
+</tr>
+<tr>
+<td align="left">**</td>
+<td align="left">Exponentation</td>
+<td align="left">x <strong> y Raises value in x by value in y. ( e.g. x </strong> y)</td>
+</tr>
+<tr>
+<td align="left">+=</td>
+<td align="left">Additive assignment</td>
+<td align="left">x+=2 Equivalent to x = x+2.</td>
+</tr>
+<tr>
+<td align="left">-=</td>
+<td align="left">Subtractive assignment</td>
+<td align="left">x-=2 Equivalent to x = x-2.</td>
+</tr>
+<tr>
+<td align="left">*=</td>
+<td align="left">Multiplicative assignment</td>
+<td align="left">x*=3 Equivalent to x = x*3.</td>
+</tr>
+<tr>
+<td align="left">/=</td>
+<td align="left">Divide assignment</td>
+<td align="left">x/3 Equivalent to x = x/3.</td>
+</tr>
+</tbody>
+</table>
+<p>Run the script in the next cell for some illustrative results</p>
+<pre><code class="python"># Uniary Arithmetic Operators
+x = 10
+y = 5
+print(x, y)
+print(x+y)
+print(x-y)
+print(x*y)
+print(x/y)
+print((x+1)//y)
+print((x+1)%y)
+print(x**y)
+</code></pre>
+
+<pre><code>10 5
+15
+5
+50
+2.0
+2
+1
+100000
+</code></pre>
+<pre><code class="python"># Arithmetic assignment operators
+x = 1
+x += 2
+print(type(x),x)
+x = 1
+x -= 2
+print(type(x),x)
+x = 1
+x *=3
+print(type(x),x)
+x = 10
+x /= 2
+print(type(x),x)  # Interesting what division does to variable type
+</code></pre>
+
+<pre><code>&lt;class 'int'&gt; 3
+&lt;class 'int'&gt; -1
+&lt;class 'int'&gt; 3
+&lt;class 'float'&gt; 5.0
+</code></pre>
+<h2 id="data-type">Data Type</h2>
+<p>In the computer data are all binary digits (actually 0 and +5 volts). 
+At a higher level of <strong>abstraction</strong> data are typed into integers, real, or alphanumeric representation. 
+The type affects the kind of arithmetic operations that are allowed (as well as the kind of arithmetic - integer versus real arithmetic; lexicographical ordering of alphanumeric , etc.)
+In scientific programming, a common (and really difficult to detect) source of slight inaccuracies (that tend to snowball as the program runs) is mixed mode arithmetic required because two numeric values are of different types (integer and real).</p>
+<p>Learn more from the textbook</p>
+<p>https://www.inferentialthinking.com/chapters/04/Data_Types.html</p>
+<p>Here we present a quick summary</p>
+<h3 id="integer">Integer</h3>
+<p>Integers are numbers without any fractional portion (nothing after the decimal point { which
+is not used in integers). Numbers like -3, -2, -1, 0, 1, 2, 200 are integers. A number like 1.1
+is not an integer, and 1.0 is also not an integer (the presence of the decimal point makes the
+number a real).</p>
+<p>To declare an integer in Python, just assign the variable name to an integer for example</p>
+<pre><code>MyPhoneNumber = 14158576309
+</code></pre>
+<h3 id="real-float">Real (Float)</h3>
+<p>A real or float is a number that has (or can have) a fractional portion - the number has
+decimal parts. The numbers 3.14159, -0.001, 11.11, 1., are all floats. 
+The last one is especially tricky, if you don't notice the decimal point you might think it is an integer but the
+inclusion of the decimal point in Python tells the program that the value is to be treated as a 
+float.
+To declare a 
+float in Python, just assign the variable name to a 
+float for example</p>
+<pre><code>MyMassInKilos = 74.8427
+</code></pre>
+<h3 id="stringalphanumeric">String(Alphanumeric)</h3>
+<p>A string is a data type that is treated as text elements. The usual letters are strings, but
+numbers can be included. The numbers in a string are simply characters and cannot be
+directly used in arithmetic. 
+There are some kinds of arithmetic that can be performed on strings but generally we process string variables to capture the text nature of their contents. 
+To declare a string in Python, just assign the variable name to a string value - the trick is the value is enclosed in quotes. 
+The quotes are delimiters that tell the program that the characters between the quotes are characters and are to be treated as literal representation.</p>
+<p>For example</p>
+<pre><code>MyName = 'Theodore'
+MyCatName = "Dusty"
+DustyMassInKilos = "7.48427"
+</code></pre>
+<p>are all string variables. 
+The last assignment is made a string on purpose. 
+String variables can be combined using an operation called concatenation. 
+The symbol for concatenation is the plus symbol <code>+</code>.</p>
+<p>Strings can also be converted to all upper case using the <code>upper()</code> function. The syntax for
+the <code>upper()</code> function is <code>'string to be upper case'.upper()</code>. 
+Notice the "dot" in the syntax. 
+The operation passes everything to the left of the dot to the function which then
+operates on that content and returns the result all upper case (or an error if the input stream
+is not a string).</p>
+<pre><code class="python"># Variable Types Example
+MyPhoneNumber = 14158576309
+MyMassInKilos = 74.8427
+MyName = 'Theodore'
+MyCatName = &quot;Dusty&quot;
+DustyMassInKilos = &quot;7.48427&quot;
+print(&quot;All about me&quot;)
+print(&quot;Name: &quot;,MyName, &quot; Mass :&quot;,MyMassInKilos,&quot;Kg&quot; )
+print('Phone : ',MyPhoneNumber)
+print('My cat\'s name :', MyCatName)  # the \ escape character is used to get the ' into the literal
+print(&quot;All about concatenation!&quot;)
+print(&quot;A Silly String : &quot;,MyCatName+MyName+DustyMassInKilos)
+print(&quot;A SILLY STRING :  &quot;, (MyCatName+MyName+DustyMassInKilos).upper())
+</code></pre>
+
+<pre><code>All about me
+Name:  Theodore  Mass : 74.8427 Kg
+Phone :  14158576309
+My cat's name : Dusty
+All about concatenation!
+A Silly String :  DustyTheodore7.48427
+A SILLY STRING :   DUSTYTHEODORE7.48427
+</code></pre>
+<p>Strings can be formatted using the <code>%</code> operator or the <code>format()</code> function. The concepts will
+be introduced later on as needed in the workbook, you can Google search for examples of
+how to do such formatting.</p>
+<h3 id="changing-types">Changing Types</h3>
+<p>A variable type can be changed. 
+This activity is called type casting. 
+Three functions allow
+type casting: <code>int()</code>, <code>float()</code>, and <code>str()</code>. 
+The function names indicate the result of using
+the function, hence <code>int()</code> returns an integer, <code>float()</code> returns a 
+oat, and <code>str()</code> returns a
+string.</p>
+<p>There is also the useful function <code>type()</code> which returns the type of variable.</p>
+<p>The easiest way to understand is to see an example. </p>
+<pre><code class="python"># Type Casting Examples
+MyInteger = 234
+MyFloat = 876.543
+MyString = 'What is your name?'
+print(MyInteger,MyFloat,MyString)
+print('Integer as float',float(MyInteger))
+print('Float as integer',int(MyFloat))
+print('Integer as string',str(MyInteger))
+print('Integer as hexadecimal',hex(MyInteger))
+print('Integer Type',type((MyInteger)))  # insert the hex conversion and see what happens!
+</code></pre>
+
+<pre><code>234 876.543 What is your name?
+Integer as float 234.0
+Float as integer 876
+Integer as string 234
+Integer as hexadecimal 0xea
+Integer Type &lt;class 'int'&gt;
+</code></pre>
+<h2 id="expressions">Expressions</h2>
+<p>Expressions are the "algebraic" constructions that are evaluated and then placed into a variable.
+Consider</p>
+<pre><code>x1 = 7 + 3 * 6 / 2 - 1
+</code></pre>
+<p>The expression is evaluated from the left to right and in words is</p>
+<pre><code>Into the object named x1 place the result of:
+
+integer 7 + (integer 6 divide by integer 2 = float 3 * integer 3 = float 9 - integer 1 = float 8) = float 15
+</code></pre>
+<p>The division operation by default produces a float result unless forced otherwise.  The result is the variable <code>x1</code> is a float with a value of <code>15.0</code></p>
+<pre><code class="python"># Expressions Example
+x1 = 7 + 3 * 6 // 2 - 1  # Change / into // and see what happens!
+print(type(x1),x1)
+## Simple I/O (Input/Output)
+</code></pre>
+
+<pre><code>&lt;class 'int'&gt; 15
+</code></pre>
+<h3 id="summary">Summary</h3>
+<p>So far consider our story - a tool to help with problem solving is CT leading to an algorithm.  The tool to implement the algorithm is the program and in our case JupyterLab running iPython interpreter for us.</p>
+<p>As a formal language we introduced:
+- tokens
+- structure</p>
+<p>From these two constructs we further introduced <strong>variables</strong> (a kind of token), <strong>data types</strong> (an abstraction, and arguably a decomposition), and <strong>expressions</strong> (a structure).  We created simple scripts (with errors), examined the errors, corrected our script, and eventually got an answer.  So we are well on our way in CT as it applies in Engineering.</p>
+<h2 id="programming-as-a-problem-solving-process">Programming as a problem solving process</h2>
+<p>Recall the entire point of this course is to develop problem solving skills and begin using some tools (Statistics, Numerical Methods, Data Science, implemented as JupyterLab/Python programs). Recall our suggested problem solving protocol:</p>
+<ol>
+<li>Explicitly state the problem</li>
+<li>State:</li>
+<li>Input information</li>
+<li>Governing equations or principles, and </li>
+<li>The required output information.</li>
+<li>Work a sample problem by-hand for testing the general solution.</li>
+<li>Develop a general solution method (coding).</li>
+<li>Test the general solution against the by-hand example, then apply to the real problem.</li>
+<li>Refine general solution for deployment (frequent use)</li>
+</ol>
+<p>Another protocol with the same goal is at https://3.137.111.182/engr-1330-webroot/1-Lessons/Lesson02/OriginalPowerpoint/HowToBuildAProgram.html   Notice the similarity!</p>
+<h3 id="example-2-problem-solving-process">Example 2 Problem Solving Process</h3>
+<p>Consider an engineering material problem where we wish to classify whether a material in loaded in the elastic or inelastic region as determined the stress (solid pressure) in a rod for some applied load.  The yield stress is the classifier, and once the material yields (begins to fail) it will not carry any additional load (until ultimate failure, when it carries no load).</p>
+<p><img alt="" src="../StressStrain.png" /></p>
+<p><strong>Step 1.</strong> Compute the material stress under an applied load; determine if value exceedes yield stress, and report the loading condition</p>
+<p><strong>Step 2.</strong> 
+  - Inputs: applied load, cross sectional area, yield stress
+  - Governing equation: <script type="math/tex"> \sigma = \frac{P}{A} </script> when <script type="math/tex">\frac{P}{A} </script> is less than the yield stress, and is equal to the yield stress otherwise.
+  - Outputs: The material stress <script type="math/tex">\sigma </script>, and the classification elastic or inelastic.</p>
+<p><strong>Step 3.</strong> Work a sample problem by-hand for testing the general solution.</p>
+<p>Assuming the yield stress is 1 million psi (units matter in an actual problem - kind of glossed over here)</p>
+<table>
+<thead>
+<tr>
+<th align="right">Applied Load (lbf)</th>
+<th align="right">Cross Section Area (sq.in.)</th>
+<th align="right">Stress (psi)</th>
+<th align="right">Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">10,000</td>
+<td align="right">1.0</td>
+<td align="right">10,000</td>
+<td align="right">Elastic</td>
+</tr>
+<tr>
+<td align="right">10,000</td>
+<td align="right">0.1</td>
+<td align="right">100,000</td>
+<td align="right">Elastic</td>
+</tr>
+<tr>
+<td align="right">100,000</td>
+<td align="right">0.1</td>
+<td align="right">1,000,000</td>
+<td align="right">Inelastic</td>
+</tr>
+</tbody>
+</table>
+<p>The stress requires us to read in the load value, read in the cross sectional area, divide the load by the area, and compare the result to the yield stress.  If it exceeds the yield stress, then the actual stress is the yield stress, and the loading is inelastic, otherwise elastic</p>
+<p>
+<script type="math/tex; mode=display"> \sigma = \frac{P}{A} </script>
+<script type="math/tex; mode=display"> If \sigma >= \text{Yield Stress  Report Inelastic} </script>
+</p>
+<p><strong>Step 4.</strong> Develop a general solution (code)</p>
+<p>In a flow-chart it would look like:</p>
+<p><img alt="" src="../Flowchart.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Flowchart for Artihmetic Mean Algorithm</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 5.</strong> This step we would code the algorithm expressed in the figure and test it with the by-hand data and other small datasets until we are convinced it works correctly. We have not yet learned prompts to get input we simply direct assign values as below (and the conditional execution is the subject of a later lesson)</p>
+<p>In a simple JupyterLab script</p>
+<pre><code class="python"># Example 2 Problem Solving Process
+yield_stress = 1e6
+applied_load = 1e5
+cross_section = 0.1
+computed_stress = applied_load/cross_section
+if(computed_stress &lt; yield_stress):
+    print(&quot;Elastic Region: Stress = &quot;,computed_stress)
+elif(computed_stress &gt;= yield_stress):
+    print(&quot;Inelastic Region: Stress = &quot;,yield_stress)
+</code></pre>
+
+<pre><code>Inelastic Region: Stress =  1000000.0
+</code></pre>
+<p><strong>Step 6.</strong> This step we would refine the code to generalize the algorithm.  In the example we want a way to supply the inputs by user entry,and tidy the output by rounding to only two decimal places.  A little CCMR from https://www.geeksforgeeks.org/taking-input-in-python/ gives us a way to deal with the inputs and typecasting.  Some more CCMR from https://www.programiz.com/python-programming/methods/built-in/round gets us rounded out!</p>
+<pre><code class="python"># Example 2 Problem Solving Process
+yield_stress = float(input('Yield Stress (psi)'))
+applied_load = float(input('Applied Load (lbf)'))
+cross_section = float(input('Cross Section Area (sq.in.)'))
+computed_stress = applied_load/cross_section
+if(computed_stress &lt; yield_stress):
+    print(&quot;Elastic Region: Stress = &quot;,round(computed_stress,2))
+elif(computed_stress &gt;= yield_stress):
+    print(&quot;Inelastic Region: Stress = &quot;,round(yield_stress,2))
+</code></pre>
+
+<pre><code>Yield Stress (psi) 1000000
+Applied Load (lbf) 100000
+Cross Section Area (sq.in.) 1
+
+
+Elastic Region: Stress =  100000.0
+</code></pre>
+<p>So the simple task of computing the stress, is a bit more complex when decomposed, that it first appears, but illustrates a five step process (with a refinement step).</p>
+<h2 id="ccmr-approach">CCMR Approach</h2>
+<p>A lot of the problems we will encounter from a CT/DS perspective have already been solved, or at least analogs have been solved.  It is perfectly acceptable to use prior work for a new set of conditions as long as proper attribution is made.  We call this process CCMR:</p>
+<ol>
+<li><strong>Copy:</strong> Find a solution to your problem from some online example:  SourceForge, StackOverflow, GeeksForGeeks, DigitalOcean, etc.</li>
+<li><strong>Cite:</strong> Cite the original source.  In general a citation will look like one of the references below, but a URL to the source is sufficient at first.</li>
+<li><strong>Modify:</strong> Modify the original cited work for your specific needs.  Note the changes in the code using comment statements.</li>
+<li><strong>Run:</strong> Apply the modified code to the problem of interest. </li>
+</ol>
+<p>In cases where we use CCMR we are not so much programming and developing our own work as scaffolding parts (https://en.wikipedia.org/wiki/Scaffold_(programming)) - a legitimate and valuable engineering activity.</p>
+<h2 id="readings">Readings</h2>
+<ol>
+<li>
+<p>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 3 https://www.inferentialthinking.com/chapters/03/programming-in-python.html</p>
+</li>
+<li>
+<p>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 4 
+https://www.inferentialthinking.com/chapters/04/Data_Types.html</p>
+</li>
+<li>
+<p>Learn Python in One Day and Learn It Well. Python for Beginners with Hands-on Project. (Learn Coding Fast with Hands-On Project Book -- Kindle Edition by LCF Publishing (Author), Jamie Chan https://www.amazon.com/Python-2nd-Beginners-Hands-Project-ebook/dp/B071Z2Q6TQ/ref=sr_1_3?dchild=1&amp;keywords=learn+python+in+a+day&amp;qid=1611108340&amp;sr=8-3</p>
+</li>
+<li>
+<p>Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.</p>
+</li>
+<li>
+<p>LearnPython.org (Interactive Tutorial) (https://www.learnpython.org/)  Short, interactive tutorial for those who just need a quick way to pick up Python syntax.</p>
+</li>
+<li>
+<p>How to Think Like a Computer Scientist (Interactive Book) (https://runestone.academy/runestone/books/published/thinkcspy/index.html) Interactive "CS 101" course taught in Python that really focuses on the art of problem solving. </p>
+</li>
+<li>
+<p>How to Learn Python for Data Science, The Self-Starter Way (https://elitedatascience.com/learn-python-for-data-science) </p>
+</li>
+</ol>
+<pre><code class="python"># Script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+! pwd
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>ip-172-26-4-2
+compthink
+/home/compthink/engr-1330-webroot/1-Lessons/Lesson02/OriginalPowerpoint
+/opt/jupyterhub/bin/python3
+3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0]
+sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
+</code></pre>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

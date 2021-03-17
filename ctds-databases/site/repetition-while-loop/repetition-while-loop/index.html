@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>WHILE ... loop - CTDS Databases</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">CTDS Databases</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../untitled/">Databases</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sample Code Library <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../repetition-for-loop/repetition-for-loop/">FOR ... loop</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">WHILE ... loop</a>
+</li>
+                                    
+<li >
+    <a href="../../conditional-block-if/conditional-block-if/">IF ... (block structure)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solved Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../solved-integration/NumericalIntegration/">Numerical Integration of Functional Data</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-integration/NumericalIntegrationTabular/">Numerical Integration of Tabular Data</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-newton/NewtonsMethod/">Single Variable Newtons Method</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-pipeline/NonLinearSystems/">Nonlinear Systems of Equations</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../repetition-for-loop/repetition-for-loop/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../conditional-block-if/conditional-block-if/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#while-loop">WHILE ... loop</a></li>
+            <li><a href="#sentinel-controlled-repetition">Sentinel-controlled repetition.</a></li>
+        <li class="main "><a href="#example-while-loops">Example while loops</a></li>
+            <li><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="while-loop">WHILE ... loop</h1>
+<h2 id="sentinel-controlled-repetition">Sentinel-controlled repetition.</h2>
+<p>When loop control is based on the value of what we are processing, sentinel-controlled repetition is used. 
+Sentinel-controlled repetition is also called indefinite repetition because it is not known in advance how many times the loop will be executed. 
+It is a repetition procedure for solving a problem by using a sentinel value (also called a signal value, a dummy value or a flag value) to indicate "end of process". 
+The sentinel value itself need not be a part of the processed data.</p>
+<p>One common example of using sentinel-controlled repetition is when we are processing data from a file and we do not know in advance when we would reach the end of the file. </p>
+<p>We can use both <code>for</code> and <code>while</code> loops, for <strong>Sentinel</strong> controlled repetition, but the <code>while</code> loop is more common.</p>
+<h3 id="structured-while-loop">Structured <code>WHILE</code> loop</h3>
+<p>The <code>while</code> loop repeats a block of instructions inside the loop while a condition remainsvtrue.</p>
+<p>First a generic syntax</p>
+<pre><code>while condition is true:
+    execute a
+    execute b
+....
+</code></pre>
+<p>Notice our friends the colon <code>:</code> and the indentation again.</p>
+<h1 id="example-while-loops">Example <code>while</code> loops</h1>
+<pre><code class="python"># sum numbers from 1 to n
+howmany = int(input('Enter N'))
+accumulator = 0.0
+counter = 1
+while counter &lt;= howmany:
+    accumulator = accumulator + float(counter)
+    counter += 1
+print( 'Sum from 1 to ',howmany, 'is %.3f' % accumulator  )
+</code></pre>
+
+<pre><code>Enter N 3
+
+
+Sum from 1 to  3 is 6.000
+</code></pre>
+<pre><code class="python"># sum even numbers from 1 to n
+howmany = int(input('Enter N'))
+accumulator = 0.0
+counter = 1
+while counter &lt;= howmany:
+    if counter%2 == 0:
+        accumulator = accumulator + float(counter)
+    counter += 1
+print( 'Sum of Evens 1 to ',howmany, 'is %.3f' % accumulator  )
+</code></pre>
+
+<pre><code>Enter N 33
+
+
+Sum of Evens 1 to  33 is 272.000
+</code></pre>
+<pre><code class="python">howmany = int(input('Enter N'))
+linetoprint=''
+counter = 1
+while counter &lt;= howmany:
+    linetoprint=linetoprint + '*'
+    counter += 1
+    print(linetoprint)
+</code></pre>
+
+<pre><code>Enter N 33
+
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+*************************
+**************************
+***************************
+****************************
+*****************************
+******************************
+*******************************
+********************************
+*********************************
+</code></pre>
+<h3 id="references">References</h3>
+<ol>
+<li>
+<p>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapters 3-6 https://www.inferentialthinking.com/chapters/03/programming-in-python.html</p>
+</li>
+<li>
+<p>Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.</p>
+</li>
+<li>
+<p>LearnPython.org (Interactive Tutorial) (https://www.learnpython.org/)  Short, interactive tutorial for those who just need a quick way to pick up Python syntax.</p>
+</li>
+<li>
+<p>Brian Christian and Tom Griffiths (2016) ALGORITHMS TO LIVE BY: The Computer Science of Human Decisions Henry Holt and Co. (https://www.amazon.com/Algorithms-Live-Computer-Science-Decisions/dp/1627790365)</p>
+</li>
+</ol>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

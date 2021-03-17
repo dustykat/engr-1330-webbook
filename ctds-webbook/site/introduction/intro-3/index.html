@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Example 1 Problem Solving - Compute a mean - Computational Thinking and Data Science</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Computational Thinking and Data Science</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../intro-1/">Computational Thinking</a>
+</li>
+            
+<li >
+    <a href="../intro-2/">How to Build a Program</a>
+</li>
+            
+<li class="active">
+    <a href="./">Example 1 Problem Solving - Compute a mean</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">JupyterLab/iPython</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../jupyterlab_python/jupyterlab-1/">JupyterLab programming environment</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Numerical Methods</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../numerical_methods/num_methods-1/">Useful methods</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models -- Statistical Methods</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../data_models_statistical/datamod-stats1/">placeholder1</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../readings.md">Additional Readings</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../intro-2/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../jupyterlab_python/jupyterlab-1/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#example-1-problem-solving-process-compute-arithmetic-mean">Example 1 Problem Solving Process - Compute Arithmetic Mean</a></li>
+        <li class="main "><a href="#step-1-problem-statement">Step 1. Problem Statement</a></li>
+        <li class="main "><a href="#step-2-identify-inputs-outputs-governing-principles">Step 2. Identify inputs, outputs, governing principles</a></li>
+        <li class="main "><a href="#step-3-create-a-sample-problem">Step 3. Create a sample problem</a></li>
+        <li class="main "><a href="#step-4-develop-a-general-solution-algorithm">Step 4 Develop a general solution (Algorithm)</a></li>
+        <li class="main "><a href="#step-5-generalization-algorithm-into-code">Step 5. Generalization (Algorithm into Code)</a></li>
+        <li class="main "><a href="#step-6-refinement">Step 6. Refinement.</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<!-- Script Block to set tables to left alignment -->
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<h3 id="example-1-problem-solving-process-compute-arithmetic-mean">Example 1 Problem Solving Process - Compute Arithmetic Mean</h3>
+<p>This example considers a need to compute an arithmetic mean, and what the process might look like.  The example goes through the steps involved, and even includes some JupyterLab/iPython scripting; students are not expected to understand the code syntax at this point, but it is included to illustrate an end result of the simple directive to compute a mean value.  </p>
+<h3 id="step-1-problem-statement">Step 1. Problem Statement</h3>
+<p>Develop script to compute the arithmetic mean of a stream of data of unknown length.</p>
+<h3 id="step-2-identify-inputs-outputs-governing-principles">Step 2. Identify inputs, outputs, governing principles</h3>
+<p>For this example these are straightforward enough to simply itemize:</p>
+<ul>
+<li>Inputs: The data stream </li>
+<li>Governing equation: <script type="math/tex"> \bar x = \frac{1}{N} \sum_{i=1}^{N} x_i </script> where <script type="math/tex">N</script> is the number of items in the data stream, and <script type="math/tex">x_i</script> is the value of the i-th element.</li>
+<li>Outputs: The arithmetic mean <script type="math/tex">\bar x</script>
+</li>
+</ul>
+<h3 id="step-3-create-a-sample-problem">Step 3. Create a sample problem</h3>
+<p>Create a sample problem suitable for "by-hand" execution for testing the general solution.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">23.43</td>
+</tr>
+<tr>
+<td align="left">37.43</td>
+</tr>
+<tr>
+<td align="left">34.91</td>
+</tr>
+<tr>
+<td align="left">28.37</td>
+</tr>
+<tr>
+<td align="left">30.62</td>
+</tr>
+</tbody>
+</table>
+<p>The arithmetic mean requires us to count how many elements are in the data stream (in this case there are 5) and compute their sum (in this case 154.76), and finally divide the sum by the count and report this result as the arithmetic mean.</p>
+<p>
+<script type="math/tex; mode=display"> \bar x = \frac{1}{5}(23.43+37.43+34.91+28.37+30.62)=\frac{154.76}{5}=30.95 </script>
+</p>
+<h3 id="step-4-develop-a-general-solution-algorithm">Step 4 Develop a general solution (Algorithm)</h3>
+<p>Here is where we create an algorithm. 
+The by-hand exercise helps identify the required steps in an “algorithm” or recipe to compute mean values. First we essentially capture or read the values then count how many there are (either as we go or as a separate step), then sum the values, then divide the values by the count, and finally report the result.</p>
+<p>In a flow-chart it would look like:</p>
+<p><img alt="" src="../Lesson1-flowchart.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Flowchart for Artihmetic Mean Algorithm</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-5-generalization-algorithm-into-code">Step 5. Generalization (Algorithm into Code)</h3>
+<p>Convert the algorithm expressed in the above into running code and test it with the "by-hand" example,  and other small datasets until we are convinced it works correctly.</p>
+<p>In a simple JupyterLab script</p>
+<pre><code class="python"># Arithmetic Mean in Very Elementary and Primative Python
+xlist = [23.43,37.43,34.91,28.37,30.62] # list is a type of data structure
+howlong = len(xlist) # len is a built-in function that returns how many items in a list
+accumulator = 0 # a variable to accumulate the sum
+for i in range(howlong):
+    accumulator = accumulator + xlist[i]
+print(&quot;arithmetic mean = &quot;,(accumulator/howlong))
+</code></pre>
+
+<pre><code>arithmetic mean =  30.951999999999998
+</code></pre>
+<h3 id="step-6-refinement">Step 6. Refinement.</h3>
+<p>This step we would refine the code to generalize the algorithm.  In the example we want a way to supply the <code>xlist</code> from a file perhaps, and tidy the output by rounding to only two decimal places - rounding is relatively simple:</p>
+<pre><code class="python"># Arithmetic Mean in Very Elementary and Primative Python
+xlist = [23.43,37.43,34.91,28.37,30.62] # list is a type of data structure
+howlong = len(xlist) # len is a built-in function that returns how many items in a list
+accumulator = 0 # a variable to accumulate the sum
+for i in range(howlong):
+    accumulator = accumulator + xlist[i]
+print(&quot;arithmetic mean = &quot;,round((accumulator/howlong),2))
+</code></pre>
+
+<pre><code>arithmetic mean =  30.95
+</code></pre>
+<p>Reading from a file, is a bit more complicated.  We need to create a connection to the file, then read the contents into our script, then put the contents into the <code>xlist</code></p>
+<pre><code class="python">xlist=[] # list (null) is a type of data structure
+externalfile = open(&quot;data.txt&quot;,'r') # create connection to file, set to read (r), file must exist
+how_many_lines = 0
+for line in externalfile: # parse each line, append to xlist
+    xlist.append(line)
+    how_many_lines += 1
+externalfile.close() # close the file connection
+
+howlong = len(xlist) # len is a built-in function that returns how many items in a list
+accumulator = 0 # a variable to accumulate the sum
+for i in range(howlong):
+    accumulator = accumulator + float(xlist[i])
+print(&quot;arithmetic mean = &quot;,round((accumulator/howlong),2))
+</code></pre>
+
+<pre><code>arithmetic mean =  30.95
+</code></pre>
+<p>Finally, if we want to reuse the code a lot, it is convienent to make it into a function</p>
+<pre><code class="python">def average(inputlist):
+# inputlist should be a list of values
+    howlong = len(inputlist) # len is a built-in function that returns how many items in a list
+    accumulator = 0 # a variable to accumulate the sum
+    for i in range(howlong):
+        accumulator = accumulator + float(inputlist[i])
+    result = (accumulator/howlong)
+    return(result)
+</code></pre>
+
+<p>Put our file reading and compute mean code here</p>
+<pre><code class="python">xlist=[] # list (null) is a type of data structure
+externalfile = open(&quot;data.txt&quot;,'r') # create connection to file, set to read (r), file must exist
+how_many_lines = 0
+for line in externalfile: # parse each line, append to xlist
+    xlist.append(line)
+    how_many_lines += 1
+externalfile.close() # close the file connection
+print(&quot;arithmetic mean = &quot;,round(average(xlist),2))
+</code></pre>
+
+<pre><code>arithmetic mean =  30.95
+</code></pre>
+<p>So the simple task of computing the mean of a collection of values, is a bit more complex when decomposed than it first appears, but illustrates a five step process (with a refinement step).  Keep in mind throughout the course this generic process is always going on in the background.</p>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

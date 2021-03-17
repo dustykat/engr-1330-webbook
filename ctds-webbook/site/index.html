@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Computational Thinking and Data Science</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href=".">Computational Thinking and Data Science</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href=".">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="introduction/intro-1/">Computational Thinking</a>
+</li>
+            
+<li >
+    <a href="introduction/intro-2/">How to Build a Program</a>
+</li>
+            
+<li >
+    <a href="introduction/intro-3/">Example 1 Problem Solving - Compute a mean</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">JupyterLab/iPython</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="jupyterlab_python/jupyterlab-1/">JupyterLab programming environment</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Numerical Methods</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="numerical_methods/num_methods-1/">Useful methods</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models -- Statistical Methods</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="data_models_statistical/datamod-stats1/">placeholder1</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="readings.md">Additional Readings</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="disabled">
+                                <a rel="next" >
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="introduction/intro-1/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#computational-thinking-and-data-science"> Computational Thinking and Data Science </a></li>
+            <li><a href="#a-webbook-to-accompany-engr-1330-at-ttu">A WebBook to Accompany ENGR 1330 at TTU </a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#document-history">Document History</a></li>
+            <li><a href="#administrator-notes">Administrator Notes</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="computational-thinking-and-data-science"><p style="text-align:center"> Computational Thinking and Data Science </p></h1>
+<h2 id="a-webbook-to-accompany-engr-1330-at-ttu"><p style="text-align:center">A WebBook to Accompany ENGR 1330 at TTU </p></h2>
+<p style="text-align:center">by <br><br>Theodore G. Cleveland and Farhang Forghanparast<br></p>
+
+<p style="text-align:center">with contributions from :<br> Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and  Mona Rizvi </p>
+
+<h2 id="introduction">Introduction</h2>
+<p>This on-line workbook is a collection of lessons and workshop contents for ENGR-1330 sections taught bt the first two authors; students in other sections are welcome to use this as a resource with proper attribution (check with your instructor regarding what they will consider acceptable) <code>suggested citation goes here</code></p>
+<p>This page is a landing page to access three categories of content; The webbook itself (use navigation bar at top of page), a semester-long course framework, and a collection of supporting data, and worked examples as displayed in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>WebBook</th>
+<th>WebCourse</th>
+<th>WebData</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A Textbook Framework <br> - Introduction to Problem Solving <br> - JupyterLab/Python fundamentals <br> - Fundamental Numerical Methods <br> - Data Modeling: Statistics <br> - Data Modeling:Machine Learning</td>
+<td>A Course Framework <br> - syllabus <br> - workshops(labs) <br> - exercises <br> - exams</td>
+<td>Support Databases <br> - Databases for lessons, workshops, projects ... <br> - Worked stand-alone examples <br> - Library of useful code fragments</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Follow this hyperlink to examine the <a href="http://192.168.1.75:8089">http://CTDS-WebCourse</a></li>
+<li>Follow this hyperlink to examine the <a href="http://192.168.1.75:8090">http://CTDS-WebData</a></li>
+</ul>
+<p>At TTU the actual course is accessed from <strong>blackboard.ttu.edu</strong>, using individual instructor content to replace selected (or all) content in the sample course framework. The lead author uses the entire content herein verbatim; other contribuitors adapt the content to their specific sections.  The webbook component is common to all sections.</p>
+<h2 id="document-history">Document History</h2>
+<p>This document is a living document and is updated frequently, Python is an ever evolving tool and stuff that works today will be constructively broken by the development team (python.org) in their quest for continuous improvement.  Generally these changes occur in the packages (libraries, external modules) and primative python is quite stable.</p>
+<h2 id="administrator-notes">Administrator Notes</h2>
+<p>The lead author built this webbook/webcourse/webdata on a Raspberry Pi 4B (4GB) running Ubuntu 20.XX, an Apache Web Server, a JupyterHub (fully encrypted) with iPython extensions, R core, Latex, and MkDocs with extensions.  The deployment hardware is an Amazon Web Services Virtual Private Server (Lightsail Instance) in the West Virginia Server Farm (typically the container is run on x86-64 Xeon hardware)</p>
+<p>Direct access to the notebook directories is on the to-do-list.</p>
+<p>A backup is maintained at <a href="https://github.com/dustykat/1330-textbook-webroot">https://github.com/dustykat/1330-textbook-webroot</a>.</p>
+<!-- # Welcome to MkDocs
+
+For full documentation visit [mkdocs.org](https://mkdocs.org).
+
+## Commands
+
+* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs help` - Print this help message.
+
+## Project layout
+
+    mkdocs.yml    # The configuration file.
+    docs/
+        index.md  # The documentation homepage.
+        ...       # Other markdown pages, images and other files.
+--></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="mathjaxhelper.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2021-03-17 22:15:24
+-->

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>FOR ... loop - CTDS Databases</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">CTDS Databases</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../untitled/">Databases</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sample Code Library <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">FOR ... loop</a>
+</li>
+                                    
+<li >
+    <a href="../../repetition-while-loop/repetition-while-loop/">WHILE ... loop</a>
+</li>
+                                    
+<li >
+    <a href="../../conditional-block-if/conditional-block-if/">IF ... (block structure)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solved Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../solved-integration/NumericalIntegration/">Numerical Integration of Functional Data</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-integration/NumericalIntegrationTabular/">Numerical Integration of Tabular Data</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-newton/NewtonsMethod/">Single Variable Newtons Method</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-pipeline/NonLinearSystems/">Nonlinear Systems of Equations</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../untitled/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../repetition-while-loop/repetition-while-loop/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#for-loop">FOR ... loop</a></li>
+            <li><a href="#count-controlled-repetition-structure">Count controlled repetition structure</a></li>
+            <li><a href="#example-for-loops">Example for loops</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="for-loop">FOR ... loop</h1>
+<h2 id="count-controlled-repetition-structure">Count controlled repetition structure</h2>
+<p>Count-controlled repetition is also called definite repetition because the number of repetitions is known before the loop begins executing. 
+When we do not know in advance the number of times we want to execute a statement, count-controlled repetition becomes a challenge, instead we would use sentinel-controlled repetition. </p>
+<p>A count-controlled repetition will exit after running a certain number of times. 
+The count is kept in a variable called an index or counter. 
+When the index reaches a certain value (the loop bound) the loop will end. </p>
+<p>Count-controlled repetition requires</p>
+<ul>
+<li>control variable (or loop counter)</li>
+<li>initial value of the control variable</li>
+<li>increment (or decrement) by which the control variable is modified each iteration through the loop</li>
+<li>condition that tests for the final value of the control variable </li>
+</ul>
+<p>We can use both <code>for</code> and <code>while</code> loops, for count controlled repetition, but the <code>for</code> loop in combination with the <code>range()</code> function is more common.</p>
+<h3 id="structured-for-loop">Structured <code>FOR</code> loop</h3>
+<p>We have seen the for loop already, but we will formally introduce it here. The <code>for</code> loop executes a block of code repeatedly until the condition in the <code>for</code> statement is no longer true.</p>
+<h3 id="looping-through-an-iterable">Looping through an iterable</h3>
+<p>An iterable is anything that can be looped over - typically a list, string, or tuple. 
+The syntax for looping through an iterable is illustrated by an example.</p>
+<p>First a generic syntax</p>
+<pre><code>for a in iterable:
+print(a)
+</code></pre>
+<p>Notice our friends the colon <code>:</code> and the indentation.</p>
+<h4 id="the-range-function-to-create-an-iterable">The <code>range()</code> function to create an iterable</h4>
+<p>The <code>range(begin,end,increment)</code> function will create an iterable starting at a value of begin, in steps defined by increment (<code>begin += increment</code>), ending at <code>end</code>. </p>
+<p>So a generic syntax becomes</p>
+<pre><code>for a in range(begin,end,increment):
+print(a)
+</code></pre>
+<p>The examples that follow are count-controlled repetition (increment skip if greater)</p>
+<h2 id="example-for-loops">Example <code>for</code> loops</h2>
+<pre><code class="python"># sum numbers from 1 to n
+howmany = int(input('Enter N'))
+accumulator = 0.0
+for i in range(1,howmany+1,1):
+    accumulator = accumulator + float(i)
+print( 'Sum from 1 to ',howmany, 'is %.3f' % accumulator  )
+</code></pre>
+
+<pre><code>Enter N 3
+
+
+Sum from 1 to  3 is 6.000
+</code></pre>
+<pre><code class="python"># sum even numbers from 1 to n
+howmany = int(input('Enter N'))
+accumulator = 0.0
+for i in range(1,howmany+1,1):
+    if i%2 == 0:
+        accumulator = accumulator + float(i)
+print( 'Sum of Evens from 1 to ',howmany, 'is %.3f' % accumulator  )
+</code></pre>
+
+<pre><code>Enter N 3
+
+
+Sum of Evens from 1 to  3 is 2.000
+</code></pre>
+<pre><code class="python">howmany = int(input('Enter N'))
+linetoprint=''
+for i in range(1,howmany+1,1):
+    linetoprint=linetoprint + '*'
+    print(linetoprint)
+</code></pre>
+
+<pre><code>Enter N 3
+
+
+*
+**
+***
+</code></pre>
+<pre><code class="python">howmany = int(input('Enter N'))
+linetoprint=''
+myiterable = range(1,howmany+1,1)  # using range to make an iterable
+for i in myiterable:
+    linetoprint=linetoprint + '*'
+    print(linetoprint)
+</code></pre>
+
+<pre><code>Enter N 33
+
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+*************************
+**************************
+***************************
+****************************
+*****************************
+******************************
+*******************************
+********************************
+*********************************
+</code></pre>
+<h3 id="references">References</h3>
+<ol>
+<li>
+<p>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapters 3-6 <a href="https://www.inferentialthinking.com/chapters/03/programming-in-python.html">https://www.inferentialthinking.com/chapters/03/programming-in-python.html</a></p>
+</li>
+<li>
+<p>Learn Python the Hard Way (Online Book) <a href="https://learnpythonthehardway.org/book/">https://learnpythonthehardway.org/book/</a>  Recommended for beginners who want a complete course in programming with Python.</p>
+</li>
+<li>
+<p>LearnPython.org (Interactive Tutorial) <a href="https://www.learnpython.org/">https://www.learnpython.org/</a>  Short, interactive tutorial for those who just need a quick way to pick up Python syntax.</p>
+</li>
+<li>
+<p>Brian Christian and Tom Griffiths (2016) ALGORITHMS TO LIVE BY: The Computer Science of Human Decisions Henry Holt and Co.<a href="https://www.amazon.com/Algorithms-Live-Computer-Science-Decisions/dp/1627790365">https://www.amazon.com/Algorithms-Live-Computer-Science-Decisions/dp/1627790365</a></p>
+</li>
+</ol>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

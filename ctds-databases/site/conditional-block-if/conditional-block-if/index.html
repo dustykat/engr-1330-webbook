@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>IF ... (block structure) - CTDS Databases</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">CTDS Databases</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../untitled/">Databases</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sample Code Library <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../repetition-for-loop/repetition-for-loop/">FOR ... loop</a>
+</li>
+                                    
+<li >
+    <a href="../../repetition-while-loop/repetition-while-loop/">WHILE ... loop</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">IF ... (block structure)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solved Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../solved-integration/NumericalIntegration/">Numerical Integration of Functional Data</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-integration/NumericalIntegrationTabular/">Numerical Integration of Tabular Data</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-newton/NewtonsMethod/">Single Variable Newtons Method</a>
+</li>
+                                    
+<li >
+    <a href="../../solved-pipeline/NonLinearSystems/">Nonlinear Systems of Equations</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../repetition-while-loop/repetition-while-loop/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../solved-integration/NumericalIntegration/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#if-block-structure">IF ... (block structure)</a></li>
+            <li><a href="#conditional-execution">Conditional Execution</a></li>
+            <li><a href="#logical-comparison-statements">Logical Comparison Statements</a></li>
+            <li><a href="#block-if-statement">Block IF statement</a></li>
+            <li><a href="#readings">Readings</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="if-block-structure">IF ... (block structure)</h1>
+<h2 id="conditional-execution">Conditional Execution</h2>
+<p>Decision making via conditional statements is an important step in algorithm design; they control the flow of execution of a program.</p>
+<p>Conditional statements in Python include:</p>
+<ul>
+<li><code>if</code> conditional statement : do something</li>
+<li><code>if....else</code> conditional statement(s) : do something, or do something else</li>
+<li><code>if....elif....else</code> conditional statement(s) : do something, or do something else, ... , or do something else</li>
+</ul>
+<p>Conditional statements are logical expressions that evaluate as TRUE or FALSE and using
+these results to perform further operations based on these conditions.
+All flow control in a program depends on evaluating conditions. The program will proceed
+diferently based on the outcome of one or more conditions - really sophisticated AI programs are a collection of conditions and correlations. </p>
+<h2 id="logical-comparison-statements">Logical Comparison Statements</h2>
+<p>The most common conditional operation is comparison. If we wish to compare whether two
+variables are the same we use the <code>==</code> (double equal sign).</p>
+<p>For example <code>x == y</code> means the program will ask whether <code>x</code> and <code>y</code> have the same value. 
+If they do, the result is TRUE if not then the result is FALSE.</p>
+<p>Other comparison signs are <code>!=</code> does NOT equal, <code>&lt;</code> smaller than, <code>&gt;</code>larger than, <code>&lt;=</code>less than or equal, and <code>&gt;=</code> greater than or equal.</p>
+<p>There are also three logical operators when we want to build multiple compares
+(multiple conditioning); these are <code>and</code>, <code>or</code>, and <code>not</code>.</p>
+<p>The <code>and</code> operator returns TRUE if (and only if) <strong>all</strong> conditions are TRUE.
+For instance <code>5 == 5 and 5 &lt; 6</code> will return a TRUE because both conditions are true.</p>
+<p>The <code>or</code> operator returns <code>TRUE</code> if at least one condition is true. 
+If <strong>all</strong> conditions are FALSE, then it will return a FALSE. For instance <code>4 &gt; 3 or 17 &gt; 20 or 3 == 2</code> will return <code>TRUE</code>because the first condition is true.
+The <code>not</code> operator returns <code>TRUE</code> if the condition after the <code>not</code> keyword is false. Think of it
+as a way to do a logic reversal.</p>
+<pre><code class="python"># Compare
+x = 7
+y = 10
+print(&quot;x =: &quot;,x,&quot;y =: &quot;,y)
+print(&quot;x is equal to y : &quot;,x==y)
+print(&quot;x is not equal to y : &quot;,x!=y)
+print(&quot;x is greater than y : &quot;,x&gt;y)
+print(&quot;x is less than y : &quot;,x&lt;y)
+</code></pre>
+
+<pre><code>x =:  7 y =:  10
+x is equal to y :  False
+x is not equal to y :  True
+x is greater than y :  False
+x is less than y :  True
+</code></pre>
+<pre><code class="python"># Logical operators
+print(&quot;5 == 5 and 5 &lt; 6 ? &quot;,5 == 5 and 5 &lt; 6)
+print(&quot;4 &gt; 3 or 17 &gt; 20 &quot;,4 &gt; 3 or 17 &gt; 20)
+print(&quot;not 5 == 5&quot;,not 5 == 5)
+</code></pre>
+
+<pre><code>5 == 5 and 5 &lt; 6 ?  True
+4 &gt; 3 or 17 &gt; 20  True
+not 5 == 5 False
+</code></pre>
+<h2 id="block-if-statement">Block <code>IF</code> statement</h2>
+<p>The <code>if</code> statement is a common flow control statement. 
+It allows the program to evaluate if a certain condition is satisfied and to perform a designed action based on the result of the evaluation. 
+Expressed in a flowchart a block <code>if</code> statement looks like:</p>
+<p><img alt="" src="../conditional.png" /></p>
+<p>As psuedo code:</p>
+<pre><code>if(condition is true): 
+    do stuff
+</code></pre>
+<p>Amazon knowing what you kind of want is based on correlations of your past behavior compared to other peoples similar, but more recent behavior, and then it uses conditional statements to decide what item to offer you in your recommendation items. 
+It's spooky, but ultimately just a program running in the background trying to make your money theirs.</p>
+<p>The structure of a mutliple condition block <code>if</code> statement is</p>
+<pre><code class="python">    if condition 1 is met:
+        do A
+    elif condition 2 is met:
+        do B
+    elif condition 3 is met:
+        do C
+    else:
+        do E
+</code></pre>
+
+<p>The <code>elif</code> means "else if". The <code>:</code> colon is an important part of the structure it tells where the action begins. Also there are no scope delimiters like (), or {} . 
+Instead Python uses indentation to isolate blocks of code. </p>
+<p>This convention is hugely important - many other coding environments use delimiters (called scoping delimiters), but Python does not. The indentation itself is the scoping delimiter.</p>
+<p>The next code fragment illustrates illustrates how the <code>if</code> statements work. The program asks the user for input. The use of <code>raw_input()</code> will let the program read any input as a string
+so non-numeric results will not throw an error. 
+The input is stored in the variable named <code>userInput</code>. 
+Next the statement if <code>userInput == "1":</code> compares the value of <code>userInput</code>
+with the string <code>"1"</code>. If the value in the variable is indeed \1", then the program will execute
+the block of code in the indentation after the colon. 
+In this case it will execute</p>
+<pre><code>print "Hello World"
+print "How do you do? "
+</code></pre>
+<p>Alternatively, if the value of <code>userInput</code> is the string <code>'2'</code>, then the program will execute </p>
+<pre><code>print "Snakes on a plane "
+</code></pre>
+<p>For all other values the program will execute</p>
+<pre><code>print "You did not enter a valid number"
+</code></pre>
+<pre><code class="python"># Block if example
+userInput = input('Enter the number 1 or 2')
+userInput = str(userInput) # type cast to string, to trap goofy binary/hex inputs
+# Use block if structure
+if userInput == '1':
+    print(&quot;Hello World&quot;)
+    print(&quot;How do you do? &quot;)
+elif userInput == '2':
+    print(&quot;Snakes on a plane &quot;)
+else:
+    print(&quot;You did not enter a valid number&quot;)
+</code></pre>
+
+<p>When we run the script</p>
+<pre><code class="python">    Enter the number 1 or 2 1
+
+
+    Hello World
+    How do you do? 
+</code></pre>
+
+<h2 id="readings">Readings</h2>
+<ol>
+<li>
+<p>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 4 Subpart 3 https://www.inferentialthinking.com/chapters/04/3/Comparison.html</p>
+</li>
+<li>
+<p>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 4 
+https://www.inferentialthinking.com/chapters/04/Data_Types.html</p>
+</li>
+<li>
+<p>Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.</p>
+</li>
+<li>
+<p>LearnPython.org (Interactive Tutorial) (https://www.learnpython.org/)  Short, interactive tutorial for those who just need a quick way to pick up Python syntax.</p>
+</li>
+</ol>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
