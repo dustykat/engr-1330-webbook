@@ -4,38 +4,42 @@ nav:
   - Home: index.md
 #  - About: about.md
   - Syllabus : 0-Syllabus/ENGR-1330-2021-1-Syllabus.md
-  - Lessons :
-      - Lesson 0 : 1-Lessons/Lesson01/lesson0.md
-      - Lesson 1 : 1-Lessons/Lesson02/lesson1.md
-      - Lesson 2 : 1-Lessons/Lesson03/lesson2.md
-      #- Lesson 3 : 1-Lessons/Lesson04/lesson3.md
-      - Lesson 4 : lesson0/lesson0.md
-      - Lesson 5 : lesson0/lesson0.md      
-      - Lesson 6 : 1-Lessons/Lesson07/lesson6.md      
-      - Lesson 7 : 1-Lessons/Lesson08/lesson7.md
-      - Lesson 8 : 1-Lessons/Lesson09/lesson8.md
-      - Lesson 9 : 1-Lessons/Lesson10/lesson9.md
-      - Lesson 10 : 1-Lessons/Lesson11/lesson10.md
-      - Lesson 11 : 1-Lessons/Lesson12/lesson11.md      
-      - Lesson 12 : 1-Lessons/Lesson13/lesson12.md       
-      - Lesson 13 : lesson0/lesson0.md
-      - Lesson 14 : lesson0/lesson0.md
-      - Lesson 15 : lesson0/lesson0.md
-      - Lesson 16 : lesson0/lesson0.md
-      - Lesson 17 : lesson0/lesson0.md      
-      - Lesson 18 : lesson0/lesson0.md       
-      - Lesson 19 : lesson0/lesson0.md
-      - Lesson 20 : lesson0/lesson0.md
-      - Lesson 21 : lesson0/lesson0.md
-      - Lesson 22 : lesson0/lesson0.md
-      - Lesson 23 : lesson0/lesson0.md      
-      - Lesson 24 : lesson0/lesson0.md       
-  - Laboratory :
-      - Lesson 24 : lesson0/lesson0.md 
-  - Homework :
-      - Lesson 24 : lesson0/lesson0.md       
-      
-     
+  - Topics :
+      - Introduction:
+          - Computational Thinking and Data Science : lesson0/lesson0.md
+          - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson0.md
+      - Programming Fundamentals:
+          - Simple Arithmetic Computations : 1-Lessons/Lesson02/lesson1.md
+          - Data Structures : 1-Lessons/Lesson03/lesson2.md
+          - Flow Control Structures : 1-Lessons/Lesson04/lesson3.md
+          - Data Files : lesson0/lesson0.md
+          - External Functions : lesson0/lesson0.md      
+          - Data Structures using NUMPY : 1-Lessons/Lesson07/lesson6.md      
+          - Data Frames using PANDAS : 1-Lessons/Lesson08/lesson7.md
+          - Data Display using MATPLOTLIB : 1-Lessons/Lesson09/lesson8.md
+      - Engineering Computation :
+          - Solving Implicit Equations : implicit_equations/NewtonsMethod.md
+          - Interpolation, Integration, and Differentiation : integration_differentiation/numerical_integration.md
+          - Linear Equation Systems : 1-Lessons/Lesson12/lesson11.md      
+          - Non-Linear Equation System : 1-Lessons/Lesson13/lesson12.md       
+          - Non-Linear Equation Systems : lesson0/lesson0.md
+      - Data Models and Decisions :
+          - Causality : lesson0/lesson0.md
+          - Descriptive Statistics : lesson0/lesson0.md
+          - Probability Distributions : lesson0/lesson0.md
+          - Probability Estimation Models : lesson0/lesson0.md      
+          - Hypothesis Testing : lesson0/lesson0.md       
+          - Interval Estimates : lesson0/lesson0.md
+      - Prediction Engines:
+          - Visual Model Fitting : lesson0/lesson0.md
+          - Least Squares (Regression) Model Fitting : lesson0/lesson0.md
+          - Prediction Interval Estimates : lesson0/lesson0.md
+          - Classification vs. Prediction : lesson0/lesson0.md      
+          - Logistic Regression : lesson0/lesson0.md 
+      - Classification Engines:
+          - K Nearest Neighbor : lesson0/lesson0.md
+          - Support Vector Machines : lesson0/lesson0.md
+          - Artifical Neural Networks : lesson0/lesson0.md       
 # nesting as pulldown??
 
 # active theme (mkdocs/readthedocs are free, they work differently wrt code blocks)
