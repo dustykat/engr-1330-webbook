@@ -231,9 +231,14 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#numerical-methods-single-variable-newtons-method">Numerical Methods - Single Variable Newtons Method</a></li>
+        <li class="main active"><a href="#transporting-wind-turbine-blades">Transporting Wind Turbine Blades</a></li>
+            <li><a href="#analysis">Analysis</a></li>
+            <li><a href="#grid-search">Grid Search</a></li>
+        <li class="main "><a href="#single-variable-newtons-method">Single Variable Newtons Method</a></li>
+            <li><a href="#background">Background</a></li>
             <li><a href="#newtons-method-using-analytical-derivatives">Newton's Method --- Using analytical derivatives</a></li>
-            <li><a href="#newtons-method-using-finite-differences-to-estimate-derivatives">Newton's Method --- Using finite-differences to estimate derivatives}</a></li>
+            <li><a href="#newtons-method-using-finite-differences-to-estimate-the-derivative">Newton's Method --- Using finite-differences to estimate the derivative</a></li>
+            <li><a href="#turbine-example-using-newtons-method">Turbine Example using Newton's Method</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -250,15 +255,180 @@ print(sys.version_info)
 [GCC 9.3.0]
 sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
 </code></pre>
-<h1 id="numerical-methods-single-variable-newtons-method">Numerical Methods - Single Variable Newtons Method</h1>
-<p>The application of fundamental principles of modeling and mechanics often leads to an
-algebraic or transcendental equation that cannot be easily solved and represented in a closed
-form. In these cases a numerical method is required to obtain an estimate of the root or
-roots of the expression.</p>
-<p>Newton's method is an iterative technique that can produce good estimates of solutions to
-such equations. The method is employed by rewriting the equation in the form <code>f(x) = 0</code>,
+<p>Copyright © DATE Author, <em>all rights reserved</em></p>
+<h1 id="transporting-wind-turbine-blades">Transporting Wind Turbine Blades</h1>
+<p>Consider the transport of Turbine Blades, they are rather long, and often the transport compaines have to navigate difficult turns as in Figure 1.</p>
+<p><img alt="https://www.doll.eu/fileadmin/_processed_/2/b/csm_Transport_2_09ee9bf954.jpg" src="https://www.doll.eu/fileadmin/_processed_/2/b/csm_Transport_2_09ee9bf954.jpg" /></p>
+<p>Consider route planning using a simple case:</p>
+<p>Two intersecting mountain road cuts (think of vertical walls) meet at an angle of 123<script type="math/tex">^o</script>, as shown in Figure 2.  The East-West road is 7 feet wide, while the Southwest-Northeast road is 9 feet wide.  What is the longest blade that can negotiate the turn?  You can neglect the blade thickness (think of it as a line segment) and cannot tip it to make it through the corner.  Build a tool (solution script) that can allow for general use where the angle <script type="math/tex">A</script> is variable as are the road widths.</p>
+<p><img alt="mountain-cut.png" src="../mountain-cut.png" /></p>
+<h2 id="analysis">Analysis</h2>
+<p>Visualize the turbine blade in sucessive positions as we transport it around the corner; there will be some critical position where each end touch the road cut walls while a point on the blade touches the corner of the intersection.</p>
+<p><img alt="turn-analysis.png" src="../turn-analysis.png" /></p>
+<p>If we analyze the various triangles formed by the turbine blade we can express the lengths in terms of the widths and angles.</p>
+<p>For the part of the blade on the East-West portion we obtain:</p>
+<p>
+<script type="math/tex; mode=display"> l_1 = \frac{w_2}{sin(B)}</script>
+</p>
+<p>For the part of the blade on the Southeast-Northwest portion we obtain:</p>
+<p>
+<script type="math/tex; mode=display"> l_2 = \frac{w_1}{sin(C)}</script>
+</p>
+<p>The angles are related as:</p>
+<p>
+<script type="math/tex; mode=display"> B = \pi - A - C </script>
+</p>
+<p>And the turbine total length is:</p>
+<p>
+<script type="math/tex; mode=display"> l = l_1 + l_2 = \frac{w_2}{sin(B)} + \frac{w_1}{sin(C)}</script>
+</p>
+<p>Substitute our expression for <script type="math/tex">B</script>, and we have everything in terms on road widths, and intersection angle:</p>
+<p>
+<script type="math/tex; mode=display"> l =  \frac{w_2}{sin(\pi - A - C)} + \frac{w_1}{sin(C)}</script>
+</p>
+<p>Now we want to find the smallest <script type="math/tex">l</script> as a function of <script type="math/tex">C</script>, the necessary condition for such a minimum is</p>
+<p>
+<script type="math/tex; mode=display">\frac{dl}{dC}=0</script>
+</p>
+<p>which by application of Calculus produces:</p>
+<p>
+<script type="math/tex; mode=display">\frac{dl}{dC}=\frac{w_2 cos(\pi - A - C)}{sin^2(\pi - A - C)} - \frac{w_1 cos(C)}{sin^2(C)}=0 </script>
+</p>
+<p>where <script type="math/tex">A</script>, <script type="math/tex">w_1</script>, and <script type="math/tex">w_2</script> are known, now we have to find a solution to this equation. and once we have found the value of <script type="math/tex">C</script> that satisfies <script type="math/tex">\frac{dl}{dC}=0</script> we can recover the length from</p>
+<p>
+<script type="math/tex; mode=display"> l =  \frac{w_2}{sin(\pi - A - C)} + \frac{w_1}{sin(C)} </script>
+</p>
+<p>Lets consider some methods to find the length:</p>
+<ol>
+<li>Plot the function, find the value from the plot</li>
+<li>Apply a search method (grid searching) </li>
+<li>Newton's method (with finite difference approximations to derivative)</li>
+</ol>
+<pre><code class="python"># Plot the function, find the value from the plot
+
+## forward define prototype functions 
+
+# Our plotting function
+import matplotlib.pyplot as plt
+def makeAplot(listx1,listy1,strlablx,strlably,strtitle):
+    mydata = plt.figure(figsize = (10,5)) # build a square drawing canvass from figure class
+    plt.plot(listx1,listy1, c='red', marker='o',linewidth=1) # basic data plot
+    plt.xlabel(strlablx)
+    plt.ylabel(strlably)
+    plt.title(strtitle)
+    plt.show()
+
+# prototype dl/dC function
+import math
+def func(x):
+    # x is angle C in radians
+    global w1,w2,A
+    # w1,w2 are road cut widths, A is angle in radians; GLOBAL DEFINE
+    numer1 =w2*math.cos(math.pi - A - x)
+    denom1 = math.sin(math.pi - A - x)**2
+    numer2 = w1*math.cos(x)
+    denom2 = math.sin(x)**2
+    func = numer1/denom1 - numer2/denom2
+    return(func)
+
+# prototype length function
+def blade_length(x):
+    # x is angle C in radians
+    global w1,w2,A
+    # w1,w2 are road cut widths, A is angle in radians; GLOBAL DEFINE
+    numer1 = w2
+    denom1 = math.sin(math.pi - A - x)
+    numer2 = w1
+    denom2 = math.sin(x)
+    blade_length = numer1/denom1 + numer2/denom2
+    return(blade_length)
+</code></pre>
+
+<pre><code class="python"># Plot the function
+
+c_angle = [] # empty list to populate
+f_value = [] # empty list to populate
+
+# set problem constants
+A = 90.1 # intersection angle in degrees
+Cm = 180 - A # biggest C angle in degrees
+A = A * (1/180.00)*math.pi  # intersection angle in radians
+w1 = 17.0 #road cut width in feet
+w2 = 19.0 #road cut width in feet
+
+stepsize = 0.01 # increments of angle (degrees)
+total_steps = int(Cm/stepsize)
+tolerance = 5 # Only save a result close to the zero
+
+for i in range(1,total_steps):
+    test_angle = float(i)*math.pi/total_steps
+    test_value = func(test_angle)
+    if abs(test_value) &lt;= tolerance:
+        c_angle.append((test_angle*180)/math.pi) # angle in degrees
+        f_value.append(test_value) # value of dl/dC function
+#        print((test_angle*180)/math.pi,test_value) # activate to examine values
+
+makeAplot(c_angle,f_value,'strlablx','strlably','strtitle')
+</code></pre>
+
+<p><img alt="png" src="../output_5_0.png" /></p>
+<pre><code class="python"># Now get the length from our best guess from plot; trial and error to refine guess
+visual_angle = 43.888 # based on eyeball fit!
+print('Maximum blade length for C angle of ',round(visual_angle,1),' degrees is ',round(blade_length(visual_angle*math.pi/180.),3),' feet')
+print(' dl/dC function target is zero; current value is ',round(func(visual_angle*math.pi/180.),3))
+</code></pre>
+
+<pre><code>Maximum blade length for C angle of  43.9  degrees is  50.93  feet
+ dl/dC function target is zero; current value is  -0.002
+</code></pre>
+<h2 id="grid-search">Grid Search</h2>
+<p>Describe method then show example</p>
+<pre><code class="python"># Apply a search method
+
+# set problem constants
+A = 90.1 # intersection angle in degrees
+Cm = 180 - A # biggest C angle in degrees
+A = A * (1/180.00)*math.pi  # intersection angle in radians
+w1 = 17.0 #road cut width in feet
+w2 = 19.0 #road cut width in feet
+
+tolerance = 0.01 # define close enough to zero
+stepsize = 0.001 # increments of angle (degrees)
+total_steps = int(Cm/stepsize)
+best_size = 1e9
+
+for i in range(1,total_steps):
+    test_angle = float(i)*math.pi/total_steps
+    test_value = func(test_angle)
+    if abs(test_value) &lt;= tolerance: # are we close to zero?
+        if abs(test_value) &lt; best_size: # are better than last close to zero?
+            best_size = abs(test_value)
+            best_angle = test_angle
+#            print(float(i),test_value,best_size)
+    else:
+        pass
+#print(((best_angle*180)/math.pi),best_size)
+# Now report values
+print('Searched ',total_steps,' interference angles in steps of ',stepsize,' degrees of arc')
+print('   Lower C angle ',round(float(1)*math.pi/total_steps,3),'degrees of arc')
+#print(' Blade Length to Fit Intersection is ',round(blade_length(float(1)*math.pi/total_steps),3),' feet')
+print('   Upper C angle ',round(Cm,3), 'degrees of arc')
+print('Best C angle    ',round(((best_angle*180)/math.pi),3), 'degrees of arc')
+print('Longest Blade Length to Fit Intersection is ',round(blade_length(best_angle),3),' feet')
+
+</code></pre>
+
+<pre><code>Searched  89900  interference angles in steps of  0.001  degrees of arc
+   Lower C angle  0.0 degrees of arc
+   Upper C angle  89.9 degrees of arc
+Best C angle     43.889 degrees of arc
+Longest Blade Length to Fit Intersection is  50.93  feet
+</code></pre>
+<h1 id="single-variable-newtons-method">Single Variable Newtons Method</h1>
+<p>Newton's method is an iterative technique that can produce good estimates of solutions to implicit equations. The method is employed by rewriting the equation in the form <code>f(x) = 0</code>,
 then successively manipulating guesses for <code>x</code> until the function evaluates to a value close
-enough to zero for the modeler to accept.</p>
+enough to zero for the modeler to accept.In the turbine blade case the <script type="math/tex">\frac{dl}{dC}=0</script> function is already in the correct form.</p>
+<h2 id="background">Background</h2>
 <p><img alt="figure" src="../newton1.png" /></p>
 <p>The figure above is a graph of some function whose intercept with the <code>x-axis</code> is unknown. The goal
 of Newton's method is to find this intersection (root) from a realistic first guess. Suppose
@@ -303,18 +473,20 @@ x_{k+1}=x_{k} - \frac{  f(x_{k})  }{   \frac{df}{dx}\rvert_{x_k} }
 method, if approximations to the derivative are used, it is called a quasi-Newton method.</p>
 <h2 id="newtons-method-using-analytical-derivatives">Newton's Method --- Using analytical derivatives</h2>
 <p>This subsection is an example in Python of implementing Newton's method with analytical derivatives.   </p>
-<p>The recipe itself is:
-1) Write the function in proper form, and code it into a computer.
-2) Write the derivative in proper form and code it into a computer.
-3) Make an initial guess of the solution (0 and 1 are always convenient guesses).
-4) Evaluate the function, evaluate the derivative, calculate their ratio.
-5) Subtract the ratio from the current guess and save the result as the update.
-6) Test for stopping:
-     i) Did the update stay the same value? Yes, then stop, probably have a solution.
-    ii) Is the function nearly zero?  Yes, then stop we probably have a solution.
-    iii) Have we tried too many updates? Yes, then stop the process is probably cycling, stop.
-7) If stopping is indicated proceed to next step, otherwise proceed back to step 4.
-8) Stopping indicated, report last update as the result (or report failure to find solution), and related information about the status of the numerical method.</p>
+<p>The recipe itself is:</p>
+<ol>
+<li>Write the function in proper form, and code it into a computer.</li>
+<li>Write the derivative in proper form and code it into a computer.</li>
+<li>Make an initial guess of the solution (0 and 1 are always convenient guesses).</li>
+<li>Evaluate the function, evaluate the derivative, calculate their ratio.</li>
+<li>Subtract the ratio from the current guess and save the result as the update.</li>
+<li>Test for stopping:</li>
+<li>Did the update stay the same value? Yes, then stop, probably have a solution.</li>
+<li>Is the function nearly zero?  Yes, then stop we probably have a solution.</li>
+<li>Have we tried too many updates? Yes, then stop the process is probably cycling, stop.</li>
+<li>If stopping is indicated proceed to next step, otherwise proceed back to step 4.</li>
+<li>Stopping indicated, report last update as the result (or report failure to find solution), and related information about the status of the numerical method.</li>
+</ol>
 <p>The following example illustrates these step as well as an ipython implementation of Newton's method.</p>
 <p>Suppose we wish to find a root (value of <code>x</code>) that satisfies:</p>
 <p>
@@ -376,17 +548,15 @@ while yes == 0:
 </code></pre>
 
 <pre><code>Enter an initial guess for Newton method 
-1
+ 2
 Enter iteration maximum 
-3
+ 9
 Enter a solution tolerance (e.g. 1e-06) 
-1e-6
+ 1e-6
 </code></pre>
-<p>The use of <code>HowSmall</code> is called a zero tolerance. <br />
-We will use the same numerical value for two tolerance tests. <br />
-Also notice how we are using error traps to force numeric input. <br />
-Probably overkill for this example, but we already wrote the code in an earlier essay, so might as well reuse the code.<br />
-Professional codes do a lot of error checking before launching into the actual processing - especially if the processing part is time consuming, its worth the time to check for obvious errors before running for a few hours then at some point failing because of an input value error that was predictable.</p>
+<p>The use of <code>HowSmall</code> is called a zero tolerance.   We will use the same numerical value for two tolerance tests.   Also notice how we are using error traps to force numeric input. <br />
+Probably overkill for this example, but because we already wrote the try-except code in an earlier lesson, might as well reuse the code.  </p>
+<p>Professional codes do a lot of error checking before launching into the actual processing - especially if the processing part is time consuming, its worth the time to check for obvious errors before running for a few hours then at some point failing because of an input value error that was predictable.</p>
 <p>Now back to the tolerance tests. 
 The first test is to determine if the update has changed or not. <br />
 If it has not, we may not have a correct answer, but there is no point continuing because the update is unlikely to move further. <br />
@@ -439,13 +609,14 @@ if count == HowMany:
 print(&quot;End of NewtonMethod.py &quot;)
 </code></pre>
 
-<pre><code> Iteration Limit Reached 
-Function value = 3676.8081814664183
- Root value    = 8.235647852860856
+<pre><code>Update not changing
+
+Function value = 1.4210854715202004e-14
+ Root value    = 4.593209147284144
 End of NewtonMethod.py
 </code></pre>
 <p>Now we simply connect the three fragments, and we would have a working Python script that implements Newton's method for the example equation.  The example is specific to the particular function provided, but the programmer could move the two functions <code>func</code> and <code>dfdx</code> into a user specified module, and then load that module in the program to make it even more generic.   The next section will use such an approach to illustrate the ability to build a generalized Newton method and <em>only have to program the function itself</em></p>
-<h2 id="newtons-method-using-finite-differences-to-estimate-derivatives">Newton's Method --- Using finite-differences to estimate derivatives}</h2>
+<h2 id="newtons-method-using-finite-differences-to-estimate-the-derivative">Newton's Method --- Using finite-differences to estimate the derivative</h2>
 <p>A practical difficulty in using Newton's method is determining the value of the derivative in cases where differentiation is difficult.<br />
 In these cases we can replace the derivative by a finite difference equation and then proceed as in Newton's method. </p>
 <p>Recall from calculus that the derivative was defined as the limit of the difference quotient:</p>
@@ -469,11 +640,9 @@ x_{k+1}=x_k - \frac{f(x_k) \Delta x}{f(x_k + \Delta x)-f(x_k)}
 <p>This root-finding method is called a quasi-Newton method.</p>
 <p>Here is the code fragment that we change by commenting out the analytical derivative and replacing it with a first-order finite difference approximation of the derivative.  The numerical value <script type="math/tex">1e-06</script> is called the step size (<script type="math/tex">\Delta x</script>)  and should be an input value (rather than built-in to the code as shown here) like the tolerance test values, and be passed to the function as another argument.</p>
 <pre><code class="python"># reset the notebook
-%reset
+%reset -f
 </code></pre>
 
-<pre><code>Once deleted, variables cannot be recovered. Proceed (y/[n])? y
-</code></pre>
 <pre><code class="python">#  import built in function for e^x, cosine
 from math import exp, cos, sin
 # Define the function
@@ -517,11 +686,11 @@ while yes == 0:
 </code></pre>
 
 <pre><code>Enter an initial guess for Newton method 
-2
+ 1
 Enter iteration maximum 
-33
+ 10
 Enter a solution tolerance (e.g. 1e-06) 
-1e-9
+ 1e-6
 </code></pre>
 <pre><code class="python"># now we begin the process
 count = 0
@@ -555,13 +724,175 @@ if count == HowMany:
 print(&quot;End of NewtonMethod.py &quot;)
 </code></pre>
 
-<pre><code>Update not changing
-
-Function value = 1.4210854715202004e-14
- Root value    = 4.593209147284144
+<pre><code> Iteration Limit Reached 
+Function value = 0.00017750521082859905
+ Root value    = 4.593211144371335
 End of NewtonMethod.py
 </code></pre>
 <p>Pretty much the same result, but now we dont have to determine the analytical derivative.</p>
+<h2 id="turbine-example-using-newtons-method">Turbine Example using Newton's Method</h2>
+<p>All we have to do is redefine the various functions, copy from above (because we reset the notebook twice, we lost these objects)</p>
+<pre><code class="python"># reset the notebook
+%reset -f
+</code></pre>
+
+<pre><code class="python"># prototype dl/dC function
+import math
+def func(x):
+    # x is angle C in radians
+    global w1,w2,A
+    # w1,w2 are road cut widths, A is angle in radians; GLOBAL DEFINE
+    numer1 =w2*math.cos(math.pi - A - x)
+    denom1 = math.sin(math.pi - A - x)**2
+    numer2 = w1*math.cos(x)
+    denom2 = math.sin(x)**2
+    func = numer1/denom1 - numer2/denom2
+    return(func)
+
+# prototype length function
+def blade_length(x):
+    # x is angle C in radians
+    global w1,w2,A
+    # w1,w2 are road cut widths, A is angle in radians; GLOBAL DEFINE
+    numer1 = w2
+    denom1 = math.sin(math.pi - A - x)
+    numer2 = w1
+    denom2 = math.sin(x)
+    blade_length = numer1/denom1 + numer2/denom2
+    return(blade_length)
+
+# prototype finite difference approximation to derivative
+def dfdx(x): 
+    dfdx = (func(x + 1e-09) - func(x) )/ (1e-09)
+    return (dfdx)
+</code></pre>
+
+<pre><code class="python"># set problem constants
+A = 90.1 # intersection angle in degrees
+Cm = 180 - A # biggest C angle in degrees
+A = A * (1/180.00)*math.pi  # intersection angle in radians
+w1 = 17.0 #road cut width in feet
+w2 = 19.0 #road cut width in feet
+</code></pre>
+
+<pre><code class="python"># Now for the Newton Method Implementation
+# Get initial guess, use a simple error trap
+yes=0
+while yes == 0:
+    xnow = input(&quot;Enter an initial guess for Newton method \n&quot;)
+    try:
+        xnow = float(xnow)
+        yes =1
+    except:
+        print (&quot;Value should be numeric, try again \n&quot;)
+# Get number trials, use a simple error trap
+yes=0
+while yes == 0:
+    HowMany = input(&quot;Enter iteration maximum \n&quot;)
+    try:
+        HowMany = int(HowMany)
+        yes =1
+    except:
+        print (&quot;Value should be numeric, try again \n&quot;)
+# Get stopping criterion
+yes=0
+while yes == 0:
+    HowSmall = input(&quot;Enter a solution tolerance (e.g. 1e-06) \n&quot;)
+    try:
+        HowSmall= float(HowSmall)
+        yes =1
+    except:
+        print (&quot;Value should be numeric, try again \n&quot;)
+</code></pre>
+
+<pre><code>Enter an initial guess for Newton method 
+ 30
+Enter iteration maximum 
+ 12
+Enter a solution tolerance (e.g. 1e-06) 
+ 1e-6
+</code></pre>
+<pre><code class="python"># need to convert to radians
+xnow = xnow*math.pi/180.
+</code></pre>
+
+<pre><code class="python"># now we begin the process
+count = 0
+for i in range(0,HowMany,1):
+    xnew = xnow - func(xnow)/dfdx(xnow)
+    print(xnow,func(xnow),xnew,func(xnew))
+
+# stopping criteria -- update not changing
+    if abs(xnew - xnow) &lt; HowSmall:
+        print (&quot;Iteration&quot;,i,&quot; Update not changing \n&quot;,)
+        print(&quot;Function value =&quot;,func(xnew))
+        print(&quot; Root value    =&quot;,xnew)
+        break
+    else:
+        xnow = xnew
+        count = count +1
+        continue
+# stopping criteria -- function close to zero
+    if abs( func(xnew) ) &lt; HowSmall:
+        print (&quot;Function value close to zero \n&quot;)
+        print(&quot;Function value =&quot;,func(xnew))
+        print(&quot; Root value    =&quot;,xnew)
+        break
+    else:
+        xnow = xnew
+        count = count +1
+        continue
+# next step, then have either broken from the loop or iteration counted out
+if count == HowMany:
+    print(&quot; Iteration Limit Reached &quot;)
+    print(&quot;Function value =&quot;,func(xnew))
+    print(&quot; Root value    =&quot;,xnew)
+print(&quot;End of NewtonMethod.py &quot;)
+</code></pre>
+
+<pre><code>0.5235987755982988 -46.15910654595476 0.6916206270990959 -11.659686294276273
+0.6916206270990959 -11.659686294276273 0.7630538719365358 -0.4517499985484186
+0.7630538719365358 -0.4517499985484186 0.7660021307306737 -0.00012395061385106487
+0.7660021307306737 -0.00012395061385106487 0.7660029400921291 -2.327027459614328e-12
+Iteration 3  Update not changing
+
+Function value = -2.327027459614328e-12
+ Root value    = 0.7660029400921291
+End of NewtonMethod.py
+</code></pre>
+<pre><code class="python"># need to convert back to degrees
+newton_angle = xnew*180/math.pi
+print(&quot;C angle &quot;,newton_angle)
+</code></pre>
+
+<pre><code>C angle  43.88873556189143
+</code></pre>
+<pre><code class="python"># Now get the length from our best guess from plot
+#newton_angle = 43.8887 # based on newton method fit!
+print('Maximum blade length for C angle of ',round(newton_angle,1),' degrees is ',round(blade_length(newton_angle*math.pi/180.),3),' feet')
+print(' dl/dC function target is zero; current value is ',round(func(newton_angle*math.pi/180.),3))
+</code></pre>
+
+<pre><code>Maximum blade length for C angle of  43.9  degrees is  50.93  feet
+ dl/dC function target is zero; current value is  -0.0
+</code></pre>
+<pre><code class="python"># Newton's method using scipy
+import scipy.optimize 
+
+myguess =  30
+myguess = myguess*math.pi/180.
+
+newton_angle = scipy.optimize.newton(func, myguess)*180/math.pi
+
+print(&quot;Using scipy the C angle is &quot;,newton_angle)
+print('Maximum blade length for C angle of ',round(newton_angle,1),' degrees is ',round(blade_length(newton_angle*math.pi/180.),3),' feet')
+print(' dl/dC function target is zero; current value is ',round(func(newton_angle*math.pi/180.),3))
+</code></pre>
+
+<pre><code>Using scipy the C angle is  43.888735561892304
+Maximum blade length for C angle of  43.9  degrees is  50.93  feet
+ dl/dC function target is zero; current value is  -0.0
+</code></pre>
 <pre><code class="python">
 </code></pre></div>
         </div>

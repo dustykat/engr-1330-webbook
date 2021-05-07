@@ -9,22 +9,21 @@ nav:
           - Computational Thinking and Data Science : lesson0/lesson0.md
           - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson0.md
       - Programming Fundamentals:
-          - Simple Arithmetic Computations : 1-Lessons/Lesson02/lesson1.md
+          - Arithmetic : 1-Lessons/Lesson02/lesson1.md
           - Data Structures : 1-Lessons/Lesson03/lesson2.md
           - Flow Control Structures : 1-Lessons/Lesson04/lesson3.md
           - Data Files : lesson0/lesson0.md
-          - External Functions : lesson0/lesson0.md      
+          - External Functions and Modules : lesson0/lesson0.md      
           - Data Structures using NUMPY : 1-Lessons/Lesson07/lesson6.md      
           - Data Frames using PANDAS : 1-Lessons/Lesson08/lesson7.md
           - Data Display using MATPLOTLIB : 1-Lessons/Lesson09/lesson8.md
       - Engineering Computation :
-          - Solving Implicit Equations : implicit_equations/NewtonsMethod.md
+          - Implicit Equations : implicit_equations/NewtonsMethod.md
           - Interpolation, Integration, and Differentiation : integration_differentiation/numerical_integration.md
           - Linear Equation Systems : 1-Lessons/Lesson12/lesson11.md      
           - Non-Linear Equation System : 1-Lessons/Lesson13/lesson12.md       
-          - Non-Linear Equation Systems : lesson0/lesson0.md
       - Data Models and Decisions :
-          - Causality : lesson0/lesson0.md
+          - Models and Causality : lesson0/lesson0.md
           - Descriptive Statistics : lesson0/lesson0.md
           - Probability Distributions : lesson0/lesson0.md
           - Probability Estimation Models : lesson0/lesson0.md      
