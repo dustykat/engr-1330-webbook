@@ -6,7 +6,7 @@ nav:
   - Syllabus : 0-Syllabus/ENGR-1330-2021-1-Syllabus.md
   - Topics :
       - Introduction:
-          - Computational Thinking and Data Science : lesson0/lesson0.md
+          - Computational Thinking and Data Science : 1-Lessons/Lesson00/lesson0.md
           - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson0.md
       - Programming Fundamentals:
           - Arithmetic : 1-Lessons/Lesson02/lesson1.md
