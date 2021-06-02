@@ -1,0 +1,112 @@
+site_name: Computational Thinking and Data Science
+# navigation/site structure 
+nav:
+  - Home: index.md
+#  - About: about.md
+  - Syllabus: syllabus/syllabus.md
+  - Lessons & Workshops:
+      - Lesson 0 Introduction:
+          - Lesson 0: lesson0/lesson0.md
+          - Workshop 0: 8-Labs/Lab0/Lab0_Dev.md
+#          - Workshop 0 Notebook: 8-Labs/Lab0/Lab0_Dev.ipynb
+      - Lesson 1 Programming Fundamentals :
+          - Lesson 1: lesson1/lesson1.md
+          - Workshop 1: 8-Labs/Lab1/Lab1_Dev.md
+#          - Workshop 1 Notebook: 8-Labs/Lab1/Lab1_Dev.ipynb
+      - Lesson 2 Data Structures:
+          - Lesson 2: lesson2/lesson2.md
+          - Workshop 2: 8-Labs/Lab2/Lab2_Dev.md
+#          - Workshop 2 Notebook: 8-Labs/Lab2/Lab2_Dev.ipynb
+      - Lesson 6 Package NumPy:
+          - Lesson 6: lesson6/lesson6.md
+          - Workshop 6: 8-Labs/Lab6/Lab6_Dev.md
+#          - Workshop 6 Notebook: 8-Labs/Lab6/Lab6_Dev.ipynb
+      - Lesson 7 Package Pandas:
+          - Lesson 7: lesson7/lesson7.md
+          - Workshop 7: 8-Labs/Lab7/Lab7_Dev.md
+#          - Workshop 7 Notebook: 8-Labs/Lab7/Lab7_Dev.ipynb
+      - Lesson 8 Package MatPlotLib:
+          - Lesson 8: lesson8/lesson8.md
+          - Workshop 8: 8-Labs/Lab8/Lab8_Dev.md
+#          - Workshop 7 Notebook: 8-Labs/Lab7/Lab7_Dev.ipynb
+      - Lesson 9 Data Modeling I:
+          - Lesson 9: lesson9/lesson9.md
+          - Workshop 9: 8-Labs/Lab9/Lab9_Dev.md
+#          - Workshop 7 Notebook: 8-Labs/Lab7/Lab7_Dev.ipynb
+          
+#  - Readings: readings.md
+  - Homework & Exams: 
+      - Exercise Set 1 :
+         - Deploy : 2-Homework/ES1/es1-deploy.md
+         - Solution : 2-Homework/ES1/es1-solution.md
+      - Exercise Set 2 :
+         - Deploy : 2-Homework/ES2/es2-deploy.md
+         - Solution : 2-Homework/ES2/es2-solution.md
+      - Exercise Set 3 :
+         - Deploy : 2-Homework/ES3/es3-deploy.md
+         - Solution : 2-Homework/ES3/es3-solution.md
+      - Week 4 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 5 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 6 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 7 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 8 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 9 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 10 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 11 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 12 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 13 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 14 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md      
+      - Week 15 Topic:
+         - Deploy : untitled.md
+         - Solution : untitled.md
+      - Exam 1 :
+          - Exam 1 Deploy: untitled.md
+          - Exam 1 Solution: untitled.md
+      - Exam 2:
+          - Exam 2 Deploy: untitled.md
+          - Exam 2 Solution: untitled.md
+      - Exam 3:
+          - Exam 3 Deploy: untitled.md
+          - Exam 3 Solution: untitled.md
+
+# nesting as pulldown??
+
+# active theme (mkdocs/readthedocs are free, they work differently wrt code blocks)
+theme:
+    name: mkdocs
+    highlightjs: true
+    hljs_languages:
+        - python
+
+# extensions to enable nice typesets 
+markdown_extensions:
+  - extra
+  - tables
+  - mdx_math:
+      enable_dollar_delimiter: True
+  - fenced_code # easier than indenting
+extra_javascript:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+  - mathjaxhelper.js  # this file needs to be in the docs directory for site build
