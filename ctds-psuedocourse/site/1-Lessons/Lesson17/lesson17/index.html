@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lesson 17 - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-1-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson00/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson07/lesson6/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson08/lesson7/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation, Integration, and Differentiation</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson11/lesson11/">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson12/lesson11/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson13/lesson13/">Lesson 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">Lesson 17</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab17/Lab17_Dev/">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-Homework/ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES3/es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ConcreteStrength/ConcreteStrength-Project/">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../../lesson0/lesson0/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../../8-Labs/Lab17/Lab17_Dev/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</a></li>
+            <li><a href="#lesson-17-data-modeling-with-special-functions-probability-distributions">Lesson 17 : Data Modeling with Special Functions (Probability Distributions)</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#computational-thinking-concepts">Computational Thinking Concepts</a></li>
+            <li><a href="#explaining-data">Explaining Data</a></li>
+            <li><a href="#normal-distribution-model-using-math-package">Normal Distribution Model (Using Math Package)</a></li>
+            <li><a href="#probability-estimation-modeling">Probability Estimation Modeling</a></li>
+            <li><a href="#references">References:</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<pre><code class="python">%%html
+&lt;!--Script block to left align Markdown Tables--&gt;
+&lt;style&gt;
+  table {margin-left: 0 !important;}
+&lt;/style&gt;
+</code></pre>
+
+<!--Script block to left align Markdown Tables-->
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<p>Copyright © 2021 Theodore G. Cleveland and Farhang Forghanparast, <em>all rights reserved</em></p>
+<h1 id="engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</h1>
+<p>Last GitHub Commit Date: 2 Mar 2021</p>
+<h2 id="lesson-17-data-modeling-with-special-functions-probability-distributions">Lesson 17 : Data Modeling with Special Functions (Probability Distributions)</h2>
+<!--![](http://54.243.252.9/engr-1330-psuedo-course/CECE-1330-PsuedoCourse/1-Lessons/Lesson13/PsuedoLesson/roulette.png)-->
+
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>To understand the fundamental concepts involved in representing a data collection;</li>
+<li>Interpolation</li>
+<li>Extrapolation</li>
+<li>Concept of a fitting function</li>
+<li>Introduce select special functions</li>
+<li>Normal distribution function</li>
+<li>Gamma distribution function</li>
+<li>Extreme value distribution function</li>
+<li>Pearson Type 3 distribution function</li>
+</ul>
+<hr />
+<h2 id="computational-thinking-concepts">Computational Thinking Concepts</h2>
+<p>The CT concepts include:</p>
+<ul>
+<li>Decomposition =&gt; Assert data are drawn from some process that is functionally explainable</li>
+<li>Abstraction =&gt; Represent data behavior with a function </li>
+<li>Algorithm Design =&gt;  Use the function to predict "new" values of observations</li>
+</ul>
+<hr />
+<h2 id="explaining-data">Explaining Data</h2>
+<p>Recall our speed and time example, repeated below.</p>
+<pre><code class="python"># Our data
+time = [0,1.0,2.0,3.0,4.0,5.0,6.0]
+speed = [0,3,7,12,20,30,45.6]
+</code></pre>
+
+<pre><code class="python"># Our model
+def poly1(b0,b1,x):
+    # return y = b0 + b1*x
+    poly1=b0+b1*x
+    return(poly1)
+</code></pre>
+
+<pre><code class="python"># Our plotting function
+import matplotlib.pyplot as plt
+def make2plot(listx1,listy1,listx2,listy2,strlablx,strlably,strtitle):
+    mydata = plt.figure(figsize = (10,5)) # build a square drawing canvass from figure class
+    plt.plot(listx1,listy1, c='red', marker='v',linewidth=0) # basic data plot
+    plt.plot(listx2,listy2, c='blue',linewidth=1) # basic model plot
+    plt.xlabel(strlablx)
+    plt.ylabel(strlably)
+    plt.legend(['Data','Model'])# modify for argument insertion
+    plt.title(strtitle)
+    plt.show()
+</code></pre>
+
+<pre><code class="python"># Our &quot;fitting&quot; process
+intercept = 5.0
+slope = 3.0
+modelSpeed = [] # empty list
+for i in range(len(time)):
+    modelSpeed.append(poly1(intercept,slope,time[i]))
+</code></pre>
+
+<pre><code class="python"># Plotting results
+make2plot(time,speed,time,modelSpeed,'time (sec.)','speed (m/s)','Plot of model and observations')
+</code></pre>
+
+<p><img alt="png" src="../output_7_0.png" /></p>
+<p>We are limited in the ability to fit the data because our representation function is limited to a straight line, now lets make a quadratic a possible model option.</p>
+<pre><code class="python"># Our new model
+def poly2(b0,b1,b2,x):
+    # return y = b0 + b1*x
+    poly2=b0+(b1+b2*x)*x  # faster than b0 + b1*x + b2*x**2
+    return(poly2)
+</code></pre>
+
+<p>Now try fitting and plotting using our new model and should get indetical result, then we can explore using the new parameter b2</p>
+<pre><code class="python"># Our &quot;fitting&quot; process
+intercept = 5.0      # set to 0.0
+slope = 3.0          # adjust to 2.0
+curvature = 0.0      # adjust to 0.9 
+modelSpeed = [] # empty list
+for i in range(len(time)):
+    modelSpeed.append(poly2(intercept,slope,curvature,time[i]))
+# Plotting results
+make2plot(time,speed,time,modelSpeed,'time (sec.)','speed (m/s)','Plot of model and observations')
+</code></pre>
+
+<p><img alt="png" src="../output_11_0.png" /></p>
+<pre><code class="python"># Our &quot;fitting&quot; process
+intercept = 0.0      # set to 0.0
+slope = 2.0          # adjust to 2.0
+curvature = 0.9      # adjust to 0.9 
+modelSpeed = [] # empty list
+for i in range(len(time)):
+    modelSpeed.append(poly2(intercept,slope,curvature,time[i]))
+# Plotting results
+make2plot(time,speed,time,modelSpeed,'time (sec.)','speed (m/s)','Plot of model and observations')
+</code></pre>
+
+<p><img alt="png" src="../output_12_0.png" /></p>
+<pre><code class="python">
+</code></pre>
+
+<p>Now which "model" is more useful for these data?  Explain your reasoning.</p>
+<p>Lets take a look over the process we just implemented</p>
+<ol>
+<li>Prepare our data series </li>
+<li>Select a function type as the data model (in this case polynomials of order 1 and 2)</li>
+<li>Use a plotting tool to plot observed data (red) and our model (blue)</li>
+<li>Adjust model parameters (b0,b1,b2, ...) to get the blue model to pass through the red dots as best we can.</li>
+</ol>
+<p>That's it, later we will explore ways to quantify the fit, which will help us choose a data model when multiple models appear good.</p>
+<pre><code class="python">## Now lets apply our tools to different data, first we will read data from a file
+</code></pre>
+
+<pre><code class="python">amatrix = []
+xvalue = []
+yvalue = []
+rowNumA = 0
+file1 = open(&quot;MyFile.txt&quot;, &quot;r&quot;)  # get the data
+for line in file1:
+    amatrix.append([float(n) for n in line.strip().split()])
+    rowNumA += 1
+file1.close() # Disconnect the file
+for i in range(len(amatrix)): # deconstruct the list, rename each column
+    xvalue.append(amatrix[i][0])
+    yvalue.append(amatrix[i][1])
+</code></pre>
+
+<pre><code class="python">make2plot(xvalue,yvalue,[],[],'x-value','y-value','EDA Plot of model and observations')
+</code></pre>
+
+<p><img alt="png" src="../output_17_0.png" /></p>
+<pre><code class="python"># Our &quot;fitting&quot; process
+intercept = 0.0      # 0.0
+slope = 0.01         # 0.018
+curvature = 1e-09      # -0.0001 
+modelY = [] # empty list
+for i in range(len(xvalue)):
+    modelY.append(poly2(intercept,slope,curvature,xvalue[i]))
+# Plotting results
+make2plot(xvalue,yvalue,xvalue,modelY,'x-value','y-value','EDA Plot of model and observations')
+</code></pre>
+
+<p><img alt="png" src="../output_18_0.png" /></p>
+<p>Lets build a different type of data model, here we will use a special function called the normal distribution function. A useful notation using the Normal density function as an example is:</p>
+<p>
+<script type="math/tex; mode=display"> \text{pdf(x)} = \frac{1}{\sigma \sqrt{2\pi}} \times exp (-\frac{(x-\mu)^2}{2 \sigma^2}) </script>
+</p>
+<p>In the function, <script type="math/tex">x</script> is the random variable, <script type="math/tex">\mu</script> is the <strong>population</strong> mean and <script type="math/tex">\sigma^2</script> is the <strong>population</strong> variance.  These parameters (<script type="math/tex">\mu</script>, and <script type="math/tex">\sigma^2</script>) play the same role that <script type="math/tex">b_0,b_1,b_2, \dots</script> play in our polynomial model - they simply adjust shape of the model.</p>
+<p>Often we don't actually know the population values so we estimate them from the collection of observations, in this context these are called the <strong>sample</strong> mean and variance.   Computation of the <strong>sample</strong> values is done using methods described in the lesson on descriptive statistics.</p>
+<p>The integral of the <script type="math/tex"> \text{pdf(x)} </script> from <script type="math/tex">-\infty~to ~ X </script>, produces a result called the cumulative distribution function.  The value <script type="math/tex"> X </script> is not a random variable, but the integral value of the probability of the random variable <script type="math/tex">x</script> being less than or equal to <script type="math/tex">X</script>.</p>
+<p>A useful notation using the Normal distribution as an example is:</p>
+<p>
+<script type="math/tex; mode=display"> F(X) =  \int_{-\infty}^X{\frac{1}{\sigma \sqrt{2\pi}} \times exp (-\frac{(x-\mu)^2}{2 \sigma^2}) dx}</script>
+</p>
+<p>For the Normal distribution the integral is a special function called the Error function and can be written as:</p>
+<p>
+<script type="math/tex; mode=display"> F(X) =  \frac{1}{2} \cdot (1+erf(\frac{(X-\mu)}{\sqrt{2} \sigma}))</script>
+</p>
+<p>We will use these concepts to build an alternative to <code>poly1</code> and <code>poly2</code> as data models.</p>
+<h2 id="normal-distribution-model-using-math-package">Normal Distribution Model (Using Math Package)</h2>
+<p>Here we will build a normal distribution model, essentially the functions for the above equations, and then will plot them.
+Then we will sample from a list of numbers from 1 to 100 and see if the data model is representative of the sample.</p>
+<pre><code class="python">import math
+
+def normdensity(x,mu,sigma):
+    weight = 1.0 /(sigma * math.sqrt(2.0*math.pi))
+    argument = ((x - mu)**2)/(2.0*sigma**2)
+    normdensity = weight*math.exp(-1.0*argument)
+    return normdensity
+
+def normdist(x,mu,sigma):
+    argument = (x - mu)/(math.sqrt(2.0)*sigma)    
+    normdist = (1.0 + math.erf(argument))/2.0
+    return normdist
+</code></pre>
+
+<pre><code class="python"># Our &quot;fitting&quot; process
+mu = 50.0      # 50.0
+sigma = 10         # 850.01**0.5
+modelY = [] # empty list
+for i in range(len(xvalue)):
+    modelY.append(normdist(mu,sigma,xvalue[i]))
+# Plotting results
+make2plot(xvalue,yvalue,xvalue,modelY,'x-value','y-value','EDA Plot of model and observations')
+</code></pre>
+
+<p><img alt="png" src="../output_22_0.png" /></p>
+<h3 id="interpolation">Interpolation</h3>
+<p>Lets return to our time/speed model and estimate the speed at 4.5 seconds</p>
+<pre><code class="python"># Our &quot;fitting&quot; process
+intercept = 0.0      # set to 0.0
+slope = 2.0          # adjust to 2.0
+curvature = 0.9      # adjust to 0.9 
+modelSpeed = [] # empty list
+for i in range(len(time)):
+    modelSpeed.append(poly2(intercept,slope,curvature,time[i]))
+# Plotting results
+make2plot(time,speed,time,modelSpeed,'time (sec.)','speed (m/s)','Plot of model and observations')
+</code></pre>
+
+<p><img alt="png" src="../output_24_0.png" /></p>
+<pre><code class="python">print('Speed estimate at time ',4.5,'is ',poly2(intercept,slope,curvature,4.5))
+</code></pre>
+
+<pre><code>Speed estimate at time  4.5 is  27.224999999999998
+</code></pre>
+<h3 id="extrapolation">Extrapolation</h3>
+<pre><code class="python">print('Speed estimate at time ',9.5,'is ',poly2(intercept,slope,curvature,9.5))
+</code></pre>
+
+<pre><code>Speed estimate at time  9.5 is  100.22500000000001
+</code></pre>
+<hr />
+<h2 id="probability-estimation-modeling">Probability Estimation Modeling</h2>
+<p>Probability estimation modeling is the use of probability distributions (population data models) to model or explain behavior in observed (sample data) values.  Once a particular distribution is selected, then the concept of risk (probability) can be explored for events of varying magnitudes.</p>
+<p>Two important “extremes” in engineering:</p>
+<ul>
+<li>
+<p>Uncommon (rare) events (floods, nuclear plant explosions, etc.)</p>
+</li>
+<li>
+<p>Common, almost predictable events (routine discharges, traffic accidents at a dangerous intersection, network failure on a due date, etc.)</p>
+</li>
+</ul>
+<p>The probability distribution is just a model of the data, like a trend line for deterministic behavior; different distributions have different shapes, and domains and can explain certain types of observations better than others.</p>
+<p>Some Useful Distributions (data models) include:</p>
+<ul>
+<li>Normal</li>
+<li>LogNormal</li>
+<li>Gamma</li>
+<li>Weibull</li>
+<li>Extreme Value (Gumbell)</li>
+<li>Beta</li>
+</ul>
+<p>There are many more; they all have the common property that they integrate to unity on the domain <script type="math/tex">-\infty~to ~ \infty</script>.  </p>
+<p>The probability distributions (models) are often expressed as a density function or a cumulative distribution function. </p>
+<pre><code class="python"># Standard Normal
+
+mu = 0
+sigma = 1
+
+x = []
+ypdf = []
+ycdf = []
+
+xlow = -10
+xhigh = 10
+howMany = 100
+xstep = (xhigh - xlow)/howMany
+
+for i in range(0,howMany+1,1):
+    x.append(xlow + i*xstep)
+    yvalue = normdensity(xlow + i*xstep,mu,sigma)
+    ypdf.append(yvalue)
+    yvalue = normdist(xlow + i*xstep,mu,sigma)
+    ycdf.append(yvalue)  
+
+#x
+#ypdf
+#ycdf
+</code></pre>
+
+<p>Make the plot below, nothing too special just yet. Plots of the density (in blue) and cumulative density (probability) in red.</p>
+<pre><code class="python">import matplotlib.pyplot # the python plotting library
+myfigure = matplotlib.pyplot.figure(figsize = (10,5)) # generate a object from the figure class, set aspect ratio
+
+# Built the plot
+matplotlib.pyplot.plot(x, ypdf, color ='blue') 
+matplotlib.pyplot.plot(x, ycdf, color ='red') 
+matplotlib.pyplot.xlabel(&quot;Value of RV&quot;) 
+matplotlib.pyplot.ylabel(&quot;Density or Quantile Value&quot;) 
+matplotlib.pyplot.title(&quot;Normal Distribution Data Model&quot;) 
+matplotlib.pyplot.show() 
+</code></pre>
+
+<p><img alt="png" src="../output_31_0.png" /></p>
+<h3 id="exceedence-probability">Exceedence Probability</h3>
+<p>The purpose of distributions is to model data and allow us to estimate an answer to the question, what is the probability that we will observe a value of the random variable less than or equal to some sentinel value.  A common way to plot the quantile function is with accumulated probability on the horizontal axis, and random variable value on the vertical axis.
+Consider the figure below;</p>
+<p><img alt="" src="http://54.243.252.9/engr-1330-psuedo-course/CECE-1330-PsuedoCourse/1-Lessons/Lesson13/PsuedoLesson/exceedence.png" /></p>
+<p>The RV Value is about 50,000 indicated by the horizontal magenta line.<br />
+The blue curve is some data model, for instance one of our distributions below.
+The accumulated probability value at 50,000 is 0.1 or roughly 10% chance, but we also have to stipulate whether we are interested in less than or greater than.  </p>
+<p>In the figure shown, <script type="math/tex">P(x <= 50,000)~ =~1.00~-~0.1~= 0.9~or~90\%</script> and is a non-exceedence probability. In words we would state 
+"The probability of observing a value less than or equal to 50,000 is 90%" the other side of the vertical line is the exceedence probability; in the figure <script type="math/tex">P(x > 50,000)~=~0.1~or~10\%</script>.  In words we would state "The probability of observing a value equal to or greater than 50,000 is 10%."  In risk analysis the sense of the probability is easily confusing, so when you can - make a plot.  Another way to look at the situation is to simply realize that the blue curve is the quantile function <script type="math/tex">F(X)</script> with <script type="math/tex">X</script> plotted on the vertical axis, and <script type="math/tex">F(X)</script> plotted on the horizontal axis.</p>
+<p>Now lets put these ideas to use.  We will sample from the population of integers from 0 to 100, with replacement.  Any single pull from the population is equally likely. Lets take 25 samples (about 1/4 of the total population - usually we dont know the size of the population).</p>
+<pre><code class="python">import numpy
+
+population = []
+for i in range(0,101,1):
+    population.append(i)
+
+sample = numpy.random.choice(population,25)
+</code></pre>
+
+<pre><code class="python"># lets get some statistics
+sample_mean = sample.mean()
+sample_variance = sample.std()**2
+</code></pre>
+
+<pre><code class="python"># sort the sample in place!
+sample.sort()
+# built a relative frequency approximation to probability, assume each pick is equally likely
+weibull_pp = []
+for i in range(0,len(sample),1):
+    weibull_pp.append((i+1)/(len(sample)+1))
+</code></pre>
+
+<pre><code class="python"># Now plot the sample values and plotting position
+myfigure = matplotlib.pyplot.figure(figsize = (10,5)) # generate a object from the figure class, set aspect ratio
+
+# Built the plot
+matplotlib.pyplot.scatter(weibull_pp, sample, color ='blue') 
+matplotlib.pyplot.plot(ycdf, x, color ='red') 
+matplotlib.pyplot.ylabel(&quot;Value of RV&quot;) 
+matplotlib.pyplot.xlabel(&quot;Density or Quantile Value&quot;) 
+matplotlib.pyplot.title(&quot;Normal Distribution Data Model&quot;) 
+matplotlib.pyplot.show() 
+</code></pre>
+
+<p><img alt="png" src="../output_36_0.png" /></p>
+<p>What a horrible plot, but lets now use the sample statistics to "fit" the data model (red) to the observations (blue). Notice we have already rotated the axes so this plot and ones that follow are structured like the "Exceedence" plot above.</p>
+<pre><code class="python"># Fitted Model
+
+mu = sample_mean
+sigma = math.sqrt(sample_variance)
+
+x = []
+ycdf = []
+
+xlow = 0
+xhigh = 100
+howMany = 100
+xstep = (xhigh - xlow)/howMany
+
+for i in range(0,howMany+1,1):
+    x.append(xlow + i*xstep)
+    yvalue = normdist(xlow + i*xstep,mu,sigma)
+    ycdf.append(yvalue) 
+</code></pre>
+
+<pre><code class="python"># Now plot the sample values and plotting position
+myfigure = matplotlib.pyplot.figure(figsize = (10,5)) # generate a object from the figure class, set aspect ratio
+
+# Built the plot
+matplotlib.pyplot.scatter(weibull_pp, sample,  color ='blue') 
+matplotlib.pyplot.plot(ycdf, x,  color ='red') 
+matplotlib.pyplot.ylabel(&quot;Value of RV&quot;) 
+matplotlib.pyplot.xlabel(&quot;Quantile Value&quot;) 
+mytitle = &quot;Normal Distribution Data Model sample mean = : &quot; + str(sample_mean)+ &quot; sample variance =:&quot; + str(sample_variance)
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_39_0.png" /></p>
+<pre><code class="python">popmean = numpy.array(population).mean()
+popvar = numpy.array(population).std()**2
+# Fitted Model
+
+mu = popmean
+sigma = math.sqrt(popvar)
+
+x = []
+ycdf = []
+
+xlow = 0
+xhigh = 100
+howMany = 100
+xstep = (xhigh - xlow)/howMany
+
+for i in range(0,howMany+1,1):
+    x.append(xlow + i*xstep)
+    yvalue = normdist(xlow + i*xstep,mu,sigma)
+    ycdf.append(yvalue) 
+
+
+# Now plot the sample values and plotting position
+myfigure = matplotlib.pyplot.figure(figsize = (10,5)) # generate a object from the figure class, set aspect ratio
+
+# Built the plot
+matplotlib.pyplot.scatter(weibull_pp, sample, color ='blue') 
+matplotlib.pyplot.plot(ycdf, x,  color ='red') 
+matplotlib.pyplot.ylabel(&quot;Value of RV&quot;) 
+matplotlib.pyplot.xlabel(&quot;Quantile Value&quot;) 
+mytitle = &quot;Normal Distribution Data Model Population mean = : &quot; + str(popmean)+ &quot; Population variance =:&quot; + str(popvar)
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_40_0.png" /></p>
+<p>Some observations are in order:</p>
+<ul>
+<li>The population is a uniformly distributed collection. </li>
+<li>By random sampling, and keeping the sample size small, the sample distribution appears approximately normal.  </li>
+</ul>
+<p>Real things of engineering interest are not always bounded as shown here, the choice of the Weibull plotting position is not arbitrary.  The blue dot scatterplot in practice is called the empirical distribution function, or empirical quantile function.   </p>
+<p>Now we will apply these ideas to some realistic data.</p>
+<h3 id="beargrass-creek">Beargrass Creek</h3>
+<p>The file <code>beargrass.txt</code> contains annual peak flows for Beargrass Creek.  The year is a water year, so the peaks occur on different days in each year; thus it is not a time series. Let's examine the data and see how well a Normal distribution data model fits, then estimate from the distribution the peak magnitude with exceedence probability 0.01 (1%-chance that will observe a value equal to or greater).</p>
+<pre><code class="python">import pandas
+beargrass = pandas.read_csv('beargrass.txt')  #Reading a .csv file
+beargrass.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Peak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1945</td>
+      <td>1810</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1946</td>
+      <td>791</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1947</td>
+      <td>839</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1948</td>
+      <td>1750</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1949</td>
+      <td>898</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># beargrass.plot()
+</code></pre>
+
+<p>Now we will just copy code (the miracle of cut-n-paste!)</p>
+<pre><code class="python">sample = beargrass['Peak'].tolist() # put the peaks into a list
+sample_mean = numpy.array(sample).mean()
+sample_variance = numpy.array(sample).std()**2
+sample.sort() # sort the sample in place!
+weibull_pp = [] # built a relative frequency approximation to probability, assume each pick is equally likely
+for i in range(0,len(sample),1):
+    weibull_pp.append((i+1)/(len(sample)+1))
+################
+mu = sample_mean # Fitted Model
+sigma = math.sqrt(sample_variance)
+x = []; ycdf = []
+xlow = 0; xhigh = 1.2*max(sample) ; howMany = 100
+xstep = (xhigh - xlow)/howMany
+for i in range(0,howMany+1,1):
+    x.append(xlow + i*xstep)
+    yvalue = normdist(xlow + i*xstep,mu,sigma)
+    ycdf.append(yvalue) 
+# Now plot the sample values and plotting position
+myfigure = matplotlib.pyplot.figure(figsize = (7,9)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(weibull_pp, sample ,color ='blue') 
+matplotlib.pyplot.plot(ycdf, x, color ='red') 
+matplotlib.pyplot.xlabel(&quot;Quantile Value&quot;) 
+matplotlib.pyplot.ylabel(&quot;Value of RV&quot;) 
+mytitle = &quot;Normal Distribution Data Model sample mean = : &quot; + str(sample_mean)+ &quot; sample variance =:&quot; + str(sample_variance)
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_45_0.png" /></p>
+<pre><code class="python">beargrass['Peak'].describe()
+</code></pre>
+
+<pre><code>count      31.000000
+mean     1599.258065
+std      1006.239500
+min       707.000000
+25%       908.000000
+50%      1250.000000
+75%      1945.000000
+max      5200.000000
+Name: Peak, dtype: float64
+</code></pre>
+<p>A 1% chance exceedence is on the right side of the chart, it is the compliment of 99% non-exceedence, in terms of our quantile function we want to find the value <script type="math/tex">X</script> that returns a quantile of 0.99.</p>
+<pre><code class="python">myguess = 6000
+print(mu,sigma)
+print(normdist(myguess,mu,sigma))
+</code></pre>
+
+<pre><code>1599.258064516129 989.8767915427474
+0.9999956206542673
+</code></pre>
+<pre><code class="python"># If we want to get fancy we can use Newton's method to get really close to the root
+
+from scipy.optimize import newton
+
+def f(x):
+    mu = 1599.258064516129
+    sigma = 989.8767915427474
+    quantile = 0.99999
+    argument = (x - mu)/(math.sqrt(2.0)*sigma)    
+    normdist = (1.0 + math.erf(argument))/2.0
+    return normdist - quantile
+
+print(newton(f, myguess))
+
+</code></pre>
+
+<pre><code>5820.974479887303
+</code></pre>
+<p>So a peak discharge of 4000 or so is expected to be observed with 1% chance, notice we took the value from the fitted distribution, not the empirical set.  As an observation, the Normal model is not a very good data model for these observations.</p>
+<h3 id="log-normal">Log-Normal</h3>
+<p>Another data model we can try is log-normal, where we stipulate that the logarithms of the observations are normal.  The scripts are practically the same, but there is an inverse transformation required to recover original value scale.  Again we will use Beargrass creek.  </p>
+<pre><code class="python">def loggit(x):  # A prototype function to log transform x
+    return(math.log(x))
+
+logsample = beargrass['Peak'].apply(loggit).tolist() # put the peaks into a list
+sample_mean = numpy.array(logsample).mean()
+sample_variance = numpy.array(logsample).std()**2
+logsample.sort() # sort the sample in place!
+weibull_pp = [] # built a relative frequency approximation to probability, assume each pick is equally likely
+for i in range(0,len(sample),1):
+    weibull_pp.append((i+1)/(len(sample)+1))
+################
+mu = sample_mean # Fitted Model in Log Space
+sigma = math.sqrt(sample_variance)
+x = []; ycdf = []
+xlow = 1; xhigh = 1.05*max(logsample) ; howMany = 100
+xstep = (xhigh - xlow)/howMany
+for i in range(0,howMany+1,1):
+    x.append(xlow + i*xstep)
+    yvalue = normdist(xlow + i*xstep,mu,sigma)
+    ycdf.append(yvalue) 
+# Now plot the sample values and plotting position
+myfigure = matplotlib.pyplot.figure(figsize = (7,9)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(weibull_pp, logsample ,color ='blue') 
+matplotlib.pyplot.plot(ycdf, x, color ='red') 
+matplotlib.pyplot.xlabel(&quot;Quantile Value&quot;) 
+matplotlib.pyplot.ylabel(&quot;Value of RV&quot;) 
+mytitle = &quot;Log Normal Data Model log sample mean = : &quot; + str(sample_mean)+ &quot; log sample variance  =:&quot; + str(sample_variance)
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_52_0.png" /></p>
+<p>The plot doesn't look too bad, but we are in log-space, which is hard to interpret, so we will transform back to arithmetic space </p>
+<pre><code class="python">def antiloggit(x):  # A prototype function to log transform x
+    return(math.exp(x))
+
+sample = beargrass['Peak'].tolist() # pull original list
+sample.sort() # sort in place
+################
+mu = sample_mean # Fitted Model in Log Space
+sigma = math.sqrt(sample_variance)
+x = []; ycdf = []
+xlow = 1; xhigh = 1.05*max(logsample) ; howMany = 100
+xstep = (xhigh - xlow)/howMany
+for i in range(0,howMany+1,1):
+    x.append(antiloggit(xlow + i*xstep))
+    yvalue = normdist(xlow + i*xstep,mu,sigma)
+    ycdf.append(yvalue) 
+# Now plot the sample values and plotting position
+myfigure = matplotlib.pyplot.figure(figsize = (7,9)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(weibull_pp, sample ,color ='blue') 
+matplotlib.pyplot.plot(ycdf, x, color ='red') 
+matplotlib.pyplot.xlabel(&quot;Quantile Value&quot;) 
+matplotlib.pyplot.ylabel(&quot;Value of RV&quot;) 
+mytitle = &quot;Log Normal Data Model sample log mean = : &quot; + str((sample_mean))+ &quot; sample log variance  =:&quot; + str((sample_variance))
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_54_0.png" /></p>
+<p>Visually a better data model, now lets determine the 1% chance value.</p>
+<pre><code class="python">myguess = 4440
+print(mu,sigma)
+print(normdist(loggit(myguess),mu,sigma)) # mu, sigma already in log space - convert myguess
+</code></pre>
+
+<pre><code>7.23730905616488 0.4984855728993489
+0.9900772507418302
+</code></pre>
+<pre><code class="python"># If we want to get fancy we can use Newton's method to get really close to the root
+
+from scipy.optimize import newton
+
+def f(x):
+    mu = 7.23730905616488
+    sigma = 0.4984855728993489
+    quantile = 0.99
+    argument = (loggit(x) - mu)/(math.sqrt(2.0)*sigma)    
+    normdist = (1.0 + math.erf(argument))/2.0
+    return normdist - quantile
+
+print(newton(f, myguess))
+</code></pre>
+
+<pre><code>4433.567789173262
+</code></pre>
+<p>Now we have a decent method, we should put stuff into functions to keep code concise, lets examine a couple more data models</p>
+<h3 id="gumbell-double-exponential-distribution">Gumbell (Double Exponential) Distribution</h3>
+<p>The Gumbell is also called the Extreme-Value Type I distribution, the density and quantile function are:</p>
+<p>
+<script type="math/tex; mode=display"> \text{pdf(x)} = \frac{1}{\beta} \cdot exp [-\frac{(x-\alpha)}{\beta} - exp (-\frac{(x-\alpha)}{\beta}) ]</script>
+</p>
+<p>
+<script type="math/tex; mode=display"> F(X) =  \int_{-\infty}^X{\frac{1}{\beta} \cdot exp [-\frac{(x-\alpha)}{\beta} - exp (-\frac{(x-\alpha)}{\beta}) ] dx} = exp [- exp (-\frac{(X-\alpha)}{\beta})] </script>
+</p>
+<p>The distribution has two parameters, <script type="math/tex">\alpha</script> and <script type="math/tex">\beta</script>, which in some sense play the same role as mean and variance. Lets modify our scripts further to see how this data model performs on the Bearcreek data.</p>
+<p>Of course we need a way to estimate the parameters, a good approximation can be obtained using:</p>
+<p>
+<script type="math/tex; mode=display"> \alpha = \mu \cdot \frac{\sqrt{6}}{\pi} </script>
+</p>
+<p>and</p>
+<p>
+<script type="math/tex; mode=display"> \beta = 0.45 \cdot \sigma </script>
+</p>
+<p>where <script type="math/tex">\mu</script> and <script type="math/tex">\sigma^2</script> are the sample mean and variance.</p>
+<pre><code class="python">def ev1dist(x,alpha,beta):
+    argument = (x - alpha)/beta
+    constant = 1.0/beta
+    ev1dist = math.exp(-1.0*math.exp(-1.0*argument))
+    return ev1dist
+</code></pre>
+
+<p>Now literally substitute into our prior code!</p>
+<pre><code class="python">sample = beargrass['Peak'].tolist() # put the peaks into a list
+sample_mean = numpy.array(sample).mean()
+sample_variance = numpy.array(sample).std()**2
+alpha_mom = sample_mean*math.sqrt(6)/math.pi
+beta_mom = math.sqrt(sample_variance)*0.45
+sample.sort() # sort the sample in place!
+weibull_pp = [] # built a relative frequency approximation to probability, assume each pick is equally likely
+for i in range(0,len(sample),1):
+    weibull_pp.append((i+1)/(len(sample)+1))
+################
+mu = sample_mean # Fitted Model
+sigma = math.sqrt(sample_variance)
+x = []; ycdf = []
+xlow = 0; xhigh = 1.2*max(sample) ; howMany = 100
+xstep = (xhigh - xlow)/howMany
+for i in range(0,howMany+1,1):
+    x.append(xlow + i*xstep)
+    yvalue = ev1dist(xlow + i*xstep,alpha_mom,beta_mom)
+    ycdf.append(yvalue) 
+# Now plot the sample values and plotting position
+myfigure = matplotlib.pyplot.figure(figsize = (7,8)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(weibull_pp, sample ,color ='blue') 
+matplotlib.pyplot.plot(ycdf, x, color ='red') 
+matplotlib.pyplot.xlabel(&quot;Quantile Value&quot;) 
+matplotlib.pyplot.ylabel(&quot;Value of RV&quot;) 
+mytitle = &quot;Extreme Value Type 1 Distribution Data Model sample mean = : &quot; + str(sample_mean)+ &quot; sample variance =:&quot; + str(sample_variance)
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_61_0.png" /></p>
+<p>Again a so-so visual fit.
+To find the 1% chance value</p>
+<pre><code class="python">myguess = 3300
+print(alpha_mom,beta_mom)
+print(ev1dist(myguess,alpha_mom,beta_mom)) # 
+</code></pre>
+
+<pre><code>1246.9363972503857 445.4445561942363
+0.990087892543188
+</code></pre>
+<pre><code class="python"># If we want to get fancy we can use Newton's method to get really close to the root
+
+from scipy.optimize import newton
+
+def f(x):
+    alpha = 1246.9363972503857
+    beta = 445.4445561942363
+    quantile = 0.99
+    argument = (x - alpha)/beta
+    constant = 1.0/beta
+    ev1dist = math.exp(-1.0*math.exp(-1.0*argument))
+    return ev1dist - quantile
+
+print(newton(f, myguess))
+</code></pre>
+
+<pre><code>3296.0478279991366
+</code></pre>
+<pre><code class="python">
+</code></pre>
+
+<h3 id="gamma-distribution-as-pearson-type-3">Gamma Distribution (as Pearson Type 3)</h3>
+<p>One last data model to consider is one that is specifically stipulated for use by federal agencies for probability estimation of extreme hydrologic events.  The data model ia called the Log-Pearson Type III distribution, its actually a specific case of a Gamma distrubution.  </p>
+<p>This example we will dispense with tyring to build it in python primative, and just use a package - the density function is not all that hard, but the quantile function is elaborate.  </p>
+<p>Learn more at http://54.243.252.9/engr-1330-psuedo-course/CECE-1330-PsuedoCourse/3-Readings/NumericalRecipesinF77.pdf (in particular around Page 276)</p>
+<p>As usual, lets let Google do some work for us, using the search term "gamma quantile function; scipy" we get to this nice blog entry https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.gamma.html which is a good start. </p>
+<p>A Pearson Type III data model has the following density function:</p>
+<p>
+<script type="math/tex; mode=display"> f(x|\tau,\alpha,\beta) = \frac{(\frac{x-\tau}{\beta})^{\alpha -1}\cdot exp( - \frac{x-\tau}{\beta})}{|\beta| \Gamma(\alpha)}</script>
+</p>
+<p>If we make some substitutions:
+<script type="math/tex"> \lambda = \frac{1}{\beta} ; \hat{x} = x -\tau </script> then the density function is</p>
+<p>
+<script type="math/tex; mode=display"> f(\hat{x}) = \frac{ 1}{\Gamma(\alpha)} (\lambda \hat{x})^{\alpha -1}\cdot exp( - \lambda \hat{x} )</script>
+</p>
+<p>which is now a one parameter Gamma density function just like the example in the link.</p>
+<p>Reading a little from http://atomickitty.ddns.net/documents/university-courses/ce-5361-swhydrology/1-Lessons.src/Lesson22/AdditionalReading/Bulletin17C-tm4b5-draft-ACWI-17Jan2018.pdf we can relate the transformations to descriptive statistics (shown below without explaination) as:</p>
+<p>
+<script type="math/tex">\mu = \text{sample mean}</script>,</p>
+<p>
+<script type="math/tex">\sigma = \text{sample standard deviation}</script>, </p>
+<p>
+<script type="math/tex">\gamma = \text{sample skew coefficient} = (\frac{n}{\sigma^3(n-1)(n-2)})\sum_{i=1}^n(x_i - \mu)^3 </script>
+</p>
+<p>
+<script type="math/tex">\alpha = \frac{4}{\gamma^2}</script>
+</p>
+<p>
+<script type="math/tex">\beta = sign(\gamma)\sqrt{\frac{\sigma^2}{\alpha}}</script>
+</p>
+<p>
+<script type="math/tex">\tau = \mu - \alpha \cdot \beta</script>
+</p>
+<p>So we have a bit of work to do.  The name of the functions in <code>scipy</code> we are interested in are <code>gamma.pdf(x,a)</code> and <code>gamma.cdf(x,a)</code>  So lets build a tool to generate a Log-Pearson Type III data model, then apply it to Beargrass Creek.  We will use a lot of glue here.</p>
+<p>First load in dependencies, and define support functions we will need </p>
+<pre><code class="python">import scipy.stats # import scipy stats package
+import math        # import math package
+import numpy       # import numpy package
+# log and antilog
+def loggit(x):  # A prototype function to log transform x
+    return(math.log(x))
+def antiloggit(x):  # A prototype function to log transform x
+    return(math.exp(x))
+def weibull_pp(sample): # plotting position function
+# returns a list of plotting positions; sample must be a numeric list
+    weibull_pp = [] # null list to return after fill
+    sample.sort() # sort the sample list in place
+    for i in range(0,len(sample),1):
+        weibull_pp.append((i+1)/(len(sample)+1))
+    return weibull_pp
+
+</code></pre>
+
+<p>Then the gamma distribution from scipy, modified for our type of inputs.</p>
+<pre><code class="python">def gammacdf(x,tau,alpha,beta): # Gamma Cumulative Density function - with three parameter to one parameter convert
+    xhat = x-tau
+    lamda = 1.0/beta
+    gammacdf = scipy.stats.gamma.cdf(lamda*xhat, alpha)
+    return gammacdf
+</code></pre>
+
+<p>Then load in the data from the data frame, log transform and generate descriptive statistics.</p>
+<pre><code class="python">#sample = beargrass['Peak'].tolist() # put the peaks into a list
+sample = beargrass['Peak'].apply(loggit).tolist() # put the log peaks into a list
+sample_mean  = numpy.array(sample).mean()
+sample_stdev = numpy.array(sample).std()
+sample_skew  = 3.0 # scipy.stats.skew(sample)
+sample_alpha = 4.0/(sample_skew**2)
+sample_beta  = numpy.sign(sample_skew)*math.sqrt(sample_stdev**2/sample_alpha)
+sample_tau   = sample_mean - sample_alpha*sample_beta
+</code></pre>
+
+<p>Now generate plotting positions for the sample observations</p>
+<pre><code class="python">plotting = weibull_pp(sample)
+</code></pre>
+
+<p>Now generate values for the data model (for plotting our red line "fit"), set limits to be a little beyond the sample range.</p>
+<pre><code class="python">x = []; ycdf = []
+xlow = (0.9*min(sample)); xhigh = (1.1*max(sample)) ; howMany = 100
+xstep = (xhigh - xlow)/howMany
+for i in range(0,howMany+1,1):
+    x.append(xlow + i*xstep)
+    yvalue = gammacdf(xlow + i*xstep,sample_tau,sample_alpha,sample_beta)
+    ycdf.append(yvalue) 
+</code></pre>
+
+<p>Now reverse transform back to native scale, and plot the sample values vs plotting position in blue, and the data model in red</p>
+<pre><code class="python"># reverse transform the peaks, and the data model peaks
+for i in range(len(sample)):
+    sample[i] = antiloggit(sample[i])
+for i in range(len(x)):
+    x[i] = antiloggit(x[i])
+myfigure = matplotlib.pyplot.figure(figsize = (7,8)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(plotting, sample ,color ='blue') 
+matplotlib.pyplot.plot(ycdf, x, color ='red') 
+matplotlib.pyplot.xlabel(&quot;Quantile Value&quot;) 
+matplotlib.pyplot.ylabel(&quot;Value of RV&quot;) 
+mytitle = &quot;Log Pearson Type III Distribution Data Model\n &quot;
+mytitle += &quot;Mean = &quot; + str(antiloggit(sample_mean)) + &quot;\n&quot;
+mytitle += &quot;SD = &quot; + str(antiloggit(sample_stdev)) + &quot;\n&quot;
+mytitle += &quot;Skew = &quot; + str(antiloggit(sample_skew)) + &quot;\n&quot;
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_77_0.png" /></p>
+<p>And as before lets find the value that retruns the 99% quantile - we will just use the newton method above.
+First recover the required model parameters. Then we will paste these into the <script type="math/tex">f(x)</script> function for the Newton's method.</p>
+<pre><code class="python">print(sample_tau)
+print(sample_alpha)
+print(sample_beta)
+</code></pre>
+
+<pre><code>6.904985340898647
+0.4444444444444444
+0.7477283593490234
+</code></pre>
+<pre><code class="python"># If we want to get fancy we can use Newton's method to get really close to the root
+
+from scipy.optimize import newton
+
+def f(x):
+    sample_tau = 5.976005311346212
+    sample_alpha = 6.402272915026134
+    sample_beta = 0.1970087438569494
+    quantile = 0.9900
+    argument = loggit(x)
+    gammavalue = gammacdf(argument,sample_tau,sample_alpha,sample_beta)
+    return gammavalue - quantile
+
+myguess =  5000
+print(newton(f, myguess))
+</code></pre>
+
+<pre><code>5856.10913158364
+</code></pre>
+<p>Trust, but verify!</p>
+<pre><code class="python">round(gammacdf(loggit(5856.109),sample_tau,sample_alpha,sample_beta),4)
+</code></pre>
+
+<pre><code>0.9753
+</code></pre>
+<p>Now lets summarize our efforts regarding Beargrass Creek annual peaks and probabilities anticipated.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Data Model</th>
+<th align="left">99% Peak Flow</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Normal</td>
+<td align="left">3902</td>
+<td align="left">so-so visual fit</td>
+</tr>
+<tr>
+<td align="left">Log-Normal</td>
+<td align="left">4433</td>
+<td align="left">better visual fit</td>
+</tr>
+<tr>
+<td align="left">Gumbell</td>
+<td align="left">3296</td>
+<td align="left">better visual fit</td>
+</tr>
+<tr>
+<td align="left">Log-Pearson III</td>
+<td align="left">5856</td>
+<td align="left">best (of the set) visual fit</td>
+</tr>
+</tbody>
+</table>
+<p>At this point, now we have to choose our model and then can investigate different questions.  So using LP3 as our favorite, lets now determine anticipated flow values for different probabilities (from the data model) - easy enought to just change the quantile value and rerun the newtons optimizer, for example:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">968</td>
+<td align="left">First Quartile Divider</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">1302</td>
+<td align="left">Median, and Second Quartile Divider</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">1860</td>
+<td align="left">3rd Quartile Divider</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">2706</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">5856</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">9420</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">11455</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="python"># If we want to get fancy we can use Newton's method to get really close to the root
+
+from scipy.optimize import newton
+
+def f(x):
+    sample_tau = 5.976005311346212
+    sample_alpha = 6.402272915026134
+    sample_beta = 0.1970087438569494
+    quantile = 0.50
+    argument = loggit(x)
+    gammavalue = gammacdf(argument,sample_tau,sample_alpha,sample_beta)
+    return gammavalue - quantile
+
+myguess =  1000
+print(newton(f, myguess))
+</code></pre>
+
+<pre><code>1302.814639184079
+</code></pre>
+<h2 id="references">References:</h2>
+<ol>
+<li>
+<p>Jamie Chan (2014) Learn Python in One Day and Learn It Well. LCF Publishing. Kindle Edition. http://www.learncodingfast.com/python</p>
+</li>
+<li>
+<p>Grus, Joel. Data Science from Scratch: First Principles with Python. O'Reilly Media. Kindle Edition. (http://safaribooksonline.com)</p>
+</li>
+<li>
+<p>Christian, B, and Griffiths Tom (2016) Algorithms to live by: The computer science of human decisions. Henry Holt and Company, ISBN 9781627790369 (hardcover)|ISBN 9781627790376 (electronic book)</p>
+</li>
+<li>
+<p>https://www.amazon.com/Distributional-Statistics-Environment-Statistical-Computing/dp/1463508417</p>
+</li>
+<li>
+<p>England, J.F. Jr., Cohn, T.A., Faber, B.A., Stedinger, J.R., Thomas Jr., W.O., Veilleux, A.G., Kiang, J.E., and Mason, R.R.Jr., 2018, Guidelines for Determining Flood Flow Frequency—Bulletin 17C: U.S. Geological Survey Techniques andMethods, book 4, chap. B5, 146 p., https://doi.org/10.3133/tm4B5</p>
+</li>
+<li>
+<p>https://www.astroml.org/book_figures/chapter3/fig_gamma_distribution.html</p>
+</li>
+<li>
+<p>https://www.inferentialthinking.com/chapters/10/Sampling_and_Empirical_Distributions.html</p>
+</li>
+<li>
+<p>https://www.inferentialthinking.com/chapters/15/Prediction.html</p>
+</li>
+</ol>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

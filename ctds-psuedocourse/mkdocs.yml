@@ -45,7 +45,7 @@ nav:
           - Linear Equation Systems : 
               - Lesson 12: 1-Lessons/Lesson12/lesson11.md      
           - Non-Linear Equation System : 
-              - Lesson 13: 1-Lessons/Lesson13/lesson12.md       
+              - Lesson 13: 1-Lessons/Lesson13/lesson13.md       
       - Data Models and Decisions :
           - Models and Causality : 
              - Lesson 14: lesson0/lesson0.md
@@ -54,7 +54,8 @@ nav:
           - Probability Distributions : 
              - Lesson 16: lesson0/lesson0.md
           - Probability Estimation Models : 
-             - Lesson 17: lesson0/lesson0.md
+             - Lesson 17: 1-Lessons/Lesson17/lesson17.md
+             - Laboratory 17: 8-Labs/Lab17/Lab17_Dev.md #needs content
           - Hypothesis Testing : 
              - Lesson 18: lesson0/lesson0.md 
           - Interval Estimates : 
