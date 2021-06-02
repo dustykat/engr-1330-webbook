@@ -1,4 +1,4 @@
-site_name: ENGR-1330 Example Course
+site_name: ENGR-1330 Fall 2021
 # navigation/site structure 
 nav:
   - Home: index.md
