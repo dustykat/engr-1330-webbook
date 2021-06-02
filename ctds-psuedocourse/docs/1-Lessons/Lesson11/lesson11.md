@@ -1,4 +1,223 @@
----
+%%html
+<!-- Script Block to set tables to left alignment -->
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+# Interpolation, Integration, Differentiation of Functions and Tabular Data
+
+## Interpolation
+
+The Starship rocket in the figure below sends a lot of telemetry data to both on-board and off-board (ground-based) control computers.  
+
+![https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/SpaceX_Starship_SN8_launch_as_viewed_from_South_Padre_Island.jpg/800px-SpaceX_Starship_SN8_launch_as_viewed_from_South_Padre_Island.jpg](800px-SpaceX_Starship_SN8_launch_as_viewed_from_South_Padre_Island.png)
+
+Suppose telemetry is received every 1/10 of a second, providing the altitude (position) of the craft, something like the figure below.
+
+![](altitude-time.png)
+
+How can one estimate the altitude at intermediate times (between the 1/10 of a second "true" values)?
+
+The problem is a type of interpolation problem similar to calculating water density from tables for intermediate values by assuming a straight line passed between the two values from the table. However it may not be appropriate to assume that the altitudes are linear with time.  The special challenge comes when we want to estimate intermediate values when there is a maximum or minimum in the tabular structure, and we will have to process many records for different cases.
+
+The classical approach to such a problem is to fit a polynomial to the tabular results and interrogate the resulting polynomial to obtain estimates of the intermediate values.  This prediction engine (the polynomial) is required to return the exact value at a observation location (in our case a 1/10 second interval).  This requirement is quite distinct from other types of prediction engines we will study.
+
+### Lagrangian Interpolation
+
+Polynomial interpolation is the method of determining a polynomial that fits a set of given points. There are several approaches to polynomial interpolation, of which one of the most well known is the Lagrangian method. The Lagrangian polynomial [https://en.wikipedia.org/wiki/Lagrange_polynomial](https://en.wikipedia.org/wiki/Lagrange_polynomial) is the polynomial of order $n-1$, where $n$ is he number of tabular data pairs we wish to interpolate. 
+
+Suppose we have a table of data (or telemetry sent back from our rocket), of $x-$ and $f(x)$-values:
+
+|$$x~$$  | $$~f(x)$$   |
+|:---  | :--- |
+|$$x_1$$ |$$f_1$$|
+|$$x_2$$   |$$f_2$$|
+|$$x_3$$   |$$f_3$$|
+|$$x_4$$ |$$f_4$$|
+
+The highest order polynomial that can be passed through these four data pairs is a cubic.  A Lagrangian form for such a cubic is
+
+$$ P_3(x) = f(x_1)\frac{(x-x_2)(x-x_3)(x-x_4)}{(x_1-x_2)(x_1-x_3)(x_1-x_4)} + f(x_2)\frac{(x-x_1)(x-x_3)(x-x_4)}{(x_2-x_1)(x_2-x_3)(x_2-x_4)} + f(x_3)\frac{(x-x_1)(x-x_2)(x-x_4)}{(x_3-x_1)(x_3-x_2)(x_3-x_4)} +f(x_4)\frac{(x-x_1)(x-x_2)(x-x_3)}{(x_4-x_1)(x_4-x_2)(x_4-x_3)} $$
+
+Notice that it is constructed of four terms, each of which is a cubic in $x$; hence the sum is a cubic also.  The pattern of each term is to form the numerator as a product of differences of the form $(x-x_i)$, omitting one $x_i$ in each term, the ommitted term is used in the denominator as a replacement for $x$ in each position in the numerator.  In each term, the difference factor is multiplied by the value $f_i$ corresponding to the $x_i$ ommitted in the numerator. The Lagragian polynomial for other degrees of interpolating polynomials employs this same pattern of forming a sum of polynomials of the desired degree. 
+
+Of importance is that the polynomial is intended to be used for interpolation, that is the value we seek $P(x^*)$ assumes we will supply $x^*$ in the range $[x_1 , x_4]$.  Going outside this range is called extrapolation, and interpolator-type prediction engines are the wromg tool!
+
+
+
+
+### Example 1
+
+Consider the three observations below, estimate (predict) the value for $f(2.3).
+
+|$$x~$$  | $$~f(x)$$   |
+|:---  | :--- |
+|1.1  |10.6|
+|1.7  |15.2|
+|3.0  |20.3|
+
+The Lagrangian form of the highest order of polynomial that can pass through the 3 data pairs is the quadratic:
+
+$$ P_2(x) = f(x_1)\frac{(x-x_2)(x-x_3)}{(x_1-x_2)(x_1-x_3)} + f(x_2)\frac{(x-x_1)(x-x_3)}{(x_2-x_1)(x_2-x_3)} + f(x_3)\frac{(x-x_1)(x-x_2)}{(x_3-x_1)(x_3-x_2)} $$
+
+Once the denominators are completed, it is relatively straightforward to compute the estimate (prediction), in this case
+
+$$ P_2(x) = (10.6)\frac{(x-1.7)(x-3.0)}{(1.1-1.7)(1.1-3.0)} + (15.2)\frac{(x-1.1)(x-3.0)}{(1.7-1.1)(1.7-3.0)} + (20.3)\frac{(x-1.1)(x-1.7)}{(3.0-1.1)(3.0-1.7)} $$
+
+At $x=2.3$ the result is $P_2(2.3)=18.38$.  
+
+Naturally, we want to use Computational Thinking principles, to pattern match and generalize the arithmetic as below.
+
+
+
+```python
+def lagint(xlist,ylist,xpred):
+    # lagrangian interpolation of order len(xlist)-1 
+    # 
+    lagint = 0.0 # ypred is an accumulator, and will be output
+    norder = len(xlist)
+    for i in range(norder):
+        term = ylist[i] # build up terms of polynomial
+        for j in range(norder):
+            if (i != j):
+                term = term * (xpred-xlist[j])/(xlist[i]-xlist[j])
+#            pass # may not need this expression
+        lagint = lagint + term
+#    print(i,j) #debugging expression
+    return(lagint)
+```
+
+
+```python
+xtable = [1.1,1.7,3.0]
+ytable = [10.6,15.2,20.3]
+
+xwant = 2.3
+
+print(round(lagint(xtable,ytable,xwant),2))
+```
+
+    18.38
+
+
+### Example 2
+
+This example is copied from [https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html](https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html)
+
+In the original source the author plots the resulting function, we can do the same here.  First the observation set:
+
+|$$x~$$  | $$~f(x)$$   |
+|:---  | :--- |
+|0 |7|
+|2 |11|
+|3 |28|
+|4 |63|
+
+Next we will plot the interpolating polynomial from $x=0$ to $x=4$ in steps of 0.1
+
+
+```python
+xtable = [0.1,0.3,0.5,0.7,0.9,1.1,1.3]
+ytable = [0.003,0.067,0.148,0.248,0.370,0.518,0.697]
+xwant = 0.3
+print(lagint(xtable,ytable,xwant))
+```
+
+    0.067
+
+
+
+```python
+# Observations
+xtable = [0,2,3,4]
+ytable = [7,11,28,63]
+#
+xpred = [] # empty list to store results for plotting
+ypred = [] # empty list to store results for plotting
+#
+step_size = 0.10  # step size
+how_many = int((xtable[len(xtable)-1])/step_size)
+# build the predictions
+for i in range(how_many+1): 
+    xpred.append(float(i)*step_size)
+    ypred.append(lagint(xtable,ytable,float(i)*step_size))
+#print(lagint(xtable,ytable,xwant))
+```
+
+
+```python
+import matplotlib.pyplot # the python plotting library
+myfigure = matplotlib.pyplot.figure(figsize = (6,6)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(xtable, ytable ,color ='blue') # The observations as points
+matplotlib.pyplot.plot(xpred, ypred, color ='red') # the polynomial
+matplotlib.pyplot.xlabel("Input Value") 
+matplotlib.pyplot.ylabel("Function Value") 
+mytitle = "Interpolating Polynomial Fit to Observations\n "
+mytitle += "Blue Markers are Observations " + "\n"
+mytitle += "Red Curve is Fitted Polynomial "+ "\n"
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+```
+
+
+    
+![png](output_10_0.png)
+    
+
+
+### Exercises
+
+In a radiation-induced polymerization study, a gamma source was used to give measured doses of radiation. The dosage varied with position in the apparatus, with the following data being recorded:
+
+|Position from emitter (inches)  | Dosage Rate, $10^5$ rads/hr  |
+|:---  | :--- |
+|0   |1.90|
+|0.5 |2.39|
+|1.0 |2.71|
+|1.5 |2.98|
+|2.0 |3.20|
+|3.0 |3.20|
+|3.5 |2.98|
+|4.0 |2.74|
+
+For some reason, the reading at 2.5 inches was not reported, but the value of radiation at that distance is needed; estimate the dosage level at 2.5 inches using an interpolation-type prediction engine.  Plot the interpolating function as well as the observations.
+# Observations
+position = [0,0.5,1.0,1.5,2.0,3.0,3.5,4.0]
+dosage = [1.90,2.39,2.71,2.98,3.20,3.20,2.98,2.74]
+#
+xpred = [] # empty list to store results for plotting
+ypred = [] # empty list to store results for plotting
+#
+step_size = 0.10  # step size
+how_many = int((position[len(position)-1])/step_size)
+# build the predictions
+for i in range(how_many+1): 
+    xpred.append(float(i)*step_size)
+    ypred.append(lagint(position,dosage,float(i)*step_size))
+#print(lagint(xtable,ytable,xwant))
+myfigure = matplotlib.pyplot.figure(figsize = (6,6)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(position,dosage ,color ='blue') # The observations as points
+matplotlib.pyplot.plot(xpred, ypred, color ='red') # the polynomial
+matplotlib.pyplot.xlabel("Distance") 
+matplotlib.pyplot.ylabel("Dosage") 
+mytitle = "Interpolating Polynomial Fit to Observations\n "
+mytitle += "Blue Markers are Observations " + "\n"
+mytitle += "Red Curve is Fitted Polynomial "+ "\n"
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+
+lagint(position,dosage,2.5)
+### Interpolation References
+- Lagrangian Interpolation (using R packages) [https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html](https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html)
+
+- Lagrangian Interpolation (Video) [https://www.youtube.com/watch?v=_zK_KhHW6og](https://www.youtube.com/watch?v=_zK_KhHW6og)
+
+- Lagrange Polynomials [https://en.wikipedia.org/wiki/Lagrange_polynomial](https://en.wikipedia.org/wiki/Lagrange_polynomial)
+
+- Gerald, C.F., and Wheatley, P. O., 1984. Applied Numerical Analysis. 3rd Ed. Addison Wesley, Inc. , pp. 171-210.
+
+- Westerink, J.J. 2018. CE 30125 Computational Methods, Department of Civil and Environmental Engineering and Earth Sciences University of Notre Dame, Notre Dame IN 46556 [https://coast.nd.edu/jjwteach/www/www/30125/pdfnotes/lecture3_6v13.pdf](https://coast.nd.edu/jjwteach/www/www/30125/pdfnotes/lecture3_6v13.pdf)
+
 # Integration of Functions
 
 At this point we have enough Python to consider doing some useful computations. We
@@ -23,12 +242,6 @@ The function is taken to be continuous within the interval $a < x < b$. We may d
 A representative panel of area $A_i$ is shown with darker shading in the figure. Three useful numerical approximations are listed in the following sections.  The approximations differ in how the function is represented by the panels --- in all cases the function is approximated by known polynomial models between the panel end points.
 
 In each case the greater the number of strips, and correspondingly smaller value of $\Delta x$, the more accurate the approximation. Typically, one can begin with a relatively small number of panels and increase the number until the resulting area approximation stops changing.
-
-
-
-
-
-
 
 ## Rectangular Panels 
 
@@ -66,12 +279,19 @@ while yes == 0:
     Program finds area under curve y = x * sqrt(1+x)
 
 
+    Enter a lower bound x_low 
+     2
+
+
 Verify that value is indeed what we entered
 
 
 ```python
 print(x_low)
 ```
+
+    2.0
+
 
 Now do the same for the upper limit, notice how we are using the ``yes`` variable.  We set a "fail" value, and demand input until we get "success".  The structure used here is called a ``try -- exception`` structure and is very common in programming.   Error checking is really important so that garbled input does not hang things up. 
 
@@ -88,12 +308,19 @@ while yes == 0:
 # exit the while loop when finally have a valid number
 ```
 
+    Enter an upper bound x_high 
+     4
+
+
 Again verify!
 
 
 ```python
 print(x_high)
 ```
+
+    4.0
+
 
 Now use the try - exception structure to input how many panels we wish to use.  Notice you can enter a negative value which will ultimately break things. Also observe this value is an integer.
 
@@ -110,12 +337,19 @@ while yes == 0:
 # exit the while loop when finally have a valid number
 ```
 
+    Enter how many panels 
+     5
+
+
 Again verify!
 
 
 ```python
 print(how_many)
 ```
+
+    5
+
 
 Now we can actually perform the integration by evaluating the function at the panel half-widths.
 In this example we are using primitive arithmetic, so the $\sqrt{}$ is accomplished by exponentation, the syntax is ``c = a ** b`` is the operation $c = a^b$.
@@ -148,6 +382,10 @@ print ("Area under curve y = x * sqrt(1+x) from x = ",x_low,\
 #       " to x = .....     lets us use multiple lines
 # the \n is a "newline" character 
 ```
+
+    Area under curve y = x * sqrt(1+x) from x =  2.0  to x =  4.0 
+     is approximately:  19.610958667237167
+
 
 The code implements rudimentary error checking -- it forces us to enter numeric values for the lower and upper values of $x$ as well as the number of panels to use.  It does not check for undefined ranges and such, but you should get the idea -- notice that a large fraction of the entire program is error trapping; this devotion to error trapping is typical for professional programs where you are going to distribute executable modules and not expect the end user to be a programmer.
 
@@ -205,6 +443,21 @@ print ("Area under curve y = x * sqrt(1+x) from x = ",x_low,\
 
 
 ```
+
+    Program finds area under curve y = x * sqrt(1+x)
+
+
+    Enter a lower bound x_low 
+     0
+    Enter an upper bound x_high 
+     2
+    Enter how many panels 
+     6
+
+
+    Area under curve y = x * sqrt(1+x) from x =  0.0  to x =  2.0 
+     is approximately:  3.3793974379024605
+
 
 ## Trapezoidal Panels
 The trapezoidal panels are approximated as shown in the figure below. 
@@ -267,6 +520,21 @@ print ("Area under curve y = x * sqrt(1+x) from x = ",x_low,\
       " to x = ",x_high,"\n is approximately: ",accumulated_area)
 
 ```
+
+    Program finds area under curve y = x * sqrt(1+x)
+
+
+    Enter a lower bound x_low 
+     0
+    Enter an upper bound x_high 
+     8
+    Enter how many panels 
+     9
+
+
+    Area under curve y = x * sqrt(1+x) from x =  0.0  to x =  8.0 
+     is approximately:  175.33954986737925
+
 
 ## Parabolic Panels
 Parabolic panels approximate the shape of the panel with a parabola.  The area between the chord and the curve (neglected in the trapezoidal solution) may be accounted for by approximating the function with a parabola passing through the points defined by three successive values of $y$.
@@ -334,6 +602,21 @@ print ("Area under curve y = x * sqrt(1+x) from x = ",x_low,\
 
 
 ```
+
+    Program finds area under curve y = x * sqrt(1+x)
+
+
+    Enter a lower bound x_low 
+     0
+    Enter an upper bound x_high 
+     1
+    Enter how many panels 
+     4
+
+
+    Area under curve y = x * sqrt(1+x) from x =  0.0  to x =  1.0 
+     is approximately:  0.6094186631272838
+
 
 If we study all the forms of the numerical method we observe that the numerical integration method is really the sum of function values at specific locations in the interval of interest, with each value multiplied by a specific weight.
 
@@ -743,3 +1026,15 @@ Approximate $\int_1^{4.2} cosh(x) dx$ from the tabulation above.  Briefly explai
 Approximate $\int_1^{4.0} cosh(x) dx$ from the tabulation above.  Explain how handled working with values that fall between tabulated values.
 
 #
+
+# References
+- [https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html](https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html)
+
+- Lagrangian Interpolation (Video) [https://www.youtube.com/watch?v=_zK_KhHW6og](https://www.youtube.com/watch?v=_zK_KhHW6og)
+
+- Lagrange Polynomials [https://en.wikipedia.org/wiki/Lagrange_polynomial](https://en.wikipedia.org/wiki/Lagrange_polynomial)
+
+
+```python
+
+```

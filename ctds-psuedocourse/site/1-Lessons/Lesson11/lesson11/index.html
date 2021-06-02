@@ -356,7 +356,13 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#integration-of-functions">Integration of Functions</a></li>
+        <li class="main active"><a href="#interpolation-integration-differentiation-of-functions-and-tabular-data">Interpolation, Integration, Differentiation of Functions and Tabular Data</a></li>
+            <li><a href="#interpolation">Interpolation</a></li>
+        <li class="main "><a href="#observations">Observations</a></li>
+        <li class="main "><a href="#build-the-predictions">build the predictions</a></li>
+        <li class="main "><a href="#printlagintxtableytablexwant">print(lagint(xtable,ytable,xwant))</a></li>
+            <li><a href="#interpolation-references">Interpolation References</a></li>
+        <li class="main "><a href="#integration-of-functions">Integration of Functions</a></li>
             <li><a href="#background">Background</a></li>
             <li><a href="#rectangular-panels">Rectangular Panels</a></li>
             <li><a href="#using-the-math-package">Using the math package</a></li>
@@ -366,12 +372,305 @@
             <li><a href="#reading-from-a-file-open-read-close-files">Reading from a file --- open, read, close files</a></li>
             <li><a href="#read-into-a-list">Read into a list</a></li>
             <li><a href="#integrating-the-tabular-data">Integrating the Tabular Data</a></li>
-            <li><a href="#exercises">Exercises</a></li>
+            <li><a href="#exercises_1">Exercises</a></li>
+        <li class="main "><a href="#references">References</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<hr />
+<p>%%html
+<!-- Script Block to set tables to left alignment -->
+<style>
+  table {margin-left: 0 !important;}
+</style></p>
+<h1 id="interpolation-integration-differentiation-of-functions-and-tabular-data">Interpolation, Integration, Differentiation of Functions and Tabular Data</h1>
+<h2 id="interpolation">Interpolation</h2>
+<p>The Starship rocket in the figure below sends a lot of telemetry data to both on-board and off-board (ground-based) control computers.  </p>
+<p><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/SpaceX_Starship_SN8_launch_as_viewed_from_South_Padre_Island.jpg/800px-SpaceX_Starship_SN8_launch_as_viewed_from_South_Padre_Island.jpg" src="../800px-SpaceX_Starship_SN8_launch_as_viewed_from_South_Padre_Island.png" /></p>
+<p>Suppose telemetry is received every 1/10 of a second, providing the altitude (position) of the craft, something like the figure below.</p>
+<p><img alt="" src="../altitude-time.png" /></p>
+<p>How can one estimate the altitude at intermediate times (between the 1/10 of a second "true" values)?</p>
+<p>The problem is a type of interpolation problem similar to calculating water density from tables for intermediate values by assuming a straight line passed between the two values from the table. However it may not be appropriate to assume that the altitudes are linear with time.  The special challenge comes when we want to estimate intermediate values when there is a maximum or minimum in the tabular structure, and we will have to process many records for different cases.</p>
+<p>The classical approach to such a problem is to fit a polynomial to the tabular results and interrogate the resulting polynomial to obtain estimates of the intermediate values.  This prediction engine (the polynomial) is required to return the exact value at a observation location (in our case a 1/10 second interval).  This requirement is quite distinct from other types of prediction engines we will study.</p>
+<h3 id="lagrangian-interpolation">Lagrangian Interpolation</h3>
+<p>Polynomial interpolation is the method of determining a polynomial that fits a set of given points. There are several approaches to polynomial interpolation, of which one of the most well known is the Lagrangian method. The Lagrangian polynomial <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial">https://en.wikipedia.org/wiki/Lagrange_polynomial</a> is the polynomial of order <script type="math/tex">n-1</script>, where <script type="math/tex">n</script> is he number of tabular data pairs we wish to interpolate. </p>
+<p>Suppose we have a table of data (or telemetry sent back from our rocket), of <script type="math/tex">x-</script> and <script type="math/tex">f(x)</script>-values:</p>
+<table>
+<thead>
+<tr>
+<th align="left">
+<script type="math/tex; mode=display">x~</script>
+</th>
+<th align="left">
+<script type="math/tex; mode=display">~f(x)</script>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<script type="math/tex; mode=display">x_1</script>
+</td>
+<td align="left">
+<script type="math/tex; mode=display">f_1</script>
+</td>
+</tr>
+<tr>
+<td align="left">
+<script type="math/tex; mode=display">x_2</script>
+</td>
+<td align="left">
+<script type="math/tex; mode=display">f_2</script>
+</td>
+</tr>
+<tr>
+<td align="left">
+<script type="math/tex; mode=display">x_3</script>
+</td>
+<td align="left">
+<script type="math/tex; mode=display">f_3</script>
+</td>
+</tr>
+<tr>
+<td align="left">
+<script type="math/tex; mode=display">x_4</script>
+</td>
+<td align="left">
+<script type="math/tex; mode=display">f_4</script>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The highest order polynomial that can be passed through these four data pairs is a cubic.  A Lagrangian form for such a cubic is</p>
+<p>
+<script type="math/tex; mode=display"> P_3(x) = f(x_1)\frac{(x-x_2)(x-x_3)(x-x_4)}{(x_1-x_2)(x_1-x_3)(x_1-x_4)} + f(x_2)\frac{(x-x_1)(x-x_3)(x-x_4)}{(x_2-x_1)(x_2-x_3)(x_2-x_4)} + f(x_3)\frac{(x-x_1)(x-x_2)(x-x_4)}{(x_3-x_1)(x_3-x_2)(x_3-x_4)} +f(x_4)\frac{(x-x_1)(x-x_2)(x-x_3)}{(x_4-x_1)(x_4-x_2)(x_4-x_3)} </script>
+</p>
+<p>Notice that it is constructed of four terms, each of which is a cubic in <script type="math/tex">x</script>; hence the sum is a cubic also.  The pattern of each term is to form the numerator as a product of differences of the form <script type="math/tex">(x-x_i)</script>, omitting one <script type="math/tex">x_i</script> in each term, the ommitted term is used in the denominator as a replacement for <script type="math/tex">x</script> in each position in the numerator.  In each term, the difference factor is multiplied by the value <script type="math/tex">f_i</script> corresponding to the <script type="math/tex">x_i</script> ommitted in the numerator. The Lagragian polynomial for other degrees of interpolating polynomials employs this same pattern of forming a sum of polynomials of the desired degree. </p>
+<p>Of importance is that the polynomial is intended to be used for interpolation, that is the value we seek <script type="math/tex">P(x^*)</script> assumes we will supply <script type="math/tex">x^*</script> in the range <script type="math/tex">[x_1 , x_4]</script>.  Going outside this range is called extrapolation, and interpolator-type prediction engines are the wromg tool!</p>
+<h3 id="example-1">Example 1</h3>
+<p>Consider the three observations below, estimate (predict) the value for $f(2.3).</p>
+<table>
+<thead>
+<tr>
+<th align="left">
+<script type="math/tex; mode=display">x~</script>
+</th>
+<th align="left">
+<script type="math/tex; mode=display">~f(x)</script>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1.1</td>
+<td align="left">10.6</td>
+</tr>
+<tr>
+<td align="left">1.7</td>
+<td align="left">15.2</td>
+</tr>
+<tr>
+<td align="left">3.0</td>
+<td align="left">20.3</td>
+</tr>
+</tbody>
+</table>
+<p>The Lagrangian form of the highest order of polynomial that can pass through the 3 data pairs is the quadratic:</p>
+<p>
+<script type="math/tex; mode=display"> P_2(x) = f(x_1)\frac{(x-x_2)(x-x_3)}{(x_1-x_2)(x_1-x_3)} + f(x_2)\frac{(x-x_1)(x-x_3)}{(x_2-x_1)(x_2-x_3)} + f(x_3)\frac{(x-x_1)(x-x_2)}{(x_3-x_1)(x_3-x_2)} </script>
+</p>
+<p>Once the denominators are completed, it is relatively straightforward to compute the estimate (prediction), in this case</p>
+<p>
+<script type="math/tex; mode=display"> P_2(x) = (10.6)\frac{(x-1.7)(x-3.0)}{(1.1-1.7)(1.1-3.0)} + (15.2)\frac{(x-1.1)(x-3.0)}{(1.7-1.1)(1.7-3.0)} + (20.3)\frac{(x-1.1)(x-1.7)}{(3.0-1.1)(3.0-1.7)} </script>
+</p>
+<p>At <script type="math/tex">x=2.3</script> the result is <script type="math/tex">P_2(2.3)=18.38</script>.  </p>
+<p>Naturally, we want to use Computational Thinking principles, to pattern match and generalize the arithmetic as below.</p>
+<pre><code class="python">def lagint(xlist,ylist,xpred):
+    # lagrangian interpolation of order len(xlist)-1 
+    # 
+    lagint = 0.0 # ypred is an accumulator, and will be output
+    norder = len(xlist)
+    for i in range(norder):
+        term = ylist[i] # build up terms of polynomial
+        for j in range(norder):
+            if (i != j):
+                term = term * (xpred-xlist[j])/(xlist[i]-xlist[j])
+#            pass # may not need this expression
+        lagint = lagint + term
+#    print(i,j) #debugging expression
+    return(lagint)
+</code></pre>
+
+<pre><code class="python">xtable = [1.1,1.7,3.0]
+ytable = [10.6,15.2,20.3]
+
+xwant = 2.3
+
+print(round(lagint(xtable,ytable,xwant),2))
+</code></pre>
+
+<pre><code>18.38
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<p>This example is copied from <a href="https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html">https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html</a></p>
+<p>In the original source the author plots the resulting function, we can do the same here.  First the observation set:</p>
+<table>
+<thead>
+<tr>
+<th align="left">
+<script type="math/tex; mode=display">x~</script>
+</th>
+<th align="left">
+<script type="math/tex; mode=display">~f(x)</script>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">11</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">28</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">63</td>
+</tr>
+</tbody>
+</table>
+<p>Next we will plot the interpolating polynomial from <script type="math/tex">x=0</script> to <script type="math/tex">x=4</script> in steps of 0.1</p>
+<pre><code class="python">xtable = [0.1,0.3,0.5,0.7,0.9,1.1,1.3]
+ytable = [0.003,0.067,0.148,0.248,0.370,0.518,0.697]
+xwant = 0.3
+print(lagint(xtable,ytable,xwant))
+</code></pre>
+
+<pre><code>0.067
+</code></pre>
+<pre><code class="python"># Observations
+xtable = [0,2,3,4]
+ytable = [7,11,28,63]
+#
+xpred = [] # empty list to store results for plotting
+ypred = [] # empty list to store results for plotting
+#
+step_size = 0.10  # step size
+how_many = int((xtable[len(xtable)-1])/step_size)
+# build the predictions
+for i in range(how_many+1): 
+    xpred.append(float(i)*step_size)
+    ypred.append(lagint(xtable,ytable,float(i)*step_size))
+#print(lagint(xtable,ytable,xwant))
+</code></pre>
+
+<pre><code class="python">import matplotlib.pyplot # the python plotting library
+myfigure = matplotlib.pyplot.figure(figsize = (6,6)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(xtable, ytable ,color ='blue') # The observations as points
+matplotlib.pyplot.plot(xpred, ypred, color ='red') # the polynomial
+matplotlib.pyplot.xlabel(&quot;Input Value&quot;) 
+matplotlib.pyplot.ylabel(&quot;Function Value&quot;) 
+mytitle = &quot;Interpolating Polynomial Fit to Observations\n &quot;
+mytitle += &quot;Blue Markers are Observations &quot; + &quot;\n&quot;
+mytitle += &quot;Red Curve is Fitted Polynomial &quot;+ &quot;\n&quot;
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_10_0.png" /></p>
+<h3 id="exercises">Exercises</h3>
+<p>In a radiation-induced polymerization study, a gamma source was used to give measured doses of radiation. The dosage varied with position in the apparatus, with the following data being recorded:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Position from emitter (inches)</th>
+<th align="left">Dosage Rate, <script type="math/tex">10^5</script> rads/hr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">1.90</td>
+</tr>
+<tr>
+<td align="left">0.5</td>
+<td align="left">2.39</td>
+</tr>
+<tr>
+<td align="left">1.0</td>
+<td align="left">2.71</td>
+</tr>
+<tr>
+<td align="left">1.5</td>
+<td align="left">2.98</td>
+</tr>
+<tr>
+<td align="left">2.0</td>
+<td align="left">3.20</td>
+</tr>
+<tr>
+<td align="left">3.0</td>
+<td align="left">3.20</td>
+</tr>
+<tr>
+<td align="left">3.5</td>
+<td align="left">2.98</td>
+</tr>
+<tr>
+<td align="left">4.0</td>
+<td align="left">2.74</td>
+</tr>
+</tbody>
+</table>
+<p>For some reason, the reading at 2.5 inches was not reported, but the value of radiation at that distance is needed; estimate the dosage level at 2.5 inches using an interpolation-type prediction engine.  Plot the interpolating function as well as the observations.</p>
+<h1 id="observations">Observations</h1>
+<p>position = [0,0.5,1.0,1.5,2.0,3.0,3.5,4.0]
+dosage = [1.90,2.39,2.71,2.98,3.20,3.20,2.98,2.74]</p>
+<h1 id="_1"></h1>
+<p>xpred = [] # empty list to store results for plotting
+ypred = [] # empty list to store results for plotting</p>
+<h1 id="_2"></h1>
+<p>step_size = 0.10  # step size
+how_many = int((position[len(position)-1])/step_size)</p>
+<h1 id="build-the-predictions">build the predictions</h1>
+<p>for i in range(how_many+1): 
+    xpred.append(float(i)<em>step_size)
+    ypred.append(lagint(position,dosage,float(i)</em>step_size))</p>
+<h1 id="printlagintxtableytablexwant">print(lagint(xtable,ytable,xwant))</h1>
+<p>myfigure = matplotlib.pyplot.figure(figsize = (6,6)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(position,dosage ,color ='blue') # The observations as points
+matplotlib.pyplot.plot(xpred, ypred, color ='red') # the polynomial
+matplotlib.pyplot.xlabel("Distance") 
+matplotlib.pyplot.ylabel("Dosage") 
+mytitle = "Interpolating Polynomial Fit to Observations\n "
+mytitle += "Blue Markers are Observations " + "\n"
+mytitle += "Red Curve is Fitted Polynomial "+ "\n"
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()</p>
+<p>lagint(position,dosage,2.5)</p>
+<h3 id="interpolation-references">Interpolation References</h3>
+<ul>
+<li>
+<p>Lagrangian Interpolation (using R packages) <a href="https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html">https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html</a></p>
+</li>
+<li>
+<p>Lagrangian Interpolation (Video) <a href="https://www.youtube.com/watch?v=_zK_KhHW6og">https://www.youtube.com/watch?v=_zK_KhHW6og</a></p>
+</li>
+<li>
+<p>Lagrange Polynomials <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial">https://en.wikipedia.org/wiki/Lagrange_polynomial</a></p>
+</li>
+<li>
+<p>Gerald, C.F., and Wheatley, P. O., 1984. Applied Numerical Analysis. 3rd Ed. Addison Wesley, Inc. , pp. 171-210.</p>
+</li>
+<li>
+<p>Westerink, J.J. 2018. CE 30125 Computational Methods, Department of Civil and Environmental Engineering and Earth Sciences University of Notre Dame, Notre Dame IN 46556 <a href="https://coast.nd.edu/jjwteach/www/www/30125/pdfnotes/lecture3_6v13.pdf">https://coast.nd.edu/jjwteach/www/www/30125/pdfnotes/lecture3_6v13.pdf</a></p>
+</li>
+</ul>
 <h1 id="integration-of-functions">Integration of Functions</h1>
 <p>At this point we have enough Python to consider doing some useful computations. We
 will start with numerical integration because it is useful and only requires count-controlled
@@ -413,11 +712,17 @@ while yes == 0:
 </code></pre>
 
 <pre><code>Program finds area under curve y = x * sqrt(1+x)
+
+
+Enter a lower bound x_low 
+ 2
 </code></pre>
 <p>Verify that value is indeed what we entered</p>
 <pre><code class="python">print(x_low)
 </code></pre>
 
+<pre><code>2.0
+</code></pre>
 <p>Now do the same for the upper limit, notice how we are using the <code>yes</code> variable.  We set a "fail" value, and demand input until we get "success".  The structure used here is called a <code>try -- exception</code> structure and is very common in programming.   Error checking is really important so that garbled input does not hang things up. </p>
 <pre><code class="python">yes = 0
 while yes == 0:
@@ -430,10 +735,15 @@ while yes == 0:
 # exit the while loop when finally have a valid number
 </code></pre>
 
+<pre><code>Enter an upper bound x_high 
+ 4
+</code></pre>
 <p>Again verify!</p>
 <pre><code class="python">print(x_high)
 </code></pre>
 
+<pre><code>4.0
+</code></pre>
 <p>Now use the try - exception structure to input how many panels we wish to use.  Notice you can enter a negative value which will ultimately break things. Also observe this value is an integer.</p>
 <pre><code class="python">yes = 0
 while yes == 0:
@@ -446,10 +756,15 @@ while yes == 0:
 # exit the while loop when finally have a valid number
 </code></pre>
 
+<pre><code>Enter how many panels 
+ 5
+</code></pre>
 <p>Again verify!</p>
 <pre><code class="python">print(how_many)
 </code></pre>
 
+<pre><code>5
+</code></pre>
 <p>Now we can actually perform the integration by evaluating the function at the panel half-widths.
 In this example we are using primitive arithmetic, so the <script type="math/tex">\sqrt{}</script> is accomplished by exponentation, the syntax is <code>c = a ** b</code> is the operation <script type="math/tex">c = a^b</script>.</p>
 <p>The integration uses an accumulator, which is a memory location where subsquent results are added (accumulated) back into the accumulator.  This structure is so common that there are alternate, compact syntax to perform this task, here it is all out in the open.</p>
@@ -474,6 +789,9 @@ for i in range(1,how_many+1,1): #note we are counting from 1
 # the \n is a &quot;newline&quot; character 
 </code></pre>
 
+<pre><code>Area under curve y = x * sqrt(1+x) from x =  2.0  to x =  4.0 
+ is approximately:  19.610958667237167
+</code></pre>
 <p>The code implements rudimentary error checking -- it forces us to enter numeric values for the lower and upper values of <script type="math/tex">x</script> as well as the number of panels to use.  It does not check for undefined ranges and such, but you should get the idea -- notice that a large fraction of the entire program is error trapping; this devotion to error trapping is typical for professional programs where you are going to distribute executable modules and not expect the end user to be a programmer.</p>
 <h2 id="using-the-math-package">Using the <code>math</code> package</h2>
 <p>The actual computations are done rather crudely -- there is a math package that would give us the ability to compute the square root as a function call rather than exponentiation to a real values exponent.</p>
@@ -525,6 +843,20 @@ print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
 
 </code></pre>
 
+<pre><code>Program finds area under curve y = x * sqrt(1+x)
+
+
+Enter a lower bound x_low 
+ 0
+Enter an upper bound x_high 
+ 2
+Enter how many panels 
+ 6
+
+
+Area under curve y = x * sqrt(1+x) from x =  0.0  to x =  2.0 
+ is approximately:  3.3793974379024605
+</code></pre>
 <h2 id="trapezoidal-panels">Trapezoidal Panels</h2>
 <p>The trapezoidal panels are approximated as shown in the figure below. </p>
 <p><img alt="" src="../trap_panels.png" /></p>
@@ -580,6 +912,20 @@ print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
 
 </code></pre>
 
+<pre><code>Program finds area under curve y = x * sqrt(1+x)
+
+
+Enter a lower bound x_low 
+ 0
+Enter an upper bound x_high 
+ 8
+Enter how many panels 
+ 9
+
+
+Area under curve y = x * sqrt(1+x) from x =  0.0  to x =  8.0 
+ is approximately:  175.33954986737925
+</code></pre>
 <h2 id="parabolic-panels">Parabolic Panels</h2>
 <p>Parabolic panels approximate the shape of the panel with a parabola.  The area between the chord and the curve (neglected in the trapezoidal solution) may be accounted for by approximating the function with a parabola passing through the points defined by three successive values of <script type="math/tex">y</script>.</p>
 <p><img alt="" src="../para-panels.png" /></p>
@@ -641,6 +987,20 @@ print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
 
 </code></pre>
 
+<pre><code>Program finds area under curve y = x * sqrt(1+x)
+
+
+Enter a lower bound x_low 
+ 0
+Enter an upper bound x_high 
+ 1
+Enter how many panels 
+ 4
+
+
+Area under curve y = x * sqrt(1+x) from x =  0.0  to x =  1.0 
+ is approximately:  0.6094186631272838
+</code></pre>
 <p>If we study all the forms of the numerical method we observe that the numerical integration method is really the sum of function values at specific locations in the interval of interest, with each value multiplied by a specific weight.</p>
 <p>In this development the weights were based on polynomials, but other method use different weighting functions.  An extremely important method is called gaussian quadrature. This method is valuable because one can approximate convolution integrals quite effectively using quadrature routines, while the number of function evaluations for a polynomial based approximation could be hopeless.</p>
 <p>When the function values are tabular, we are going to have to accept the rectangular (with adaptations) and trapezoidal as our best tools to approximate an integral because we don't have any really effective way to evaluate the function between the tabulated values.</p>
@@ -889,7 +1249,7 @@ x =  1.8  y =  3.107
 Area =  1.7683000000000002
 </code></pre>
 <p>Realistically the only other simple integration method for tabular data is the rectangular rule, either using the left edge of a panel or the right edge of a panel (and I suppose you could do both and average the result which would be the trapezoidal method).</p>
-<h2 id="exercises">Exercises</h2>
+<h2 id="exercises_1">Exercises</h2>
 <p>1)  Approximate <script type="math/tex">\int_0^2 f(x) dx</script> from the tabulation in the Table below:</p>
 <pre><code>x     f(x)
 0.00  1.0000 
@@ -933,7 +1293,7 @@ Area =  1.7683000000000002
 9.0   4051.54202549259
 </code></pre>
 <p>Approximate <script type="math/tex">\int_1^{9.0} cosh(x) dx</script> from the tabulation above.</p>
-<h1 id="_1"></h1>
+<h1 id="_3"></h1>
 <p>3) The table below is a tabulation of various values of the hyperbolic cosine function. </p>
 <pre><code>x     cosh(x)
 1.0  1.54308063481524  
@@ -997,7 +1357,21 @@ Area =  1.7683000000000002
 9.0   4051.54202549259
 </code></pre>
 <p>Approximate <script type="math/tex">\int_1^{4.0} cosh(x) dx</script> from the tabulation above.  Explain how handled working with values that fall between tabulated values.</p>
-<h1 id="_2"></h1></div>
+<h1 id="_4"></h1>
+<h1 id="references">References</h1>
+<ul>
+<li>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html">https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html</a></p>
+</li>
+<li>
+<p>Lagrangian Interpolation (Video) <a href="https://www.youtube.com/watch?v=_zK_KhHW6og">https://www.youtube.com/watch?v=_zK_KhHW6og</a></p>
+</li>
+<li>
+<p>Lagrange Polynomials <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial">https://en.wikipedia.org/wiki/Lagrange_polynomial</a></p>
+</li>
+</ul>
+<pre><code class="python">
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
