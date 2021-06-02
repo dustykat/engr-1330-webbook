@@ -4,7 +4,7 @@ nav:
   - Home: index.md
 #  - About: about.md
   - Syllabus : 0-Syllabus/ENGR-1330-2021-1-Syllabus.md
-  - Course Topics :
+  - Lessons and Labs :
       - Introduction:
           - Computational Thinking and Data Science : 
               - Lesson 0: 1-Lessons/Lesson00/lesson0.md
@@ -37,35 +37,55 @@ nav:
           - Data Display using MATPLOTLIB : 
               - Lesson 9: 1-Lessons/Lesson09/lesson8.md
               - Laboratory 9: 8-Labs/Lab9/Lab9_Dev.md
-      - Engineering Computation :
+      - Engineering Computation :  # exam 1
           - Implicit Equations : 
               - Lesson 10: 1-Lessons/Lesson10/lesson10.md
           - Interpolation, Integration, and Differentiation : 
               - Lesson 11: 1-Lessons/Lesson11/lesson11.md
-          - Linear Equation Systems : 1-Lessons/Lesson12/lesson11.md      
-          - Non-Linear Equation System : 1-Lessons/Lesson13/lesson12.md       
+          - Linear Equation Systems : 
+              - Lesson 12: 1-Lessons/Lesson12/lesson11.md      
+          - Non-Linear Equation System : 
+              - Lesson 13: 1-Lessons/Lesson13/lesson12.md       
       - Data Models and Decisions :
-          - Models and Causality : lesson0/lesson0.md
-          - Descriptive Statistics : lesson0/lesson0.md
-          - Probability Distributions : lesson0/lesson0.md
-          - Probability Estimation Models : lesson0/lesson0.md      
-          - Hypothesis Testing : lesson0/lesson0.md       
-          - Interval Estimates : lesson0/lesson0.md
-      - Prediction Engines:
-          - Visual Model Fitting : lesson0/lesson0.md
-          - Least Squares (Regression) Model Fitting : lesson0/lesson0.md
-          - Prediction Interval Estimates : lesson0/lesson0.md
-          - Classification vs. Prediction : lesson0/lesson0.md      
-          - Logistic Regression : lesson0/lesson0.md 
+          - Models and Causality : 
+             - Lesson 14: lesson0/lesson0.md
+          - Descriptive Statistics : 
+             - Lesson 15: lesson0/lesson0.md
+          - Probability Distributions : 
+             - Lesson 16: lesson0/lesson0.md
+          - Probability Estimation Models : 
+             - Lesson 17: lesson0/lesson0.md
+          - Hypothesis Testing : 
+             - Lesson 18: lesson0/lesson0.md 
+          - Interval Estimates : 
+             - Lesson 19: lesson0/lesson0.md 
+      - Prediction Engines:     # exam 2
+          - Visual Model Fitting : 
+             - Lesson 20: lesson0/lesson0.md
+          - Least Squares (Regression) Model Fitting : 
+             - Lesson 21: lesson0/lesson0.md
+          - Prediction Interval Estimates : 
+             - Lesson 22: lesson0/lesson0.md         
+          - Logistic Regression : 
+             - Lesson 23: lesson0/lesson0.md
       - Classification Engines:
-          - K Nearest Neighbor : lesson0/lesson0.md
-          - Support Vector Machines : lesson0/lesson0.md
-          - Artifical Neural Networks : lesson0/lesson0.md       
+          - K Nearest Neighbor : 
+             - Lesson 24: lesson0/lesson0.md     # exam 3
+          - Support Vector Machines : 
+             - Lesson 25: lesson0/lesson0.md
+          - Artifical Neural Networks : 
+             - Lesson 26: lesson0/lesson0.md
 # nesting as pulldown??
-  - Homework Exercises:
+  - Homeworks/Project:
      - Exercise Set 1: 2-Homework/ES1/es1-deploy.md
      - Exercise Set 2: 2-Homework/ES2/es2-deploy.md
      - Exercise Set 3: 2-Homework/ES3/es3-deploy.md
+     - Image Classification Project (under development): 6-Projects/P-ImageClassification/MyANN.md
+     - Instrument Calibration Project (reference links need update) : 6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project.md
+     - Music Classification Project (reference links need update) : 6-Projects/P-MusicClassification/genre-classification-project-problem.md
+     - Concrete Strength Prediction Project (reference links need update): 6-Projects/P-ConcreteStrength/ConcreteStrength-Project.md
+     - Audio File Analysis Project (under development) : 6-Projects/P-DTMF/DTMF-Part1.md
+     
 # active theme (mkdocs/readthedocs are free, they work differently wrt code blocks)
 theme:
     name: mkdocs
