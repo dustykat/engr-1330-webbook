@@ -6,7 +6,9 @@ nav:
   - Syllabus : 0-Syllabus/ENGR-1330-2021-1-Syllabus.md
   - Course Topics :
       - Introduction:
-          - Computational Thinking and Data Science : 1-Lessons/Lesson00/lesson0.md
+          - Computational Thinking and Data Science : 
+              - Lesson 0: 1-Lessons/Lesson00/lesson0.md
+              - Laboratory 0: 8-Labs/Lab0/Lab0_Dev.md
           - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson1.md
       - Programming Fundamentals:
           - Arithmetic : 1-Lessons/Lesson02/lesson2.md
@@ -43,7 +45,7 @@ nav:
           - Artifical Neural Networks : lesson0/lesson0.md       
 # nesting as pulldown??
   - Laboratory Exercises :
-      - Laboratory 0: 8-Labs/Lab0/Lab0_Dev.md
+
       - Laboratory 1: 8-Labs/Lab1/Lab1_Dev.md
       - Laboratory 1: 8-Labs/Lab2/Lab2_Dev.md
       - Laboratory 1: 8-Labs/Lab6/Lab6_Dev.md
