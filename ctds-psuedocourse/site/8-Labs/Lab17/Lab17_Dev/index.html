@@ -470,35 +470,486 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#laboratory-17-title">Laboratory 17: Title. </a></li>
+        <li class="main active"><a href="#laboratory-17-data-modeling-using-probability-functions">Laboratory 17 Data Modeling using Probability Functions</a></li>
             <li><a href="#full-name">Full name:</a></li>
             <li><a href="#r">R#:</a></li>
-            <li><a href="#title-of-the-notebook">Title of the notebook:</a></li>
+            <li><a href="#hex">HEX:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook</a></li>
             <li><a href="#date">Date:</a></li>
+        <li class="main "><a href="#estimate-the-magnitude-of-the-annual-peak-flow-at-spring-ck-near-spring-tx">Estimate the magnitude of the annual peak flow at Spring Ck near Spring, TX.</a></li>
+            <li><a href="#normal-distribution-data-model">Normal Distribution Data Model</a></li>
+            <li><a href="#log-normal-distribution-data-model">Log-Normal Distribution Data Model</a></li>
+            <li><a href="#gumbell-double-exponential-ev1-distribution-data-model">Gumbell Double Exponential (EV1) Distribution Data Model</a></li>
+            <li><a href="#pearson-iii-distribution-data-model">Pearson III Distribution Data Model</a></li>
+            <li><a href="#log-pearson-iii-distribution-data-model">Log-Pearson III Distribution Data Model</a></li>
+        <li class="main "><a href="#summary-of-best-data-model-based-on-graphical-fit">Summary of "Best" Data Model based on Graphical Fit</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="laboratory-17-title"><font color=darkred>Laboratory 17: Title. </font></h1>
-<pre><code class="python"># Preamble script block to identify host, user, and kernel
-import sys
-! hostname
-! whoami
-print(sys.executable)
-print(sys.version)
-print(sys.version_info)
-</code></pre>
-
-<pre><code>DESKTOP-EH6HD63
-desktop-eh6hd63\farha
-C:\Users\Farha\Anaconda3\python.exe
-3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]
-sys.version_info(major=3, minor=7, micro=4, releaselevel='final', serial=0)
-</code></pre>
+<h1 id="laboratory-17-data-modeling-using-probability-functions">Laboratory 17 Data Modeling using Probability Functions</h1>
 <h2 id="full-name">Full name:</h2>
 <h2 id="r">R#:</h2>
-<h2 id="title-of-the-notebook">Title of the notebook:</h2>
-<h2 id="date">Date:</h2></div>
+<h2 id="hex">HEX:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook</h2>
+<h2 id="date">Date:</h2>
+<h3 id="important-terminology">Important Terminology:</h3>
+<p><strong>Population:</strong> In statistics, a population is the entire pool from which a statistical sample is drawn. A population may refer to an entire group of people, objects, events, hospital visits, or measurements. <br>
+<strong>Sample:</strong> In statistics and quantitative research methodology, a sample is a set of individuals or objects collected or selected from a statistical population by a defined procedure. The elements of a sample are known as sample points, sampling units or observations.<br>
+<strong>Distribution (Data Model):</strong> A data distribution is a function or a listing which shows all the possible values (or intervals) of the data. It also (and this is important) tells you how often each value occurs. <br></p>
+<p><strong><em>From https://www.investopedia.com/terms</em></strong><br>
+<strong><em>https://www.statisticshowto.com/data-distribution/</em></strong></p>
+<pre><code class="python">### Important Steps:
+1. __Get descriptive statistics- mean, variance, std. dev.__
+2. __Use plotting position formulas (e.g., weibull, gringorten, cunnane) and plot the SAMPLES (data you already have)__
+3. __Use different data models (e.g., normal, log-normal, Gumbell) and find the one that better FITs your samples- Visual or Numerical__
+4. __Use the data model that provides the best fit to infer about the POPULATION__
+</code></pre>
+
+<h1 id="estimate-the-magnitude-of-the-annual-peak-flow-at-spring-ck-near-spring-tx">Estimate the magnitude of the annual peak flow at Spring Ck near Spring, TX.</h1>
+<p>The file <code>08068500.pkf</code> is an actual WATSTORE formatted file for a USGS gage at Spring Creek, Texas. The first few lines of the file look like:</p>
+<pre><code>Z08068500                       USGS 
+H08068500       3006370952610004848339SW12040102409    409     72.6             
+N08068500       Spring Ck nr Spring, TX
+Y08068500       
+308068500       19290530  483007              34.30        1879          
+308068500       19390603    838               13.75                    
+308068500       19400612   3420               21.42                    
+308068500       19401125  42700               33.60                    
+308068500       19420409  14200               27.78                    
+308068500       19430730   8000               25.09                    
+308068500       19440319   5260               23.15                    
+308068500       19450830  31100               32.79                    
+308068500       19460521  12200               27.97
+</code></pre>
+<p>The first column are some agency codes that identify the station , the second column after the fourth row is a date in YYYYMMDD format, the third column is a discharge in CFS, the fourth and fifth column are not relevant for this laboratory exercise.  The file was downloadef from</p>
+<p>https://nwis.waterdata.usgs.gov/tx/nwis/peak?site_no=08068500&amp;agency_cd=USGS&amp;format=hn2</p>
+<p>In the original file there are a couple of codes that are manually removed:</p>
+<ul>
+<li>19290530  483007;  the trailing 7 is a code identifying a break in the series (non-sequential)</li>
+<li>20170828  784009; the trailing 9 identifies the historical peak</li>
+</ul>
+<p>The laboratory task is to fit the data models to this data, decide the best model from visual perspective, and report from that data model the magnitudes of peak flow associated with the probebilitiess below (i.e. populate the table)</p>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<p>The first step is to read the file, skipping the first part, then build a dataframe:</p>
+<pre><code class="python"># Read the data file
+amatrix = [] # null list to store matrix reads
+rowNumA = 0
+matrix1=[]
+col0=[]
+col1=[]
+col2=[]
+with open('08068500.pkf','r') as afile:
+    lines_after_4 = afile.readlines()[4:]
+afile.close() # Disconnect the file
+howmanyrows = len(lines_after_4)
+for i in range(howmanyrows):
+    matrix1.append(lines_after_4[i].strip().split())
+for i in range(howmanyrows):
+    col0.append(matrix1[i][0])
+    col1.append(matrix1[i][1])
+    col2.append(matrix1[i][2])
+# col2 is date, col3 is peak flow
+#now build a datafranem
+</code></pre>
+
+<pre><code class="python">import pandas 
+df = pandas.DataFrame(col0)
+df['date']= col1
+df['flow']= col2
+</code></pre>
+
+<pre><code class="python">df.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>date</th>
+      <th>flow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>308068500</td>
+      <td>19290530</td>
+      <td>48300</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>308068500</td>
+      <td>19390603</td>
+      <td>838</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>308068500</td>
+      <td>19400612</td>
+      <td>3420</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>308068500</td>
+      <td>19401125</td>
+      <td>42700</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>308068500</td>
+      <td>19420409</td>
+      <td>14200</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Now explore if you can plot the dataframe as a plot of peaks versus date.</p>
+<pre><code class="python"># Plot here
+</code></pre>
+
+<p>From here on you can proceede using the lecture notebook as a go-by, although you should use functions as much as practical to keep your work concise</p>
+<pre><code class="python"># Descriptive Statistics 
+</code></pre>
+
+<pre><code class="python"># Weibull Plotting Position Function
+</code></pre>
+
+<pre><code class="python"># Normal Quantile Function 
+</code></pre>
+
+<pre><code class="python"># Fitting Data to Normal Data Model 
+</code></pre>
+
+<h2 id="normal-distribution-data-model">Normal Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<pre><code class="python"># Log-Normal Quantile Function 
+</code></pre>
+
+<pre><code class="python"># Fitting Data to Normal Data Model 
+</code></pre>
+
+<h2 id="log-normal-distribution-data-model">Log-Normal Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<pre><code class="python"># Gumbell EV1 Quantile Function
+</code></pre>
+
+<pre><code class="python"># Fitting Data to Gumbell EV1 Data Model 
+</code></pre>
+
+<h2 id="gumbell-double-exponential-ev1-distribution-data-model">Gumbell Double Exponential (EV1) Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<pre><code class="python"># Gamma (Pearson Type III) Quantile Function
+</code></pre>
+
+<pre><code class="python"># Fitting Data to Pearson (Gamma) III Data Model 
+# This is new, in lecture the fit was to log-Pearson, same procedure, but not log transformed
+</code></pre>
+
+<h2 id="pearson-iii-distribution-data-model">Pearson III Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<pre><code class="python"># Fitting Data to Log-Pearson (Log-Gamma) III Data Model 
+</code></pre>
+
+<h2 id="log-pearson-iii-distribution-data-model">Log-Pearson III Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<h1 id="summary-of-best-data-model-based-on-graphical-fit">Summary of "Best" Data Model based on Graphical Fit</h1></div>
         </div>
 
         <footer class="col-md-12">
