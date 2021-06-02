@@ -4,14 +4,14 @@ nav:
   - Home: index.md
 #  - About: about.md
   - Syllabus : 0-Syllabus/ENGR-1330-2021-1-Syllabus.md
-  - Topics :
+  - Course Topics :
       - Introduction:
           - Computational Thinking and Data Science : 1-Lessons/Lesson00/lesson0.md
           - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson1.md
       - Programming Fundamentals:
-          - Arithmetic : 1-Lessons/Lesson02/lesson1.md
-          - Data Structures : 1-Lessons/Lesson03/lesson2.md
-          - Flow Control Structures : 1-Lessons/Lesson04/lesson3.md
+          - Arithmetic : 1-Lessons/Lesson02/lesson2.md
+          - Data Structures : 1-Lessons/Lesson03/lesson3.md
+          - Flow Control Structures : 1-Lessons/Lesson04/lesson4.md
           - Data Files : lesson0/lesson0.md
           - External Functions and Modules : lesson0/lesson0.md      
           - Data Structures using NUMPY : 1-Lessons/Lesson07/lesson6.md      
@@ -20,6 +20,8 @@ nav:
       - Engineering Computation :
           - Implicit Equations : implicit_equations/NewtonsMethod.md
           - Interpolation, Integration, and Differentiation : integration_differentiation/numerical_integration.md
+          - Implicit Equations : 1-Lessons/Lesson10/lesson9.md
+          - Interpolation, Integration, and Differentiation : 1-Lessons/Lesson11/lesson10.md
           - Linear Equation Systems : 1-Lessons/Lesson12/lesson11.md      
           - Non-Linear Equation System : 1-Lessons/Lesson13/lesson12.md       
       - Data Models and Decisions :
@@ -40,7 +42,20 @@ nav:
           - Support Vector Machines : lesson0/lesson0.md
           - Artifical Neural Networks : lesson0/lesson0.md       
 # nesting as pulldown??
+  - Laboratory Exercises :
+      - Laboratory 0: 8-Labs/Lab0/Lab0_Dev.md
+      - Laboratory 1: 8-Labs/Lab1/Lab1_Dev.md
+      - Laboratory 1: 8-Labs/Lab2/Lab2_Dev.md
+      - Laboratory 1: 8-Labs/Lab6/Lab6_Dev.md
+      - Laboratory 1: 8-Labs/Lab7/Lab7_Dev.md
+      - Laboratory 1: 8-Labs/Lab8/Lab8_Dev.md
+      - Laboratory 1: 8-Labs/Lab9/Lab9_Dev.md
 
+      
+  - Homework Exercises:
+     - Exercise Set 1: 2-Homework/ES1/es1-deploy.md
+     - Exercise Set 2: 2-Homework/ES2/es2-deploy.md
+     - Exercise Set 3: 2-Homework/ES3/es3-deploy.md
 # active theme (mkdocs/readthedocs are free, they work differently wrt code blocks)
 theme:
     name: mkdocs
