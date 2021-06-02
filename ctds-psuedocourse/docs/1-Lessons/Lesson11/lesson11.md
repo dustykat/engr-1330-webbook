@@ -181,6 +181,9 @@ In a radiation-induced polymerization study, a gamma source was used to give mea
 |4.0 |2.74|
 
 For some reason, the reading at 2.5 inches was not reported, but the value of radiation at that distance is needed; estimate the dosage level at 2.5 inches using an interpolation-type prediction engine.  Plot the interpolating function as well as the observations.
+
+
+```python
 # Observations
 position = [0,0.5,1.0,1.5,2.0,3.0,3.5,4.0]
 dosage = [1.90,2.39,2.71,2.98,3.20,3.20,2.98,2.74]
@@ -207,6 +210,8 @@ matplotlib.pyplot.title(mytitle)
 matplotlib.pyplot.show()
 
 lagint(position,dosage,2.5)
+```
+
 ### Interpolation References
 - Lagrangian Interpolation (using R packages) [https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html](https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html)
 

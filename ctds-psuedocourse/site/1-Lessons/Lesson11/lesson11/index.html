@@ -358,10 +358,6 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#interpolation-integration-differentiation-of-functions-and-tabular-data">Interpolation, Integration, Differentiation of Functions and Tabular Data</a></li>
             <li><a href="#interpolation">Interpolation</a></li>
-        <li class="main "><a href="#observations">Observations</a></li>
-        <li class="main "><a href="#build-the-predictions">build the predictions</a></li>
-        <li class="main "><a href="#printlagintxtableytablexwant">print(lagint(xtable,ytable,xwant))</a></li>
-            <li><a href="#interpolation-references">Interpolation References</a></li>
         <li class="main "><a href="#integration-of-functions">Integration of Functions</a></li>
             <li><a href="#background">Background</a></li>
             <li><a href="#rectangular-panels">Rectangular Panels</a></li>
@@ -628,31 +624,34 @@ matplotlib.pyplot.show()
 </tbody>
 </table>
 <p>For some reason, the reading at 2.5 inches was not reported, but the value of radiation at that distance is needed; estimate the dosage level at 2.5 inches using an interpolation-type prediction engine.  Plot the interpolating function as well as the observations.</p>
-<h1 id="observations">Observations</h1>
-<p>position = [0,0.5,1.0,1.5,2.0,3.0,3.5,4.0]
-dosage = [1.90,2.39,2.71,2.98,3.20,3.20,2.98,2.74]</p>
-<h1 id="_1"></h1>
-<p>xpred = [] # empty list to store results for plotting
-ypred = [] # empty list to store results for plotting</p>
-<h1 id="_2"></h1>
-<p>step_size = 0.10  # step size
-how_many = int((position[len(position)-1])/step_size)</p>
-<h1 id="build-the-predictions">build the predictions</h1>
-<p>for i in range(how_many+1): 
-    xpred.append(float(i)<em>step_size)
-    ypred.append(lagint(position,dosage,float(i)</em>step_size))</p>
-<h1 id="printlagintxtableytablexwant">print(lagint(xtable,ytable,xwant))</h1>
-<p>myfigure = matplotlib.pyplot.figure(figsize = (6,6)) # generate a object from the figure class, set aspect ratio
+<pre><code class="python"># Observations
+position = [0,0.5,1.0,1.5,2.0,3.0,3.5,4.0]
+dosage = [1.90,2.39,2.71,2.98,3.20,3.20,2.98,2.74]
+#
+xpred = [] # empty list to store results for plotting
+ypred = [] # empty list to store results for plotting
+#
+step_size = 0.10  # step size
+how_many = int((position[len(position)-1])/step_size)
+# build the predictions
+for i in range(how_many+1): 
+    xpred.append(float(i)*step_size)
+    ypred.append(lagint(position,dosage,float(i)*step_size))
+#print(lagint(xtable,ytable,xwant))
+myfigure = matplotlib.pyplot.figure(figsize = (6,6)) # generate a object from the figure class, set aspect ratio
 matplotlib.pyplot.scatter(position,dosage ,color ='blue') # The observations as points
 matplotlib.pyplot.plot(xpred, ypred, color ='red') # the polynomial
-matplotlib.pyplot.xlabel("Distance") 
-matplotlib.pyplot.ylabel("Dosage") 
-mytitle = "Interpolating Polynomial Fit to Observations\n "
-mytitle += "Blue Markers are Observations " + "\n"
-mytitle += "Red Curve is Fitted Polynomial "+ "\n"
+matplotlib.pyplot.xlabel(&quot;Distance&quot;) 
+matplotlib.pyplot.ylabel(&quot;Dosage&quot;) 
+mytitle = &quot;Interpolating Polynomial Fit to Observations\n &quot;
+mytitle += &quot;Blue Markers are Observations &quot; + &quot;\n&quot;
+mytitle += &quot;Red Curve is Fitted Polynomial &quot;+ &quot;\n&quot;
 matplotlib.pyplot.title(mytitle) 
-matplotlib.pyplot.show()</p>
-<p>lagint(position,dosage,2.5)</p>
+matplotlib.pyplot.show()
+
+lagint(position,dosage,2.5)
+</code></pre>
+
 <h3 id="interpolation-references">Interpolation References</h3>
 <ul>
 <li>
@@ -1293,7 +1292,7 @@ Area =  1.7683000000000002
 9.0   4051.54202549259
 </code></pre>
 <p>Approximate <script type="math/tex">\int_1^{9.0} cosh(x) dx</script> from the tabulation above.</p>
-<h1 id="_3"></h1>
+<h1 id="_1"></h1>
 <p>3) The table below is a tabulation of various values of the hyperbolic cosine function. </p>
 <pre><code>x     cosh(x)
 1.0  1.54308063481524  
@@ -1357,7 +1356,7 @@ Area =  1.7683000000000002
 9.0   4051.54202549259
 </code></pre>
 <p>Approximate <script type="math/tex">\int_1^{4.0} cosh(x) dx</script> from the tabulation above.  Explain how handled working with values that fall between tabulated values.</p>
-<h1 id="_4"></h1>
+<h1 id="_2"></h1>
 <h1 id="references">References</h1>
 <ul>
 <li>
