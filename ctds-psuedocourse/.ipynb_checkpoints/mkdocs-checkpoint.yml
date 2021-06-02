@@ -38,8 +38,10 @@ nav:
               - Lesson 9: 1-Lessons/Lesson09/lesson8.md
               - Laboratory 9: 8-Labs/Lab9/Lab9_Dev.md
       - Engineering Computation :
-          - Implicit Equations : 1-Lessons/Lesson10/lesson9.md
-          - Interpolation, Integration, and Differentiation : 1-Lessons/Lesson11/lesson10.md
+          - Implicit Equations : 
+              - Lesson 10: 1-Lessons/Lesson10/lesson10.md
+          - Interpolation, Integration, and Differentiation : 
+              - Lesson 11: 1-Lessons/Lesson11/lesson11.md
           - Linear Equation Systems : 1-Lessons/Lesson12/lesson11.md      
           - Non-Linear Equation System : 1-Lessons/Lesson13/lesson12.md       
       - Data Models and Decisions :
