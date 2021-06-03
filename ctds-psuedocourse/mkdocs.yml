@@ -2,7 +2,7 @@ site_name: ENGR-1330 Fall 2021
 # navigation/site structure 
 nav:
   - Home: index.md
-#  - About: about.md
+  - About: about.md
   - Syllabus : 0-Syllabus/ENGR-1330-2021-3-Syllabus.md
   - Lessons and Labs :
       - Introduction:

@@ -1,35 +1,26 @@
-# ENGR-1330 Computational Thinking and Data Science
-This is a repository for a course at Texas Tech University, specificially the sections taught by Dr. Theodore G. Cleveland.
+# <p style="text-align:center"> Computational Thinking and Data Science </p>
 
-## Purpose
-The purpose of the repository is to maintain a convienent back-up of course content for rapid migration across servers.  
+## <p style="text-align:center">A WebBook to Accompany ENGR 1330 at TTU </p>
 
-## Special Notes
-1. The structure is written to work on a web host, with hostname == `atomickitty.ddns.net`, if you clone to another server you will have the lovely task of changing the links.  The string editor `sed` will become your friend!
+<p style="text-align:center">by <br><br>Theodore G. Cleveland and Farhang Forghanparast<br></p>
 
-2. Materials herein come from many sources, in particular the Data8 repository from UC Berkeley.  Sources in notebooks are at least cited by a URL.  As the content is matured, proper citations are to be inserted.
+<p style="text-align:center">with contributions from :<br> Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and  Mona Rizvi </p>
 
-3. The `3-Readings` directory contains copyrighted materials and should be exposed with care on a web server; generally no-one reads anymore, so its probably safe enought to protect using `.htaccess` simple uid:pwd approach. I use the materials during lectures to point out where I obtain various computational ideas.
 
-## How to Use
-1. Clone the entire repository to /var/www/html/engr-1330-webroot.  Have your main index point to this directory i.e. `http://your-fqdn-server.org/engr-1330-webroot/`
-You can see working example at https://3.137.111.182/engr-1330-webroot/ (You will have to set a browser exception to accept the self-signed certificate)
+## Introduction
+ 
+This on-line webbook is a collection of lessons, laboratory, and exercises contents for ENGR-1330 sections taught bt the first two authors; students in other sections are welcome to use this as a resource with proper attribution (check with your instructor regarding what they will consider acceptable) `suggested citation goes here`
 
-## Syncronization Notes:
-1. Sync with 3.137.111.182/engr-1330-webroot/ (AWS server -- primary and live website copy)
-2. Sync with 75.3.84.227:192.168.1.75/ (Raspberry Pi -- developer and backup website copy)
-3. Sync with 75.3.84.227:192.168.1.79/ (Macintosh -- developer copy)
+The entire course content is served here and can be accessed from **blackboard.ttu.edu** or directly using the public URL.  
+Homeworks and exams must be uploaded to **blackboard.ttu.edu** to be graded.   Solutions are posted after due dates have passed, these links are updated weekly-ish.
 
-## Commands
+## Document History
+This document is a living document and is updated frequently, Python is an ever evolving tool and stuff that works today will be constructively broken by the development team (python.org) in their quest for continuous improvement.  Generally these changes occur in the packages (libraries, external modules) and primative python is quite stable.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+## Administrator Notes
+The lead author built this webbook on a Raspberry Pi 4B (4GB) running Ubuntu 20.XX, an Apache Web Server, a JupyterHub (fully encrypted) with iPython extensions, R core, Latex, and MkDocs with extensions.  The deployment hardware is an Amazon Web Services Virtual Private Server (Lightsail Instance) in the West Virginia Server Farm (typically the container is run on x86-64 Xeon hardware)
 
-## Project layout
+Direct editing on the AWS server is possible, but the typesetting may not render correctly; additionally running some of the notebooks will use up the daily allocation of compute time on the server and the whole thing will hang up; remember to do all development and testing on the Raspberry PI or your laptop.  The development server is hardware cloned weekly (it takes 12 hours, during which it is inaccessible) 
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+A working backup is maintained at [https://github.com/dustykat/engr-1330-webbook](https://github.com/dustykat/engr-1330-webbook).
+
