@@ -88,8 +88,9 @@ Office location: TBD (**Zoom**)
 Office hours: 0900-1000 M; 1700-1800 W
 
 ## Textbook: 
-Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).  Link: https://www.inferentialthinking.com/chapters/intro.
+Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).  Link: [https://www.inferentialthinking.com/chapters/intro](https://www.inferentialthinking.com/chapters/intro)
 
+Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. (2021) *Computational Thinking and Data Science: A WebBook to Accompany ENGR 1330 at TTU*, Whitacre College of Engineering, DOI (pending) [https://3.137.111.182/engr-1330-webbook/](https://3.137.111.182/engr-1330-webbook/)
 
 ## Course Contents: 
 * Computational thinking for problem-solving: Logical problem solving, decomposition, pattern recognition, abstraction, representation, algorithm design, and generalization.
@@ -135,22 +136,22 @@ On completion of the course, students will have
 ## Resources/Tools
 ### Platforms for Python Programming (for your own computers)
 
-1. Anaconda platform (https://www.anaconda.com/): Anaconda distribution is an open-source Data Science Distribution Development Platform.  It includes Python 3 with over 1,500 data science packages making it easy to manage libraries and dependencies.  Available in Linux, Windows, and Mac OS X.  
+1. Anaconda platform [https://www.anaconda.com/](https://www.anaconda.com/): Anaconda distribution is an open-source Data Science Distribution Development Platform.  It includes Python 3 with over 1,500 data science packages making it easy to manage libraries and dependencies.  Available in Linux, Windows, and Mac OS X.  
 
-2. Jupyter (https://jupyter.org/): JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. JupyterLab is flexible: Configure and arrange the user interface to support a wide range of workflows in data science, scientific computing, and machine learning. `note` Anaconda for MacOS includes a JupyterLab instance, so a separate install is not required.
+2. Jupyter [https://jupyter.org/](https://jupyter.org/): JupyterLab is a web-based interactive development environment for Jupyter notebooks, code, and data. JupyterLab is flexible: Configure and arrange the user interface to support a wide range of workflows in data science, scientific computing, and machine learning. `note` Anaconda for MacOS includes a JupyterLab instance, so a separate install is not required.
 
 ### Additional Modules for Python Programming
-3. Math module (https://docs.python.org/3/library/math.html): Gives access to the mathematical functions defined by the C standard e.g. factorial, gcd, exponential, logarithm. 
-4. Operator module (https://docs.python.org/3/library/operator.html): Helps in exporting a set of efficient functions corresponding to the intrinsic operators of Python.  For example, the operator add(x,y) is equivalent to the expression x+y.
+3. Math module [https://docs.python.org/3/library/math.html](https://docs.python.org/3/library/math.html): Gives access to the mathematical functions defined by the C standard e.g. factorial, gcd, exponential, logarithm. 
+4. Operator module [https://docs.python.org/3/library/operator.html](https://docs.python.org/3/library/operator.html): Helps in exporting a set of efficient functions corresponding to the intrinsic operators of Python.  For example, the operator add(x,y) is equivalent to the expression x+y.
 
 ### Python Modules for Data Science
-5. Scipy module (https://www.scipy.org/): A Python-based ecosystem of open-source software for mathematics, science, and engineering. Some of the core packages are:
+5. Scipy module [https://www.scipy.org/](https://www.scipy.org/): A Python-based ecosystem of open-source software for mathematics, science, and engineering. Some of the core packages are:
     * Numpy: Provides n-dimensional array package
     * Scipy: Fundamental for scientific computing (e.g. linear algorithm, optimization)
     * Matplotlib: Visualizations/2D plotting
     * IPython: Enhanced interactive console <<= this is the kernel used in JupyterLab
     * Pandas: Data structures and data analysis
-6. Scikit-learn module (https://scikit-learn.org/stable/): A library for machine learning in Python. It is a simple and efficient tool for predictive data analysis.  It is built on NumPy, SciPy, and matplotlib modules.
+6. Scikit-learn module [https://scikit-learn.org/stable/](https://scikit-learn.org/stable/): A library for machine learning in Python. It is a simple and efficient tool for predictive data analysis.  It is built on NumPy, SciPy, and matplotlib modules.
  
 ### On-Line Options
 - AWS Lightsail Instance (use Windows Server 2000 template; lowest resource provision tier; AWS RDP client, or download and install own RDP client) 
@@ -160,15 +161,12 @@ On completion of the course, students will have
 - Minimal, in fact this syllabus was created using a JupyterLab notebook (as a markdown processor) on a Raspberry Pi 4B, which technically cannot support a JupyterHub, but does.  
 - Your current laptop should be fine, or if you only have a chromebook, build an AWS instance.
 
-The college of engineering has specific laptop requirements for your other courses that are listed at https://www.depts.ttu.edu/coe/dean/engineeringitservices/buyingtherightcomputer.php
+The college of engineering has specific laptop requirements for your other courses that are listed at [https://www.depts.ttu.edu/coe/dean/engineeringitservices/buyingtherightcomputer.php](https://www.depts.ttu.edu/coe/dean/engineeringitservices/buyingtherightcomputer.php)
 
 ### Content Server
-Blackboard is used as the learning management system (LMS) for this class, and it uses web links to a content server at https://3.137.111.182/engr-1330-webbook/  The Blackboard links will generally go directly to a section in the webbook, but feel free to explore by going in the front door!
+Blackboard is used as the learning management system (LMS) for this class, and it uses web links to a content server at [https://3.137.111.182/engr-1330-webbook/](https://3.137.111.182/engr-1330-webbook/)  The Blackboard links will generally go directly to a section in the webbook, but feel free to explore by going in the front door!
 
-
-```python
-
-```
+# Course Schedule
 
 ### Week 1 Introduction
 ---
@@ -215,7 +213,7 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 |21Sep21|Data Structures using NUMPY <br> - Network Topology (Types) <br> - Network Models <br> - Solution Arithmetic|ppXX-XX|ES-5 Pump Selection|
 |23Sep21|Data Frames using PANDAS <br> - Interface Tour <br> - Examples |ppXX-XX|none; *Future ES-6 Tank Sizing*|
 
-<font color=red>**Test 1 on Blackboard available 48 hour access window**
+<font color=red>**Test 1 on Blackboard available 48 hour access window**</font>
 
 ### Week 6 Programming Fundamentals/Engineering Computation
 ---
@@ -244,7 +242,7 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 |12Oct21|Non-Linear Equation Systems <br> - Multi-variable extension of Newton's method <br> - Constructing the Jabobian (analytical) <br> - Constructing the Jabobian (finite difference)|ppXX-XX|none|
 |14Oct21|Correlation,Causality, Randomness, and Probability <br> - topic <br> - topic <br> - topic |ppXX-XX|ES-9 Design Storm|
 
-<font color=red>**Test 2 on Blackboard available 48 hour access window**
+<font color=red>**Test 2 on Blackboard available 48 hour access window**</font>
 
 ### Week 9 Data Models and Decisions
 ---
@@ -291,7 +289,7 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 |16Nov21|Logistic Regression |ppXX-XX||
 |18Nov21|Classification <br> - Classification vs Prediction <br> K-Nearest Neighbor Method |ppXX-XX||
 
-<font color=red>**Test 3 on Blackboard available 48 hour access window**
+<font color=red>**Test 3 on Blackboard available 48 hour access window**</font>
 
 ### Week 14 Classification Engines
 ---
@@ -302,7 +300,7 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 |23Nov21|Project Presentations|ppXX-XX|Support Vector Machines (Demonstration) |
 |30Nov21|Project Presentations|ppXX-XX|Artifical Neural Network (Demonstration)|
 
-<font color=red>**Project Report Due 6 Dec 2021**
+<font color=red>**Project Report Due 6 Dec 2021**</font>
 
 ---
 ## Course Assessment and Grading Criteria:
