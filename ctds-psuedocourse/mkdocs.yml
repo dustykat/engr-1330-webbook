@@ -3,7 +3,7 @@ site_name: ENGR-1330 Fall 2021
 nav:
   - Home: index.md
 #  - About: about.md
-  - Syllabus : 0-Syllabus/ENGR-1330-2021-1-Syllabus.md
+  - Syllabus : 0-Syllabus/ENGR-1330-2021-3-Syllabus.md
   - Lessons and Labs :
       - Introduction:
           - Computational Thinking and Data Science : 
