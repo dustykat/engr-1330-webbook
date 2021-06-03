@@ -11,7 +11,9 @@
  
 This on-line webbook is a collection of lessons, laboratory, and exercises contents for ENGR-1330 sections taught bt the first two authors; students in other sections are welcome to use this as a resource with proper attribution (check with your instructor regarding what they will consider acceptable) 
 
-*suggested citation* `Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. (2021) *Computational Thinking and Data Science: A WebBook to Accompany ENGR 1330 at TTU*, Whitacre College of Engineering, DOI (pending) [https://3.137.111.182/engr-1330-webbook/](https://3.137.111.182/engr-1330-webbook/)`
+suggested citation: 
+
+Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. (2021) *Computational Thinking and Data Science: A WebBook to Accompany ENGR 1330 at TTU*, Whitacre College of Engineering, DOI (pending) [https://3.137.111.182/engr-1330-webbook/](https://3.137.111.182/engr-1330-webbook/)
 
 The entire course content is served here and can be accessed from **blackboard.ttu.edu** or directly using the public URL.  
 Homeworks and exams must be uploaded to **blackboard.ttu.edu** to be graded.   Solutions are posted after due dates have passed, these links are updated weekly-ish.
