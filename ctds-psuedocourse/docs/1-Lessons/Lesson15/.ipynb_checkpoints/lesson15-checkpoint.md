@@ -15,9 +15,9 @@
 
 
 # ENGR 1330 Computational Thinking with Data Science 
-Last GitHub Commit Date: 2 Mar 2021
+Last GitHub Commit Date: 4 Jun 2021ß
 
-## Lesson 11 Descriptive Statistics 
+## Lesson 15 Descriptive Statistics 
 A fundamental part of working with data is _**describing**_ it. Descriptive statistics help simplify and summarize large amounts of data in a sensible manner.
 
 <!--![8x8](https://blog-c7ff.kxcdn.com/blog/wp-content/uploads/2016/12/Cover_descriptive-statistics_BlogImage_Final.png)-->
