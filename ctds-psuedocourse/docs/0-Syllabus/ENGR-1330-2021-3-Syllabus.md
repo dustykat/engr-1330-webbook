@@ -172,10 +172,10 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 ---
 (480 cumulative minutes) 
 
-|date|lesson|links|laboratory|
+|date|lesson topics|links|laboratory topics|
 |:---|:---|:---|:---|
-|24Aug21|Computational Thinking and Data Science <br> - Syllabus  <br> - Computational Thinking Principles <br> - Data Science Principles  |[https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.md](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.md) |Setting up computational environment <br> - Setting a browser exception (to access course contents) <br> - Anaconda (PC/Mac) <br> - Anaconda on AWS (Cloud Server running Windows Server 2020)|
-|26Aug21|Problem Solving with Computational Thinking <br> - CT and programming as a problem solving process <br> - Attribution via CCMR |ppXX-XX|iPython/JupyterLab fundamentals <br> - Code cells <br> - Markdown cells <br> - Exporting to a pdf <br> - Resetting a notebook <br> - Troubleshoot hung kernel|
+|24Aug21|Computational Thinking and Data Science <br> - Syllabus  <br> - Computational Thinking Principles <br> - Data Science Principles  |[Lesson 0](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0/) <br> <br> [Laboratory 0](https://3.137.111.182/engr-1330-webbook/8-Labs/Lab0/Lab0_Dev) |Setting up computational environment <br> - Setting a browser exception (to access course contents) <br> - Anaconda (PC/Mac) <br> - Anaconda on AWS (Cloud Server running Windows Server 2020)|
+|26Aug21|Problem Solving with Computational Thinking <br> - CT and programming as a problem solving process <br> - Attribution via CCMR |[Lesson 1](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson01/lesson1/) <br> <br> [Laboratory 1](https://3.137.111.182/engr-1330-webbook/8-Labs/Lab1/Lab1_Dev)|iPython/JupyterLab fundamentals <br> - Code cells <br> - Markdown cells <br> - Exporting to a pdf <br> - Resetting a notebook <br> - Troubleshoot hung kernel|
 
 ### Week 2 Programming Fundamentals
 ---
@@ -183,8 +183,8 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|31Aug21|Fundamental Arithmetic <br> - Variables and Constants <br> - Assignment Statements <br> - Arithmetic Operations <br> - External Modules  |ppXX-XX|iPython ... |
-|2Sep21|Data Structures <br> - Population Models <br> - Temporal Variation <br>   |ppXX-XX|ES-2 Topographic Mapping|
+|31Aug21|Fundamental Arithmetic <br> - Variables and Constants <br> - Assignment Statements <br> - Arithmetic Operations <br> - External Modules  |[Lesson 2](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson02/lesson2/) <br> <br> [Laboratory 2](https://3.137.111.182/engr-1330-webbook/8-Labs/Lab2/Lab2_Dev)|iPython ... |
+|2Sep21|Data Structures <br> - lists, arrays, tuples, sets, dictionaries <br> - Names, position index, contents; position keys <br>- Conditional structures; logical compares, block and in-line if    |[Lesson 3](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson03/lesson3/) <br> <br> [Laboratory 3](https://3.137.111.182/engr-1330-webbook/8-Labs/Lab3/Lab3_Dev)|ES-2 Topographic Mapping|
 
 ### Week 3 Programming Fundamentals
 ---
@@ -192,8 +192,8 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|7Sep21|Flow Control Structures <br> - Darcy-Weisbach <br> - Chezy-Manning <br> - Hazen-Williams |ppXX-XX|ES-3 Demand Estimation|
-|9Sep21|Data Files <br> - Gravity System <br> -  Pumped System <br> - EGL&HGL  |ppXX-XX|none|
+|7Sep21|Flow Control Structures <br> - Controlled repetition <br> - Structured FOR Loop <br> - Structured WHILE Loop <br> - Representing computational processes with flowcharts, a graphical abstraction|[Lesson 4](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson04/lesson4/) <br> <br> [Laboratory 4](https://3.137.111.182/engr-1330-webbook/8-Labs/Lab4/Lab4_Dev)|Loops <br> - FOR loops <br> - **range()** function <br> - WHILE loops <br> - Error trapping **try ... except** structure|
+|9Sep21|Data Files <br> - open/read/close  <br> - open/write/close <br> - create/append/delete  |[Lesson 5](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson05/lesson5/) <br> <br> [Laboratory 5](https://3.137.111.182/engr-1330-webbook/8-Labs/Lab5/Lab5_Dev)| file manipulation|
 
 ### Week 4 Programming Fundamentals
 ---
@@ -201,8 +201,8 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|14Sep21|Data Files <br> - Pump Types <br> - Pump Performance Curves <br> - Net Positive Suction Head |ppXX-XX| none|
-|16Sep21|Functions <br> - Reservoir Types <br> - Flow Equalization <br> - Pressure Zones |ppXX-XX|ES-4 Application of Head Loss Models|
+|14Sep21|Functions <br> - Pump Types <br> - Pump Performance Curves <br> - Net Positive Suction Head |ppXX-XX| none|
+|16Sep21|Data Structures using NUMPY <br> - Reservoir Types <br> - Flow Equalization <br> - Pressure Zones |ppXX-XX|ES-4 Application of Head Loss Models|
 
 ### Week 5 Programming Fundamentals
 ---
@@ -210,19 +210,19 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|21Sep21|Data Structures using NUMPY <br> - Network Topology (Types) <br> - Network Models <br> - Solution Arithmetic|ppXX-XX|ES-5 Pump Selection|
-|23Sep21|Data Frames using PANDAS <br> - Interface Tour <br> - Examples |ppXX-XX|none; *Future ES-6 Tank Sizing*|
+|21Sep21|Data Frames using PANDAS <br> - Network Topology (Types) <br> - Network Models <br> - Solution Arithmetic|ppXX-XX|ES-5 Pump Selection|
+|23Sep21|Data Display using MATPLOTLIB <br> - Interface Tour <br> - Examples |ppXX-XX|none; *Future ES-6 Tank Sizing*|
 
 <font color=red>**Test 1 on Blackboard available 48 hour access window**</font>
 
-### Week 6 Programming Fundamentals/Engineering Computation
+### Week 6 Engineering Computation
 ---
 (2880 cumulative minutes)
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|28Sep21|Data Display using MATPLOTLIB <br> - Example |ppXX-XX|none|
-|30Sep21|Solving Implicit Equations <br> - Graphical <br> - Grid Search <br> - Newton's Method (Analytical) <br> - Newton's Method (Finite Difference) <br> - Newtons Method using NUMPY |ppXX-XX|ES-7 Network Hydraulics by EPANET|
+|28Sep21|Solving Implicit Equations <br> - Graphical <br> - Grid Search <br> - Newton's Method (Analytical) <br> - Newton's Method (Finite Difference) <br> - Newtons Method using NUMPY |ppXX-XX||
+|30Sep21|Interpolation and Integration<br> - Lagrange Polynomial Interpolation <br> – Integration of Functions <br> - Integration of Tabular Results |ppXX-XX|ES-8 Network Hydraulics by EPANET|
 
 ### Week 7 Engineering Computation
 ---
@@ -230,17 +230,17 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|5Oct21|Interpolation and Integration<br> - Lagrange Polynomial Interpolation <br> – Integration of Functions <br> - Integration of Tabular Results |ppXX-XX|ES-8 Network Hydraulics by EPANET| 
-|7Oct21|Matrix Arithmetic <br> - Vector/Matrix Addition/Multipication(Inner Product) <br> - Matrix Inversion (Concept of multiplicative inverse) <br> - Solving Linear Systems of Equations <br> - Gaussian Reduction without Pivoting <br> - Reduction with Pivoting <br> - Using NUMPY |ppXX-XX|none; *future ES-8NX*|
+|5Oct21|Matrix Arithmetic <br> - Vector/Matrix Addition/Multipication(Inner Product) <br> - Matrix Inversion (Concept of multiplicative inverse) <br> - Solving Linear Systems of Equations <br> - Gaussian Reduction without Pivoting <br> - Reduction with Pivoting <br> - Using NUMPY |ppXX-XX|none; *future ES-8NX*|
+|7Oct21|Non-Linear Equation Systems <br> - Multi-variable extension of Newton's method <br> - Constructing the Jabobian (analytical) <br> - Constructing the Jabobian (finite difference)|ppXX-XX|none|
 
-### Week 8 Engineering Computation/Data Models and Decisions
+### Week 8 Data Models and Decisions
 ---
 (3840 cumulative minutes)
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|12Oct21|Non-Linear Equation Systems <br> - Multi-variable extension of Newton's method <br> - Constructing the Jabobian (analytical) <br> - Constructing the Jabobian (finite difference)|ppXX-XX|none|
-|14Oct21|Correlation,Causality, Randomness, and Probability <br> - topic <br> - topic <br> - topic |ppXX-XX|ES-9 Design Storm|
+|12Oct21|Correlation,Causality, Randomness, and Probability <br> - topic <br> - topic <br> - topic |ppXX-XX|ES-9 Design Storm|
+|14Oct21|Descriptive Statistics <br> - Mean, median, mode (measures of central tendency) <br> - Variance, Standard deviation (measures of dispersion) <br> - Skew (measures of symmetry) <br> - Higher moments (pointyness ...) |ppXX-XX|ES-10 Open Channel Steady Flow|
 
 <font color=red>**Test 2 on Blackboard available 48 hour access window**</font>
 
@@ -250,8 +250,8 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|19Oct21|Descriptive Statistics <br> - Mean, median, mode (measures of central tendency) <br> - Variance, Standard deviation (measures of dispersion) <br> - Skew (measures of symmetry) <br> - Higher moments (pointyness ...) |ppXX-XX|ES-10 Open Channel Steady Flow|
-|21Oct21|Useful Functions for Data Models <br> - The mighty straight line ! <br> - Normal Distribution Function <br> - Gamma Distribution Function <br> - Extreme Value Distribution Function |ppXX-XX|bb quiz1|
+|19Oct21|Functions as Data Models <br> - A line <br> - Normal Distribution Function <br> - Gamma Distribution Function <br> - Extreme Value Distribution Function |ppXX-XX|bb quiz1|
+|21Oct21|Probability Estimation Modeling <br> – Order statistics (plotting positions)  <br> - Histograms <br> - Visual assessment of Fit |ppXX-XX|ES-11 Inlet Sizing|
 
 ### Week 10 Data Models and Decisions
 ---
@@ -259,46 +259,46 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|26Oct21|Probability Estimation Modeling <br> – Order statistics (plotting positions)  <br> - Histograms <br> - Assessment of Fit |ppXX-XX|ES-11 Inlet Sizing|
-|28Oct21|Hypothesis Testing <br> - Comparing two (or more) collections of observations <br> - A/B Testing <br> - Parametric and Non-Parametric Tests|ppXX-XX||
+|26Oct21|Hypothesis Testing <br> - Comparing two (or more) collections of observations <br> - A/B Testing <br> - Parametric and Non-Parametric Tests|ppXX-XX||
+|28Oct21|Interval Estimates <br> - Surface network <br> - Storm Sewer network |ppXX-XX|ES-12 Rational Method Conduit Sizing|
 
-### Week 11 Data Models and Decisions/Prediction Engines
+### Week 11 Prediction Engines
 ---
 (5280 cumulative minutes)
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|2Nov21|Interval Estimates <br> - Surface network <br> - Storm Sewer network |ppXX-XX|ES-12 Rational Method Conduit Sizing|
-|2Nov21|Visual Model Fit <br> - Data model as a prediction engine <br> - Assessing model quality by plotting <br> - Extrapolation |ppXX-XX|ES-13 SWMM Design/Sizing Somewhere USA|
+|2Nov21|Data Models as Prediction Engines <br> - Data model as a prediction engine <br> - Assessing model quality by plotting <br> - Extrapolation |ppXX-XX|ES-13 SWMM Design/Sizing Somewhere USA|
+|2Nov21|Regression Models <br> - Linear regression <br> - Ordinary Least Squares  <br> - Multiple linear regression <br> - |ppXX-XX|Prediction Interval Estimates <br> - topic <br> -topic |
 
-### Week 12 Prediction Engines
+### Week 12 Classification Engines
 ---
 (5760 cumulative minutes)
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|9Nov21|Regression Models  <br> - Ordinary Least Squares  <br> - |ppXX-XX|ES-14 SWMM Model Tanglewilde|
-|11Nov21|Prediction Interval Estimates <br> - topic <br> -topic |ppXX-XX|none|
+|9Nov21|Classification <br> - Classification vs Prediction <br> - Logistic Regression |ppXX-XX||
+|11Nov21|Search-Type Engines <br> - K-Nearest Neighbor Method <br> - Random Forests |ppXX-XX||
 
-### Week 13 Prediction/Classification Engines
+### Week 13 Classification Engines
 ---
 (6240 cumulative minutes)
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|16Nov21|Logistic Regression |ppXX-XX||
-|18Nov21|Classification <br> - Classification vs Prediction <br> K-Nearest Neighbor Method |ppXX-XX||
+|16Nov21|Boundary-Type Engines <br> - Support Vector Machines <br>  |ppXX-XX||
+|18Nov21|Pattern-Type Engines <br> - Artifical Neural Network (Demonstration) <br>  |ppXX-XX||
 
 <font color=red>**Test 3 on Blackboard available 48 hour access window**</font>
 
-### Week 14 Classification Engines
+### Week 14 Wrap-Up
 ---
 (6720 cumulative minutes)
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|23Nov21|Project Presentations|ppXX-XX|Support Vector Machines (Demonstration) |
-|30Nov21|Project Presentations|ppXX-XX|Artifical Neural Network (Demonstration)|
+|23Nov21|Project Presentations|ppXX-XX||
+|30Nov21|Project Presentations|ppXX-XX||
 
 <font color=red>**Project Report Due 6 Dec 2021**</font>
 
