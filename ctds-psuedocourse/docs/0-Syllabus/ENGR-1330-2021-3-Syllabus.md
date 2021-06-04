@@ -174,7 +174,7 @@ Blackboard is used as the learning management system (LMS) for this class, and i
 
 |date|lesson|links|laboratory|
 |:---|:---|:---|:---|
-|24Aug21|Computational Thinking and Data Science <br> - Syllabus  <br> - Computational Thinking Principles <br> - Data Science Principles  |ppXX-XX|Setting up computational environment <br> - Setting a browser exception (to access course contents) <br> - Anaconda (PC/Mac) <br> - Anaconda on AWS (Cloud Server running Windows Server 2020)|
+|24Aug21|Computational Thinking and Data Science <br> - Syllabus  <br> - Computational Thinking Principles <br> - Data Science Principles  |[https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.md](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.md) |Setting up computational environment <br> - Setting a browser exception (to access course contents) <br> - Anaconda (PC/Mac) <br> - Anaconda on AWS (Cloud Server running Windows Server 2020)|
 |26Aug21|Problem Solving with Computational Thinking <br> - CT and programming as a problem solving process <br> - Attribution via CCMR |ppXX-XX|iPython/JupyterLab fundamentals <br> - Code cells <br> - Markdown cells <br> - Exporting to a pdf <br> - Resetting a notebook <br> - Troubleshoot hung kernel|
 
 ### Week 2 Programming Fundamentals
