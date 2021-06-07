@@ -14,6 +14,11 @@
 
 
 
+**Download** (right-click, save target as ...) this jupyterlab notebook from:
+
+[https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson01/lesson1.ipynb](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson01/lesson1.ipynb)
+
+
 # ENGR 1330 Computational Thinking with Data Science 
 Last GitHub Commit Date: 13 January 2021
 ## Lesson 1 Problem Solving and Computational Thinking: 
