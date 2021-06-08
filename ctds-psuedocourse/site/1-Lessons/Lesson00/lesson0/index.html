@@ -494,14 +494,11 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<!-- Script Block to set tables to left alignment -->
-
-<style>
-  table {margin-left: 0 !important;}
-</style>
-
+<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from:</p>
+<p><a href="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.ipynb">https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.ipynb</a></p>
 <h1 id="engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</h1>
-<p>Last GitHub Commit Date: 13 January 2021</p>
+<p>Copyright © 2021 Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. <em>The contents of this book are licensed for free consumption under the following license:</em> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a>.</p>
+<p>Last GitHub Commit Date: 8 June 2021</p>
 <h2 id="lesson-0-introduction-to-computational-thinking-with-data-science">Lesson 0 Introduction to Computational Thinking with Data Science:</h2>
 <ul>
 <li>Computational thinking concepts </li>
@@ -516,11 +513,43 @@
 <li>The first block identifies the particular computer, the user, and the python kernel in use.</li>
 <li>The second block sets markdown tables to left edge when rendering.</li>
 </ul>
-<p>I usually put both blocks at the top of the notebook, just after some kind of title block, as done here.</p>
+<p>I usually put both blocks at the top of the notebook, just after some kind of title block, as done here.
+Admittedly these clutter up the webbook, but are needed for structure and debugging codes; you can remove them from your copies of the notebooks if you wish!</p>
+<pre><code class="python"># Script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+! pwd
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>atomickitty
+sensei
+/home/sensei/1330-textbook-webroot/ctds-psuedocourse/docs/1-Lessons/Lesson00
+/opt/jupyterhub/bin/python3
+3.8.5 (default, Jan 27 2021, 15:41:15) 
+[GCC 9.3.0]
+sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
+</code></pre>
+<pre><code class="python">%%html
+&lt;!-- Script Block to set tables to left alignment --&gt;
+&lt;style&gt;
+  table {margin-left: 0 !important;}
+&lt;/style&gt;
+</code></pre>
+
+<!-- Script Block to set tables to left alignment -->
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
 <h2 id="computational-thinking-concepts">Computational Thinking Concepts</h2>
 <p>Computational thinking (CT) refers to the thought processes involved in expressing solutions as computational steps or algorithms that can be carried out by a computer. </p>
-<p>Much of what follows is borrowed from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/">(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/)</a>.</p>
-<p>Computational thinking is taking an approach to solving problems, designing systems and understanding human behaviour that draws on concepts fundamental to computing <a href="http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf">(http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf)</a>.</p>
+<p>Much of what follows is borrowed from (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/).</p>
+<p>Computational thinking is taking an approach to solving problems, designing systems and understanding human behaviour that draws on concepts fundamental to computing (http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf).</p>
 <p>Computational thinking is a kind of analytical thinking:</p>
 <ul>
 <li>It shares with mathematical thinking in the general ways in which we might approach solving a problem. </li>
@@ -584,7 +613,7 @@ In computing, we abstract notions beyond the physical dimensions of time and spa
 <h4 id="algorithms">Algorithms</h4>
 <p>Step-by-step instructions of how to solve a problem (https://en.wikipedia.org/wiki/Algorithm). 
 Identifies what is to be done, and the order in which they should be done.</p>
-<p><img alt="" src="../algorithm.png" /></p>
+<p><img alt="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/algorithm.png" src="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/algorithm.png" /></p>
 <table>
 <thead>
 <tr>
@@ -656,7 +685,7 @@ Identifies what is to be done, and the order in which they should be done.</p>
 <p>First, it is much easier to program in a high-level language. Programs written in a high-level language take less time to write, they are shorter and easier to read, and they are more likely to be correct. Second, high-level languages are portable, meaning that they can run on different kinds of computers with few or no modifications. Low-level programs can run on only one kind of computer and have to be rewritten to run on another.</p>
 <p>Due to these advantages, almost all programs are written in high-level languages. Low-level languages are used only for a few specialized applications, and for device drivers.</p>
 <p>Two kinds of programs process high-level languages into low-level languages: interpreters and compilers. An interpreter reads a high-level program and executes it, meaning that it does what the program says. It processes the program a little at a time, alternately reading lines and performing computations.</p>
-<p><img alt="" src="../interpreter.png" /></p>
+<p><img alt="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/interpreter.png" src="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/interpreter.png" /></p>
 <table>
 <thead>
 <tr>
@@ -674,7 +703,7 @@ Identifies what is to be done, and the order in which they should be done.</p>
 </tbody>
 </table>
 <p>A compiler reads the program and translates it completely before the program starts running. In this case, the high-level program is called the source code, and the translated program is called the object code or the executable. Once a program is compiled, you can execute it repeatedly without further translation.</p>
-<p><img alt="" src="../compiler.png" /></p>
+<p><img alt="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/compiler.png" src="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/compiler.png" /></p>
 <table>
 <thead>
 <tr>
@@ -776,7 +805,7 @@ Identifies what is to be done, and the order in which they should be done.</p>
 <p><strong>Step 4.</strong> Develop a general solution (code)</p>
 <p>The by-hand exercise helps identify the required steps in an “algorithm” or recipe to compute mean values. First we essentially capture or read the values then count how many there are (either as we go or as a separate step), then sum the values, then divide the values by the count, and finally report the result.</p>
 <p>In a flow-chart it would look like:</p>
-<p><img alt="" src="../Lesson1-flowchart.png" /></p>
+<p><img alt="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/Lesson1-flowchart.png" src="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/Lesson1-flowchart.png" /></p>
 <table>
 <thead>
 <tr>
@@ -871,25 +900,7 @@ print(&quot;arithmetic mean = &quot;,round(average(xlist),2))
 </ol>
 <p>In cases where we use CCMR we are not so much programming and developing our own work as scaffolding parts (https://en.wikipedia.org/wiki/Scaffold_(programming)) - a legitimate and valuable engineering activity.</p>
 <h2 id="readings">Readings</h2>
-<p>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 https://www.inferentialthinking.com/chapters/01/what-is-data-science.html</p>
-<pre><code class="python"># Script block to identify host, user, and kernel
-import sys
-! hostname
-! whoami
-! pwd
-print(sys.executable)
-print(sys.version)
-print(sys.version_info)
-</code></pre>
-
-<pre><code>atomickitty
-sensei
-/home/sensei/1330-textbook-webroot/docs/lesson0
-/opt/jupyterhub/bin/python3
-3.8.5 (default, Jul 28 2020, 12:59:40) 
-[GCC 9.3.0]
-sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
-</code></pre></div>
+<p>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 https://www.inferentialthinking.com/chapters/01/what-is-data-science.html</p></div>
         </div>
 
         <footer class="col-md-12">

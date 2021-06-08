@@ -1,14 +1,14 @@
+**Download** (right-click, save target as ...) this page as a jupyterlab notebook from:
 
-
-<!-- Script Block to set tables to left alignment -->
-<style>
-  table {margin-left: 0 !important;}
-</style>
-
+[https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.ipynb](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.ipynb)
 
 
 # ENGR 1330 Computational Thinking with Data Science 
-Last GitHub Commit Date: 13 January 2021
+Copyright © 2021 Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. *The contents of this book are licensed for free consumption under the following license:* [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+Last GitHub Commit Date: 8 June 2021
+
+
 ## Lesson 0 Introduction to Computational Thinking with Data Science: 
 - Computational thinking concepts 
 - Data science and practices 
@@ -24,14 +24,53 @@ In the lesson notebooks there will usually be two script blocks, identical to th
 - The second block sets markdown tables to left edge when rendering.
 
 I usually put both blocks at the top of the notebook, just after some kind of title block, as done here.
+Admittedly these clutter up the webbook, but are needed for structure and debugging codes; you can remove them from your copies of the notebooks if you wish!
+
+
+```python
+# Script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+! pwd
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+```
+
+    atomickitty
+    sensei
+    /home/sensei/1330-textbook-webroot/ctds-psuedocourse/docs/1-Lessons/Lesson00
+    /opt/jupyterhub/bin/python3
+    3.8.5 (default, Jan 27 2021, 15:41:15) 
+    [GCC 9.3.0]
+    sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
+
+
+
+```python
+%%html
+<!-- Script Block to set tables to left alignment -->
+<style>
+  table {margin-left: 0 !important;}
+</style>
+```
+
+
+<!-- Script Block to set tables to left alignment -->
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+
 
 ## Computational Thinking Concepts
 
 Computational thinking (CT) refers to the thought processes involved in expressing solutions as computational steps or algorithms that can be carried out by a computer. 
 
-Much of what follows is borrowed from [(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/).
+Much of what follows is borrowed from (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/).
 
-Computational thinking is taking an approach to solving problems, designing systems and understanding human behaviour that draws on concepts fundamental to computing [(http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf)](http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf).
+Computational thinking is taking an approach to solving problems, designing systems and understanding human behaviour that draws on concepts fundamental to computing (http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf).
 
 Computational thinking is a kind of analytical thinking:
 
@@ -87,7 +126,7 @@ Books in an online bookstore
 Step-by-step instructions of how to solve a problem (https://en.wikipedia.org/wiki/Algorithm). 
 Identifies what is to be done, and the order in which they should be done.
 
-![](algorithm.png)
+![https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/algorithm.png](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/algorithm.png)
 
 ||Image from https://www.newyorker.com/magazine/2021/01/18/whats-wrong-with-the-way-we-work?utm_source=pocket-newtab||
 |---|------------|---|
@@ -159,14 +198,14 @@ Due to these advantages, almost all programs are written in high-level languages
 
 Two kinds of programs process high-level languages into low-level languages: interpreters and compilers. An interpreter reads a high-level program and executes it, meaning that it does what the program says. It processes the program a little at a time, alternately reading lines and performing computations.
 
-![](interpreter.png)
+![https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/interpreter.png](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/interpreter.png)
 
 ||Interpreted Program. Image from (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)||
 |---|------------|---|
 
 A compiler reads the program and translates it completely before the program starts running. In this case, the high-level program is called the source code, and the translated program is called the object code or the executable. Once a program is compiled, you can execute it repeatedly without further translation.
 
-![](compiler.png)
+![https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/compiler.png](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/compiler.png)
 
 ||Compiled Prorgam. Image from: (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)||
 |---|------------|---|
@@ -259,7 +298,7 @@ The by-hand exercise helps identify the required steps in an “algorithm” or 
 
 In a flow-chart it would look like:
 
-![](Lesson1-flowchart.png)
+![https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/Lesson1-flowchart.png](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/Lesson1-flowchart.png)
 
 ||Flowchart for Artihmetic Mean Algorithm||
 |---|------------|---|
@@ -367,24 +406,3 @@ In cases where we use CCMR we are not so much programming and developing our own
 ## Readings
 
 Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 https://www.inferentialthinking.com/chapters/01/what-is-data-science.html
-
-
-```python
-# Script block to identify host, user, and kernel
-import sys
-! hostname
-! whoami
-! pwd
-print(sys.executable)
-print(sys.version)
-print(sys.version_info)
-```
-
-    atomickitty
-    sensei
-    /home/sensei/1330-textbook-webroot/docs/lesson0
-    /opt/jupyterhub/bin/python3
-    3.8.5 (default, Jul 28 2020, 12:59:40) 
-    [GCC 9.3.0]
-    sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
-
