@@ -1,18 +1,19 @@
 **Download** (right-click, save target as ...) this page as a jupyterlab notebook from:
 
-[Laboratory 0](https://atomickitty.ddns.net:8000/user/sensei/files/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/8-Labs/Lab0/Lab0_Dev.ipynb?_xsrf=2%7C1b4d47c3%7C0c3aca0c53606a3f4b71c448b09296ae%7C1623531240)
+[Laboratory 1](https://atomickitty.ddns.net:8000/user/sensei/files/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/8-Labs/Lab0/Lab1_Dev.ipynb?_xsrf=2%7C1b4d47c3%7C0c3aca0c53606a3f4b71c448b09296ae%7C1623531240)
 
 ___
 
 
-# <font color=darkred>Laboratory 0: Yes, That's how we count in python!</font>
+# <font color=darkred>Laboratory 1: A Notebook Like No Other!</font>
 
 
 
-![](https://www.accountingweb.co.uk/sites/default/files/istock-637073764.jpg) <br>
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png) <br>
 
 
 ### Welcome to your first <span style='background:yellow'>Jupyter Notebook</span>. This is a medium that we will be using throughout the semester. 
+___
 
 ## Why is this called a notebook?
 ### Because you can write stuff in it!
@@ -20,26 +21,16 @@ ___
 ## Is that it?
 ### Nope! you can **write** and **run** <span style='background:yellow'>CODE</span> in this notebook! Plus a bunch of other cool stuff such as making graphs, running tests and simulations, adding images, and prepare documents (such as this one!). 
 
-## How do we get this?
-
-![](https://assets-cdn.anaconda.com/assets/_1200x630_crop_center-center_82_none/anaconda-meta.jpg?mtime=20200506175707&focal=none&tmtime=20200616170545) <br>
-
-### There are online services that allow you create, modify, and export Jupyter notebooks. However, to have this on your local machines (computers), you can install <span style='background:yellow'>Anaconda</span>. Anaconda is a package of different software suits including "Jupyter Notebook". You can find videos on how to install Anaconda on your devices on BlackBoard:
-- Go to Anaconda.com
-- Scroll down to the bottom of the page or click on products > individual edition
-- Download the right version for your system: Windows, MacOS, and Linux- This may take a while depending on your connection speed
-- Once the installer file is downloaded, run it and install Anaconda on your machine.
-    - Anaconda requires almost 3 GB of free space
-    - Install it in a separate folder- Preferably on a drive with lots of free memory!
-    - BE PATIENT!- It will take a while. 
 
 
 ## <font color=purple>The Environment - Let's have a look around this window!</font>
 
 ![](https://i.pinimg.com/originals/db/db/ba/dbdbbad5798bfc3ff27a499dc5ca2b30.gif) <br>
+<font color=gray>*Rami Malek in Mr. Robot*</font>
 
-
-- The tabs
+ 
+ 
+- The tabs:
     - File
     - Edit
     - View
@@ -47,7 +38,7 @@ ___
     - Cell
     - Kernel
     
-- The Icons
+- The Icons:
     - Save
     - Insert Cell Below
     - Cut
@@ -59,7 +50,9 @@ ___
     - Intruppt Kernel
     - Restart Kernel
     - Cell Type Selector (Dropdown list)
-    
+
+___
+
 ### The notebook consists of a sequence of cells. A cell is a multiline text input field, and its contents can be executed by using Shift-Enter, or by clicking Run in the menu bar. The execution behavior of a cell is determined by the cell’s type. 
 ### There are three types of cells: code cells, markdown cells, and raw cells. Every cell starts off being a code cell, but its type can be changed by using a drop-down on the toolbar (which will be “Code”, initially).
     
@@ -189,7 +182,7 @@ print("This is my first notebook!")
 *Unless stated otherwise, we want you to submit your weekly lab assignments in PDF and your exam and project deliverables in both PDF and .ipynb formats.*
 
 ![](https://i.pinimg.com/originals/1d/ae/c2/1daec2478020d74065a95359b6223283.gif) <br>
-
+___
 
 ![](https://media2.giphy.com/media/5nj4ZZWl6QwneEaBX4/source.gif) <br>
 
@@ -210,9 +203,10 @@ print("This is my first notebook!")
 - __"Quick introduction to Jupyter Notebook"__ by __Michael Fudge__ available at *https://www.youtube.com/watch?v=jZ952vChhuI <br>
 - __"What is Jupyter Notebook?"__ by __codebasics__ available at *https://www.youtube.com/watch?v=q_BzsPxwLOE <br>
 
-![](https://media2.giphy.com/media/dNgK7Ws7y176U/200.gif) <br>
+![](https://media.csesoc.org.au/content/images/2019/10/learn11.gif) <br>
 
 
+___
 ## Exercise: Let's see who you are! <br>
 
 

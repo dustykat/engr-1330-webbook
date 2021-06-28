@@ -1,6 +1,13 @@
+**Download** (right-click, save target as ...) this page as a jupyterlab notebook from:
+
+[Laboratory 0](https://atomickitty.ddns.net:8000/user/sensei/files/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/8-Labs/Lab0/Lab0_Dev.ipynb?_xsrf=2%7C1b4d47c3%7C0c3aca0c53606a3f4b71c448b09296ae%7C1623531240)
+
+___
+
+
 # <font color=darkred>Laboratory 0: Yes, That's how we count in python!</font>
 
-[Link to Content Server](http://54.243.252.9/webbook-engr1330/8-Labs/Lab0/)
+
 
 ![](https://www.accountingweb.co.uk/sites/default/files/istock-637073764.jpg) <br>
 
@@ -120,7 +127,7 @@ Scratched: ~~string~~ <br>
 
 - You can also use images from online sources be using this format:
 
-``![](put the image address here.image format) ``<br>
+![](put the image address here.image format) <br>
 
 
 ## Raw Cells:
@@ -221,4 +228,3 @@ print("This is my first notebook!")
 ```
 
 ![](https://i.pinimg.com/originals/84/44/f5/8444f53fa329b94ddd674ffb2e192fe8.png)
-
