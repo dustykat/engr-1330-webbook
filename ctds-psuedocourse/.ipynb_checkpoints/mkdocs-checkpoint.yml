@@ -9,7 +9,7 @@ nav:
               #- Laboratory 0: 8-Labs/Lab0/Lab0_Dev.md
       - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson1.md
               #- Laboratory 1: 8-Labs/Lab1/Lab1_Dev.md
-  - Fundamentals of Scripting:
+  - Scripting Fundamentals:
       - Simple Computation : 1-Lessons/Lesson02/lesson2.md
               #- Laboratory 2: 8-Labs/Lab2/Lab2_Dev.md
       - Data Structures and the MATH package: 1-Lessons/Lesson03/lesson3.md
@@ -32,7 +32,7 @@ nav:
       - Linear Equation Systems :  1-Lessons/Lesson12/lesson12.md      
       - Non-Linear Equation Systems : 1-Lessons/Lesson13/lesson13.md 
       #        - Laboratory 13: 8-Labs/Lab13/Lab13_Dev.md
-  - Data Modeling and Decisions : 
+  - Models and Decisions : 
       - Statistical Data Modeling : lesson0/lesson0.md
       - Randomness and Probability: lesson0/lesson0.md
       - Descriptive Statistics : 1-Lessons/Lesson15/lesson15.md 
@@ -44,12 +44,12 @@ nav:
       - Hypothesis Testing : lesson0/lesson0.md 
       - Experimental Design (A/B Testing) : lesson0/lesson0.md 
       - Interval Estimates :  lesson0/lesson0.md 
-  - Prediction Engines :
+  - Prediction :
       - Fitting Models to Observations:   lesson0/lesson0.md
       - Least Squares (Regression) Model Fitting : lesson0/lesson0.md
       - Model Quality:   lesson0/lesson0.md
       - Estimating Probability/Quantile Regression : lesson0/lesson0.md
-  - Classification Engines :
+  - Classification :
         - Introduction: lesson0/lesson0.md
         - Types: lesson0/lesson0.md
         - K Nearest Neighbor : lesson0/lesson0.md
