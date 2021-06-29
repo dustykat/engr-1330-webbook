@@ -4,51 +4,57 @@ nav:
   - Home: index.md
   - About: about.md
   # - Syllabus : 0-Syllabus/ENGR-1330-2021-3-Syllabus.md
-  - Computational Thinking and Data Science : 1-Lessons/Lesson00/lesson0.md
+  - Introduction: 
+      - Computational Thinking and Data Science : 1-Lessons/Lesson00/lesson0.md
               #- Laboratory 0: 8-Labs/Lab0/Lab0_Dev.md
-  - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson1.md
+      - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson1.md
               #- Laboratory 1: 8-Labs/Lab1/Lab1_Dev.md
-  - Simple Computation : 1-Lessons/Lesson02/lesson2.md
+  - Scripting in Python:
+      - Simple Computation : 1-Lessons/Lesson02/lesson2.md
               #- Laboratory 2: 8-Labs/Lab2/Lab2_Dev.md
-  - Data Structures and the MATH package: 1-Lessons/Lesson03/lesson3.md
+      - Data Structures and the MATH package: 1-Lessons/Lesson03/lesson3.md
              # - Laboratory 3: 8-Labs/Lab3/Lab3_Dev.md  # need a new lab move this to lab4
-  - Program Control Structures :  1-Lessons/Lesson04/lesson4.md
+      - Program Control Structures :  1-Lessons/Lesson04/lesson4.md
             #  - Laboratory 4: 8-Labs/Lab4/Lab4_Dev.md # move to lab 6
-  - External Functions and Modules : lesson0/lesson0.md   
+      - External Functions and Modules : lesson0/lesson0.md   
             # - Laboratory 6: 8-Labs/Lab6/Lab6_Dev.md
-  - Engineering and Scientific Data Files :  lesson0/lesson0.md
+      - Engineering and Scientific Data Files :  lesson0/lesson0.md
            #  - Laboratory 5: 8-Labs/Lab5/Lab5_Dev.md #need to rewrite 
-  - Computational Linear Algebra using NUMPY : 1-Lessons/Lesson07/lesson6.md 
+      - Computational Linear Algebra using NUMPY : 1-Lessons/Lesson07/lesson6.md 
              #- Laboratory 1: 8-Labs/Lab7/Lab7_Dev.md
-  - Database Query and Manipulation using PANDAS : 1-Lessons/Lesson08/lesson7.md
+      - Database Query and Manipulation using PANDAS : 1-Lessons/Lesson08/lesson7.md
              # - Laboratory 8: 8-Labs/Lab8/Lab8_Dev.md
-  - Visual Display of Data using MATPLOTLIB : 1-Lessons/Lesson09/lesson8.md
+      - Visual Display of Data using MATPLOTLIB : 1-Lessons/Lesson09/lesson8.md
 #              - Laboratory 9: 8-Labs/Lab9/Lab9_Dev.md
-#      - Engineering Computation :  # exam 1
-  - Implicit Equations : 1-Lessons/Lesson10/lesson10.md
-  - Interpolation and Integration : 1-Lessons/Lesson11/lesson11.md
-  - Linear Equation Systems :  1-Lessons/Lesson12/lesson12.md      
-  - Non-Linear Equation Systems : 1-Lessons/Lesson13/lesson13.md 
+  - Engineering Computations :  # exam 1
+      - Implicit Equations : 1-Lessons/Lesson10/lesson10.md
+      - Interpolation and Integration : 1-Lessons/Lesson11/lesson11.md
+      - Linear Equation Systems :  1-Lessons/Lesson12/lesson12.md      
+      - Non-Linear Equation Systems : 1-Lessons/Lesson13/lesson13.md 
       #        - Laboratory 13: 8-Labs/Lab13/Lab13_Dev.md
-  - Data Modeling (Statistical Approach): lesson0/lesson0.md
-  - Randomness and Probability: lesson0/lesson0.md
-  - Descriptive Statistics : 1-Lessons/Lesson15/lesson15.md 
+  - Data Modeling : 
+      - Statistical Data Modeling : lesson0/lesson0.md
+      - Randomness and Probability: lesson0/lesson0.md
+      - Descriptive Statistics : 1-Lessons/Lesson15/lesson15.md 
              #- Laboratory 15: 8-Labs/Lab15/Lab15_Dev.md #check internal links
-  - Distribution Models : lesson0/lesson0.md
+      - Distribution Models : lesson0/lesson0.md
              #- Laboratory 16: 8-Labs/Lab16/Lab16_Dev.md #check internal links
-  - Probability Estimation Modeling : 1-Lessons/Lesson17/lesson17.md
+      - Probability Estimation Modeling : 1-Lessons/Lesson17/lesson17.md
             # - Laboratory 17: 8-Labs/Lab17/Lab17_Dev.md #needs content
-  - Hypothesis Testing : lesson0/lesson0.md 
-  - Experimental Design (A/B Testing) : lesson0/lesson0.md 
-  - Interval Estimates :  lesson0/lesson0.md 
-  - Prediction Engines - Fitting Models to Observations:   lesson0/lesson0.md
-  - Prediction Engines - Least Squares (Regression) Model Fitting : lesson0/lesson0.md
-  - Prediction Engines - Model Quality:   lesson0/lesson0.md
-  - Prediction Engines - Estimating Probability/Quantile Regression : lesson0/lesson0.md
-  - Classification Engines - Introduction: lesson0/lesson0.md
-  - Classification Engines - Types: lesson0/lesson0.md
-  - Classification Engines - K Nearest Neighbor : lesson0/lesson0.md
-  - Classification Engines - Engine Update : lesson0/lesson0.md
+  - Decision Making:
+      - Hypothesis Testing : lesson0/lesson0.md 
+      - Experimental Design (A/B Testing) : lesson0/lesson0.md 
+      - Interval Estimates :  lesson0/lesson0.md 
+  - Prediction Engines :
+      - Fitting Models to Observations:   lesson0/lesson0.md
+      - Least Squares (Regression) Model Fitting : lesson0/lesson0.md
+      - Model Quality:   lesson0/lesson0.md
+      - Estimating Probability/Quantile Regression : lesson0/lesson0.md
+  - Classification Engines :
+        - Introduction: lesson0/lesson0.md
+        - Types: lesson0/lesson0.md
+        - K Nearest Neighbor : lesson0/lesson0.md
+        - Engine Update : lesson0/lesson0.md
 
 # nesting as pulldown??
 
