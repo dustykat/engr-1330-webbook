@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lab2 Dev - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson00/lesson0/">Computational Thinking and Data Science</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson01/lesson1/">Problem Solving with Computational Thinking</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson02/lesson2/">Simple Computation</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson03/lesson3/">Data Structures and the MATH package</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson04/lesson4/">Program Control Structures</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">External Functions and Modules</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Engineering and Scientific Data Files</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson07/lesson6/">Computational Linear Algebra using NUMPY</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson08/lesson7/">Database Query and Manipulation using PANDAS</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson09/lesson8/">Visual Display of Data using MATPLOTLIB</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson10/lesson10/">Implicit Equations</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson11/lesson11/">Interpolation and Integration</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson12/lesson12/">Linear Equation Systems</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson13/lesson13/">Non-Linear Equation Systems</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Data Modeling (Statistical Approach)</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Randomness and Probability</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson15/lesson15/">Descriptive Statistics</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Distribution Models</a>
+                            </li>
+                            <li >
+                                <a href="../../../1-Lessons/Lesson17/lesson17/">Probability Estimation Modeling</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Hypothesis Testing</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Experimental Design (A/B Testing)</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Interval Estimates</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Prediction Engines - Fitting Models to Observations</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Prediction Engines - Least Squares (Regression) Model Fitting</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Prediction Engines - Model Quality</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Prediction Engines - Estimating Probability/Quantile Regression</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Classification Engines - Introduction</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Classification Engines - Types</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Classification Engines - K Nearest Neighbor</a>
+                            </li>
+                            <li >
+                                <a href="../../../lesson0/lesson0/">Classification Engines - Engine Update</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laboratory-2-first-steps">Laboratory 2: First Steps... </a></li>
+            <li><a href="#notice-the-code-cell-below">Notice the code cell below!</a></li>
+            <li><a href="#from-this-notebook-forward-please-include-and-run-the-script-in-the-cell-it-will-help-in-debugging-a-notebook">From this notebook forward please include and run the script in the cell, it will help in debugging a notebook.</a></li>
+            <li><a href="#also-from-now-on-please-make-sure-that-you-have-the-following-markdown-cell-filled-with-your-own-information-on-top-of-your-notebooks">Also, from now on, please make sure that you have the following markdown cell, filled with your own information, on top of your notebooks:</a></li>
+            <li><a href="#full-name">Full name:</a></li>
+            <li><a href="#r">R#:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook:</a></li>
+            <li><a href="#date">Date:</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#operators">Operators</a></li>
+            <li><a href="#arithmetic-operators">Arithmetic Operators</a></li>
+            <li><a href="#data-type">Data Type</a></li>
+            <li><a href="#expressions">Expressions</a></li>
+            <li><a href="#exercise-integer-or-float">Exercise: Integer or Float? </a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from:</p>
+<p><a href="https://atomickitty.ddns.net:8000/user/sensei/files/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/8-Labs/Lab1/Lab2_Dev.ipynb?_xsrf=2%7C1b4d47c3%7C0c3aca0c53606a3f4b71c448b09296ae%7C1623531240">Lab2</a></p>
+<hr />
+<h1 id="laboratory-2-first-steps"><font color=darkred>Laboratory 2: First Steps... </font></h1>
+<p><img alt="" src="https://i1.wp.com/timemanagementninja.com/wp-content/uploads/2013/10/First-Steps.jpg?resize=600%2C400" /> <br></p>
+<h3 id="notice-the-code-cell-below">Notice the code cell below!</h3>
+<h3 id="from-this-notebook-forward-please-include-and-run-the-script-in-the-cell-it-will-help-in-debugging-a-notebook">From this notebook forward please include and run the script in the cell, it will help in debugging a notebook.</h3>
+<pre><code class="python"># Preamble script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>DESKTOP-EH6HD63
+desktop-eh6hd63\farha
+C:\Users\Farha\Anaconda3\python.exe
+3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]
+sys.version_info(major=3, minor=7, micro=4, releaselevel='final', serial=0)
+</code></pre>
+<h3 id="also-from-now-on-please-make-sure-that-you-have-the-following-markdown-cell-filled-with-your-own-information-on-top-of-your-notebooks">Also, from now on, please make sure that you have the following markdown cell, filled with your own information, on top of your notebooks:</h3>
+<h2 id="full-name">Full name:</h2>
+<h2 id="r">R#:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook:</h2>
+<h2 id="date">Date:</h2>
+<hr />
+<h3 id="now-lets-get-to-work">Now, let's get to work!</h3>
+<p><img alt="" src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2019/06/Variable-Font-Demo-3.gif" /> <br></p>
+<h2 id="variables"><font color=purple>Variables</font></h2>
+<p>Variables are names given to data that we want to store and manipulate in programs. A
+variable has a name and a value. The value representation depends on what type of object
+the variable represents.
+The utility of variables comes in when we have a structure that is universal, but values of
+variables within the structure will change - otherwise it would be simple enough to just
+hardwire the arithmetic.</p>
+<p>Suppose we want to store the time of concentration for some hydrologic calculation. 
+To do so, we can name a variable <code>TimeOfConcentration</code>, and then <code>assign</code> a value to the variable,
+for instance:</p>
+<pre><code class="python">TimeOfConcentration = 0.0
+</code></pre>
+
+<p>After this assignment statement the variable is created in the program and has a value of 0.0. 
+The use of a decimal point in the initial assignment establishes the variable as a float (a real variable is called a floating point representation -- or just a float).</p>
+<pre><code class="python">TimeOfConcentration + 5
+</code></pre>
+
+<pre><code>5.0
+</code></pre>
+<h3 id="naming-rules"><font color=purple>Naming Rules</font></h3>
+<p>Variable names in Python can only contain letters (a - z, A - Z), numerals (0 - 9), or underscores. 
+The first character cannot be a number, otherwise there is considerable freedom in naming. 
+The names can be reasonably long. 
+<code>runTime</code>, <code>run_Time</code>, <code>_run_Time2</code>, <code>_2runTime</code> are all valid names, but <code>2runTime</code> is not valid, and will create an error when you try to use it.</p>
+<pre><code class="python"># Script to illustrate variable names
+runTime = 1
+_2runTime = 2 # change to 2runTime = 2 and rerun script
+runTime2 = 2
+print(runTime,_2runTime,runTime2)
+</code></pre>
+
+<pre><code>1 2 2
+</code></pre>
+<p>There are some reserved words that cannot be used as variable names because they have preassigned meaning in Parseltongue. These words include print, input, if, while, and for. There are several more; the interpreter won't allow you to use these names as variables and will issue an error message when you attempt to run a program with such words used as variables.</p>
+<hr />
+<h2 id="operators"><font color=purple>Operators</font></h2>
+<p>The <code>=</code> sign used in the variable definition is called an assignment operator (or assignment sign). 
+The symbol means that the expression to the right of the symbol is to be evaluated and the result placed into the variable on the left side of the symbol.  The "operation" is assignment, the "=" symbol is the operator name.</p>
+<p>Consider the script below:</p>
+<pre><code class="python"># Assignment Operator
+x = 5
+y = 10
+print (x,y)
+x=y # reverse order y=x and re-run, what happens?
+print (x,y)
+</code></pre>
+
+<pre><code>5 10
+10 10
+</code></pre>
+<p>So look at what happened. When we assigned values to the variables named <code>x</code> and <code>y</code>, they started life as 5 and 10. 
+We then wrote those values to the console, and the program returned 5 and 10. 
+Then we assigned <code>y</code> to <code>x</code> which took the value in y and replaced the value that was in x with this value. 
+We then wrote the contents again, and both variables have the value 10.</p>
+<h3 id="whats-it-with">What's it with # ?</h3>
+<blockquote>
+<p>Comments are added by writing a hashtag symbol (#) followed by any text of your choice. Any text that follows the hashtag symbol on the same line is ignored by the Python interpreter.</p>
+</blockquote>
+<p><img alt="" src="https://thumbs.gfycat.com/AgitatedRipeCicada-size_restricted.gif" /> <br></p>
+<hr />
+<h2 id="arithmetic-operators"><font color=purple>Arithmetic Operators</font></h2>
+<p>In addition to assignment we can also perform arithmetic operations on variables. The
+fundamental arithmetic operators are:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Symbol</th>
+<th align="left">Meaning</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">=</td>
+<td align="left">Assignment</td>
+<td align="left">x=3 Assigns value of 3 to x.</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">Addition</td>
+<td align="left">x+y Adds values in x and y.</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">Subtraction</td>
+<td align="left">x-y Subtracts values in y from x.</td>
+</tr>
+<tr>
+<td align="left">
+<script type="math/tex">*</script>
+</td>
+<td align="left">Multiplication</td>
+<td align="left">x*y Multiplies values in x and y.</td>
+</tr>
+<tr>
+<td align="left">/</td>
+<td align="left">Division</td>
+<td align="left">x/y Divides value in x by value in y.</td>
+</tr>
+<tr>
+<td align="left">//</td>
+<td align="left">Floor division</td>
+<td align="left">x//y Divide x by y, truncate result to whole number.</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">Modulus</td>
+<td align="left">x%y Returns remainder when x is divided by y.</td>
+</tr>
+<tr>
+<td align="left">
+<script type="math/tex">**</script>
+</td>
+<td align="left">Exponentation</td>
+<td align="left">x<script type="math/tex">**</script>y Raises value in x by value in y. ( e.g. xy)</td>
+</tr>
+<tr>
+<td align="left">+=</td>
+<td align="left">Additive assignment</td>
+<td align="left">x+=2 Equivalent to x = x+2.</td>
+</tr>
+<tr>
+<td align="left">-=</td>
+<td align="left">Subtractive assignment</td>
+<td align="left">x-=2 Equivalent to x = x-2.</td>
+</tr>
+<tr>
+<td align="left">*=</td>
+<td align="left">Multiplicative assignment</td>
+<td align="left">x*=3 Equivalent to x = x*3.</td>
+</tr>
+<tr>
+<td align="left">/=</td>
+<td align="left">Divide assignment</td>
+<td align="left">x/3 Equivalent to x = x/3.</td>
+</tr>
+</tbody>
+</table>
+<p>Run the script in the next cell for some illustrative results</p>
+<pre><code class="python"># Uniary Arithmetic Operators
+x = 10
+y = 5
+print(x, y)
+print(x+y)
+print(x-y)
+print(x*y)
+print(x/y)
+print((x+1)//y)
+print((x+1)%y)
+print(x**y)
+</code></pre>
+
+<pre><code>10 5
+15
+5
+50
+2.0
+2
+1
+100000
+</code></pre>
+<pre><code class="python"># Arithmetic assignment operators
+x = 1
+x += 2
+print(type(x),x)
+x = 1
+x -= 2
+print(type(x),x)
+x = 1
+x *=3
+print(type(x),x)
+x = 10
+x /= 2
+print(type(x),x)  # Interesting what division does to variable type
+</code></pre>
+
+<pre><code>&lt;class 'int'&gt; 3
+&lt;class 'int'&gt; -1
+&lt;class 'int'&gt; 3
+&lt;class 'float'&gt; 5.0
+</code></pre>
+<hr />
+<h2 id="data-type"><font color=purple>Data Type</font></h2>
+<p>In the computer data are all binary digits (actually 0 and +5 volts). 
+At a higher level of abstraction data are typed into integers, real, or alphanumeric representation. 
+The type affects the kind of arithmetic operations that are allowed (as well as the kind of arithmetic - integer versus real arithmetic; lexicographical ordering of alphanumeric , etc.)
+In scientific programming, a common (and really difficult to detect) source of slight inaccuracies (that tend to snowball as the program runs) is mixed mode arithmetic required because two numeric values are of different types (integer and real).</p>
+<p>Learn more from the textbook</p>
+<p>https://www.inferentialthinking.com/chapters/04/Data_Types.html</p>
+<p>Here we present a quick summary</p>
+<h3 id="integer"><font color=purple>Integer</font></h3>
+<p>Integers are numbers without any fractional portion (nothing after the decimal point { which
+is not used in integers). Numbers like -3, -2, -1, 0, 1, 2, 200 are integers. A number like 1.1
+is not an integer, and 1.0 is also not an integer (the presence of the decimal point makes the
+number a real).</p>
+<p>To declare an integer in Python, just assign the variable name to an integer for example</p>
+<pre><code>MyPhoneNumber = 14158576309
+</code></pre>
+<h3 id="real-float"><font color=purple>Real (Float)</font></h3>
+<p>A real or float is a number that has (or can have) a fractional portion - the number has
+decimal parts. The numbers 3.14159, -0.001, 11.11, 1., are all floats. 
+The last one is especially tricky, if you don't notice the decimal point you might think it is an integer but the
+inclusion of the decimal point in Python tells the program that the value is to be treated as a 
+float.
+To declare a 
+float in Python, just assign the variable name to a 
+float for example</p>
+<pre><code>MyMassInKilos = 74.8427
+</code></pre>
+<h3 id="stringalphanumeric"><font color=purple>String(Alphanumeric)</font></h3>
+<p>A string is a data type that is treated as text elements. The usual letters are strings, but
+numbers can be included. The numbers in a string are simply characters and cannot be
+directly used in arithmetic. 
+There are some kinds of arithmetic that can be performed on strings but generally we process string variables to capture the text nature of their contents. 
+To declare a string in Python, just assign the variable name to a string value - the trick is the value is enclosed in quotes. 
+The quotes are delimiters that tell the program that the characters between the quotes are characters and are to be treated as literal representation.</p>
+<p>For example</p>
+<pre><code>MyName = 'Theodore'
+MyCatName = "Dusty"
+DustyMassInKilos = "7.48427"
+</code></pre>
+<p>are all string variables. 
+The last assignment is made a string on purpose. 
+String variables can be combined using an operation called concatenation. 
+The symbol for concatenation is the plus symbol <code>+</code>.</p>
+<p>Strings can also be converted to all upper case using the <code>upper()</code> function. The syntax for
+the <code>upper()</code> function is <code>'string to be upper case'.upper()</code>. 
+Notice the "dot" in the syntax. 
+The operation passes everything to the left of the dot to the function which then
+operates on that content and returns the result all upper case (or an error if the input stream
+is not a string).</p>
+<pre><code class="python"># Variable Types Example
+MyPhoneNumber = 14158576309
+MyMassInKilos = 74.8427
+MyName = 'Theodore'
+MyCatName = &quot;Dusty&quot;
+DustyMassInKilos = &quot;7.48427&quot;
+print(&quot;All about me&quot;)
+print(&quot;Name: &quot;,MyName, &quot; Mass :&quot;,MyMassInKilos,&quot;Kg&quot; )
+print('Phone : ',MyPhoneNumber)
+print('My cat\'s name :', MyCatName)  # the \ escape character is used to get the ' into the literal
+print(&quot;All about concatenation!&quot;)
+print(&quot;A Silly String : &quot;,MyCatName+MyName+DustyMassInKilos)
+print(&quot;A SILLY STRING :  &quot;, (MyCatName+MyName+DustyMassInKilos).upper())
+print(MyName[0:4])    # Notice how the string is sliced- This is Python: ALWAYS start counting from zero!
+</code></pre>
+
+<pre><code>All about me
+Name:  Theodore  Mass : 74.8427 Kg
+Phone :  14158576309
+My cat's name : Dusty
+All about concatenation!
+A Silly String :  DustyTheodore7.48427
+A SILLY STRING :   DUSTYTHEODORE7.48427
+Theo
+</code></pre>
+<p>Strings can be formatted using the <code>%</code> operator or the <code>format()</code> function. The concepts will
+be introduced later on as needed in the workbook, you can Google search for examples of
+how to do such formatting.</p>
+<h3 id="changing-types"><font color=purple>Changing Types</font></h3>
+<p>A variable type can be changed. 
+This activity is called type casting. 
+Three functions allow
+type casting: <code>int()</code>, <code>float()</code>, and <code>str()</code>. 
+The function names indicate the result of using
+the function, hence <code>int()</code> returns an integer, <code>float()</code> returns a 
+oat, and <code>str()</code> returns a
+string.</p>
+<p>There is also the useful function <code>type()</code> which returns the type of variable.</p>
+<p>The easiest way to understand is to see an example. </p>
+<pre><code class="python"># Type Casting Examples
+MyInteger = 234
+MyFloat = 876.543
+MyString = 'What is your name?'
+print(MyInteger,MyFloat,MyString)
+print('Integer as float',float(MyInteger))
+print('Float as integer',int(MyFloat))
+print('Integer as string',str(MyInteger))
+print('Integer as hexadecimal',hex(MyInteger))
+print('Integer Type',type((MyInteger)))  # insert the hex conversion and see what happens!
+</code></pre>
+
+<hr />
+<h2 id="expressions"><font color=purple>Expressions</font></h2>
+<p><img alt="" src="https://thumbs.gfycat.com/HandsomeRegularHuman-max-1mb.gif" /> <br></p>
+<p>Expressions are the "algebraic" constructions that are evaluated and then placed into a variable.
+Consider</p>
+<pre><code>x1 = 7 + 3 * 6 / 2 - 1
+</code></pre>
+<p>The expression is evaluated from the left to right and in words is</p>
+<pre><code>Into the object named x1 place the result of:
+
+integer 7 + (integer 6 divide by integer 2 = float 3 * integer 3 = float 9 - integer 1 = float 8) = float 15
+</code></pre>
+<p>The division operation by default produces a float result unless forced otherwise.  The result is the variable <code>x1</code> is a float with a value of <code>15.0</code></p>
+<pre><code class="python"># Expressions Example
+x1 = 7 + 3 * 6 // 2 - 1  # Change / into // and see what happens!
+print(type(x1),x1)
+## Simple I/O (Input/Output)
+</code></pre>
+
+<pre><code>&lt;class 'int'&gt; 15
+</code></pre>
+<h3 id="example-simple-inputoutput">Example: Simple Input/Output</h3>
+<p>Get two floating point numbers via the <code>input()</code> function and store them under the variable names <code>float1</code> and <code>float2</code>. Then, compare them, and try a few operations on them!</p>
+<pre><code>float1 = input("Please enter float1: ")
+float1 = float(float1) 
+...
+</code></pre>
+<p>Print <code>float1</code> and <code>float2</code> to the output screen.  </p>
+<pre><code>print("float1:", float1)
+...
+</code></pre>
+<p>Then check whether <code>float1</code> is greater than or equal to <code>float2</code>.</p>
+<pre><code class="python">float1 = input(&quot;Please enter float1: &quot;)
+float2 = input(&quot;Please enter float2: &quot;)
+</code></pre>
+
+<pre><code>Please enter float1: 2.5
+Please enter float2: 5
+</code></pre>
+<pre><code class="python">print(&quot;float1:&quot;, float1)
+print(&quot;float2:&quot;, float2)
+</code></pre>
+
+<pre><code>float1: 2.5
+float2: 5
+</code></pre>
+<pre><code class="python">float1 = float(float1)
+float2 = float(float2)
+</code></pre>
+
+<pre><code class="python">print(&quot;float1:&quot;, float1)
+print(&quot;float2:&quot;, float2)
+</code></pre>
+
+<pre><code>float1: 2.5
+float2: 5.0
+</code></pre>
+<pre><code class="python">float1&gt;float2
+</code></pre>
+
+<pre><code>False
+</code></pre>
+<pre><code class="python">float1+float2
+</code></pre>
+
+<pre><code>7.5
+</code></pre>
+<pre><code class="python">float1/float2
+</code></pre>
+
+<pre><code>0.5
+</code></pre>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/5nj4ZZWl6QwneEaBX4/source.gif" /> <br></p>
+<p><em>Here are some great reads on this topic:</em> 
+- <strong>"Variables in Python"</strong> by <strong>John Sturtz</strong> available at <em>https://realpython.com/python-variables/ <br>
+- <strong>"A Beginner’s Guide To Python Variables"</strong> by <strong>Avijeet Biswal</strong> available at </em>https://www.simplilearn.com/tutorials/python-tutorial/python-variables <br>
+- <strong>"A Very Basic Introduction to Variables in Python"</strong> by <strong>Dr. Python</strong> available at *https://medium.com/@doctorsmonsters/a-very-basic-introduction-to-variables-in-python-4231e36dac52 <br></p>
+<p><em>Here are some great videos on these topics:</em> 
+- <strong>"Python Tutorial for Absolute Beginners #1 - What Are Variables?"</strong> by <strong>CS Dojo</strong> available at <em>https://www.youtube.com/watch?v=Z1Yd7upQsXY <br>
+- <strong>"#4 Python Tutorial for Beginners | Variables in Python"</strong> by <strong>Telusko</strong> available at </em>https://www.youtube.com/watch?v=TqPzwenhMj0 <br>
+- <strong>"Variables and Types in Python"</strong> by <strong>DataCamp</strong> available at *https://www.youtube.com/watch?v=OH86oLzVzzw <br></p>
+<p><img alt="" src="https://media.csesoc.org.au/content/images/2019/10/learn11.gif" /> <br></p>
+<hr />
+<h2 id="exercise-integer-or-float">Exercise: Integer or Float? <br></h2>
+<h3 id="think-of-a-few-cases-where-one-might-need-to-convert-a-float-into-an-integer">Think of a few cases where one might need to convert a float into an integer.</h3>
+<h4 id="make-sure-to-cite-any-resources-that-you-may-use">* Make sure to cite any resources that you may use.</h4>
+<p><img alt="" src="https://quotefancy.com/media/wallpaper/3840x2160/959294-Douglas-Horton-Quote-Beauty-is-variable-ugliness-is-constant.jpg" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
