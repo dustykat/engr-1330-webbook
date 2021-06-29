@@ -9,7 +9,7 @@ nav:
               #- Laboratory 0: 8-Labs/Lab0/Lab0_Dev.md
       - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson1.md
               #- Laboratory 1: 8-Labs/Lab1/Lab1_Dev.md
-  - Scripting in Python:
+  - Fundamentals of Scripting:
       - Simple Computation : 1-Lessons/Lesson02/lesson2.md
               #- Laboratory 2: 8-Labs/Lab2/Lab2_Dev.md
       - Data Structures and the MATH package: 1-Lessons/Lesson03/lesson3.md
@@ -26,13 +26,13 @@ nav:
              # - Laboratory 8: 8-Labs/Lab8/Lab8_Dev.md
       - Visual Display of Data using MATPLOTLIB : 1-Lessons/Lesson09/lesson8.md
 #              - Laboratory 9: 8-Labs/Lab9/Lab9_Dev.md
-  - Engineering Computations :  # exam 1
+  - Engineering Computation :  # exam 1
       - Implicit Equations : 1-Lessons/Lesson10/lesson10.md
       - Interpolation and Integration : 1-Lessons/Lesson11/lesson11.md
       - Linear Equation Systems :  1-Lessons/Lesson12/lesson12.md      
       - Non-Linear Equation Systems : 1-Lessons/Lesson13/lesson13.md 
       #        - Laboratory 13: 8-Labs/Lab13/Lab13_Dev.md
-  - Data Modeling : 
+  - Data Modeling and Decisions : 
       - Statistical Data Modeling : lesson0/lesson0.md
       - Randomness and Probability: lesson0/lesson0.md
       - Descriptive Statistics : 1-Lessons/Lesson15/lesson15.md 
@@ -41,7 +41,6 @@ nav:
              #- Laboratory 16: 8-Labs/Lab16/Lab16_Dev.md #check internal links
       - Probability Estimation Modeling : 1-Lessons/Lesson17/lesson17.md
             # - Laboratory 17: 8-Labs/Lab17/Lab17_Dev.md #needs content
-  - Decision Making:
       - Hypothesis Testing : lesson0/lesson0.md 
       - Experimental Design (A/B Testing) : lesson0/lesson0.md 
       - Interval Estimates :  lesson0/lesson0.md 
