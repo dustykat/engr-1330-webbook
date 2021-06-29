@@ -19,8 +19,8 @@ suggested citation:
 
 <font color=magenta>Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. (2021) *Computational Thinking and Data Science: A WebBook to Accompany ENGR 1330 at TTU*, Whitacre College of Engineering, DOI (pending) [https://3.137.111.182/engr-1330-webbook/](https://3.137.111.182/engr-1330-webbook/)</font>
 
-The entire course content is served here and can be accessed from **blackboard.ttu.edu** or directly using the public URL.  
-Homeworks and exams must be uploaded to **blackboard.ttu.edu** to be graded.   Solutions are posted after due dates have passed, these links are updated weekly-ish.
+<!--The entire course content is served here and can be accessed from **blackboard.ttu.edu** or directly using the public URL.  
+Homeworks and exams must be uploaded to **blackboard.ttu.edu** to be graded.   Solutions are posted after due dates have passed, these links are updated weekly-ish.-->
 
 ## Document History
 This document is a living document and is updated frequently, Python is an ever evolving tool and stuff that works today will be constructively broken by the development team (python.org) in their quest for continuous improvement.  Generally these changes occur in the packages (libraries, external modules) and primative python is quite stable.
