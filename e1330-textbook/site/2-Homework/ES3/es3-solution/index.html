@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title><font color=darkblue>Week 3 Assignment </font> - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson00/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson07/lesson6/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson08/lesson7/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation and Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson11/lesson11/">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson12/lesson12/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson13/lesson13/">Lesson 13</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab13/Lab13_Dev/">Laboratory 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson15/lesson15/">Lesson 15</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab15/Lab15_Dev/">Laboratory 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab16/Lab16_Dev/">Laboratory 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson17/lesson17/">Lesson 17</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab17/Lab17_Dev/">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ConcreteStrength/ConcreteStrength-Project/">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#week-3-assignment">Week 3 Assignment </a></li>
+            <li><a href="#full-name">Full name:</a></li>
+            <li><a href="#r">R#:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook:</a></li>
+            <li><a href="#date">Date:</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="week-3-assignment"><font color=darkblue>Week 3 Assignment </font></h1>
+<h2 id="full-name">Full name:</h2>
+<h2 id="r">R#:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook:</h2>
+<h2 id="date">Date:</h2>
+<p><img alt="" src="https://campaignjr.com/v1/wp-content/uploads/2016/12/12_funny-and-inspiring-graphic-design-related-gifs.gif" /> <br></p>
+<hr />
+<h3 id="question1-user-defined-function">Question1: User-Defined Function</h3>
+<p>Create the function <script type="math/tex; mode=display">f(x) = e^x - 10 cos(x) - 100</script> as a function (i.e. use the <code>def</code> keyword)</p>
+<pre><code>def name(parameters) :
+    operations on parameters
+    ...
+    ...
+    return (value, or null)
+</code></pre>
+<p>Then apply your function to the value.</p>
+<p>Use your function to complete the table below:</p>
+<table>
+<thead>
+<tr>
+<th align="right">x</th>
+<th align="right">f(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0.0</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">1.50</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">2.00</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">2.25</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">3.0</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">4.25</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="python">from math import exp # package that contains exp function
+from math import cos # package that contains cosine function
+def gollum(x) : #define the function &quot;gollum&quot;
+    precious = exp(x) - 10*cos(x) -100  #as stated by the question
+    return precious
+</code></pre>
+
+<pre><code class="python">from prettytable import PrettyTable #package that contains the PrettyTable function 
+t = PrettyTable(['x', 'y']) #Define an empty table
+
+x = [0.0,1.5,2.0,2.25,3.0,4.25] #the list of x values according to the table
+for i in range(0,6,1): #a counter to go through the list x
+    t.add_row([x[i], gollum(x[i])]) #for each x value, fill one row in table t with the value of x and the value of gollum function of that x
+
+print(t)
+</code></pre>
+
+<hr />
+<h3 id="question2-power-plot">Question2: Power Plot <br></h3>
+<p>Copy the wrapper script for the <code>plotAline()</code> function (from the Lab4_dev notebook), and modify the copy to create a plot of
+<script type="math/tex; mode=display"> y = x^2 </script>
+for x raging from 0 to 9 (inclusive) in steps of 1.</p>
+<p>Label the plot and the plot axes.</p>
+<pre><code class="python">def plotAline(list1,list2,strx,stry,strtitle): # plot list1 on x, list2 on y, xlabel, ylabel, title
+    from matplotlib import pyplot as plt # import the plotting library from matplotlibplt.show()
+    plt.plot( list1, list2, color ='green', marker ='o', linestyle ='solid') # create a line chart, years on x-axis, gdp on y-axis
+    plt.title(strtitle)# add a title
+    plt.ylabel(stry)# add a label to the x and y-axes
+    plt.xlabel(strx)
+    plt.show() # display the plot
+    return #null return
+</code></pre>
+
+<pre><code class="python">xxx = [] # null list
+yyy = [] # null list
+for i in range(0,10):
+    xxx.append(1.0*i) #float i and append to the list
+for i in range(0,10):
+    yyy.append(xxx[i]**2)
+plotAline(xxx,yyy,&quot;X&quot;,&quot;Y&quot;,&quot;Plot of Y = X^2 &quot;)
+</code></pre>
+
+<p><img alt="png" src="../output_8_0.png" /></p>
+<hr />
+<h3 id="question3-cars">Question3: Cars! <br></h3>
+<p>Write a class named '<strong>CarSpeed</strong>' to calculate the speed (in miles/hour) of different brands of cars based on the information given in the table below.<br />
+The formula to calculate speed is also given below.<br />
+Based on your output, which brand of car has the highest speed?</p>
+<p>
+<script type="math/tex; mode=display">Speed = \frac{Distance}{Time}</script>
+</p>
+<table>
+<thead>
+<tr>
+<th>Car brand</th>
+<th>Distance (miles)</th>
+<th>Time (hours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ford</td>
+<td>120</td>
+<td>1.75</td>
+</tr>
+<tr>
+<td>Ferrari</td>
+<td>100</td>
+<td>1.20</td>
+</tr>
+<tr>
+<td>BMW</td>
+<td>205</td>
+<td>2.35</td>
+</tr>
+<tr>
+<td>Porsche</td>
+<td>155</td>
+<td>1.85</td>
+</tr>
+<tr>
+<td>Audi</td>
+<td>190</td>
+<td>2.10</td>
+</tr>
+<tr>
+<td>Jaguar</td>
+<td>255</td>
+<td>2.45</td>
+</tr>
+</tbody>
+</table>
+<h5 id="notes">Notes:</h5>
+<ol>
+<li>Use docstrings to describe the purpose of the class.</li>
+<li>Create an object for each car brand and display the output as shown below.</li>
+</ol>
+<p>Ford_Speed (miles/hour): <strong>SPEED</strong><br />
+Ferrari_Speed (miles/hour): <strong>SPEED</strong> <br />
+BMW_Speed (miles/hour): <strong>SPEED</strong>  <br />
+Porsche_Speed (miles/hour): <strong>SPEED</strong> <br />
+Audi_Speed (miles/hour): <strong>SPEED</strong><br />
+Jaguar_Speed (miles/hour): <strong>SPEED</strong><br />
+The car with the highest speed is: <strong>CAR BRAND</strong></p>
+<pre><code class="python">class CarSpeed:
+    &quot;&quot;&quot;This class calculates the speed of the car based on the given distance and time&quot;&quot;&quot;
+    def __init__(self, distance, time):
+        self.distance = distance
+        self.time= time
+
+    def speed(self):
+        return self.distance/self.time
+
+</code></pre>
+
+<pre><code class="python">ford = CarSpeed(120, 1.75)
+ferrari = CarSpeed(100, 1.20)
+bmw = CarSpeed(205, 2.35)
+porsche = CarSpeed(155, 1.85)
+audi = CarSpeed(190, 2.10)
+jaguar = CarSpeed(255, 2.45)
+</code></pre>
+
+<pre><code class="python">print(&quot;Ford_Speed (miles/hour):&quot;, ford.speed())
+print(&quot;Ferrari_Speed (miles/hour):&quot;, ferrari.speed())
+print(&quot;BMW_Speed (miles/hour):&quot;, bmw.speed())
+print(&quot;Porsche_Speed (miles/hour):&quot;, porsche.speed())
+print(&quot;Audi_Speed (miles/hour):&quot;, audi.speed())
+print(&quot;Jaguar_Speed (miles/hour):&quot;, jaguar.speed())
+
+</code></pre>
+
+<pre><code>Ford_Speed (miles/hour): 68.57142857142857
+Ferrari_Speed (miles/hour): 83.33333333333334
+BMW_Speed (miles/hour): 87.23404255319149
+Porsche_Speed (miles/hour): 83.78378378378378
+Audi_Speed (miles/hour): 90.47619047619047
+Jaguar_Speed (miles/hour): 104.08163265306122
+</code></pre>
+<pre><code class="python"># which brand of car has the highest speed?
+BrSp = {&quot;Ford&quot;:ford.speed(),&quot;Ferrari&quot;:ferrari.speed(),&quot;BMW&quot;:bmw.speed(),&quot;Porsche&quot;:porsche.speed(),&quot;Audi&quot;:audi.speed(),&quot;Jaguar&quot;:jaguar.speed()} #Create a dictionary with brands and speeds
+print(BrSp)
+max_key = max(BrSp, key=BrSp.get) #Find the key(brand) associated with maximum speed
+print(&quot;The brand of car with the highest speed is&quot;,max_key)
+</code></pre>
+
+<pre><code>{'Ford': 68.57142857142857, 'Ferrari': 83.33333333333334, 'BMW': 87.23404255319149, 'Porsche': 83.78378378378378, 'Audi': 90.47619047619047, 'Jaguar': 104.08163265306122}
+The brand of car with the highest speed is Jaguar
+</code></pre>
+<hr />
+<h3 id="question4-robocop-modification">Question4: RoboCop Modification  <br></h3>
+<p>Write a class named '<strong>Tax</strong>' to calculate the state tax (in dollars) of Employees at Texas Tech University based on their annual salary.<br />
+The state tax is 16% if the annual salary is below 80,000 dollars and 22% if the salary is more than 80,000 dollars. </p>
+<p>
+<script type="math/tex; mode=display">Tax = Annual salary \times State\, tax\, \%</script>
+</p>
+<table>
+<thead>
+<tr>
+<th>Employee</th>
+<th>Annual salary (dollars)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bob</td>
+<td>1,50,000</td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>78,000</td>
+</tr>
+<tr>
+<td>John</td>
+<td>55,000</td>
+</tr>
+<tr>
+<td>Danny</td>
+<td>1,75,000</td>
+</tr>
+</tbody>
+</table>
+<h4 id="notes_1">Notes:</h4>
+<ol>
+<li>Use docstrings to describe the purpose of the class.</li>
+<li>Use if....else conditional statements within the method of the class to choose the relevant tax % based on the annual salary.</li>
+<li>Create an object for employee and display the output as shown below.</li>
+</ol>
+<p>Bob's tax amount (in dollars): <strong>AMOUNT</strong><br />
+Mary's tax amount (in dollars): <strong>AMOUNT</strong><br />
+John's tax amount (in dollars): <strong>AMOUNT</strong><br />
+Danny's tax amount (in dollars): <strong>AMOUNT</strong> </p>
+<pre><code class="python">class Tax:
+    &quot;&quot;&quot;This class calculates the tax amount based on the annual salary and the state tax %&quot;&quot;&quot;
+    def __init__(self, salary):
+        self.salary = salary
+
+    def taxamount(self):
+        if self.salary &lt; 80000:
+            return self.salary*(16/100)
+        else: 
+            return self.salary*(22/100)
+
+bob = Tax(150000)
+mary = Tax(78000)
+john = Tax(55000)
+danny = Tax(175000)
+
+print(&quot;Bob's tax amount (in dollars):&quot;, bob.taxamount())  
+print(&quot;Mary's tax amount (in dollars):&quot;, mary.taxamount())  
+print(&quot;John's tax amount (in dollars):&quot;, john.taxamount())  
+print(&quot;Danny's tax amount (in dollars):&quot;, danny.taxamount())
+</code></pre>
+
+<pre><code>Bob's tax amount (in dollars): 33000.0
+Mary's tax amount (in dollars): 12480.0
+John's tax amount (in dollars): 8800.0
+Danny's tax amount (in dollars): 38500.0
+</code></pre>
+<p><img alt="" src="https://freight.cargo.site/w/1200/i/c96b2ce17b2aee95c6e837552e3e38d058ac4ad2a6759448ed78128963790744/Happy_Coding_BC_6-03-05.png" /></p>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

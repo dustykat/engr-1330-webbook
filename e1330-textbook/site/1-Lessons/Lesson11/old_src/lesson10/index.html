@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Lesson10 - ENGR-1330 Fall 2021</title>
+        <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson00/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson07/lesson6/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson08/lesson7/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation and Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../lesson11/">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson12/lesson12/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson13/lesson13/">Lesson 13</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab13/Lab13_Dev/">Laboratory 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson15/lesson15/">Lesson 15</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab15/Lab15_Dev/">Laboratory 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab16/Lab16_Dev/">Laboratory 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../Lesson17/lesson17/">Lesson 17</a>
+</li>
+            
+<li >
+    <a href="../../../../8-Labs/Lab17/Lab17_Dev/">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../2-Homework/ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../../../2-Homework/ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../../2-Homework/ES3/es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../../../6-Projects/P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../../../6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../../6-Projects/P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../../6-Projects/P-ConcreteStrength/ConcreteStrength-Project/">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../../6-Projects/P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</a></li>
+            <li><a href="#lesson-10-data-modeling-randomness-and-probability">Lesson 10 Data Modeling: Randomness and Probability</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#computational-thinking-concepts">Computational Thinking Concepts</a></li>
+            <li><a href="#randomness-and-probabilities">Randomness and Probabilities</a></li>
+            <li><a href="#simple-exclusion">Simple Exclusion</a></li>
+            <li><a href="#complete-enumeration">Complete Enumeration</a></li>
+            <li><a href="#conditioning-two-events-must-happen">Conditioning (Two events must happen)</a></li>
+            <li><a href="#partitioning-when-sequence-doesnt-matter-a-kind-of-enumeration">Partitioning (When sequence doesn't matter) - A kind of enumeration!</a></li>
+            <li><a href="#at-least-one-success-a-kind-of-exclusionpartition">At Least One Success (A kind of exclusion/partition)</a></li>
+            <li><a href="#why-should-anyone-buy-flood-protection">Why Should anyone buy Flood Protection?</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<pre><code class="python">%%html
+&lt;!--Script block to left align Markdown Tables--&gt;
+&lt;style&gt;
+  table {margin-left: 0 !important;}
+&lt;/style&gt;
+</code></pre>
+
+<!--Script block to left align Markdown Tables-->
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<h1 id="engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</h1>
+<p>Last GitHub Commit Date: 25 February 2021</p>
+<h2 id="lesson-10-data-modeling-randomness-and-probability">Lesson 10 Data Modeling: Randomness and Probability</h2>
+<p>This lesson introduces probability as the chance of occurance of some event. 
+Concepts of sampling and empirical distributions are introduced.</p>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>To be able to find probabilities of enumerable (discrete) events.</li>
+<li>To be able to approximate probabilities of enumerable and/or continuous events.</li>
+<li>Explain the concepts of sample, population, and probabilities</li>
+<li>Computing probability: single events, both events, at least event.</li>
+</ul>
+<hr />
+<h2 id="computational-thinking-concepts">Computational Thinking Concepts</h2>
+<p>The CT concepts include:</p>
+<ul>
+<li>Decomposition =&gt; Reduce complex observations into concept of an event</li>
+<li>Abstraction =&gt; Outcome == an event, and its likelihood</li>
+<li>Pattern Matching =&gt; Fliping coins, rolling die == map to an event space; apply gambling principles</li>
+<li>System Integration =&gt; Iteration, Simulation </li>
+</ul>
+<hr />
+<h2 id="randomness-and-probabilities">Randomness and Probabilities</h2>
+<p>The textbook discusses randomness at: https://www.inferentialthinking.com/chapters/09/Randomness.html</p>
+<p>Section 9.5 of that link elaborates on probabilities</p>
+<p>"Over the centuries, there has been considerable philosophical debate about what probabilities are. Some people think that probabilities are relative frequencies; others think they are long run relative frequencies; still others think that probabilities are a subjective measure of their own personal degree of uncertainty."</p>
+<p>As a practical matter, most probabilities are relative frequencies.  If you are a Bayesian statistician, its just conditioned relative frequency.  By convention, probabilities are numbers between 0 and 1, or, equivalently, 0% and 100%. Impossible events have probability 0. Events that are certain have probability 1.</p>
+<p><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRY93kpa8YEikMTZsMZk8Rka4DTQrpxkDxmkA&amp;usqp=CAU" /></p>
+<p>As a silly example, the probability that a Great White shark will swim up your sewer pipe and bite you on the bottom, is zero.  Unless the sewer pipe is pretty big, the shark cannot physically get to you - hence impossible.  Now if you are swimming in a freshwater river, lets say the Columbia river on the Oregon border, that probability of sharkbite increases a bit, perhaps 1 in 100 million, or 0.000001% chance of a Great White shark (a pelagic species adapted to salt water), swimming upriver in freshwater, past a couple of fish ladders, still hungry enough bite your bottom. It would be a rare bite indeed; but not physically impossible.</p>
+<p><img alt="" src="https://www.myyosemitepark.com/.image/t_share/MTQ3OTg4NjE5NjM3MTcxNjc5/yt-galen-clark-overhanging-rock_georgefiske1900.jpg" /></p>
+<p>At the other end of the scale, "sure things" have a probability close to 1. If you run and jump off Glacier point in Yosemite Valley, its almost guarenteed that you will have a 1000 foot plunge until you hit the apron of the cliff and make a big red smear - there could be a gust of wind pushing you away into the trees, but pretty unlikely. So without a squirrel suit and a parachute you are pretty much going to expire with probability 100% chance.</p>
+<p>Math is the main tool for finding probabilities exactly, though computers are useful for this purpose too. Simulation can provide excellent approximations. In this section, we will informally develop a few simple rules that govern the calculation of probabilities. In subsequent sections we will return to simulations to approximate probabilities of complex events.</p>
+<p>We will use the standard notation 𝑃(event) to denote the probability that "event" happens, and we will use the words "chance" and "probability" interchangeably.</p>
+<hr />
+<h2 id="simple-exclusion">Simple Exclusion</h2>
+<p>If the chance that event happens is 40%, then the chance that it doesn't happen is 60%. 
+This natural calculation can be described in general as follows:</p>
+<p>𝑃(an event doesn't happen) = 1−𝑃(the event happens)</p>
+<p>The result is correct if the entireity of possibilities are enumerated, that is the entire population is described.</p>
+<h2 id="complete-enumeration">Complete Enumeration</h2>
+<p>If you are rolling an ordinary die, a natural assumption is that all six faces are equally likely. 
+Then probabilities of how one roll comes out can be easily calculated as a ratio. 
+For example, the chance that the die shows an even number is </p>
+<p>
+<script type="math/tex; mode=display">\frac{number~of~even~faces}{number~of~all~faces} =  \frac{\#{2,4,6}}{\#{1,2,3,4,5,6}} = \frac{3}{6} </script>
+</p>
+<p>Similarly,
+<script type="math/tex; mode=display">𝑃(die~shows~a~multiple~of~3) = \frac{\#{3,6}}{\#{1,2,3,4,5,6}} = \frac{2}{6}</script>
+</p>
+<p>In general,
+<script type="math/tex; mode=display">𝑃(an event happens) = \frac{outcomes that make the event happen}{all outcomes}</script>
+</p>
+<p>Provided all the outcomes are equally likely.  As above, this presumes the entireity of possibilities are enumerated.  </p>
+<p>In the case of a single die, there are six outcomes - these comprise the entire <strong>population</strong> of outcomes.  If we roll two die there are 12 outcomes, three die 18 and so on.  </p>
+<p>Not all random phenomena are as simple as one roll of a die. The two main rules of probability, developed below, allow mathematicians to find probabilities even in complex situations.</p>
+<h2 id="conditioning-two-events-must-happen">Conditioning (Two events must happen)</h2>
+<p>Suppose you have a box that contains three tickets: one red, one blue, and one green. Suppose you draw two tickets at random without replacement; that is, you shuffle the three tickets, draw one, shuffle the remaining two, and draw another from those two. What is the chance you get the green ticket first, followed by the red one?</p>
+<p>There are six possible pairs of colors: RB, BR, RG, GR, BG, GB (we've abbreviated the names of each color to just its first letter). All of these are equally likely by the sampling scheme, and only one of them (GR) makes the event happen. So
+<script type="math/tex; mode=display"> 𝑃(green~first,~then~red) = \frac{GR}{RB, BR, RG, GR, BG, GB} = \frac{1}{6} </script>
+</p>
+<p>But there is another way of arriving at the answer, by thinking about the event in two stages. First, the green ticket has to be drawn. That has chance 1/3, which means that the green ticket is drawn first in about 1/3 of all repetitions of the experiment. </p>
+<p>But that doesn't complete the event. Among the 1/3 of repetitions when green is drawn first, the red ticket has to be drawn next. 
+That happens in about 1/2 of those repetitions, and so:</p>
+<p>
+<script type="math/tex; mode=display">𝑃(green~first,~then~red) = \frac{1}{2} of \frac{1}{3} = \frac{1}{6} </script>
+</p>
+<p>This calculation is usually written "in chronological order," as follows.</p>
+<p>
+<script type="math/tex; mode=display">𝑃(green~first,~then~red) = \frac{1}{3} of \frac{1}{2} = \frac{1}{6} </script>
+</p>
+<p>The factor of <script type="math/tex; mode=display">\frac{1}{2}</script> is called " the <strong>conditional</strong> chance that the red ticket appears second, given that the green ticket appeared first."</p>
+<p>In general, we have the multiplication rule:</p>
+<p>
+<script type="math/tex; mode=display"> 𝑃(two~events~both~happen) = 𝑃(one~event~happens)\times 𝑃(the~other~event~happens, given~that~the~first~one~happened) </script>
+</p>
+<p>Thus, when there are two conditions – one event must happen, as well as another – the chance is a fraction of a fraction, which is smaller than either of the two component fractions. The more conditions that have to be satisfied, the less likely they are to all be satisfied.</p>
+<h2 id="partitioning-when-sequence-doesnt-matter-a-kind-of-enumeration">Partitioning (When sequence doesn't matter) - A kind of enumeration!</h2>
+<p>Suppose instead we want the chance that one of the two tickets is green and the other red. 
+This event doesn't specify the order in which the colors must appear. 
+So they can appear in either order.</p>
+<p>A good way to tackle problems like this is to partition the event so that it can happen in exactly one of several different ways. 
+The natural partition of "one green and one red" is: GR, RG.</p>
+<p>Each of GR and RG has chance 1/6 by the calculation above. </p>
+<p>So you can calculate the chance of "one green and one red" by adding them up.</p>
+<p>
+<script type="math/tex; mode=display">𝑃(one~green~and~one~red) = 𝑃(GR)+𝑃(RG) = \frac{1}{6} + \frac{1}{6} = \frac{2}{6} </script>
+</p>
+<p>In general, we have the addition rule:</p>
+<p>
+<script type="math/tex; mode=display"> 𝑃(an~event~happens) = 𝑃(first~way~it~can~happen)+𝑃(second~way~it~can~happen) </script>
+</p>
+<p>provided the event happens in exactly one of the two ways.</p>
+<p>Thus, when an event can happen in one of two different ways, the chance that it happens is a sum of chances, and hence bigger than the chance of either of the individual ways.</p>
+<p>The multiplication rule has a natural extension to more than two events, as we will see below. So also the addition rule has a natural extension to events that can happen in one of several different ways.</p>
+<p>Learn more at: https://ocw.mit.edu/courses/mathematics/18-440-probability-and-random-variables-spring-2014/lecture-notes/MIT18_440S14_Lecture3.pdf</p>
+<h2 id="at-least-one-success-a-kind-of-exclusionpartition">At Least One Success (A kind of exclusion/partition)</h2>
+<p>Data scientists work with random samples from populations. 
+A question that sometimes arises is about the likelihood that a particular individual in the population is selected to be in the sample. 
+To work out the chance, that individual is called a "success," and the problem is to find the chance that the sample contains a success.</p>
+<p>To see how such chances might be calculated, we start with a simpler setting: tossing a coin two times.</p>
+<p>If you toss a coin twice, there are four equally likely outcomes: HH, HT, TH, and TT. 
+We have abbreviated "Heads" to H and "Tails" to T. 
+The chance of getting at least one head in two tosses is therefore 3/4.</p>
+<p>Another way of coming up with this answer is to work out what happens if you don't get at least one head: both the tosses have to land tails. So
+<script type="math/tex; mode=display">𝑃(at~least~one~head~in~two~tosses) = 1−𝑃(both~tails) = 1−\frac{1}{4} = \frac{3}{4}</script>
+</p>
+<p>Notice also that
+<script type="math/tex; mode=display">𝑃(both~tails) = \frac{1}{4} = \frac{1}{2} \times \frac{1}{2} = (\frac{1}{2})^2</script>
+</p>
+<p>by the multiplication rule.</p>
+<p>These two observations allow us to find the chance of at least one head in any given number of tosses. For example,
+<script type="math/tex; mode=display">𝑃(at~least~one~head~in~17~tosses) = 1−𝑃(all~17~are~tails) = 1−(\frac{1}{2})^{17}</script>
+</p>
+<p>And now we are in a position to find the chance that the face with six spots comes up at least once in rolls of a die.</p>
+<p>For example,
+<script type="math/tex; mode=display">𝑃(a~single~roll~is~not~6) = 𝑃(1)+𝑃(2)+𝑃(3)+𝑃(4)+𝑃(5) = \frac{5}{6}</script>
+</p>
+<p>Therefore,
+<script type="math/tex; mode=display">𝑃(at~least~one~6~in~two~rolls) = 1−𝑃(both~rolls~are~not~6) = 1−(\frac{5}{6})^2</script>
+</p>
+<p>and
+<script type="math/tex; mode=display">𝑃(at~least~one~6~in~17~rolls) = 1−(\frac{5}{6})^{17}</script>
+</p>
+<p>The table below shows these probabilities as the number of rolls increases from 1 to 50.</p>
+<pre><code class="python">import pandas as pd
+HowManyRollsToTake = 50
+numRolls = []
+probabilities = []
+for i in range(HowManyRollsToTake+1):
+    numRolls.append(i)
+    probabilities.append(1-(5/6)**i)
+
+rolls = {
+    &quot;NumRolls&quot;: numRolls,
+    &quot;Prob at least one 6&quot;: probabilities
+}
+
+df = pd.DataFrame(rolls)
+df.plot.scatter(x=&quot;NumRolls&quot;, y=&quot;Prob at least one 6&quot;)
+</code></pre>
+
+<pre><code>&lt;AxesSubplot:xlabel='NumRolls', ylabel='Prob at least one 6'&gt;
+</code></pre>
+<p><img alt="png" src="../output_8_1.png" /></p>
+<p>df.describe()</p>
+<h2 id="why-should-anyone-buy-flood-protection">Why Should anyone buy Flood Protection?</h2>
+<p>Lets apply these ideas to insurance.</p>
+<p><img alt="" src="https://www.snopes.com/uploads/2015/05/tropical-storm-allison-865x452.jpg" /></p>
+<p>Suppose you have a house that is located in the 100-year ARI (Annual Recurrance Interval) regulatory flood plain; and you are in a community with a good engineer, who got the probability correct, that is the chance in any year of a <strong>total loss</strong> is 1 in 100 or 0.01. Thus the chance of <strong>no loss</strong> in any year is 99 in 100 or 0.99 (pretty good odds)! </p>
+<p>So what is the chance during a 30-year loan, of no loss?</p>
+<p>We can just apply the multiplication rule on the <strong>no loss</strong> probability 
+ <script type="math/tex; mode=display"> P(No~Loss) = 0.99^{30} </script>
+</p>
+<p>But lets simulate - literally adapting the prior script.</p>
+<pre><code class="python">import pandas as pd
+HowManyYears = 600
+numYears = []
+nolossprobabilities = []
+lossprobabilities = []
+for i in range(HowManyYears+1):
+    numYears.append(i) # How many years in the sequence
+    nolossprobabilities.append((1-(1/100))**i) #Probability of No Loss after i-years
+    lossprobabilities.append(1 - (1-(1/100))**i) #Probability of Loss after i-years
+years = {
+    &quot;Years from Start of Loan&quot;: numYears,
+    &quot;Probability of No Loss&quot;: nolossprobabilities,
+    &quot;Probability of Loss&quot;: lossprobabilities
+}
+
+df = pd.DataFrame(years)
+df.plot.line(x=&quot;Years from Start of Loan&quot;, y=&quot;Probability of Loss&quot;)
+# df.plot.line(x=&quot;Years from Start of Loan&quot;, y=&quot;Probability of No Loss&quot;)
+</code></pre>
+
+<pre><code>&lt;AxesSubplot:xlabel='Years from Start of Loan'&gt;
+</code></pre>
+<p><img alt="png" src="../output_11_1.png" /></p>
+<pre><code class="python">df.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Years from Start of Loan</th>
+      <th>Probability of No Loss</th>
+      <th>Probability of Loss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.990000</td>
+      <td>0.010000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>0.980100</td>
+      <td>0.019900</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>0.970299</td>
+      <td>0.029701</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>0.960596</td>
+      <td>0.039404</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">df[&quot;Probability of Loss&quot;].loc[30]
+</code></pre>
+
+<pre><code>0.2602996266117198
+</code></pre>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../../mathjaxhelper.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

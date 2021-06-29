@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Concrete Strength Prediction Project (reference links need update) - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson00/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson07/lesson6/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson08/lesson7/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation and Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson11/lesson11/">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson12/lesson12/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson13/lesson13/">Lesson 13</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab13/Lab13_Dev/">Laboratory 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson15/lesson15/">Lesson 15</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab15/Lab15_Dev/">Laboratory 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab16/Lab16_Dev/">Laboratory 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson17/lesson17/">Lesson 17</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab17/Lab17_Dev/">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-Homework/ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES3/es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../P-MusicClassification/genre-classification-project-problem/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../P-DTMF/DTMF-Part1/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#engr-1330-computational-thinking-and-data-science-fall-2020">ENGR 1330 – Computational Thinking and Data Science Fall 2020</a></li>
+            <li><a href="#concrete-strength-predictor-final-project-background">Concrete Strength Predictor Final Project - Background</a></li>
+            <li><a href="#objectives">Objective(s):</a></li>
+            <li><a href="#tasks">Tasks:</a></li>
+            <li><a href="#deliverables">Deliverables:</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<pre><code class="python">%%html
+&lt;!--Script block to left align Markdown Tables--&gt;
+&lt;style&gt;
+  table {margin-left: 0 !important;}
+&lt;/style&gt;
+</code></pre>
+
+<!--Script block to left align Markdown Tables-->
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<h1 id="engr-1330-computational-thinking-and-data-science-fall-2020">ENGR 1330 – Computational Thinking and Data Science Fall 2020</h1>
+<h2 id="concrete-strength-predictor-final-project-background">Concrete Strength Predictor Final Project - Background</h2>
+<p>The Compressive Strength of Concrete determines the quality of Concrete. 
+The strength is determined by a standard crushing test on a concrete cylinder, that requires engineers to build small concrete cylinders with different combinations of raw materials and test these cylinders for strength variations with a change in each raw material. 
+The recommended wait time for testing the cylinder is 28 days to ensure correct results, although there are formulas for making estimates from shorter cure times.
+The formal 28-day approach consumes a lot of time and labor to prepare different prototypes and test them; the method itself is error prone and mistakes can cause the wait time to drastically increase.</p>
+<p>One way of reducing the wait time and reducing the number of combinations to try is to make use of digital simulations, where we can provide information to the computer about what we know and the computer tries different combinations to predict the compressive strength.
+This approach can reduce the number of combinations we can try physically and reduce the total amount of time for experimentation. 
+But, to design such software we have to know the relations between all the raw materials and how one material affects the strength. 
+It is possible to derive mathematical equations and run simulations based on these equations, but we cannot expect the relations to be same in real-world. 
+Also, these tests have been performed for many numbers of times now and we have enough real-world data that can be used for predictive modelling.</p>
+<h2 id="objectives">Objective(s):</h2>
+<ul>
+<li>Literature scan on concrete design, and utility of a predictive approach</li>
+<li>Analyse an existing concrete compressive strength database and build a data model to predict the compressive strength of a concrete mixture.</li>
+<li>Build an interface to allow users to enter concrete mixtures and return an estimated strength and an assessment of the uncertainty in the estimate</li>
+<li>Build an interface to allow users to add observations to the underlying database, and automatically update the Data Model to incorporate the new observations</li>
+</ul>
+<h2 id="tasks">Tasks:</h2>
+<p><strong>Literature Research:</strong>
+- Describe the challenge of concrete mixture design and the importance of compressive strength.
+- Summarize the value of a data model in the context of the conventional approach to strength prediction</p>
+<p>Some places to start are:
+- I-Cheng Yeh, “ Modeling of strength of high performance concrete using artificial neural networks,” Cement and Concrete Research, Vol. 28, №12, pp. 1797–1808 (1998). https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength</p>
+<ul>
+<li>
+<p>Laskar, Aminul Islam. (2011). Mix design of high-performance concrete. Materials Research, 14(4), 429-433. Epub November 21, 2011.https://doi.org/10.1590/S1516-14392011005000088 or http://54.243.252.9/engr-1330-psuedo-course/CECE-1330-PsuedoCourse/6-Projects/P-ConcreteStrength/Mix_Design_of_High-performance_Concrete.pdf</p>
+</li>
+<li>
+<p>Ahsanul Kabir, Md Monjurul Hasan, Khasro Miah, “ Strength Prediction Model for Concrete”, ACEE Int. J. on Civil and Environmental Engineering, Vol. 2, №1, Aug 2013.</p>
+</li>
+<li>
+<p>https://towardsdatascience.com/concrete-compressive-strength-prediction-using-machine-learning-4a531b3c43f3</p>
+</li>
+<li>
+<p>Castro, A.L. &amp; Liborio, J.B.L. &amp; Valenzuela, Federico &amp; Pandolfelli, Victor. (2008). The application of rheological concepts on the evaluation of high-performance concrete workability. American Concrete Institute, ACI Special Publication. 119-131.  copy at: http://54.243.252.9/engr-1330-psuedo-course/CECE-1330-PsuedoCourse/6-Projects/P-ConcreteStrength/ArtigoHPC026_CASTROetalfinal.pdf</p>
+</li>
+<li>
+<p>de Larrard, François &amp; Sedran, Thierry. (2002). Mixture-proportioning of high-performance concrete. Cement and Concrete Research. 32. 1699-1704. 10.1016/S0008-8846(02)00861-X. copy at: http://54.243.252.9/engr-1330-psuedo-course/CECE-1330-PsuedoCourse/6-Projects/P-ConcreteStrength/Mixture-ProportioningCCR-deLarrardSedran-full.pdf</p>
+</li>
+</ul>
+<p><strong>Database Acquisition</strong>
+- Get the database from the repository: https://archive.ics.uci.edu/ml/machine-learning-databases/concrete/compressive/Concrete_Data.xls
+- Supply links to any additional databases discovered during the literature research
+- A copy of the database is located at: http://54.243.252.9/engr-1330-psuedo-course/CECE-1330-PsuedoCourse/6-Projects/P-ConcreteStrength/concreteData.xls If you cannot access the original database you can use this copy</p>
+<p><strong>Exploratory Data Analysis</strong>
+- Describe (in words) the database.
+- Reformat as needed (column headings perhaps) the database for subsequent analysis.
+- Select possible data model structures (multi-feature linear model, power-law, ...)
+- Select possible data model "fitting" tools (ordinary least squares,lasso regression, decision trees, random forests, ...)</p>
+<p><strong>Model Building</strong>
+- Build data models
+- Assess data model quality (decide which model is best) 
+- Build the input data interface for using the "best" model
+- Using your best model determine projected concrete strength for 5 possible mixtures in the table below:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Cement</th>
+<th align="left">BlastFurnaceSlag</th>
+<th align="left">FlyAsh</th>
+<th align="left">CoarseAggregate</th>
+<th align="left">FineAggregate</th>
+<th align="left">Water</th>
+<th align="left">Superplasticizer</th>
+<th align="left">Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">175.0</td>
+<td align="left">13.0</td>
+<td align="left">172.0</td>
+<td align="left">1000.0</td>
+<td align="left">856.0</td>
+<td align="left">156.0</td>
+<td align="left">4.0</td>
+<td align="left">3.0</td>
+</tr>
+<tr>
+<td align="left">320.0</td>
+<td align="left">0.0</td>
+<td align="left">0.0</td>
+<td align="left">970.0</td>
+<td align="left">850.0</td>
+<td align="left">192.0</td>
+<td align="left">0.0</td>
+<td align="left">7.0</td>
+</tr>
+<tr>
+<td align="left">320.0</td>
+<td align="left">0.0</td>
+<td align="left">126.0</td>
+<td align="left">860.0</td>
+<td align="left">856.0</td>
+<td align="left">209.0</td>
+<td align="left">5.70</td>
+<td align="left">28.0</td>
+</tr>
+<tr>
+<td align="left">320.0</td>
+<td align="left">73.0</td>
+<td align="left">54.0</td>
+<td align="left">972.0</td>
+<td align="left">773.0</td>
+<td align="left">181.0</td>
+<td align="left">6.0</td>
+<td align="left">45.0</td>
+</tr>
+<tr>
+<td align="left">530.0</td>
+<td align="left">359.0</td>
+<td align="left">200.0</td>
+<td align="left">1145.0</td>
+<td align="left">992.0</td>
+<td align="left">247.0</td>
+<td align="left">32.0</td>
+<td align="left">365.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Documentation</strong>
+- Training video on how to use your tool, and demonstrate the tool(s) as they are run
+- Project management video 
+- Interim report (see deliverables below); this document must be rendered as a .pdf, but you are free to use your favorite writing software (Word,LibreOffice, ...).
+- Final Report (see deliverables below)</p>
+<h2 id="deliverables">Deliverables:</h2>
+<h4 id="part-1-due-november-24">Part 1 (due November 24):</h4>
+<p>A report that briefly describes the concrete strength database and how you plan to solve the tasks of creating a suitable data model.<br />
+- Break down each task into manageable subtasks and describe how you intend to solve the subtasks and how you will test each task. (Perhaps make a simple Gantt Chart)
+- Address the responsibilities of each team member for tasks completed and tasks to be completed until the end of the semester. (Perhaps make explicit subtask assignments)</p>
+<p>Your report should be limited to 4 pages, 12 pt font size, double linespacing (exclusive of references which are NOT included in the page count).  You need to cite/reference all sources you used.  </p>
+<h4 id="part-2-due-on-final-exam-day">Part 2 (due on Final Exam day):</h4>
+<ul>
+<li>A well-documented JupyterLab (using a python kernel) analysis and implementation for the data model.</li>
+<li>A well-documented JupyterLab (using a python kernel) implementation for the data model user interface.</li>
+<li>A well-documented JupyterLab (using a python kernel) implementation for the database update interface.</li>
+</ul>
+<p><strong>Above items can reside in a single notebook; but clearly identify sections that perform different tasks.</strong></p>
+<ul>
+<li>A how-to video demonstrating performance and description of problems that you were not able to solve.</li>
+<li>A project management video (up to 5 minutes) in which you explain how you completed the project and how you worked as a team.</li>
+</ul>
+<p><strong>Above items can reside in a single video; but structure the video into the two parts; use an obvious transition when moving from "how to ..." into the project management portion.</strong>  Keep the total video length to less than 10 minutes; submit as an <em>unlisted</em> YouTube video, and just supply the link (someone on each team is likely to have a YouTube creator account).  Keep in mind a 10 minute video can approach 100MB file size before compression, so it won't upload to Blackboard and cannot be emailed.</p>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

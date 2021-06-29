@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lesson 11 - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson00/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson07/lesson6/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson08/lesson7/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation and Integration</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson12/lesson12/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson13/lesson13/">Lesson 13</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab13/Lab13_Dev/">Laboratory 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson15/lesson15/">Lesson 15</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab15/Lab15_Dev/">Laboratory 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab16/Lab16_Dev/">Laboratory 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson17/lesson17/">Lesson 17</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab17/Lab17_Dev/">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-Homework/ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES3/es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ConcreteStrength/ConcreteStrength-Project/">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../Lesson10/lesson10/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../Lesson12/lesson12/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#interpolation-integration-differentiation-of-functions-and-tabular-data">Interpolation, Integration, Differentiation of Functions and Tabular Data</a></li>
+            <li><a href="#interpolation">Interpolation</a></li>
+        <li class="main "><a href="#integration-of-functions">Integration of Functions</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#rectangular-panels">Rectangular Panels</a></li>
+            <li><a href="#using-the-math-package">Using the math package</a></li>
+            <li><a href="#trapezoidal-panels">Trapezoidal Panels</a></li>
+            <li><a href="#parabolic-panels">Parabolic Panels</a></li>
+        <li class="main "><a href="#integration-of-tabular-data">Integration of Tabular Data</a></li>
+            <li><a href="#reading-from-a-file-open-read-close-files">Reading from a file --- open, read, close files</a></li>
+            <li><a href="#read-into-a-list">Read into a list</a></li>
+            <li><a href="#integrating-the-tabular-data">Integrating the Tabular Data</a></li>
+            <li><a href="#exercises_1">Exercises</a></li>
+        <li class="main "><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>%%html
+<!-- Script Block to set tables to left alignment -->
+<style>
+  table {margin-left: 0 !important;}
+</style></p>
+<h1 id="interpolation-integration-differentiation-of-functions-and-tabular-data">Interpolation, Integration, Differentiation of Functions and Tabular Data</h1>
+<h2 id="interpolation">Interpolation</h2>
+<p>The Starship rocket in the figure below sends a lot of telemetry data to both on-board and off-board (ground-based) control computers.  </p>
+<p><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/SpaceX_Starship_SN8_launch_as_viewed_from_South_Padre_Island.jpg/800px-SpaceX_Starship_SN8_launch_as_viewed_from_South_Padre_Island.jpg" src="../800px-SpaceX_Starship_SN8_launch_as_viewed_from_South_Padre_Island.png" /></p>
+<p>Suppose telemetry is received every 1/10 of a second, providing the altitude (position) of the craft, something like the figure below.</p>
+<p><img alt="" src="../altitude-time.png" /></p>
+<p>How can one estimate the altitude at intermediate times (between the 1/10 of a second "true" values)?</p>
+<p>The problem is a type of interpolation problem similar to calculating water density from tables for intermediate values by assuming a straight line passed between the two values from the table. However it may not be appropriate to assume that the altitudes are linear with time.  The special challenge comes when we want to estimate intermediate values when there is a maximum or minimum in the tabular structure, and we will have to process many records for different cases.</p>
+<p>The classical approach to such a problem is to fit a polynomial to the tabular results and interrogate the resulting polynomial to obtain estimates of the intermediate values.  This prediction engine (the polynomial) is required to return the exact value at a observation location (in our case a 1/10 second interval).  This requirement is quite distinct from other types of prediction engines we will study.</p>
+<h3 id="lagrangian-interpolation">Lagrangian Interpolation</h3>
+<p>Polynomial interpolation is the method of determining a polynomial that fits a set of given points. There are several approaches to polynomial interpolation, of which one of the most well known is the Lagrangian method. The Lagrangian polynomial <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial">https://en.wikipedia.org/wiki/Lagrange_polynomial</a> is the polynomial of order <script type="math/tex">n-1</script>, where <script type="math/tex">n</script> is he number of tabular data pairs we wish to interpolate. </p>
+<p>Suppose we have a table of data (or telemetry sent back from our rocket), of <script type="math/tex">x-</script> and <script type="math/tex">f(x)</script>-values:</p>
+<table>
+<thead>
+<tr>
+<th align="left">
+<script type="math/tex; mode=display">x~</script>
+</th>
+<th align="left">
+<script type="math/tex; mode=display">~f(x)</script>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<script type="math/tex; mode=display">x_1</script>
+</td>
+<td align="left">
+<script type="math/tex; mode=display">f_1</script>
+</td>
+</tr>
+<tr>
+<td align="left">
+<script type="math/tex; mode=display">x_2</script>
+</td>
+<td align="left">
+<script type="math/tex; mode=display">f_2</script>
+</td>
+</tr>
+<tr>
+<td align="left">
+<script type="math/tex; mode=display">x_3</script>
+</td>
+<td align="left">
+<script type="math/tex; mode=display">f_3</script>
+</td>
+</tr>
+<tr>
+<td align="left">
+<script type="math/tex; mode=display">x_4</script>
+</td>
+<td align="left">
+<script type="math/tex; mode=display">f_4</script>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The highest order polynomial that can be passed through these four data pairs is a cubic.  A Lagrangian form for such a cubic is</p>
+<p>
+<script type="math/tex; mode=display"> P_3(x) = f(x_1)\frac{(x-x_2)(x-x_3)(x-x_4)}{(x_1-x_2)(x_1-x_3)(x_1-x_4)} + f(x_2)\frac{(x-x_1)(x-x_3)(x-x_4)}{(x_2-x_1)(x_2-x_3)(x_2-x_4)} + f(x_3)\frac{(x-x_1)(x-x_2)(x-x_4)}{(x_3-x_1)(x_3-x_2)(x_3-x_4)} +f(x_4)\frac{(x-x_1)(x-x_2)(x-x_3)}{(x_4-x_1)(x_4-x_2)(x_4-x_3)} </script>
+</p>
+<p>Notice that it is constructed of four terms, each of which is a cubic in <script type="math/tex">x</script>; hence the sum is a cubic also.  The pattern of each term is to form the numerator as a product of differences of the form <script type="math/tex">(x-x_i)</script>, omitting one <script type="math/tex">x_i</script> in each term, the ommitted term is used in the denominator as a replacement for <script type="math/tex">x</script> in each position in the numerator.  In each term, the difference factor is multiplied by the value <script type="math/tex">f_i</script> corresponding to the <script type="math/tex">x_i</script> ommitted in the numerator. The Lagragian polynomial for other degrees of interpolating polynomials employs this same pattern of forming a sum of polynomials of the desired degree. </p>
+<p>Of importance is that the polynomial is intended to be used for interpolation, that is the value we seek <script type="math/tex">P(x^*)</script> assumes we will supply <script type="math/tex">x^*</script> in the range <script type="math/tex">[x_1 , x_4]</script>.  Going outside this range is called extrapolation, and interpolator-type prediction engines are the wromg tool!</p>
+<h3 id="example-1">Example 1</h3>
+<p>Consider the three observations below, estimate (predict) the value for $f(2.3).</p>
+<table>
+<thead>
+<tr>
+<th align="left">
+<script type="math/tex; mode=display">x~</script>
+</th>
+<th align="left">
+<script type="math/tex; mode=display">~f(x)</script>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1.1</td>
+<td align="left">10.6</td>
+</tr>
+<tr>
+<td align="left">1.7</td>
+<td align="left">15.2</td>
+</tr>
+<tr>
+<td align="left">3.0</td>
+<td align="left">20.3</td>
+</tr>
+</tbody>
+</table>
+<p>The Lagrangian form of the highest order of polynomial that can pass through the 3 data pairs is the quadratic:</p>
+<p>
+<script type="math/tex; mode=display"> P_2(x) = f(x_1)\frac{(x-x_2)(x-x_3)}{(x_1-x_2)(x_1-x_3)} + f(x_2)\frac{(x-x_1)(x-x_3)}{(x_2-x_1)(x_2-x_3)} + f(x_3)\frac{(x-x_1)(x-x_2)}{(x_3-x_1)(x_3-x_2)} </script>
+</p>
+<p>Once the denominators are completed, it is relatively straightforward to compute the estimate (prediction), in this case</p>
+<p>
+<script type="math/tex; mode=display"> P_2(x) = (10.6)\frac{(x-1.7)(x-3.0)}{(1.1-1.7)(1.1-3.0)} + (15.2)\frac{(x-1.1)(x-3.0)}{(1.7-1.1)(1.7-3.0)} + (20.3)\frac{(x-1.1)(x-1.7)}{(3.0-1.1)(3.0-1.7)} </script>
+</p>
+<p>At <script type="math/tex">x=2.3</script> the result is <script type="math/tex">P_2(2.3)=18.38</script>.  </p>
+<p>Naturally, we want to use Computational Thinking principles, to pattern match and generalize the arithmetic as below.</p>
+<pre><code class="python">def lagint(xlist,ylist,xpred):
+    # lagrangian interpolation of order len(xlist)-1 
+    # 
+    lagint = 0.0 # ypred is an accumulator, and will be output
+    norder = len(xlist)
+    for i in range(norder):
+        term = ylist[i] # build up terms of polynomial
+        for j in range(norder):
+            if (i != j):
+                term = term * (xpred-xlist[j])/(xlist[i]-xlist[j])
+#            pass # may not need this expression
+        lagint = lagint + term
+#    print(i,j) #debugging expression
+    return(lagint)
+</code></pre>
+
+<pre><code class="python">xtable = [1.1,1.7,3.0]
+ytable = [10.6,15.2,20.3]
+
+xwant = 2.3
+
+print(round(lagint(xtable,ytable,xwant),2))
+</code></pre>
+
+<pre><code>18.38
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<p>This example is copied from <a href="https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html">https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html</a></p>
+<p>In the original source the author plots the resulting function, we can do the same here.  First the observation set:</p>
+<table>
+<thead>
+<tr>
+<th align="left">
+<script type="math/tex; mode=display">x~</script>
+</th>
+<th align="left">
+<script type="math/tex; mode=display">~f(x)</script>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">11</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">28</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">63</td>
+</tr>
+</tbody>
+</table>
+<p>Next we will plot the interpolating polynomial from <script type="math/tex">x=0</script> to <script type="math/tex">x=4</script> in steps of 0.1</p>
+<pre><code class="python">xtable = [0.1,0.3,0.5,0.7,0.9,1.1,1.3]
+ytable = [0.003,0.067,0.148,0.248,0.370,0.518,0.697]
+xwant = 0.3
+print(lagint(xtable,ytable,xwant))
+</code></pre>
+
+<pre><code>0.067
+</code></pre>
+<pre><code class="python"># Observations
+xtable = [0,2,3,4]
+ytable = [7,11,28,63]
+#
+xpred = [] # empty list to store results for plotting
+ypred = [] # empty list to store results for plotting
+#
+step_size = 0.10  # step size
+how_many = int((xtable[len(xtable)-1])/step_size)
+# build the predictions
+for i in range(how_many+1): 
+    xpred.append(float(i)*step_size)
+    ypred.append(lagint(xtable,ytable,float(i)*step_size))
+#print(lagint(xtable,ytable,xwant))
+</code></pre>
+
+<pre><code class="python">import matplotlib.pyplot # the python plotting library
+myfigure = matplotlib.pyplot.figure(figsize = (6,6)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(xtable, ytable ,color ='blue') # The observations as points
+matplotlib.pyplot.plot(xpred, ypred, color ='red') # the polynomial
+matplotlib.pyplot.xlabel(&quot;Input Value&quot;) 
+matplotlib.pyplot.ylabel(&quot;Function Value&quot;) 
+mytitle = &quot;Interpolating Polynomial Fit to Observations\n &quot;
+mytitle += &quot;Blue Markers are Observations &quot; + &quot;\n&quot;
+mytitle += &quot;Red Curve is Fitted Polynomial &quot;+ &quot;\n&quot;
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+</code></pre>
+
+<p><img alt="png" src="../output_10_0.png" /></p>
+<h3 id="exercises">Exercises</h3>
+<p>In a radiation-induced polymerization study, a gamma source was used to give measured doses of radiation. The dosage varied with position in the apparatus, with the following data being recorded:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Position from emitter (inches)</th>
+<th align="left">Dosage Rate, <script type="math/tex">10^5</script> rads/hr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">1.90</td>
+</tr>
+<tr>
+<td align="left">0.5</td>
+<td align="left">2.39</td>
+</tr>
+<tr>
+<td align="left">1.0</td>
+<td align="left">2.71</td>
+</tr>
+<tr>
+<td align="left">1.5</td>
+<td align="left">2.98</td>
+</tr>
+<tr>
+<td align="left">2.0</td>
+<td align="left">3.20</td>
+</tr>
+<tr>
+<td align="left">3.0</td>
+<td align="left">3.20</td>
+</tr>
+<tr>
+<td align="left">3.5</td>
+<td align="left">2.98</td>
+</tr>
+<tr>
+<td align="left">4.0</td>
+<td align="left">2.74</td>
+</tr>
+</tbody>
+</table>
+<p>For some reason, the reading at 2.5 inches was not reported, but the value of radiation at that distance is needed; estimate the dosage level at 2.5 inches using an interpolation-type prediction engine.  Plot the interpolating function as well as the observations.</p>
+<pre><code class="python"># Observations
+position = [0,0.5,1.0,1.5,2.0,3.0,3.5,4.0]
+dosage = [1.90,2.39,2.71,2.98,3.20,3.20,2.98,2.74]
+#
+xpred = [] # empty list to store results for plotting
+ypred = [] # empty list to store results for plotting
+#
+step_size = 0.10  # step size
+how_many = int((position[len(position)-1])/step_size)
+# build the predictions
+for i in range(how_many+1): 
+    xpred.append(float(i)*step_size)
+    ypred.append(lagint(position,dosage,float(i)*step_size))
+#print(lagint(xtable,ytable,xwant))
+myfigure = matplotlib.pyplot.figure(figsize = (6,6)) # generate a object from the figure class, set aspect ratio
+matplotlib.pyplot.scatter(position,dosage ,color ='blue') # The observations as points
+matplotlib.pyplot.plot(xpred, ypred, color ='red') # the polynomial
+matplotlib.pyplot.xlabel(&quot;Distance&quot;) 
+matplotlib.pyplot.ylabel(&quot;Dosage&quot;) 
+mytitle = &quot;Interpolating Polynomial Fit to Observations\n &quot;
+mytitle += &quot;Blue Markers are Observations &quot; + &quot;\n&quot;
+mytitle += &quot;Red Curve is Fitted Polynomial &quot;+ &quot;\n&quot;
+matplotlib.pyplot.title(mytitle) 
+matplotlib.pyplot.show()
+
+lagint(position,dosage,2.5)
+</code></pre>
+
+<h3 id="interpolation-references">Interpolation References</h3>
+<ul>
+<li>
+<p>Lagrangian Interpolation (using R packages) <a href="https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html">https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html</a></p>
+</li>
+<li>
+<p>Lagrangian Interpolation (Video) <a href="https://www.youtube.com/watch?v=_zK_KhHW6og">https://www.youtube.com/watch?v=_zK_KhHW6og</a></p>
+</li>
+<li>
+<p>Lagrange Polynomials <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial">https://en.wikipedia.org/wiki/Lagrange_polynomial</a></p>
+</li>
+<li>
+<p>Gerald, C.F., and Wheatley, P. O., 1984. Applied Numerical Analysis. 3rd Ed. Addison Wesley, Inc. , pp. 171-210.</p>
+</li>
+<li>
+<p>Westerink, J.J. 2018. CE 30125 Computational Methods, Department of Civil and Environmental Engineering and Earth Sciences University of Notre Dame, Notre Dame IN 46556 <a href="https://coast.nd.edu/jjwteach/www/www/30125/pdfnotes/lecture3_6v13.pdf">https://coast.nd.edu/jjwteach/www/www/30125/pdfnotes/lecture3_6v13.pdf</a></p>
+</li>
+</ul>
+<h1 id="integration-of-functions">Integration of Functions</h1>
+<p>At this point we have enough Python to consider doing some useful computations. We
+will start with numerical integration because it is useful and only requires count-controlled
+repetition and single subscript lists.</p>
+<h2 id="background">Background</h2>
+<p>Numerical integration is the numerical approximation of</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+I = \int_a^b f(x)dx
+\end{equation}</script>
+</p>
+<p>Consider the problem of determining the shaded area under the curve <script type="math/tex">y = f(x)</script> from <script type="math/tex">x = a</script> to <script type="math/tex">x = b</script>, as depicted in the figure below, and suppose that analytical integration is not feasible.</p>
+<p><img alt="figure1" src="../schematic_panels.png" /></p>
+<p>The function may be known in tabular form from experimental measurements or it may be known in an analytical form. 
+The function is taken to be continuous within the interval <script type="math/tex">a < x < b</script>. We may divide the area into <script type="math/tex">n</script> vertical panels, each of width <script type="math/tex">\Delta x = (b - a)/n</script>, and then add the areas of all strips to obtain  <script type="math/tex">A~\approx \int ydx</script>.</p>
+<p>A representative panel of area <script type="math/tex">A_i</script> is shown with darker shading in the figure. Three useful numerical approximations are listed in the following sections.  The approximations differ in how the function is represented by the panels --- in all cases the function is approximated by known polynomial models between the panel end points.</p>
+<p>In each case the greater the number of strips, and correspondingly smaller value of <script type="math/tex">\Delta x</script>, the more accurate the approximation. Typically, one can begin with a relatively small number of panels and increase the number until the resulting area approximation stops changing.</p>
+<h2 id="rectangular-panels">Rectangular Panels</h2>
+<p>The figure below is a schematic of a rectangular panels.  The figure is assuming the function structure is known and can be evaluated at an arbitrary location in the <script type="math/tex">\Delta x</script> dimension.</p>
+<p><img alt="figure2" src="../rect_panels.png" /></p>
+<p>Each panel is treated as a rectangle, as shown by the representative panel whose height <script type="math/tex">y_m</script> is chosen visually so that the small cross-hatched areas are as nearly equal as possible. Thus, we form the sum <script type="math/tex">\sum y_m</script> of the effective heights and multiply by <script type="math/tex">\Delta x</script>. For a function known in analytical form, a value for <script type="math/tex">y_m</script> equal to that of the function at the midpoint <script type="math/tex">x_i + \Delta x /2</script> may be calculated and used in the summation.</p>
+<p>For tabulated functions, we have to choose to either take <script type="math/tex">y_m</script> as the value at the left endpoint or right endpoint.    This limitation is often quite handy when we are trying to integrate a function that is integrable, but undefined on one endpoint.</p>
+<p>Lets try some examples in Python.</p>
+<p>Find the area under the curve <script type="math/tex">y= x\sqrt{1+x^2}</script>  from <script type="math/tex">x = 0</script> to <script type="math/tex">x = 2</script>.</p>
+<p>First lets read in the value for the lowerlimit, we will do some limited error checks to be sure user enters a number, but won't check that the number is non-negative.</p>
+<pre><code class="python"># RectangularPanels.py
+# Numerical Integration
+print (&quot;Program finds area under curve y = x * sqrt(1+x)&quot;)
+# Get input data -- use error checking
+yes = 0
+while yes == 0:
+    x_low = input(&quot;Enter a lower bound x_low \n&quot;)
+    try:
+        x_low = float(x_low)
+        yes = 1
+    except:
+        print (&quot;x_low really needs to be a number, try again \n&quot;)
+# exit the while loop when finally have a valid number
+</code></pre>
+
+<pre><code>Program finds area under curve y = x * sqrt(1+x)
+
+
+Enter a lower bound x_low 
+ 2
+</code></pre>
+<p>Verify that value is indeed what we entered</p>
+<pre><code class="python">print(x_low)
+</code></pre>
+
+<pre><code>2.0
+</code></pre>
+<p>Now do the same for the upper limit, notice how we are using the <code>yes</code> variable.  We set a "fail" value, and demand input until we get "success".  The structure used here is called a <code>try -- exception</code> structure and is very common in programming.   Error checking is really important so that garbled input does not hang things up. </p>
+<pre><code class="python">yes = 0
+while yes == 0:
+    x_high = input(&quot;Enter an upper bound x_high \n&quot;)
+    try:
+        x_high = float(x_high)
+        yes = 1
+    except:
+        print (&quot;x_high really needs to be a number, try again \n&quot;)
+# exit the while loop when finally have a valid number
+</code></pre>
+
+<pre><code>Enter an upper bound x_high 
+ 4
+</code></pre>
+<p>Again verify!</p>
+<pre><code class="python">print(x_high)
+</code></pre>
+
+<pre><code>4.0
+</code></pre>
+<p>Now use the try - exception structure to input how many panels we wish to use.  Notice you can enter a negative value which will ultimately break things. Also observe this value is an integer.</p>
+<pre><code class="python">yes = 0
+while yes == 0:
+    how_many = input(&quot;Enter how many panels \n&quot;)
+    try:
+        how_many = int(how_many)
+        yes = 1
+    except:
+        print (&quot;Panels really needs to be a number, try again \n&quot;)
+# exit the while loop when finally have a valid number
+</code></pre>
+
+<pre><code>Enter how many panels 
+ 5
+</code></pre>
+<p>Again verify!</p>
+<pre><code class="python">print(how_many)
+</code></pre>
+
+<pre><code>5
+</code></pre>
+<p>Now we can actually perform the integration by evaluating the function at the panel half-widths.
+In this example we are using primitive arithmetic, so the <script type="math/tex">\sqrt{}</script> is accomplished by exponentation, the syntax is <code>c = a ** b</code> is the operation <script type="math/tex">c = a^b</script>.</p>
+<p>The integration uses an accumulator, which is a memory location where subsquent results are added (accumulated) back into the accumulator.  This structure is so common that there are alternate, compact syntax to perform this task, here it is all out in the open.</p>
+<p>The counting loop where we evaluate the function at different <code>x</code> values, starts at 1 and ends at <code>how_many+1</code> because python <code>for</code> loops use an increment skip if equal structure. When the value in <code>range</code> equals <code>how_many</code> the <code>for</code> loop exits (<code>break</code> is implied.)  A loop control structure starting from 0 is shown in the code as a comment line.  Simply uncomment this line, and comment the line just below to have the structure typical in python scripts.  In the start from 1 case, we want to evaluate at the last value of <code>how_many</code>.  </p>
+<pre><code class="python"># OK we should have the three things we need for evaluating the integral
+delta_x = (x_high - x_low)/float(how_many)  # compute panel width
+xx = x_low + delta_x/2 # initial value for x
+### OK THIS IS THE ACTUAL INTEGRATOR PART ###
+accumulated_area = 0.0  # initial value in an accumulator
+#for i in range(0,how_many,1): #note we are counting from 0
+for i in range(1,how_many+1,1): #note we are counting from 1
+    accumulated_area = accumulated_area + ( xx * ( (1+xx**2)**(0.5) ) ) * delta_x
+    xx = xx + delta_x
+### AND WE ARE DONE INTEGRATING #############
+</code></pre>
+
+<p>Finally, we want to report our result</p>
+<pre><code class="python">print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
+      &quot; to x = &quot;,x_high,&quot;\n is approximately: &quot;,accumulated_area)
+# the backslash \
+#       &quot; to x = .....     lets us use multiple lines
+# the \n is a &quot;newline&quot; character 
+</code></pre>
+
+<pre><code>Area under curve y = x * sqrt(1+x) from x =  2.0  to x =  4.0 
+ is approximately:  19.610958667237167
+</code></pre>
+<p>The code implements rudimentary error checking -- it forces us to enter numeric values for the lower and upper values of <script type="math/tex">x</script> as well as the number of panels to use.  It does not check for undefined ranges and such, but you should get the idea -- notice that a large fraction of the entire program is error trapping; this devotion to error trapping is typical for professional programs where you are going to distribute executable modules and not expect the end user to be a programmer.</p>
+<h2 id="using-the-math-package">Using the <code>math</code> package</h2>
+<p>The actual computations are done rather crudely -- there is a math package that would give us the ability to compute the square root as a function call rather than exponentiation to a real values exponent.</p>
+<p>That is illustrated below</p>
+<pre><code class="python"># RectangularPanels.py
+# Numerical Integration
+# Use built-in math functions
+import math  # a package of math functions
+# we are naming an object &quot;sqrt&quot; that will compute the square root
+def sqrt (x):
+        return math.sqrt(x)
+# saves us having to type math.NAME every time we wish to use a function
+# in this program not all that meaningful, but in complex programs handy!
+print (&quot;Program finds area under curve y = x * sqrt(1+x)&quot;)
+# Get input data -- use error checking
+yes = 0
+while yes == 0:
+    x_low = input(&quot;Enter a lower bound x_low \n&quot;)
+    try:
+        x_low = float(x_low)
+        yes = 1
+    except:
+        print (&quot;x_low really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    x_high = input(&quot;Enter an upper bound x_high \n&quot;)
+    try:
+        x_high = float(x_high)
+        yes = 1
+    except:
+        print (&quot;x_high really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    how_many = input(&quot;Enter how many panels \n&quot;)
+    try:
+        how_many = int(how_many)
+        yes = 1
+    except:
+        print (&quot;Panels really needs to be a number, try again \n&quot;)
+delta_x = (x_high - x_low)/float(how_many)  # compute panel width
+accumulated_area = 0.0  # initial value in an accumulator
+xx = x_low + delta_x/2 # initial value for x
+for i in range(1,how_many+1,1): #note we are counting from 1
+    accumulated_area = accumulated_area + ( xx * sqrt(1+xx**2) ) * delta_x
+    xx = xx + delta_x
+print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
+      &quot; to x = &quot;,x_high,&quot;\n is approximately: &quot;,accumulated_area)
+
+
+</code></pre>
+
+<pre><code>Program finds area under curve y = x * sqrt(1+x)
+
+
+Enter a lower bound x_low 
+ 0
+Enter an upper bound x_high 
+ 2
+Enter how many panels 
+ 6
+
+
+Area under curve y = x * sqrt(1+x) from x =  0.0  to x =  2.0 
+ is approximately:  3.3793974379024605
+</code></pre>
+<h2 id="trapezoidal-panels">Trapezoidal Panels</h2>
+<p>The trapezoidal panels are approximated as shown in the figure below. </p>
+<p><img alt="" src="../trap_panels.png" /></p>
+<p>The area <script type="math/tex">A_i</script> is the average height <script type="math/tex">(y_i + y_{i+1} )/2</script> times <script type="math/tex">\Delta x</script>. Adding the areas gives the area approximation as tabulated.   For the example with the curvature shown, the approximation will be on the low side. For the reverse curvature, the approximation will be on the high side.  The trapezoidal approximation is commonly used with tabulated values.</p>
+<p>The script below illustrates the trapezoidal method for approximating an integral.  In the example, the left and right panel endpoints in <script type="math/tex">x</script> are set as separate variables <script type="math/tex">x_{left}</script> and <script type="math/tex">x_{right}</script> and incremented by <script type="math/tex">\Delta x</script> as we step through the count-controlled repetition to accumulate the area.  The corresponding <script type="math/tex">y</script> values are computed within the loop and averaged, then multiplied by <script type="math/tex">\Delta x</script> and added to the accumulator.  Finally the <script type="math/tex">x</script> values are incremented --- for grins, we used the += operator on the accumulator</p>
+<pre><code class="python"># TrapezoidalPanels.py
+# Numerical Integration
+# Use built-in math functions
+import math  # a package of math functions
+# we are naming an object &quot;sqrt&quot; that will compute the square root
+def sqrt (x):
+        return math.sqrt(x)
+# saves us having to type math.NAME every time we wish to use a function
+# in this program not all that meaningful, but in complex programs handy!
+print (&quot;Program finds area under curve y = x * sqrt(1+x)&quot;)
+# Get input data -- use error checking
+yes = 0
+while yes == 0:
+    x_low = input(&quot;Enter a lower bound x_low \n&quot;)
+    try:
+        x_low = float(x_low)
+        yes = 1
+    except:
+        print (&quot;x_low really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    x_high = input(&quot;Enter an upper bound x_high \n&quot;)
+    try:
+        x_high = float(x_high)
+        yes = 1
+    except:
+        print (&quot;x_high really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    how_many = input(&quot;Enter how many panels \n&quot;)
+    try:
+        how_many = int(how_many)
+        yes = 1
+    except:
+        print (&quot;Panels really needs to be a number, try again \n&quot;)
+delta_x = (x_high - x_low)/float(how_many)  # compute panel width
+accumulated_area = 0.0      # initial value in an accumulator
+x_left = x_low              # initial value for x_left edge panel
+x_right = x_left + delta_x  # initial value for x_right edge panel
+for i in range(1,how_many+1,1): #note we are counting from 1
+    y_left = ( x_left* sqrt(1+x_left**2) )
+    y_right = ( x_right* sqrt(1+x_right**2) )
+    accumulated_area += + (1./2.) * ( y_left + y_right ) * delta_x
+    x_left += delta_x
+    x_right += delta_x
+print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
+      &quot; to x = &quot;,x_high,&quot;\n is approximately: &quot;,accumulated_area)
+
+</code></pre>
+
+<pre><code>Program finds area under curve y = x * sqrt(1+x)
+
+
+Enter a lower bound x_low 
+ 0
+Enter an upper bound x_high 
+ 8
+Enter how many panels 
+ 9
+
+
+Area under curve y = x * sqrt(1+x) from x =  0.0  to x =  8.0 
+ is approximately:  175.33954986737925
+</code></pre>
+<h2 id="parabolic-panels">Parabolic Panels</h2>
+<p>Parabolic panels approximate the shape of the panel with a parabola.  The area between the chord and the curve (neglected in the trapezoidal solution) may be accounted for by approximating the function with a parabola passing through the points defined by three successive values of <script type="math/tex">y</script>.</p>
+<p><img alt="" src="../para-panels.png" /></p>
+<p>This area may be calculated from the geometry of the parabola and added to the trapezoidal area of the pair of strips to give the area <script type="math/tex">\Delta A</script> of the pair as illustrated. Adding all of the <script type="math/tex">\Delta A</script>s produces the tabulation shown, which is known as Simpson's rule. To use Simpson's rule, the number <script type="math/tex">n</script> of strips must be even.</p>
+<p>The same example as presented for rectangular panels is repeated, except using parabolic panels.  The code is changed yet again because we will evaluate at each end of the panel as well as at an intermediate value.</p>
+<pre><code class="python"># ParabolicPanels.py
+# Numerical Integration
+# Use built-in math functions
+import math  # a package of math functions
+# we are naming an object &quot;sqrt&quot; that will compute the square root
+def sqrt (x):
+        return math.sqrt(x)
+# saves us having to type math.NAME every time we wish to use a function
+# in this program not all that meaningful, but in complex programs handy!
+print (&quot;Program finds area under curve y = x * sqrt(1+x)&quot;)
+# Get input data -- use error checking
+yes = 0
+while yes == 0:
+    x_low = input(&quot;Enter a lower bound x_low \n&quot;)
+    try:
+        x_low = float(x_low)
+        yes = 1
+    except:
+        print (&quot;x_low really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    x_high = input(&quot;Enter an upper bound x_high \n&quot;)
+    try:
+        x_high = float(x_high)
+        yes = 1
+    except:
+        print (&quot;x_high really needs to be a number, try again \n&quot;)
+yes = 0
+while yes == 0:
+    how_many = input(&quot;Enter how many panels \n&quot;)
+    try:
+        how_many = int(how_many)
+        yes = 1
+    except:
+        print (&quot;Panels really needs to be a number, try again \n&quot;)
+delta_x = (x_high - x_low)/float(how_many)  # compute panel width
+accumulated_area = 0.0         # initial value in an accumulator
+x_left   = x_low               # initial value for x_left edge panel
+x_middle = x_left   + delta_x  # initial value for x_middle edge panel
+x_right  = x_middle + delta_x  # initial value for x_right edge panel
+how_many = int(how_many/2)     # using 2 panels every step, so 1/2 many steps -- force integer result 
+for i in range(1,how_many+1,1): #note we are counting from 1
+    y_left   = ( x_left   * sqrt(1+   x_left**2) )
+    y_middle = ( x_middle * sqrt(1+ x_middle**2) )
+    y_right  = ( x_right  * sqrt(1+  x_right**2) )
+    accumulated_area = accumulated_area + \
+                       (1./3.) * ( y_left + 4.* y_middle + y_right ) * delta_x
+    x_left   = x_left   + 2*delta_x
+    x_middle = x_left   +   delta_x
+    x_right  = x_middle +   delta_x
+print (&quot;Area under curve y = x * sqrt(1+x) from x = &quot;,x_low,\
+      &quot; to x = &quot;,x_high,&quot;\n is approximately: &quot;,accumulated_area)
+
+
+</code></pre>
+
+<pre><code>Program finds area under curve y = x * sqrt(1+x)
+
+
+Enter a lower bound x_low 
+ 0
+Enter an upper bound x_high 
+ 1
+Enter how many panels 
+ 4
+
+
+Area under curve y = x * sqrt(1+x) from x =  0.0  to x =  1.0 
+ is approximately:  0.6094186631272838
+</code></pre>
+<p>If we study all the forms of the numerical method we observe that the numerical integration method is really the sum of function values at specific locations in the interval of interest, with each value multiplied by a specific weight.</p>
+<p>In this development the weights were based on polynomials, but other method use different weighting functions.  An extremely important method is called gaussian quadrature. This method is valuable because one can approximate convolution integrals quite effectively using quadrature routines, while the number of function evaluations for a polynomial based approximation could be hopeless.</p>
+<p>When the function values are tabular, we are going to have to accept the rectangular (with adaptations) and trapezoidal as our best tools to approximate an integral because we don't have any really effective way to evaluate the function between the tabulated values.</p>
+<hr />
+<h1 id="integration-of-tabular-data">Integration of Tabular Data</h1>
+<p>This section is going to work with tabular data -- different from function evaluation, but
+similar. To be really useful, we need to learn how to read data from a file; manually
+entering tabular data is really time consuming, error prone, and just plain idiotic.</p>
+<p>So in this chapter we will learn how to read data from a file into a list, then we can process
+the list as if it were a function and integrate its contents.</p>
+<h3 id="reading-from-a-file-open-read-close-files">Reading from a file --- open, read, close files</h3>
+<p>First, lets consider a file named <code>MyFile.txt</code>.   The extension is important so that the Shell does not think it is a Python script.
+The contents of <code>MyFile.txt</code> are:</p>
+<pre><code>1  1
+2  4
+3  9
+4  16
+5  25
+</code></pre>
+<p>The code fragment below, will let us look at the file (already existing in our local directory)</p>
+<pre><code class="python">import subprocess # lets us run &quot;shell&quot; commands and recover stdio stream
+usefull_cat_call = subprocess.run([&quot;cat&quot;,&quot;MyFile.txt&quot;], stdout=subprocess.PIPE, text=True) # this is the call to run the bash command &quot;cat MyFile.txt&quot; which will display the contents of the file if it exists.
+print(usefull_cat_call.stdout)
+</code></pre>
+
+<pre><code>1  1
+2  4
+3  9
+4  16
+5  25
+</code></pre>
+<p>Now that we know that the file exists,to read the contents into a Python script we have to do the following:</p>
+<ul>
+<li>
+<p>Open a connection to the file --- this is a concept common to all languages, it might be called something different, but the program needs to somehow know the location and name of the file.</p>
+</li>
+<li>
+<p>Read the contents into an object --- we have a lot of control on how this gets done, for the time being we won't exercise much control yet.  When you do substantial programs, you will depend on the control of the reads (and writes).</p>
+</li>
+<li>
+<p>Disconnect the file --- this too is common to all languages.  Its a really easy step to forget.  Not a big deal if the program ends as planned but terrible if there is a error in the program and the connection is still open.  Usually nothing bad happens, but with an open connection it is possible for the file to get damaged.   If that file represents millions of customers credit card numbers, that's kind of a problem, and time to go work on your resume, or get your passport collection out and choose a country without extradition.</p>
+</li>
+</ul>
+<p>The code fragment below performs these three tasks and prints the things we read</p>
+<pre><code class="python">Afile = open(&quot;MyFile.txt&quot;,&quot;r&quot;) # open a connection to the file; set to &quot;read&quot;
+# read the five lines
+line1 = Afile.readline()
+line2 = Afile.readline()
+line3 = Afile.readline()
+line4 = Afile.readline()
+line5 = Afile.readline()
+Afile.close() # disconnect from the file
+# echo the input
+print(line1,end=&quot;&quot;)
+print(line2,end=&quot;&quot;)
+print(line3,end=&quot;&quot;)
+print(line4,end=&quot;&quot;)
+print(line5,end=&quot;&quot;)
+</code></pre>
+
+<pre><code>1  1
+2  4
+3  9
+4  16
+5  25
+</code></pre>
+<h3 id="read-into-a-list">Read into a list</h3>
+<p>A far more useful and elegant way to read from a file is to use a <code>for</code> loop.   The attribute <code>line</code> within a file is an iterable, hence construction the loop is pretty straightforward.   </p>
+<p>A script fragment below does the same thing as the example above, but uses a <code>for</code> loop to accomplish stepping through the file.   </p>
+<p>Additionally, I have added a counter to keep track of how many lines were read --- in a lot of engineering programs, the number of things read becomes important later in a program, hence it is usually a good idea to capture the count when the data are first read.</p>
+<p>First lets work out if we can automatically detect the end of the file.  So this script just reads and prints the attribute <code>line</code> from object <code>Afile</code>.<br />
+Notice how the print statement is changed, to suppress the extra line feed.</p>
+<pre><code class="python">Afile = open(&quot;MyFile.txt&quot;,&quot;r&quot;) # open a connection to the file; set to &quot;read&quot;
+# read using a for loop, exit when at end of file  and report line count
+how_many_lines = 0 # start our counter!
+for line in Afile:
+    print(line,end=&quot;&quot;)
+    how_many_lines += 1
+Afile.close() # disconnect from the file
+print(&quot;\nFile has &quot;,how_many_lines,&quot; records (lines)&quot;)
+</code></pre>
+
+<pre><code>1  1
+2  4
+3  9
+4  16
+5  25
+File has  5  records (lines)
+</code></pre>
+<p>Now we will add a list to receive the input, here it reads the file above as a string into a list <code>xy</code>, then splits that list and places the contents into two other lists, <code>x</code> and <code>y</code>.  The script has several parts to discuss.   First, the destination variables (lists) must be created -- I used the null list concept here because I don't know how big the list is until I read the list.<br />
+Next I used the <code>.append()</code> method which operates on the <code>xy</code> list.<br />
+The arguments of the method <code>[str(n) for n in line.strip().split()]</code> tells the program that the elements are to be interpreted as a string, and to split (split) the line into sub-strings based on a null delimiter (whitespace), and to remove all the whitespace (strip) characters.   </p>
+<p>Once the line is split, the strings are appended into the <code>xy</code> list.  The <code>xy</code> list is printed to show that it is a list of 5 things, each thing being a string comprised of two sets of characters separated by a comma.   <code>xy</code> is a list of strings.</p>
+<p>The next section of the code then uses the <code>pair</code> function within another <code>.append()</code> method to break the character sets in each element of <code>xy</code> into two parts <code>x</code> and <code>y</code>.<br />
+Lastly during the pair operation, the code also converts the data into real values (float) and then prints the data in two columns.  <br />
+This seems like a lot of work, but we could easily get this code to be super reliable, then save it as a function and never have to write it again.   That too comes later -- suffice to say for now we can read a file, parse its contents into two lists <script type="math/tex">x</script> and <script type="math/tex">y</script>.  Thus we are now able to integrate tabular data.</p>
+<pre><code class="python">xy = [] # null list to store the lines
+x  = [] # a null list for the first column
+y  = [] # a null list for the second column
+Afile = open(&quot;MyFile.txt&quot;,&quot;r&quot;) # open a connection to the file; set to &quot;read&quot;
+# read using a for loop, exit when at end of file  and report line count
+how_many_lines = 0 # start our counter!
+for line in Afile:
+    print(line,end=&quot;&quot;)
+    xy.append([str(n) for n in line.strip().split()]) # append line to xy, split the line on whitespace, strip out whitespace
+    how_many_lines += 1
+Afile.close() # disconnect from the file
+print(&quot;\nFile has &quot;,how_many_lines,&quot; records (lines)&quot;)
+print(&quot;The list is: &quot;,end=&quot;&quot;)
+print(xy) # the list
+for pair in xy:  # parse into x and y
+    x.append(float(pair[0]))
+    y.append(float(pair[1]))
+# verify parsed
+for i in range (0,how_many_lines,1):
+    print(&quot;x = &quot;,x[i],&quot; y = &quot;,y[i])
+
+</code></pre>
+
+<pre><code>1  1
+2  4
+3  9
+4  16
+5  25
+File has  5  records (lines)
+The list is: [['1', '1'], ['2', '4'], ['3', '9'], ['4', '16'], ['5', '25']]
+x =  1.0  y =  1.0
+x =  2.0  y =  4.0
+x =  3.0  y =  9.0
+x =  4.0  y =  16.0
+x =  5.0  y =  25.0
+</code></pre>
+<h3 id="integrating-the-tabular-data">Integrating the Tabular Data</h3>
+<p>Suppose instead of a function we only have tabulations and wist to estimate the area under the curve represented by the tabular values.  Then our integration rules from the prior chapter still work more or less, except the rectangular panels will have to be shifted to either the left edge or right edge of a panel (where the tabulation exists).   </p>
+<p>Lets just examine an example.  Suppose some measurement technology produced a table of related values. <br />
+The excitation variable is <code>x</code> and <code>f(x)</code> is the response. </p>
+<pre><code>    x    f(x) 
+   1.0  1.543 
+   1.1  1.668 
+   1.2  1.811 
+   1.3  1.971 
+   1.4  2.151 
+   1.5  2.352 
+   1.6  2.577 
+   1.7  2.828 
+   1.8  3.107
+</code></pre>
+<p>To integrate this table using the trapezoidal method is straightforward.<br />
+We will modify our earlier code to read the table (which we put into a file), and compute the integral. </p>
+<pre><code class="python"># My Tabular Integration
+# Integrate a table of values using Trapezoidal Panels
+xy = [] # null list to store the lines
+x  = [] # a null list for the first column
+y  = [] # a null list for the second column
+Afile = open(&quot;MyTableOfData.txt&quot;,&quot;r&quot;) # open a connection to the file; set to &quot;read&quot;
+# read using a for loop, exit when at end of file  and report line count
+how_many_lines = 0 # start our counter!
+for line in Afile:
+    print(line,end=&quot;&quot;)
+    xy.append([str(n) for n in line.strip().split()]) # append line to xy, split the line on whitespace, strip out whitespace
+    how_many_lines += 1
+Afile.close() # disconnect from the file
+print(&quot;\nFile has &quot;,how_many_lines,&quot; records (lines)&quot;)
+print(&quot;The list is: &quot;,end=&quot;&quot;)
+print(xy) # the list
+for pair in xy:  # parse into x and y
+    x.append(float(pair[0]))
+    y.append(float(pair[1]))
+# verify parsed
+for i in range (0,how_many_lines,1):
+    print(&quot;x = &quot;,x[i],&quot; y = &quot;,y[i])
+# now the actual integration
+accumulated_area = 0 # an accumulator
+for i in range(0,how_many_lines-1,1): #index stops at n-1 things because each panel evaluated at both ends
+    delta_x = x[i+1]-x[i]
+    height =(y[i+1]+y[i])/2.0
+    accumulated_area += height*delta_x
+print(&quot;Area = &quot;,accumulated_area)  # report the result
+
+</code></pre>
+
+<pre><code>1.0  1.543 
+1.1  1.668 
+1.2  1.811 
+1.3  1.971 
+1.4  2.151 
+1.5  2.352 
+1.6  2.577 
+1.7  2.828 
+1.8  3.107
+File has  9  records (lines)
+The list is: [['1.0', '1.543'], ['1.1', '1.668'], ['1.2', '1.811'], ['1.3', '1.971'], ['1.4', '2.151'], ['1.5', '2.352'], ['1.6', '2.577'], ['1.7', '2.828'], ['1.8', '3.107']]
+x =  1.0  y =  1.543
+x =  1.1  y =  1.668
+x =  1.2  y =  1.811
+x =  1.3  y =  1.971
+x =  1.4  y =  2.151
+x =  1.5  y =  2.352
+x =  1.6  y =  2.577
+x =  1.7  y =  2.828
+x =  1.8  y =  3.107
+Area =  1.7683000000000002
+</code></pre>
+<p>Cool, it seems to work -- now tidy the code a bit by suppressing extra outputs</p>
+<pre><code class="python"># My Tabular Integration
+# Integrate a table of values using Trapezoidal Panels
+xy = [] # null list to store the lines
+x  = [] # a null list for the first column
+y  = [] # a null list for the second column
+Afile = open(&quot;MyTableOfData.txt&quot;,&quot;r&quot;) # open a connection to the file; set to &quot;read&quot;
+# read using a for loop, exit when at end of file  and report line count
+how_many_lines = 0 # start our counter!
+for line in Afile:
+    ##print(line,end=&quot;&quot;)
+    xy.append([str(n) for n in line.strip().split()]) # append line to xy, split the line on whitespace, strip out whitespace
+    how_many_lines += 1
+Afile.close() # disconnect from the file
+print(&quot;\nRecords read =: &quot;,how_many_lines)
+##print(&quot;The list is: &quot;,end=&quot;&quot;)
+##print(xy) # the list
+for pair in xy:  # parse into x and y
+    x.append(float(pair[0]))
+    y.append(float(pair[1]))
+# verify parsed
+for i in range (0,how_many_lines,1):
+    print(&quot;x = &quot;,x[i],&quot; y = &quot;,y[i])
+# now the actual integration
+accumulated_area = 0 # an accumulator
+for i in range(0,how_many_lines-1,1): #index stops at n-1 things because each panel evaluated at both ends
+    delta_x = x[i+1]-x[i]
+    height =(y[i+1]+y[i])/2.0
+    accumulated_area += height*delta_x
+print(&quot;Area = &quot;,accumulated_area)  # report the result
+</code></pre>
+
+<pre><code>Records read =:  9
+x =  1.0  y =  1.543
+x =  1.1  y =  1.668
+x =  1.2  y =  1.811
+x =  1.3  y =  1.971
+x =  1.4  y =  2.151
+x =  1.5  y =  2.352
+x =  1.6  y =  2.577
+x =  1.7  y =  2.828
+x =  1.8  y =  3.107
+Area =  1.7683000000000002
+</code></pre>
+<p>Realistically the only other simple integration method for tabular data is the rectangular rule, either using the left edge of a panel or the right edge of a panel (and I suppose you could do both and average the result which would be the trapezoidal method).</p>
+<h2 id="exercises_1">Exercises</h2>
+<p>1)  Approximate <script type="math/tex">\int_0^2 f(x) dx</script> from the tabulation in the Table below:</p>
+<pre><code>x     f(x)
+0.00  1.0000 
+0.12  0.8869 
+0.53  0.5886 
+0.87  0.4190 
+1.08  0.3396 
+1.43  0.2393 
+2.00  0.1353
+</code></pre>
+<pre><code class="python">#
+</code></pre>
+
+<p>2) The table below is a tabulation of various values of the hyperbolic cosine function. </p>
+<pre><code>x     cosh(x)
+1.0  1.54308063481524  
+1.1   1.66851855382226  
+1.2   1.81065556732437  
+1.3   1.97091423032663  
+1.4   2.15089846539314  
+1.5   2.35240961524325  
+1.6   2.57746447119489  
+1.7   2.82831545788997  
+1.8   3.10747317631727  
+2.0   3.76219569108363  
+2.2   4.56790832889823  
+2.4   5.55694716696551  
+2.6   6.76900580660801  
+2.8   8.25272841686113  
+3.0   10.0676619957778  
+3.3   13.5747610440296  
+3.6   18.3127790830626  
+3.9   24.711345508488  
+4.2   33.3506633088728  
+4.6   49.7471837388392  
+5.0   74.2099485247878  
+5.5   122.348009517829  
+6.0   201.715636122456  
+7.0   548.317035155212  
+8.0   1490.47916125218  
+9.0   4051.54202549259
+</code></pre>
+<p>Approximate <script type="math/tex">\int_1^{9.0} cosh(x) dx</script> from the tabulation above.</p>
+<h1 id="_1"></h1>
+<p>3) The table below is a tabulation of various values of the hyperbolic cosine function. </p>
+<pre><code>x     cosh(x)
+1.0  1.54308063481524  
+1.1   1.66851855382226  
+1.2   1.81065556732437  
+1.3   1.97091423032663  
+1.4   2.15089846539314  
+1.5   2.35240961524325  
+1.6   2.57746447119489  
+1.7   2.82831545788997  
+1.8   3.10747317631727  
+2.0   3.76219569108363  
+2.2   4.56790832889823  
+2.4   5.55694716696551  
+2.6   6.76900580660801  
+2.8   8.25272841686113  
+3.0   10.0676619957778  
+3.3   13.5747610440296  
+3.6   18.3127790830626  
+3.9   24.711345508488  
+4.2   33.3506633088728  
+4.6   49.7471837388392  
+5.0   74.2099485247878  
+5.5   122.348009517829  
+6.0   201.715636122456  
+7.0   548.317035155212  
+8.0   1490.47916125218  
+9.0   4051.54202549259
+</code></pre>
+<p>Approximate <script type="math/tex">\int_1^{4.2} cosh(x) dx</script> from the tabulation above.  Briefly explain how you handle starting and stopping the integration from values that are intermediate and are tabulated.</p>
+<pre><code class="python">#
+</code></pre>
+
+<p>4) (Advanced) The table below is a tabulation of various values of the hyperbolic cosine function. </p>
+<pre><code>x     cosh(x)
+1.0  1.54308063481524  
+1.1   1.66851855382226  
+1.2   1.81065556732437  
+1.3   1.97091423032663  
+1.4   2.15089846539314  
+1.5   2.35240961524325  
+1.6   2.57746447119489  
+1.7   2.82831545788997  
+1.8   3.10747317631727  
+2.0   3.76219569108363  
+2.2   4.56790832889823  
+2.4   5.55694716696551  
+2.6   6.76900580660801  
+2.8   8.25272841686113  
+3.0   10.0676619957778  
+3.3   13.5747610440296  
+3.6   18.3127790830626  
+3.9   24.711345508488  
+4.2   33.3506633088728  
+4.6   49.7471837388392  
+5.0   74.2099485247878  
+5.5   122.348009517829  
+6.0   201.715636122456  
+7.0   548.317035155212  
+8.0   1490.47916125218  
+9.0   4051.54202549259
+</code></pre>
+<p>Approximate <script type="math/tex">\int_1^{4.0} cosh(x) dx</script> from the tabulation above.  Explain how handled working with values that fall between tabulated values.</p>
+<h1 id="_2"></h1>
+<h1 id="references">References</h1>
+<ul>
+<li>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html">https://rstudio-pubs-static.s3.amazonaws.com/286315_f00cf07beb3945d2a0260d6eaecb5d36.html</a></p>
+</li>
+<li>
+<p>Lagrangian Interpolation (Video) <a href="https://www.youtube.com/watch?v=_zK_KhHW6og">https://www.youtube.com/watch?v=_zK_KhHW6og</a></p>
+</li>
+<li>
+<p>Lagrange Polynomials <a href="https://en.wikipedia.org/wiki/Lagrange_polynomial">https://en.wikipedia.org/wiki/Lagrange_polynomial</a></p>
+</li>
+</ul>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

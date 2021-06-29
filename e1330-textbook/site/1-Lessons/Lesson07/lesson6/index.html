@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lesson 7 - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson00/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson08/lesson7/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation and Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson11/lesson11/">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson12/lesson12/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson13/lesson13/">Lesson 13</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab13/Lab13_Dev/">Laboratory 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson15/lesson15/">Lesson 15</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab15/Lab15_Dev/">Laboratory 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab16/Lab16_Dev/">Laboratory 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson17/lesson17/">Lesson 17</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab17/Lab17_Dev/">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-Homework/ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES3/es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ConcreteStrength/ConcreteStrength-Project/">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../../8-Labs/Lab6/Lab6_Dev/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../../8-Labs/Lab7/Lab7_Dev/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</a></li>
+            <li><a href="#lesson-6-classes-objects-and-file-handling">Lesson 6 Classes, Objects, and File Handling:</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#classes-and-objects">Classes and Objects</a></li>
+        <li class="main "><a href="#an-example">An Example:</a></li>
+            <li><a href="#notes">Notes:</a></li>
+        <li class="main "><a href="#files-and-filesystems">Files and Filesystems</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#example">Example</a></li>
+            <li><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</h1>
+<p>Last GitHub Commit Date: 31 January 2021</p>
+<h2 id="lesson-6-classes-objects-and-file-handling">Lesson 6 Classes, Objects, and File Handling:</h2>
+<ul>
+<li>Classes and Objects</li>
+<li>Files<ul>
+<li>Create (new), Open (existing)</li>
+<li>Read from ....</li>
+<li>Write to ...</li>
+<li>Close (save)</li>
+<li>Delete </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="special-script-blocks">Special Script Blocks</h3>
+<pre><code class="python">%%html
+&lt;!--Script block to left align Markdown Tables--&gt;
+&lt;style&gt;
+  table {margin-left: 0 !important;}
+&lt;/style&gt;
+</code></pre>
+
+<!--Script block to left align Markdown Tables-->
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<hr />
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>To understand the use of classes and objects to do effective coding in Python </li>
+<li>To understand the basic idea of how to manipulate the data in a file using file handling options in Python </li>
+</ul>
+<h2 id="classes-and-objects">Classes and Objects</h2>
+<p>In object-oriented programming, a <strong><em>class</em></strong> is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods). In many languages, the class name is used as the name for the class (the template itself), the name for the default constructor of the class (a subroutine that creates objects), and as the type of objects generated by instantiating the class; these distinct concepts are easily conflated.</p>
+<p>When an <strong><em>object</em></strong> is created by a constructor of the class, the resulting object is called an instance of the class, and the member variables specific to the object are called instance variables, to contrast with the class variables shared across the class.</p>
+<p>Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by its class) for modifying its state.</p>
+<p>Class definitions, like function definitions (def statements) must be executed before they have any effect. (You could conceivably place a class definition in a branch of an if statement, or inside a function.)</p>
+<p>In practice, the statements inside a class definition will usually be function definitions, but other statements are allowed, and sometimes useful — we’ll come back to this later. The function definitions inside a class normally have a peculiar form of argument list, dictated by the calling conventions for methods — again, this is explained later.</p>
+<p>When a class definition is entered, a new namespace is created, and used as the local scope — thus, all assignments to local variables go into this new namespace. In particular, function definitions bind the name of the new function here.</p>
+<p>When a class definition is left normally (via the end), a class object is created. This is basically a wrapper around the contents of the namespace created by the class definition; we’ll learn more about class objects in the next section. The original local scope (the one in effect just before the class definition was entered) is reinstated, and the class object is bound here to the class name given in the class definition header (ClassName in the example).</p>
+<h3 id="what-is-an-object">What is an object?</h3>
+<p>An object is simply a collection of data (variables) and methods (functions) that act on those data. Similarly, a class is a blueprint for that object.</p>
+<p>We can think of class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows etc. Based on these descriptions we build the house. House is the object.</p>
+<p>As many houses can be made from a house's blueprint, we can create many objects from a class. An object is also called an instance of a class and the process of creating this object is called instantiation</p>
+<p>Learn more at 
+1. https://docs.python.org/3/tutorial/classes.html 
+2. https://en.wikipedia.org/wiki/Class_(computer_programming)</p>
+<h1 id="an-example">An Example:</h1>
+<p>Write a class named '<strong>Tax</strong>' to calculate the state tax (in dollars) of Employees at Texas Tech University based on their annual salary.<br />
+The state tax is 16% if the annual salary is below 80,000 dollars and 22% if the salary is more than 80,000 dollars. </p>
+<table>
+<thead>
+<tr>
+<th>Employee</th>
+<th>Annual salary (dollars)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bob</td>
+<td>150,000</td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>78,000</td>
+</tr>
+<tr>
+<td>John</td>
+<td>55,000</td>
+</tr>
+<tr>
+<td>Danny</td>
+<td>175,000</td>
+</tr>
+</tbody>
+</table>
+<h4 id="notes">Notes:</h4>
+<ol>
+<li>Use docstrings to describe the purpose of the class.</li>
+<li>Use if....else conditional statements within the method of the class to choose the relevant tax % based on the annual salary.</li>
+<li>Create an object for employee and display the output as shown below.</li>
+</ol>
+<p>Bob's tax amount (in dollars): <strong>AMOUNT</strong><br />
+Mary's tax amount (in dollars): <strong>AMOUNT</strong><br />
+John's tax amount (in dollars): <strong>AMOUNT</strong><br />
+Danny's tax amount (in dollars): <strong>AMOUNT</strong> </p>
+<pre><code class="python">class Tax:
+    &quot;&quot;&quot;This class calculates the tax amount based on the annual salary and the state tax %&quot;&quot;&quot;
+    def __init__(self, salary): # here is the instantiation constructor
+        self.salary = salary
+
+    def taxamount(self):   # here is a method (function) that can operate on the class once created
+        if self.salary &lt; 80000:
+            return self.salary*(16/100)
+        else: 
+            return self.salary*(22/100)
+</code></pre>
+
+<pre><code class="python">bob = Tax(150000)
+dir(bob)
+</code></pre>
+
+<pre><code>['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ 'salary',
+ 'taxamount']
+</code></pre>
+<pre><code class="python">bob = Tax(150000) # objects constructed using Tax class
+mary = Tax(78000)
+john = Tax(55000)
+danny = Tax(175000)
+</code></pre>
+
+<pre><code class="python">dir(Tax)
+</code></pre>
+
+<pre><code>['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ 'taxamount']
+</code></pre>
+<pre><code class="python">dir(mary)
+</code></pre>
+
+<pre><code>['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ 'salary',
+ 'taxamount']
+</code></pre>
+<pre><code class="python">print(&quot;bobz salary &quot;, bob.salary )
+
+print(&quot;Bob's tax amount (in dollars):&quot;, bob.taxamount()  )
+print(&quot;Mary's tax amount (in dollars):&quot;, mary.taxamount())  
+print(&quot;John's tax amount (in dollars):&quot;, john.taxamount())  
+print(&quot;Danny's tax amount (in dollars):&quot;, danny.taxamount())
+</code></pre>
+
+<pre><code>bobz salary  150000
+Bob's tax amount (in dollars): 33000.0
+Mary's tax amount (in dollars): 12480.0
+John's tax amount (in dollars): 8800.0
+Danny's tax amount (in dollars): 38500.0
+</code></pre>
+<p>Numbers, strings, lists, and dictionaries are all objects that are instances of a parent class</p>
+<pre><code class="python">print(type(0))
+</code></pre>
+
+<pre><code>&lt;class 'int'&gt;
+</code></pre>
+<pre><code class="python">print(type(&quot;&quot;)) 
+</code></pre>
+
+<pre><code>&lt;class 'str'&gt;
+</code></pre>
+<pre><code class="python">print(type([1, 2, 3, 4]))
+</code></pre>
+
+<pre><code>&lt;class 'list'&gt;
+</code></pre>
+<p>To get more information about the built-in classes and objects, use dir( ) and help( ) functions</p>
+<pre><code class="python">print(dir(int))
+</code></pre>
+
+<pre><code class="python">print(help(&quot;&quot;))
+</code></pre>
+
+<p>User-defined classes: Defining docstrings</p>
+<pre><code class="python">class Dog:
+    &quot;&quot;&quot;This class enables the dog to say its name and age in dog years&quot;&quot;&quot;
+    def __init__(self, name, years):
+        &quot;&quot;&quot;This function contains all the necessary attributes&quot;&quot;&quot;
+        self.name = name
+        self.years = years
+        self.dog_age = years*9
+
+    def sound(self):
+        &quot;&quot;&quot;This function enables the dog to speak&quot;&quot;&quot;
+        print(&quot;woof! I am {} and I am {} dog years old! woof!&quot;.format(self.name, self.dog_age))
+
+fudge = Dog(&quot;Fudge&quot;, 2)
+maple = Dog(&quot;Maple&quot;, 1.5)
+fudge.sound()
+maple.sound()
+</code></pre>
+
+<pre><code>woof! I am Fudge and I am 18 dog years old! woof!
+woof! I am Maple and I am 13.5 dog years old! woof!
+</code></pre>
+<pre><code class="python">help(Dog)
+</code></pre>
+
+<pre><code>Help on class Dog in module __main__:
+
+class Dog(builtins.object)
+ |  Dog(name, years)
+ |  
+ |  This class enables the dog to say its name and age in dog years
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, name, years)
+ |      This function contains all the necessary attributes
+ |  
+ |  sound(self)
+ |      This function enables the dog to speak
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+</code></pre>
+<h1 id="files-and-filesystems">Files and Filesystems</h1>
+<h2 id="background">Background</h2>
+<p>A computer file is a computer resource for recording data discretely (not in the secretive context, but specifically somewhere on a piece of hardware) in a computer storage device. Just as words can be written to paper, so can information be written to a computer file. Files can be edited and transferred through the internet on that particular computer system.</p>
+<p>There are different types of computer files, designed for different purposes. A file may be designed to store a picture, a written message, a video, a computer program, or a wide variety of other kinds of data. Some types of files can store several types of information at once.</p>
+<p>By using computer programs, a person can open, read, change, save, and close a computer file. Computer files may be reopened, modified, and copied an arbitrary number of times.</p>
+<p>Typically, files are organised in a file system, which keeps track of where the files are located on disk and enables user access. </p>
+<h3 id="file-system">File system</h3>
+<p>In computing, a file system or filesystem, controls how data is stored and retrieved. 
+Without a file system, data placed in a storage medium would be one large body of data with no way to tell where one piece of data stops and the next begins. 
+By separating the data into pieces and giving each piece a name, the data is isolated and identified. 
+Taking its name from the way paper-based data management system is named, each group of data is called a “file”. 
+The structure and logic rules used to manage the groups of data and their names is called a “file system”.</p>
+<h3 id="path">Path</h3>
+<p>A path, the general form of the name of a file or directory, specifies a unique location in a file system. A path points to a file system location by following the directory tree hierarchy expressed in a string of characters in which path components, separated by a delimiting character, represent each directory. The delimiting character is most commonly the slash (”/”), the backslash character (”\”), or colon (”:”), though some operating systems may use a different delimiter.
+Paths are used extensively in computer science to represent the directory/file relationships common in modern operating systems, and are essential in the construction of Uniform Resource Locators (URLs). Resources can be represented by either absolute or relative paths.
+As an example consider the following two files:</p>
+<ol>
+<li>/Users/theodore/MyGit/@atomickitty/hurri-sensors/.git/Guest.conf </li>
+<li>/etc/apache2/users/Guest.conf</li>
+</ol>
+<p>They both have the same file name, but are located on different paths. 
+Failure to provide the path when addressing the file can be a problem. 
+Another way to interpret is that the two unique files actually have different names, and only part of those names is common (Guest.conf)
+The two names above (including the path) are called fully qualified filenames (or absolute names), a relative path (usually relative to the file or program of interest depends on where in the directory structure the file lives. 
+If we are currently in the .git directory (the first file) the path to the file is just the filename.</p>
+<p>We have experienced path issues with dependencies on .png files - in general your JupyterLab notebooks on CoCalc can only look at the local directory which is why we have to copy files into the directory for things to work.</p>
+<h3 id="file-types">File Types</h3>
+<ol>
+<li>
+<p>Text Files. Text files are regular files that contain information readable by the user. This information is stored in ASCII. You can display and print these files. The lines of a text file must not contain NULL characters, and none can exceed a prescribed (by architecture) length, including the new-line character.  The term text file does not prevent the inclusion of control or other nonprintable characters (other than NUL). Therefore, standard utilities that list text files as inputs or outputs are either able to process the special characters gracefully or they explicitly describe their limitations within their individual sections.</p>
+</li>
+<li>
+<p>Binary Files. Binary files are regular files that contain information readable by the computer. Binary files may be executable files that instruct the system to accomplish a job. Commands and programs are stored in executable, binary files. Special compiling programs translate ASCII text into binary code.  The only difference between text and binary files is that text files have lines of less than some length, with no NULL characters, each terminated by a new-line character.</p>
+</li>
+<li>
+<p>Directory Files. Directory files contain information the system needs to access all types of files, but they do not contain the actual file data. As a result, directories occupy less space than a regular file and give the file system structure flexibility and depth. Each directory entry represents either a file or a subdirectory. Each entry contains the name of the file and the file's index node reference number (i-node). The i-node points to the unique index node assigned to the file. The i-node describes the location of the data associated with the file. Directories are created and controlled by a separate set of commands.</p>
+</li>
+</ol>
+<h3 id="file-manipulation">File Manipulation</h3>
+<p>For this lesson we examine just a handfull of file manipulations which are quite useful. Files can be "created","read","updated", or "deleted" (CRUD). </p>
+<h4 id="example-create-a-file-write-to-it">Example: Create a file, write to it.</h4>
+<p>Below is an example of creating a file that does not yet exist.
+The script is a bit pendandic on purpose.</p>
+<p>First will use some system commands to view the contents of the local directory</p>
+<pre><code class="python">import sys
+# on a Mac/Linux
+! rm -rf myfirstfile.txt # delete file if it exists
+! pwd # list name of working directory, note it includes path, so it is an absolute path
+# on Winderz
+#! del myfirstfile.txt # delete file if it exists
+#! %pwd # list name of working directory, note it includes path, so it is an absolute path
+</code></pre>
+
+<pre><code>/home/sensei/1330-textbook-webroot/docs/lesson6
+</code></pre>
+<pre><code class="python"># on a Mac/Linux
+! ls -l # list contents of working directory
+# on Winderz
+#! dir # list contents of working directory
+</code></pre>
+
+<pre><code>total 752
+-rw-rw-r-- 1 sensei sensei   9353 Feb 17 17:31 ClassObjects_FileHandling_LabSession.ipynb
+-rw-rw-r-- 1 sensei sensei  38589 Feb 17 17:31 ClassObjects_FileHandling_LectureSession.ipynb
+-rw-rw-r-- 1 sensei sensei 627474 Feb 17 17:31 ENGR-1330-Lesson6-Dev.html
+-rw-rw-r-- 1 sensei sensei  36134 Feb 17 17:31 ENGR-1330-Lesson6-Dev.ipynb
+-rw-rw-r-- 1 sensei sensei    524 Feb 17 17:31 ReadingFile.txt
+-rw-rw-r-- 1 sensei sensei  36342 Feb 17 17:34 lesson6.ipynb
+-rw-rw-r-- 1 sensei sensei    153 Feb 17 17:31 sample-Copy1.txt
+-rw-rw-r-- 1 sensei sensei    111 Feb 17 17:31 sample.txt
+</code></pre>
+<pre><code class="python"># create file example
+externalfile = open(&quot;myfirstfile.txt&quot;,'w') # create connection to file, set to write (w), file does not need to exist
+mymessage = 'message in a bottle' #some object to write, in this case a string
+externalfile.write(mymessage)# write the contents of mymessage to the file
+externalfile.close() # close the file connection
+</code></pre>
+
+<p>At this point our new file should exist, lets list the directory and see if that is so</p>
+<pre><code class="python"># on a Mac/Linux
+! ls -l # list contents of working directory
+# on Winderz
+#! dir # list contents of working directory
+</code></pre>
+
+<pre><code>total 756
+-rw-rw-r-- 1 sensei sensei   9353 Feb 17 17:31 ClassObjects_FileHandling_LabSession.ipynb
+-rw-rw-r-- 1 sensei sensei  38589 Feb 17 17:31 ClassObjects_FileHandling_LectureSession.ipynb
+-rw-rw-r-- 1 sensei sensei 627474 Feb 17 17:31 ENGR-1330-Lesson6-Dev.html
+-rw-rw-r-- 1 sensei sensei  36134 Feb 17 17:31 ENGR-1330-Lesson6-Dev.ipynb
+-rw-rw-r-- 1 sensei sensei    524 Feb 17 17:31 ReadingFile.txt
+-rw-rw-r-- 1 sensei sensei  36342 Feb 17 17:34 lesson6.ipynb
+-rw-rw-r-- 1 sensei sensei     19 Feb 17 17:35 myfirstfile.txt
+-rw-rw-r-- 1 sensei sensei    153 Feb 17 17:31 sample-Copy1.txt
+-rw-rw-r-- 1 sensei sensei    111 Feb 17 17:31 sample.txt
+</code></pre>
+<p>Sure enough, its there, we will use a <code>bash</code> command <code>cat</code> to look at the contents of the file.</p>
+<pre><code class="python">! cat myfirstfile.txt # Mac/Linux
+# ! type myfirstfile.txt # Winderz
+</code></pre>
+
+<pre><code>message in a bottle
+</code></pre>
+<h4 id="example-read-from-an-existing-file">Example: Read from an existing file.</h4>
+<p>We will continue using the file we just made, and read from it the example is below</p>
+<pre><code class="python"># read file example
+externalfile = open(&quot;myfirstfile.txt&quot;,'r') # create connection to file, set to read (r), file must exist
+silly_string = externalfile.read() # read the contents
+externalfile.close() # close the file connection
+print(silly_string)
+</code></pre>
+
+<pre><code>message in a bottle
+</code></pre>
+<h4 id="example-update-a-file">Example: Update a file.</h4>
+<p>This example continues with our same file, but we will now add contents without destroying existing contents. The keyword is <code>append</code></p>
+<pre><code class="python">externalfile = open(&quot;myfirstfile.txt&quot;,'a') # create connection to file, set to append (a), file does not need to exist
+externalfile.write('\n') # adds a newline character
+what_to_add = 'I love rock-and-roll, put another dime in the jukebox baby ... \n' 
+externalfile.write(what_to_add) # add a string including the linefeed
+what_to_add = '... the waiting is the hardest part \n' 
+externalfile.write(what_to_add) # add a string including the linefeed
+mylist = [1,2,3,4,5] # a list of numbers
+what_to_add = ','.join(map(repr, mylist)) + &quot;\n&quot; # one way to write the list
+externalfile.write(what_to_add)
+what_to_add = ','.join(map(repr, mylist[0:len(mylist)])) + &quot;\n&quot; # another way to write the list
+externalfile.write(what_to_add)
+externalfile.close()
+</code></pre>
+
+<p>As before we can examine the contents using a shell command sent from the notebook.</p>
+<pre><code class="python">! cat myfirstfile.txt
+# ! type myfirstfile.txt # Winderz
+</code></pre>
+
+<pre><code>message in a bottle
+I love rock-and-roll, put another dime in the jukebox baby ... 
+... the waiting is the hardest part 
+1,2,3,4,5
+1,2,3,4,5
+</code></pre>
+<h4 id="example-delete-a-file">Example: Delete a file</h4>
+<p>Delete can be done by a system call as we did above to clear the local directory</p>
+<p>In a JupyterLab notebook, we can either use</p>
+<pre><code>import sys
+! rm -rf myfirstfile.txt # delete file if it exists
+</code></pre>
+<p>or</p>
+<pre><code>import os
+os.remove("myfirstfile.txt")
+</code></pre>
+<p>they both have same effect, both equally dangerous to your filesystem.</p>
+<p>Learn more about CRUD with text files at https://www.guru99.com/reading-and-writing-files-in-python.html</p>
+<p>Learn more about file delete at https://www.dummies.com/programming/python/how-to-delete-a-file-in-python/</p>
+<pre><code class="python">import os
+file2kill = &quot;myfirstfile.txt&quot;
+try:
+    os.remove(file2kill) # file must exist or will generate an exception
+except:
+    pass # example of using pass to improve readability
+print(file2kill, &quot; missing or deleted !&quot;)
+</code></pre>
+
+<pre><code>myfirstfile.txt  missing or deleted !
+</code></pre>
+<p>A little discussion on the part where we wrote numbers</p>
+<pre><code>what_to_add = ','.join(map(repr, mylist[0:len(mylist)])) + "\n"
+</code></pre>
+<p>Here are descriptions of the two functions <code>map</code> and <code>repr</code></p>
+<p><code>map(function, iterable, ...)</code> Apply <code>function</code> to every item of iterable and return a list of the results. 
+If additional iterable arguments are passed, function must take that many arguments and is applied to the items from all iterables in parallel. 
+If one iterable is shorter than another it is assumed to be extended with None items. 
+If function is None, the identity function is assumed; if there are multiple arguments, <code>map()</code> returns a list consisting of tuples containing the corresponding items from all iterables (a kind of transpose operation). 
+The iterable arguments may be a sequence or any iterable object; the result is always a list.</p>
+<p><code>repr(object)</code> Return a string containing a printable representation of an object. 
+This is the same value yielded by conversions (reverse quotes). 
+It is sometimes useful to be able to access this operation as an ordinary function. 
+For many types, this function makes an attempt to return a string that would yield an object with the same value when passed to <code>eval()</code>, otherwise the representation is a string enclosed in angle brackets that contains the name of the type of the object together with additional information often including the name and address of the object. 
+A class can control what this function returns for its instances by defining a <code>repr()</code> method.</p>
+<p>What they do in this script is important. 
+The statement:</p>
+<pre><code>what_to_add = ’,’.join(map(repr, mylist[0:len(mylist)])) + "\n"
+</code></pre>
+<p>is building a string that will be comprised of elements of mylist[0:len(mylist)].
+The <code>repr()</code> function gets these elements as they are represented in the computer, the delimiter a comma is added using the join method in Python, and because everything is now a string the</p>
+<pre><code>... + "\n"
+</code></pre>
+<p>puts a linefeed character at the end of the string so the output will start a new line the next time something is written.</p>
+<h2 id="example">Example</h2>
+<ul>
+<li>create a text file, name it <strong>"MyFavoriteQuotation"</strong>.</li>
+<li>Write <strong>your favorite quotation</strong> in the file.</li>
+<li>Read the file.</li>
+<li>Add this string to it in a new line : "And that's something I wish I had said..."</li>
+<li>Show the final outcome.</li>
+</ul>
+<pre><code class="python"># create the &quot;My Favorite Quotation&quot; file:
+externalfile = open(&quot;MyFavoriteQuotation.txt&quot;,'w')         # create connection to file, set to write (w)
+myquotation = 'The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness. For he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy my brothers. And you will know my name is the Lord when I lay my vengeance upon you.' #My choice: quotation from Pulp Fiction
+externalfile.write(myquotation)# write the contents of mymessage to the file
+externalfile.close() # close the file connection
+#Let's read the file
+! cat MyFavoriteQuotation.txt 
+# Let's add the string
+externalfile = open(&quot;MyFavoriteQuotation.txt&quot;,'a')  #create connection to file, set to append (a)
+externalfile.write('\n') # adds a newline character
+what_to_add = &quot;And that's something I wish I had said ... \n&quot;
+externalfile.write(what_to_add)
+externalfile.close()
+#Let's read the file one last time
+! cat MyFavoriteQuotation.txt 
+# ! type MyFavoriteQuotation # Winderz
+</code></pre>
+
+<pre><code>The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness. For he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy my brothers. And you will know my name is the Lord when I lay my vengeance upon you.The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness. For he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy my brothers. And you will know my name is the Lord when I lay my vengeance upon you.
+And that's something I wish I had said ...
+</code></pre>
+<h2 id="references">References</h2>
+<p>Overland, B. (2018). Python Without Fear. Addison-Wesley ISBN 978-0-13-468747-6. </p>
+<p>Grus, Joel (2015). Data Science from Scratch: First Principles with Python O’Reilly
+Media. Kindle Edition.</p>
+<p>Precord, C. (2010) wxPython 2.8 Application Development Cookbook Packt Publishing Ltd. Birmingham , B27 6PA, UK ISBN 978-1-849511-78-0.</p>
+<pre><code class="python"># Preamble script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>atomickitty
+compthink
+/opt/jupyterhub/bin/python3
+3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0]
+sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
+</code></pre>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

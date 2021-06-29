@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Laboratory 15 - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson00/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson07/lesson6/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson08/lesson7/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation and Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson11/lesson11/">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson12/lesson12/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson13/lesson13/">Lesson 13</a>
+</li>
+            
+<li >
+    <a href="../../Lab13/Lab13_Dev/">Laboratory 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson15/lesson15/">Lesson 15</a>
+</li>
+            
+<li class="active">
+    <a href="./">Laboratory 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+            
+<li >
+    <a href="../../Lab16/Lab16_Dev/">Laboratory 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson17/lesson17/">Lesson 17</a>
+</li>
+            
+<li >
+    <a href="../../Lab17/Lab17_Dev/">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-Homework/ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES3/es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ConcreteStrength/ConcreteStrength-Project/">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../../1-Lessons/Lesson15/lesson15/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../../lesson0/lesson0/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laboratory-15-avoiding-data-alexithymia-or-perks-of-using-descriptive-statistics">Laboratory 15: "Avoiding Data Alexithymia" or "Perks of Using Descriptive Statistics</a></li>
+            <li><a href="#full-name">Full name:</a></li>
+            <li><a href="#r">R#:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook:</a></li>
+            <li><a href="#date">Date:</a></li>
+        <li class="main "><a href="#descriptive-statistics-with-python">Descriptive Statistics with Python</a></li>
+            <li><a href="#example1">Example1:</a></li>
+            <li><a href="#example">Example:</a></li>
+            <li><a href="#exercise-why-descriptive-statistics">Exercise: Why Descriptive Statistics?  </a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>Download</strong> (right-click, save target as ...) this jupyterlab notebook from:</p>
+<p><a href="https://3.137.111.182/engr-1330-webbook/8-Labs/Lab15/Lab15_Dev.ipynb">https://3.137.111.182/engr-1330-webbook/8-Labs/Lab15/Lab15_Dev.ipynb</a></p>
+<p><strong>Download</strong> (right-click, save target as ...) AirTraffic database file from: </p>
+<p><a href="https://3.137.111.182/engr-1330-webbook/8-Labs/Lab15/AirTraffic.csv">https://3.137.111.182/engr-1330-webbook/8-Labs/Lab15/AirTraffic.csv</a></p>
+<p><strong>Download</strong> (right-click, save target as ...) Lubbock_Oct_T&amp;P database file from: </p>
+<p><a href="https://3.137.111.182/engr-1330-webbook/8-Labs/Lab15/Lubbock_Oct_T&amp;P.csv">https://3.137.111.182/engr-1330-webbook/8-Labs/Lab15/Lubbock_Oct_T&amp;P.csv</a></p>
+<h1 id="laboratory-15-avoiding-data-alexithymia-or-perks-of-using-descriptive-statistics"><font color=darkred>Laboratory 15: "Avoiding Data Alexithymia" or "Perks of Using Descriptive Statistics</font></h1>
+<pre><code class="python"># Preamble script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>DESKTOP-EH6HD63
+desktop-eh6hd63\farha
+C:\Users\Farha\Anaconda3\python.exe
+3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]
+sys.version_info(major=3, minor=7, micro=4, releaselevel='final', serial=0)
+</code></pre>
+<h2 id="full-name">Full name:</h2>
+<h2 id="r">R#:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook:</h2>
+<h2 id="date">Date:</h2>
+<hr />
+<h1 id="descriptive-statistics-with-python"><font color=purple>Descriptive Statistics with Python</font></h1>
+<p><img alt="" src="https://sd.keepcalms.com/i/keep-calm-and-study-descriptive-statistics.png" /></p>
+<pre><code class="python"># Let's import the necessary libraries:
+import numpy as np
+import pandas as pd
+import statistics
+import scipy.stats
+import matplotlib.pyplot as plt 
+</code></pre>
+
+<hr />
+<h3 id="example1">Example1:</h3>
+<p><strong>1. Read the "AirTraffic.csv" file as a dataframe and check its first few rows.</strong><br>
+<strong>2. Use descriptive functions of the Pandas library to learn more about the dataframe</strong><br>
+<strong>3. Compute the arithmetic and harmonic mean of 'Distance'.</strong><br>
+<strong>4. Find the median of 'Distance'.</strong><br>
+<strong>5. Find the range of 'Distance'.</strong><br>
+<strong>6. Find the IQR of 'Distance'.</strong><br>
+<strong>7. Use descriptive functions of the Pandas library to get a 5-number summary of 'Distance'. Plot a box plot without outliers.</strong><br>
+<strong>8. Find the variance and standard deviation of 'Distance'.</strong><br>
+<strong>9. Find the skewness and kurtosis 'Distance'.</strong><br></p>
+<pre><code class="python">AT = pd.read_csv(&quot;AirTraffic.csv&quot;)         #Read the .csv file a data frame
+AT.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DISTANCE</th>
+      <th>ORIGIN_COUNTRY_NAME</th>
+      <th>DEST_COUNTRY_NAME</th>
+      <th>AIRCRAFT_GROUP</th>
+      <th>CLASS</th>
+      <th>DATA_SOURCE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>3855</td>
+      <td>United States</td>
+      <td>Germany</td>
+      <td>6</td>
+      <td>G</td>
+      <td>IF</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>5805</td>
+      <td>United States</td>
+      <td>Germany</td>
+      <td>6</td>
+      <td>G</td>
+      <td>IF</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>801</td>
+      <td>United States</td>
+      <td>United States</td>
+      <td>6</td>
+      <td>G</td>
+      <td>DF</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4343</td>
+      <td>United States</td>
+      <td>Germany</td>
+      <td>6</td>
+      <td>G</td>
+      <td>IF</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5142</td>
+      <td>United States</td>
+      <td>Germany</td>
+      <td>6</td>
+      <td>G</td>
+      <td>IF</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">AT.info()
+</code></pre>
+
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 118279 entries, 0 to 118278
+Data columns (total 6 columns):
+DISTANCE               118279 non-null int64
+ORIGIN_COUNTRY_NAME    118279 non-null object
+DEST_COUNTRY_NAME      118279 non-null object
+AIRCRAFT_GROUP         118279 non-null int64
+CLASS                  118279 non-null object
+DATA_SOURCE            118279 non-null object
+dtypes: int64(2), object(4)
+memory usage: 5.4+ MB
+</code></pre>
+<pre><code class="python">Distance = AT['DISTANCE']
+# Use the mean function from the statistics library
+mean = statistics.mean(Distance)
+print(&quot;The arithmetic mean distance of the 2020 flights is &quot;,round(mean,2),&quot;miles&quot;)
+hmean = statistics.harmonic_mean(Distance)
+print(&quot;The harmonic mean distance of the 2020 flights is &quot;,round(hmean,2),&quot;miles&quot;)
+</code></pre>
+
+<pre><code>The arithmetic mean distance of the 2020 flights is  1101.12 miles
+The harmonic mean distance of the 2020 flights is  220.81 miles
+</code></pre>
+<pre><code class="python">Distance = AT['DISTANCE']
+# Use the mean function from the statistics library
+median = statistics.median(Distance)
+print(&quot;The median of distance of the 2020  flights is &quot;,median,&quot;miles&quot;)
+</code></pre>
+
+<pre><code>The median of distance of the 2020  flights is  740 miles
+</code></pre>
+<pre><code class="python">Distance = AT['DISTANCE']
+Range = np.ptp(Distance) #ptp stands for Peak To Peak
+print(&quot;The range of distance of the 2020  flights is &quot;,Range,&quot;miles&quot;)
+</code></pre>
+
+<pre><code>The range of distance of the 2020  flights is  9778 miles
+
+
+C:\Users\Farha\Anaconda3\lib\site-packages\numpy\core\fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+</code></pre>
+<pre><code class="python">Distance = AT['DISTANCE']
+
+IQR = scipy.stats.iqr(Distance)
+print(&quot;The IQR of distance of the 2020  flights is &quot;,IQR,&quot;miles&quot;)
+</code></pre>
+
+<pre><code>The IQR of distance of the 2020  flights is  968.0 miles
+</code></pre>
+<pre><code class="python">Distance = AT['DISTANCE']
+Distance.describe()
+</code></pre>
+
+<pre><code>count    118279.000000
+mean       1101.120165
+std        1260.423448
+min           1.000000
+25%         335.000000
+50%         740.000000
+75%        1303.000000
+max        9779.000000
+Name: DISTANCE, dtype: float64
+</code></pre>
+<pre><code class="python">fig = plt.figure(figsize =(7, 5))
+plt.boxplot(Distance,medianprops={'linewidth': 1, 'color': 'purple'},showfliers=False)
+
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="../output_15_0.png" /></p>
+<pre><code class="python">Distance = AT['DISTANCE']
+var = statistics.variance(Distance)
+sd = statistics.stdev(Distance)
+print(&quot;The variance and standard deviation of distance of the 2020 flights is &quot;,round(var,2),&quot; and &quot;,round(sd,2),&quot; respectively&quot;)
+</code></pre>
+
+<pre><code>The variance and standard deviation of distance of the 2020 flights is  1588667.27  and  1260.42  respectively
+</code></pre>
+<pre><code class="python">Distance = AT['DISTANCE']
+skew = scipy.stats.skew(Distance)
+kurtosis = scipy.stats.kurtosis(Distance)
+print(&quot;The skewness and kurtosis of distance of the 2020 flights is &quot;,round(skew,2),&quot; and &quot;,round(kurtosis,2),&quot; respectively&quot;)
+</code></pre>
+
+<pre><code>The skewness and kurtosis of distance of the 2020 flights is  2.63  and  8.13  respectively
+</code></pre>
+<hr />
+<h3 id="example">Example:</h3>
+<p><strong>1. Read the "Lubbock_Oct_T&amp;P.csv" file as a dataframe and check its first few rows.</strong><br>
+<strong>2. Use descriptive functions of the Pandas library and explain the format of the dataframe</strong><br>
+<strong>3. Compute the arithmetic and harmonic mean of 'temperature'.</strong><br>
+<strong>4. Find the median of 'precipitation' and 'temperature'.</strong><br>
+<strong>5. Find the range and IQR of 'precipitation'.</strong><br>
+<strong>6. Find the 10th,40th, and 70th percentile of 'temperature'.</strong><br>
+<strong>7. Provide a 5-number summary of 'precipitation'. Plot a box plot without outliers. Interpret it in your own words</strong><br>
+<strong>8. Find the variance and standard deviation of 'precipitation'.</strong><br>
+<strong>9. Find the skewness and kurtosis 'precipitation'.</strong><br></p>
+<pre><code class="python">
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
+
+<pre><code class="python">
+</code></pre>
+
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/5nj4ZZWl6QwneEaBX4/source.gif" /> <br></p>
+<p><em>Here are some great reads on this topic:</em> 
+- <strong>"Python Statistics Fundamentals: How to Describe Your Data"</strong> by <strong>Mirko Stojiljković</strong> available at <em>https://realpython.com/python-statistics/</em> <br>
+- <strong>"Introduction to Descriptive Statistics and Probability for Data Science"</strong> by <strong>Abhishek Kumar</strong> available at <em>https://towardsdatascience.com/intro-to-descriptive-statistics-and-probability-for-data-science-8effec826488</em><br>
+- <strong>"Statistics for Data Science — A beginners guide to Descriptive Statistics in Python"</strong> by <strong>Angel Das</strong> available at <em>https://towardsdatascience.com/statistics-for-data-science-a-beginners-guide-to-descriptive-statistics-in-python-9e0daa30809a</em><br>
+- <strong>"Interpreting Data Using Descriptive Statistics with Python"</strong> by <strong>Deepika Singh</strong> available at <em>https://www.pluralsight.com/guides/interpreting-data-using-descriptive-statistics-python</em><br></p>
+<p><em>Here are some great videos on these topics:</em> 
+- <strong>"Descriptive Statistics Using Scipy , Numpy and Pandas in Python - Tutorial 13"</strong> by <strong>TheEngineeringWorld</strong> available at <em>https://www.youtube.com/watch?v=mWIwXqtZmd8</em> <br>
+- <strong>"Python for Data Analysis: Descriptive Statistics"</strong> by <strong>DataDaft</strong> available at <em>https://www.youtube.com/watch?v=3mELSEnGBvA</em> <br>
+- <strong>"Introduction to Descriptive Statistics"</strong> by <strong>Teresa Johnson</strong> available at <em>https://www.youtube.com/watch?v=QoQbR4lVLrs</em> <br></p>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/dNgK7Ws7y176U/200.gif" /> <br></p>
+<h2 id="exercise-why-descriptive-statistics">Exercise: Why Descriptive Statistics?  <br></h2>
+<h3 id="what-is-the-importance-and-application-of-descriptive-statistics-especially-in-engineering">What is the importance and application of descriptive statistics, especially in Engineering.</h3>
+<h4 id="make-sure-to-cite-any-resources-that-you-may-use"><em>Make sure to cite any resources that you may use.</em></h4>
+<pre><code class="python">
+</code></pre>
+
+<p><img alt="" src="https://cdn.quotes.pub/660x400/descriptive-statistics-exist-to-simplify-whi-383494.jpg" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

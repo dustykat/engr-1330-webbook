@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lesson 0 - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson07/lesson6/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson08/lesson7/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation and Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson11/lesson11/">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson12/lesson12/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson13/lesson13/">Lesson 13</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab13/Lab13_Dev/">Laboratory 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson15/lesson15/">Lesson 15</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab15/Lab15_Dev/">Laboratory 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab16/Lab16_Dev/">Laboratory 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson17/lesson17/">Lesson 17</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab17/Lab17_Dev/">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-Homework/ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES3/es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ConcreteStrength/ConcreteStrength-Project/">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../../8-Labs/Lab0/Lab0_Dev/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</a></li>
+            <li><a href="#lesson-0-introduction-to-computational-thinking-with-data-science">Lesson 0 Introduction to Computational Thinking with Data Science:</a></li>
+            <li><a href="#computational-thinking-concepts">Computational Thinking Concepts</a></li>
+            <li><a href="#data-science-and-practice">Data Science and Practice</a></li>
+            <li><a href="#jupyterlab-ipython-environment">JupyterLab (iPython) Environment</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#programming-as-a-problem-solving-process">Programming as a problem solving process</a></li>
+            <li><a href="#ccmr-approach">CCMR Approach</a></li>
+            <li><a href="#readings">Readings</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from:</p>
+<p><a href="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.ipynb">https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.ipynb</a></p>
+<h1 id="engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</h1>
+<p>Copyright © 2021 Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. <em>The contents of this book are licensed for free consumption under the following license:</em> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a>.</p>
+<p>Last GitHub Commit Date: 8 June 2021</p>
+<h2 id="lesson-0-introduction-to-computational-thinking-with-data-science">Lesson 0 Introduction to Computational Thinking with Data Science:</h2>
+<ul>
+<li>Computational thinking concepts </li>
+<li>Data science and practices </li>
+<li>JupyterLab (iPython) as a programming environment </li>
+<li>Programming as a problem solving process</li>
+<li>CCMR Approach</li>
+</ul>
+<h3 id="special-script-blocks">Special Script Blocks</h3>
+<p>In the lesson notebooks there will usually be two script blocks, identical to the ones below.  </p>
+<ul>
+<li>The first block identifies the particular computer, the user, and the python kernel in use.</li>
+<li>The second block sets markdown tables to left edge when rendering.</li>
+</ul>
+<p>I usually put both blocks at the top of the notebook, just after some kind of title block, as done here.
+Admittedly these clutter up the webbook, but are needed for structure and debugging codes; you can remove them from your copies of the notebooks if you wish!</p>
+<pre><code class="python"># Script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+! pwd
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>atomickitty
+sensei
+/home/sensei/1330-textbook-webroot/ctds-psuedocourse/docs/1-Lessons/Lesson00
+/opt/jupyterhub/bin/python3
+3.8.5 (default, Jan 27 2021, 15:41:15) 
+[GCC 9.3.0]
+sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
+</code></pre>
+<pre><code class="python">%%html
+&lt;!-- Script Block to set tables to left alignment --&gt;
+&lt;style&gt;
+  table {margin-left: 0 !important;}
+&lt;/style&gt;
+</code></pre>
+
+<!-- Script Block to set tables to left alignment -->
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<h2 id="computational-thinking-concepts">Computational Thinking Concepts</h2>
+<p>Computational thinking (CT) refers to the thought processes involved in expressing solutions as computational steps or algorithms that can be carried out by a computer. </p>
+<p>Much of what follows is borrowed from (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/).</p>
+<p>Computational thinking is taking an approach to solving problems, designing systems and understanding human behaviour that draws on concepts fundamental to computing (http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf).</p>
+<p>Computational thinking is a kind of analytical thinking:</p>
+<ul>
+<li>It shares with mathematical thinking in the general ways in which we might approach solving a problem. </li>
+<li>It shares with engineering thinking in the general ways in which we might approach designing and evaluating a large, complex system that operates within the constraints of the real world. - It shares with scientific thinking in the general ways in which we might approach understanding computability, intelligence, the mind and human behaviour.</li>
+</ul>
+<p>The essence of computational thinking is <strong>abstraction</strong> and <strong>automation</strong>. 
+In computing, we abstract notions beyond the physical dimensions of time and space. Our abstractions are extremely general because they are symbolic, where numeric abstractions are just a special case.</p>
+<h3 id="ct-foundations">CT Foundations</h3>
+<p>CT is literally a process for breaking down a problem into smaller parts, looking for patterns in the problems, identifying what kind of information is needed, developing a step-by-step solution, and implementing that solution. </p>
+<ol>
+<li>Decomposition</li>
+<li>Pattern Recognition</li>
+<li>Abstraction</li>
+<li>Algorithms</li>
+<li>System Integration (implementation)</li>
+</ol>
+<h4 id="decomposition">Decomposition</h4>
+<p>Decomposition is the process of taking a complex problem and breaking it into more manageable sub-problems. Examples include:<br />
+- Writing a paper:<br />
+ - Introduction 
+ - Body 
+ - Conclusion </p>
+<ul>
+<li>Wide-viewed (Panorama) image: </li>
+<li>Taking multiple overlapped photos </li>
+<li>Stitch them</li>
+</ul>
+<p>Decomposition often leaves a <strong>framework</strong> of sub-problems that later have to be <strong>assembled (system integration)</strong> to produce a desired solution.</p>
+<h4 id="pattern-recognition">Pattern Recognition</h4>
+<p>Refers to finding similarities, or shared characteristics of problems.  Allows a complex problem to become easier to solve. Allows use of same solution method for each occurrence of the pattern. </p>
+<p>Pattern recognition allows use of <strong>automation</strong> to process things - its a fundamental drilled shaft of CT.  It also provides a way to use analogs from old problems to address new situations; it also will require <strong>assembly (system integration)</strong> to produce a desired solution.</p>
+<h4 id="abstraction">Abstraction</h4>
+<p>Determine important characteristics of the problem and ignore characteristics that are not important. Use these characteristics to create a representation of what we are trying to solve. </p>
+<p>Books in an online bookstore</p>
+<table>
+<thead>
+<tr>
+<th align="left">Important</th>
+<th align="left">NOT important</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">title</td>
+<td align="left">Cover color</td>
+</tr>
+<tr>
+<td align="left">ISBN</td>
+<td align="left">Author’s hometown</td>
+</tr>
+<tr>
+<td align="left">Authors</td>
+<td align="left">...</td>
+</tr>
+<tr>
+<td align="left">...</td>
+<td align="left">...</td>
+</tr>
+</tbody>
+</table>
+<h4 id="algorithms">Algorithms</h4>
+<p>Step-by-step instructions of how to solve a problem (https://en.wikipedia.org/wiki/Algorithm). 
+Identifies what is to be done, and the order in which they should be done.</p>
+<p><img alt="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/algorithm.png" src="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/algorithm.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Image from https://www.newyorker.com/magazine/2021/01/18/whats-wrong-with-the-way-we-work?utm_source=pocket-newtab</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>An algorithm is a <strong>finite</strong> sequence of defined, instructions, typically to solve a class of problems or to perform a computation. Algorithms are unambiguous and are used as specifications for performing calculations, data processing, automated reasoning, and other tasks. Starting from an initial state and initial input (perhaps empty), the instructions describe a computation that, when executed, proceeds through a finite number of defined successive states, eventually producing "output" and terminating at a final ending state. The transition from one state to the next is not necessarily deterministic; some algorithms, known as randomized algorithms, can incorporate random input.</p>
+<h4 id="system-integration-implementation">System Integration (implementation)</h4>
+<p>System integration is the assembly of the parts above into the complete (integrated) solution.  Integration combines parts into a program which is the realization of an algorithm using a syntax that the computer can understand. </p>
+<h2 id="data-science-and-practice">Data Science and Practice</h2>
+<p>Data science is leveraging existing data sources, to create new ones as needed in order to extract meaningful information and actionable insights through business domain expertise, effective communication and results interpretation. Data science uses relevant statistical techniques, programming languages, software packages and libraries, and data infrastructure; The insights are used to drive business decisions and take actions intended to achieve business goals. </p>
+<p>Why is this important for engineers? Because engineering is a business! </p>
+<p>A list of typical skills (https://elitedatascience.com/data-science-resources):</p>
+<ul>
+<li>Foundational Skills<ul>
+<li><strong>Programming and Data Manipulation</strong> </li>
+<li><strong>Statistics and Probability</strong></li>
+</ul>
+</li>
+<li>Technical Skills<ul>
+<li>Data Collection</li>
+<li>SQL</li>
+<li><strong>Data Visualization</strong></li>
+<li><strong>Applied Machine Learning</strong></li>
+</ul>
+</li>
+<li>Business Skills<ul>
+<li><strong>Communication</strong></li>
+<li>Creativity and Innovation</li>
+<li>Operations and Strategy</li>
+<li>Business Analytics</li>
+</ul>
+</li>
+<li>Supplementary Skills<ul>
+<li>Natural Language Processing</li>
+<li>Recommendation Systems</li>
+<li><strong>Time Series Analysis</strong></li>
+</ul>
+</li>
+<li>Practice<ul>
+<li><strong>Projects</strong></li>
+<li>Competitions</li>
+<li>Problem Solving Challenges</li>
+</ul>
+</li>
+</ul>
+<h2 id="jupyterlab-ipython-environment">JupyterLab (iPython) Environment</h2>
+<h3 id="the-tools">The tools:</h3>
+<p><strong>JupyterLab</strong> (https://jupyter.org/) is a web-based interactive development environment for Jupyter notebooks, code, and data. </p>
+<p><strong>Jupyter Notebook</strong> is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data organizing and transformation, numerical simulation, statistical modeling, visualization, machine learning, and other similar types of uses. </p>
+<p><strong>JupyterHub</strong> (https://github.com/jupyterhub/jupyterhub) is a multi-user Hub that spawns, manages, and proxies multiple instances of the single-user Jupyter notebook server.</p>
+<p>All these tools allow use of various coding languages; Python is the choice for ENGR 1330.  Installing JupyterLab on your own computer is relatively straightforward if it is an Intel-based Linux, Macintosh, or Windows machine - simply use Anaconda (https://www.anaconda.com/) as the installer.</p>
+<p>Installing onto an ARM-based machine is more difficult, but possible (this notebook was created on a Raspberry Pi). With both Apple and Microsoft abandoning Intel you can expect Anaconda builds for aarch64 (ARM) in the future.  </p>
+<h3 id="this-course">This course:</h3>
+<p>You will create and use Jupyter Notebooks that use the <strong>ipython</strong> kernel, the notebook files will look like <code>filename.ipynb</code>; these are ASCII files that the JupyterLab interprets and runs.</p>
+<h2 id="python">Python</h2>
+<p>The programming language we will use is Python (actually iPython). Python is an example of a high-level language; other high-level languages include C, C++, PHP, FORTRAN, ADA, Pascal, Go, Java, etc (there are a lot).</p>
+<p>As you might infer from the name high-level language, there are also low-level languages, sometimes referred to as machine languages or assembly languages. Machine language is the encoding of instructions in binary so that they can be directly executed by the computer. Assembly language uses a slightly easier format to refer to the low level instructions. Loosely speaking, computers can only execute programs written in low-level languages. To be exact, computers can actually only execute programs written in machine language. Thus, programs written in a high-level language (and even those in assembly language) have to be processed before they can run. This extra processing takes some time, which is a small disadvantage of high-level languages. However, the advantages to high-level languages are enormous.</p>
+<p>First, it is much easier to program in a high-level language. Programs written in a high-level language take less time to write, they are shorter and easier to read, and they are more likely to be correct. Second, high-level languages are portable, meaning that they can run on different kinds of computers with few or no modifications. Low-level programs can run on only one kind of computer and have to be rewritten to run on another.</p>
+<p>Due to these advantages, almost all programs are written in high-level languages. Low-level languages are used only for a few specialized applications, and for device drivers.</p>
+<p>Two kinds of programs process high-level languages into low-level languages: interpreters and compilers. An interpreter reads a high-level program and executes it, meaning that it does what the program says. It processes the program a little at a time, alternately reading lines and performing computations.</p>
+<p><img alt="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/interpreter.png" src="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/interpreter.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Interpreted Program. Image from (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>A compiler reads the program and translates it completely before the program starts running. In this case, the high-level program is called the source code, and the translated program is called the object code or the executable. Once a program is compiled, you can execute it repeatedly without further translation.</p>
+<p><img alt="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/compiler.png" src="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/compiler.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Compiled Prorgam. Image from: (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Many modern languages use both processes. They are first compiled into a lower level language, called byte code, and then interpreted by a program called a virtual machine. Python uses both processes, but because of the way programmers interact with it, it is usually considered an interpreted language.</p>
+<p>As a language, python is a formal language that has certain requirements and structure called "syntax."</p>
+<p>Formal languages are languages that are designed by people for specific applications. For example, the notation that mathematicians use is a formal language that is particularly good at denoting relationships among numbers and symbols. Chemists use a formal language to represent the chemical structure of molecules. Programming languages are formal languages that have been designed to express computations.</p>
+<p>Formal languages have strict rules about syntax. For example, 3+3=6 is a syntactically correct mathematical statement, but 3=+6&amp; is not. </p>
+<p>Syntax rules come in two flavors, pertaining to <strong>tokens</strong> and <strong>structure</strong>. <strong>Tokens</strong> are the basic elements of the language, such as words, numbers, and chemical elements. One of the problems with 3=+6&amp; is that &amp; is not a legal token in mathematics (at least as far as we know). </p>
+<p>The second type of syntax rule pertains to the structure of a statement— that is, the way the tokens are arranged. The statement 3=+6&amp; is structurally illegal (in mathematics) because you don’t place a plus sign immediately after an equal sign (of course we will in python!). </p>
+<p>When you read a sentence in English or a statement in a formal language, you have to figure out what the structure of the sentence is; This process is called <strong>parsing</strong>.</p>
+<p>For example, when you hear the sentence, “The other shoe fell”, you understand that the other shoe is the subject and fell is the verb. Once you have parsed a sentence, you can figure out what it means, or the semantics of the sentence. Assuming that you know what a shoe is and what it means to fall, you will understand the general implication of this sentence.</p>
+<h3 id="good-resources">Good Resources:</h3>
+<ul>
+<li>Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.</li>
+<li>LearnPython.org (Interactive Tutorial) (https://www.learnpython.org/)  Short, interactive tutorial for those who just need a quick way to pick up Python syntax.</li>
+<li>How to Think Like a Computer Scientist (Interactive Book) (https://runestone.academy/runestone/books/published/thinkcspy/index.html) Interactive "CS 101" course taught in Python that really focuses on the art of problem solving. </li>
+<li>How to Learn Python for Data Science, The Self-Starter Way (https://elitedatascience.com/learn-python-for-data-science) </li>
+</ul>
+<h2 id="programming-as-a-problem-solving-process">Programming as a problem solving process</h2>
+<p>The entire point of this course is to develop problem solving skills and begin using some tools (Statistics, Numerical Methods, Data Science, implemented as JupyterLab/Python programs).</p>
+<p>The scientific method (https://en.wikipedia.org/wiki/Scientific_method) is one example of an effective problem solving strategy. Stated as a protocol it goes something like:</p>
+<ol>
+<li>Observation: Formulation of a question</li>
+<li>Hypothesis: A  conjecture that may explain observed behavior. Falsifiable by an experiment whose outcome conflicts with predictions deduced from the hypothesis</li>
+<li>Prediction: How the experiment should conclude if hypothesis is correct </li>
+<li>Testing: Experimental design, and conduct of the experiment.</li>
+<li>Analysis: Interpretation of experimental results</li>
+</ol>
+<p>This protocol can be directly adapted to CT/DS problems as:</p>
+<ol>
+<li>Define the problem (problem statement)</li>
+<li>Gather information (identify known and unknown values, and governing equations)</li>
+<li>Generate and evaluate potential solutions</li>
+<li>Refine and implement a solution</li>
+<li>Verify and test the solution.</li>
+</ol>
+<p>For actual computational methods the protocol becomes:</p>
+<ol>
+<li>Explicitly state the problem</li>
+<li>State:</li>
+<li>Input information</li>
+<li>Governing equations or principles, and </li>
+<li>The required output information.</li>
+<li>Work a sample problem by-hand for testing the general solution.</li>
+<li>Develop a general solution method (coding).</li>
+<li>Test the general solution against the by-hand example, then apply to the real problem.</li>
+</ol>
+<p>Oddly enough the first step is the most important and sometimes the most difficult. In a practical problem, step 2 is sometimes difficult because a skilled programmer is needed to translate the governing principles into an algorithm for the general solution (step 4).</p>
+<h3 id="example-1-problem-solving-process">Example 1 Problem Solving Process</h3>
+<p>Consider a need to compute an arithmetic mean, what would the process look like?</p>
+<p><strong>Step 1.</strong> Develop script to compute the arithmetic mean of a stream of data of unknown length.</p>
+<p><strong>Step 2.</strong> 
+  - Inputs: The data stream 
+  - Governing equation: <script type="math/tex"> \bar x = \frac{1}{N} \sum_{i=1}^{N} x_i </script> where <script type="math/tex">N</script> is the number of items in the data stream, and <script type="math/tex">x_i</script> is the value of the i-th element.
+  - Outputs: The arithmetic mean <script type="math/tex">\bar x</script>
+</p>
+<p><strong>Step 3.</strong> Work a sample problem by-hand for testing the general solution.</p>
+<table>
+<thead>
+<tr>
+<th align="right">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">23.43</td>
+</tr>
+<tr>
+<td align="right">37.43</td>
+</tr>
+<tr>
+<td align="right">34.91</td>
+</tr>
+<tr>
+<td align="right">28.37</td>
+</tr>
+<tr>
+<td align="right">30.62</td>
+</tr>
+</tbody>
+</table>
+<p>The arithmetic mean requires us to count how many elements are in the data stream (in this case there are 5) and compute their sum (in this case 154.76), and finally divide the sum by the count and report this result as the arithmetic mean.</p>
+<p>
+<script type="math/tex; mode=display"> \bar x = \frac{1}{5}(23.43+37.43+34.91+28.37+30.62)=\frac{154.76}{5}=30.95 </script>
+</p>
+<p><strong>Step 4.</strong> Develop a general solution (code)</p>
+<p>The by-hand exercise helps identify the required steps in an “algorithm” or recipe to compute mean values. First we essentially capture or read the values then count how many there are (either as we go or as a separate step), then sum the values, then divide the values by the count, and finally report the result.</p>
+<p>In a flow-chart it would look like:</p>
+<p><img alt="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/Lesson1-flowchart.png" src="https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/Lesson1-flowchart.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Flowchart for Artihmetic Mean Algorithm</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 5.</strong> This step we would code the algorithm expressed in the figure and test it with the by-hand data and other small datasets until we are convinced it works correctly.</p>
+<p>In a simple JupyterLab script</p>
+<pre><code class="python"># Arithmetic Mean in Very Elementary and Primative Python
+xlist = [23.43,37.43,34.91,28.37,30.62] # list is a type of data structure
+howlong = len(xlist) # len is a built-in function that returns how many items in a list
+accumulator = 0 # a variable to accumulate the sum
+for i in range(howlong):
+    accumulator = accumulator + xlist[i]
+print(&quot;arithmetic mean = &quot;,(accumulator/howlong))
+</code></pre>
+
+<pre><code>arithmetic mean =  30.951999999999998
+</code></pre>
+<p><strong>Step 6.</strong> This step we would refine the code to generalize the algorithm.  In the example we want a way to supply the <code>xlist</code> from a file perhaps, and tidy the output by rounding to only two decimal places - rounding is relatively simple:</p>
+<pre><code class="python"># Arithmetic Mean in Very Elementary and Primative Python
+xlist = [23.43,37.43,34.91,28.37,30.62] # list is a type of data structure
+howlong = len(xlist) # len is a built-in function that returns how many items in a list
+accumulator = 0 # a variable to accumulate the sum
+for i in range(howlong):
+    accumulator = accumulator + xlist[i]
+print(&quot;arithmetic mean = &quot;,round((accumulator/howlong),2))
+</code></pre>
+
+<pre><code>arithmetic mean =  30.95
+</code></pre>
+<p>Reading from a file, is a bit more complicated.  We need to create a connection to the file, then read the contents into our script, then put the contents into the <code>xlist</code></p>
+<pre><code class="python">xlist=[] # list (null) is a type of data structure
+externalfile = open(&quot;data.txt&quot;,'r') # create connection to file, set to read (r), file must exist
+how_many_lines = 0
+for line in externalfile: # parse each line, append to xlist
+    xlist.append(line)
+    how_many_lines += 1
+externalfile.close() # close the file connection
+
+howlong = len(xlist) # len is a built-in function that returns how many items in a list
+accumulator = 0 # a variable to accumulate the sum
+for i in range(howlong):
+    accumulator = accumulator + float(xlist[i])
+print(&quot;arithmetic mean = &quot;,round((accumulator/howlong),2))
+</code></pre>
+
+<pre><code>arithmetic mean =  30.95
+</code></pre>
+<p>Finally, if we want to reuse the code a lot, it is convienent to make it into a function</p>
+<pre><code class="python">def average(inputlist):
+# inputlist should be a list of values
+    howlong = len(inputlist) # len is a built-in function that returns how many items in a list
+    accumulator = 0 # a variable to accumulate the sum
+    for i in range(howlong):
+        accumulator = accumulator + float(inputlist[i])
+    result = (accumulator/howlong)
+    return(result)
+</code></pre>
+
+<p>Put our file reading and compute mean code here</p>
+<pre><code class="python">xlist=[] # list (null) is a type of data structure
+externalfile = open(&quot;data.txt&quot;,'r') # create connection to file, set to read (r), file must exist
+how_many_lines = 0
+for line in externalfile: # parse each line, append to xlist
+    xlist.append(line)
+    how_many_lines += 1
+externalfile.close() # close the file connection
+print(&quot;arithmetic mean = &quot;,round(average(xlist),2))
+</code></pre>
+
+<pre><code>arithmetic mean =  30.95
+</code></pre>
+<p>So the simple task of computing the mean of a collection of values, is a bit more complex when decomposed that it first appears, but illustrates a five step process (with a refinement step).  Throughout the course this process is always in the background.</p>
+<h2 id="ccmr-approach">CCMR Approach</h2>
+<p>A lot of the problems we will encounter from a CT/DS perspective have already been solved, or at least analogs have been solved.  It is perfectly acceptable to use prior work for a new set of conditions as long as proper attribution is made.  We call this process CCMR:</p>
+<ol>
+<li><strong>Copy:</strong> Find a solution to your problem from some online example:  SourceForge, StackOverflow, GeeksForGeeks, DigitalOcean, etc.</li>
+<li><strong>Cite:</strong> Cite the original source.  In general a citation will look like one of the references below, but a URL to the source is sufficient at first.</li>
+<li><strong>Modify:</strong> Modify the original cited work for your specific needs.  Note the changes in the code using comment statements.</li>
+<li><strong>Run:</strong> Apply the modified code to the problem of interest. </li>
+</ol>
+<p>In cases where we use CCMR we are not so much programming and developing our own work as scaffolding parts (https://en.wikipedia.org/wiki/Scaffold_(programming)) - a legitimate and valuable engineering activity.</p>
+<h2 id="readings">Readings</h2>
+<p>Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 https://www.inferentialthinking.com/chapters/01/what-is-data-science.html</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,3219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lesson 8 - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson00/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson07/lesson6/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation and Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson11/lesson11/">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson12/lesson12/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson13/lesson13/">Lesson 13</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab13/Lab13_Dev/">Laboratory 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson15/lesson15/">Lesson 15</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab15/Lab15_Dev/">Laboratory 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab16/Lab16_Dev/">Laboratory 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Lesson17/lesson17/">Lesson 17</a>
+</li>
+            
+<li >
+    <a href="../../../8-Labs/Lab17/Lab17_Dev/">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-Homework/ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES3/es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ConcreteStrength/ConcreteStrength-Project/">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../../8-Labs/Lab7/Lab7_Dev/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../../8-Labs/Lab8/Lab8_Dev/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</a></li>
+            <li><a href="#lesson-7-the-pandas-module">Lesson 7 The Pandas module</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+        <li class="main "><a href="#the-dataframe">The Dataframe</a></li>
+            <li><a href="#computational-thinking-concepts">Computational Thinking Concepts</a></li>
+            <li><a href="#module-set-up">Module Set-Up</a></li>
+        <li class="main "><a href="#now-we-shall-create-a-proper-dataframe">Now we shall create a proper dataframe</a></li>
+            <li><a href="#getting-the-shape-of-dataframes">Getting the shape of dataframes</a></li>
+            <li><a href="#appending-new-columns">Appending new columns</a></li>
+            <li><a href="#appending-new-rows">Appending new rows</a></li>
+        <li class="main "><a href="#indexing">Indexing</a></li>
+        <li class="main "><a href="#conditional-selection">Conditional Selection</a></li>
+        <li class="main "><a href="#descriptor-functions">Descriptor Functions</a></li>
+            <li><a href="#head-method">head method</a></li>
+            <li><a href="#info-method">info method</a></li>
+            <li><a href="#describe-method">describe method</a></li>
+            <li><a href="#counting-and-sum-methods">Counting and Sum methods</a></li>
+            <li><a href="#using-functions-in-dataframes-symbolic-apply">Using functions in dataframes - symbolic apply</a></li>
+            <li><a href="#sorts">Sorts</a></li>
+        <li class="main "><a href="#aggregating-grouping-values-dataframe-contents">Aggregating (Grouping Values) dataframe contents</a></li>
+        <li class="main "><a href="#filtering-out-missing-values">Filtering out missing values</a></li>
+            <li><a href="#reading-a-file-into-a-dataframe">Reading a File into a Dataframe</a></li>
+        <li class="main "><a href="#writing-a-dataframe-to-file">Writing a dataframe to file</a></li>
+            <li><a href="#downloading-files-from-websites-optional">Downloading files from websites (optional)</a></li>
+            <li><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="engr-1330-computational-thinking-with-data-science">ENGR 1330 Computational Thinking with Data Science</h1>
+<p>Last GitHub Commit Date: 14 February 2021</p>
+<h2 id="lesson-7-the-pandas-module">Lesson 7 The Pandas module</h2>
+<ul>
+<li>About Pandas</li>
+<li>How to install<ul>
+<li>Anaconda</li>
+<li>JupyterHub/Lab (on Linux)</li>
+<li>JupyterHub/Lab (on MacOS)</li>
+<li>JupyterHub/Lab (on Windoze)</li>
+</ul>
+</li>
+<li>The Dataframe<ul>
+<li>Primatives</li>
+<li>Using Pandas</li>
+<li>Create, Modify, Delete datagrames</li>
+<li>Slice Dataframes</li>
+<li>Conditional Selection</li>
+<li>Synthetic Programming (Symbolic Function Application)</li>
+<li>Files</li>
+</ul>
+</li>
+<li>Access Files from a remote Web Server<ul>
+<li>Get file contents</li>
+<li>Get the actual file</li>
+<li>Adaptations for encrypted servers (future semester)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="special-script-blocks">Special Script Blocks</h3>
+<pre><code class="python">%%html
+&lt;!--Script block to left align Markdown Tables--&gt;
+&lt;style&gt;
+  table {margin-left: 0 !important;}
+&lt;/style&gt;
+</code></pre>
+
+<!--Script block to left align Markdown Tables-->
+
+<style>
+  table {margin-left: 0 !important;}
+</style>
+
+<hr />
+<h2 id="objectives">Objectives</h2>
+<ol>
+<li>To understand the <strong>dataframe abstraction</strong> as implemented in the Pandas library(module).<ol>
+<li>To be able to access and manipulate data within a dataframe</li>
+<li>To be able to obtain basic statistical measures of data within a dataframe</li>
+</ol>
+</li>
+<li>Read/Write from/to files<ol>
+<li>MS Excel-type files (.xls,.xlsx,.csv) (LibreOffice files use the MS .xml standard)</li>
+<li>Ordinary ASCII (.txt) files </li>
+</ol>
+</li>
+<li>Access files directly from a URL (advanced concept)<ol>
+<li>Using a wget-type function</li>
+<li>Using a curl-type function</li>
+<li>Using API keys (future versions)</li>
+</ol>
+</li>
+</ol>
+<h3 id="pandas">Pandas:</h3>
+<p>Pandas is the core library for dataframe manipulation in Python. It provides a high-performance multidimensional array object, and tools for working with these arrays. The library’s name is derived from the term ‘Panel Data’. 
+If you are curious about Pandas, this cheat sheet is recommended: <a href="https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf">https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf</a></p>
+<h4 id="data-structure">Data Structure</h4>
+<p>The Primary data structure is called a dataframe.  It is an <strong>abstraction</strong> where data are represented as a 2-dimensional mutable and heterogenous tabular data structure; much like a Worksheet in MS Excel. The structure itself is popular among statisticians and data scientists and business executives.  </p>
+<p>According to the marketing department 
+<em>"Pandas Provides rich data structures and functions designed to make working with data fast, easy, and expressive.  It is useful in data manipulation, cleaning, and analysis; Pandas excels in performance and productivity "</em></p>
+<hr />
+<h1 id="the-dataframe">The Dataframe</h1>
+<p>A data table is called a <code>DataFrame</code> in pandas (and other programming environments too). The figure below from <a href="https://pandas.pydata.org/docs/getting_started/index.html">https://pandas.pydata.org/docs/getting_started/index.html</a> illustrates a dataframe model:</p>
+<p><img alt="" src="../01-table-dataframe.png" /> </p>
+<p>Each <strong>column</strong> and each <strong>row</strong> in a dataframe is called a series, the header row, and index column are special. 
+Like MS Excel we can query the dataframe to find the contents of a particular <code>cell</code> using its <strong>row name</strong> and <strong>column name</strong>, or operate on entire <strong>rows</strong> and <strong>columns</strong></p>
+<p>To use pandas, we need to import the module.</p>
+<h2 id="computational-thinking-concepts">Computational Thinking Concepts</h2>
+<p>The CT concepts expressed within Pandas include:</p>
+<ul>
+<li><code>Decomposition</code> :  Data interpretation, manipulation, and analysis of Pandas dataframes is an act of decomposition -- although the dataframes can be quite complex.</li>
+<li><code>Abstraction</code> : The dataframe is a data representation abstraction that allows for placeholder operations, later substituted with specific contents for a problem; enhances reuse and readability.  We leverage the principle of algebraic replacement using these abstractions.</li>
+<li><code>Algorithms</code> :  Data interpretation, manipulation, and analysis of dataframes are generally implemented as part of a supervisory algorithm.</li>
+</ul>
+<h2 id="module-set-up">Module Set-Up</h2>
+<p>In principle, Pandas should be available in a default Anaconda install 
+- You should not have to do any extra installation steps to install the library in Python
+- You do have to <strong>import</strong> the library in your scripts</p>
+<p>How to check
+- Simply open a code cell and run <code>import pandas</code> if the notebook does not protest (i.e. pink block of error), the youis good to go.</p>
+<pre><code class="python">import pandas
+</code></pre>
+
+<p>If you do get an error, that means that you will have to install using <code>conda</code> or <code>pip</code>; you are on-your-own here!  On the <strong>content server</strong> the process is:</p>
+<ol>
+<li>Open a new terminal from the launcher</li>
+<li>Change to root user <code>su</code> then enter the root password</li>
+<li><code>sudo -H /opt/jupyterhib/bin/python3 -m pip install pandas</code></li>
+<li>Wait until the install is complete; for security, user <code>compthink</code> is not in the <code>sudo</code> group</li>
+<li>Verify the install by trying to execute <code>import pandas</code> as above.</li>
+</ol>
+<p>The process above will be similar on a Macintosh, or Windows if you did not use an Anaconda distribution.   Best is to have a sucessful anaconda install, or go to the <a href="https://apply.mysubwaycareer.com/us/en/">GoodJobUntilMyOrgansGetHarvested</a>. </p>
+<p>If you have to do this kind of install, you will have to do some reading, some references I find useful are:
+1. https://jupyterlab.readthedocs.io/en/stable/user/extensions.html
+2. https://www.pugetsystems.com/labs/hpc/Note-How-To-Install-JupyterHub-on-a-Local-Server-1673/#InstallJupyterHub
+3. https://jupyterhub.readthedocs.io/en/stable/installation-guide-hard.html (This is the approach on the content server which has a functioning JupyterHub)</p>
+<pre><code class="python">
+</code></pre>
+
+<h3 id="dataframe-type-structure-using-primative-python">Dataframe-type Structure using primative python</h3>
+<p>First lets construct a dataframe like object using python primatives.
+We will construct 3 lists, one for row names, one for column names, and one for the content.</p>
+<pre><code class="python">import numpy
+mytabular = numpy.random.randint(1,100,(5,4))
+myrowname = ['A','B','C','D','E']
+mycolname = ['W','X','Y','Z']
+mytable = [['' for jcol in range(len(mycolname)+1)] for irow in range(len(myrowname)+1)] #non-null destination matrix, note the implied loop construction
+</code></pre>
+
+<p>The above builds a placeholder named <code>mytable</code> for the psuedo-dataframe.
+Next we populate the table, using a for loop to write the column names in the first row, row names in the first column, and the table fill for the rest of the table.</p>
+<pre><code class="python">for irow in range(1,len(myrowname)+1): # write the row names
+    mytable[irow][0]=myrowname[irow-1]
+for jcol in range(1,len(mycolname)+1): # write the column names
+    mytable[0][jcol]=mycolname[jcol-1]  
+for irow in range(1,len(myrowname)+1): # fill the table (note the nested loop)
+    for jcol in range(1,len(mycolname)+1):
+        mytable[irow][jcol]=mytabular[irow-1][jcol-1]
+</code></pre>
+
+<p>Now lets print the table out by row and we see we have a very dataframe-like structure</p>
+<pre><code class="python">for irow in range(0,len(myrowname)+1):
+    print(mytable[irow][0:len(mycolname)+1])
+</code></pre>
+
+<pre><code>['', 'W', 'X', 'Y', 'Z']
+['A', 19, 21, 22, 81]
+['B', 94, 75, 66, 44]
+['C', 70, 56, 47, 63]
+['D', 56, 80, 39, 39]
+['E', 66, 78, 39, 15]
+</code></pre>
+<p>We can also query by row </p>
+<pre><code class="python">print(mytable[3][0:len(mycolname)+1])
+</code></pre>
+
+<pre><code>['C', 70, 56, 47, 63]
+</code></pre>
+<p>Or by column</p>
+<pre><code class="python">for irow in range(0,len(myrowname)+1):  #cannot use implied loop in a column slice
+    print(mytable[irow][2])
+</code></pre>
+
+<pre><code>X
+21
+75
+56
+80
+78
+</code></pre>
+<p>Or by row+column index; sort of looks like a spreadsheet syntax.</p>
+<pre><code class="python">print(' ',mytable[0][3])
+print(mytable[3][0],mytable[3][3])
+</code></pre>
+
+<pre><code>  Y
+C 47
+</code></pre>
+<h1 id="now-we-shall-create-a-proper-dataframe">Now we shall create a proper dataframe</h1>
+<p>We will now do the same using pandas</p>
+<pre><code class="python">mydf = pandas.DataFrame(numpy.random.randint(1,100,(5,4)), ['A','B','C','D','E'], ['W','X','Y','Z'])
+mydf
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>97</td>
+      <td>20</td>
+      <td>61</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>74</td>
+      <td>8</td>
+      <td>7</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>75</td>
+      <td>67</td>
+      <td>52</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>92</td>
+      <td>83</td>
+      <td>90</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>We can also turn our table into a dataframe, notice how the constructor adds header row and index column</p>
+<pre><code class="python">mydf1 = pandas.DataFrame(mytable)
+mydf1
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td></td>
+      <td>W</td>
+      <td>X</td>
+      <td>Y</td>
+      <td>Z</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A</td>
+      <td>19</td>
+      <td>21</td>
+      <td>22</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>B</td>
+      <td>94</td>
+      <td>75</td>
+      <td>66</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C</td>
+      <td>70</td>
+      <td>56</td>
+      <td>47</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>D</td>
+      <td>56</td>
+      <td>80</td>
+      <td>39</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>E</td>
+      <td>66</td>
+      <td>78</td>
+      <td>39</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>To get proper behavior, we can just reuse our original objects</p>
+<pre><code class="python">mydf2 = pandas.DataFrame(mytabular,myrowname,mycolname)
+mydf2
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>19</td>
+      <td>21</td>
+      <td>22</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>94</td>
+      <td>75</td>
+      <td>66</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>70</td>
+      <td>56</td>
+      <td>47</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>56</td>
+      <td>80</td>
+      <td>39</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>66</td>
+      <td>78</td>
+      <td>39</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Why are <code>mydf</code> and <code>mydf2</code> different?</p>
+<pre><code class="python">
+</code></pre>
+
+<h3 id="getting-the-shape-of-dataframes">Getting the shape of dataframes</h3>
+<p>The shape method, which is available after the dataframe is constructed, will return the row and column rank (count) of a dataframe.</p>
+<pre><code class="python">mydf.shape
+</code></pre>
+
+<pre><code>(5, 4)
+</code></pre>
+<pre><code class="python">mydf1.shape
+</code></pre>
+
+<pre><code>(6, 5)
+</code></pre>
+<pre><code class="python">mydf2.shape
+</code></pre>
+
+<pre><code>(5, 4)
+</code></pre>
+<pre><code class="python">
+</code></pre>
+
+<h3 id="appending-new-columns">Appending new columns</h3>
+<p>To append a column simply assign a value to a new column name to the dataframe</p>
+<pre><code class="python">mydf['new']= 'NA'
+</code></pre>
+
+<pre><code class="python">mydf
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+      <th>new</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>97</td>
+      <td>20</td>
+      <td>61</td>
+      <td>35</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>74</td>
+      <td>8</td>
+      <td>7</td>
+      <td>99</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>75</td>
+      <td>67</td>
+      <td>52</td>
+      <td>82</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>92</td>
+      <td>83</td>
+      <td>90</td>
+      <td>28</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+      <td>NA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="appending-new-rows">Appending new rows</h2>
+<p>This is sometimes a bit trickier but here is one way:
+- create a copy of a row, give it a new name. 
+- concatenate it back into the dataframe.</p>
+<pre><code class="python">newrow = mydf.loc[['E']].rename(index={&quot;E&quot;: &quot;X&quot;}) # create a single row, rename the index
+newtable = pandas.concat([mydf,newrow]) # concatenate the row to bottom of df - note the syntax
+</code></pre>
+
+<pre><code class="python">newtable
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+      <th>new</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>97</td>
+      <td>20</td>
+      <td>61</td>
+      <td>35</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>74</td>
+      <td>8</td>
+      <td>7</td>
+      <td>99</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>75</td>
+      <td>67</td>
+      <td>52</td>
+      <td>82</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>92</td>
+      <td>83</td>
+      <td>90</td>
+      <td>28</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>X</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+      <td>NA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">
+</code></pre>
+
+<h3 id="removing-rows-and-columns">Removing Rows and Columns</h3>
+<p>To remove a column is straightforward, we use the drop method</p>
+<pre><code class="python">newtable.drop('new', axis=1, inplace = True)
+newtable
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>97</td>
+      <td>20</td>
+      <td>61</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>74</td>
+      <td>8</td>
+      <td>7</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>75</td>
+      <td>67</td>
+      <td>52</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>92</td>
+      <td>83</td>
+      <td>90</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>X</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>To remove a row, you really got to want to, easiest is probablty to create a new dataframe with the row removed</p>
+<pre><code class="python">newtable = newtable.loc[['A','B','D','E','X']] # select all rows except C
+newtable
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>97</td>
+      <td>20</td>
+      <td>61</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>74</td>
+      <td>8</td>
+      <td>7</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>92</td>
+      <td>83</td>
+      <td>90</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>X</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># or just use drop with axis specify
+newtable.drop('X', axis=0, inplace = True)
+</code></pre>
+
+<pre><code class="python">newtable
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>97</td>
+      <td>20</td>
+      <td>61</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>74</td>
+      <td>8</td>
+      <td>7</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>92</td>
+      <td>83</td>
+      <td>90</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="indexing">Indexing</h1>
+<p>We have already been indexing, but a few examples follow:</p>
+<pre><code class="python">newtable['X'] #Selecing a single column
+</code></pre>
+
+<pre><code>A    20
+B     8
+D    83
+E    67
+Name: X, dtype: int64
+</code></pre>
+<pre><code class="python">newtable[['X','W']] #Selecing a multiple columns
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>W</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>20</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>8</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>83</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>67</td>
+      <td>80</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">newtable.loc['E'] #Selecing rows based on label via loc[ ] indexer
+</code></pre>
+
+<pre><code>W    80
+X    67
+Y     4
+Z    24
+Name: E, dtype: int64
+</code></pre>
+<pre><code class="python">newtable
+
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>97</td>
+      <td>20</td>
+      <td>61</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>74</td>
+      <td>8</td>
+      <td>7</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>92</td>
+      <td>83</td>
+      <td>90</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">newtable.loc[['E','D','B']] #Selecing multiple rows based on label via loc[ ] indexer
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>E</th>
+      <td>80</td>
+      <td>67</td>
+      <td>4</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>92</td>
+      <td>83</td>
+      <td>90</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>74</td>
+      <td>8</td>
+      <td>7</td>
+      <td>99</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">newtable.loc[['B','E','D'],['X','Y']] #Selecting elements via both rows and columns via loc[ ] indexer
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>B</th>
+      <td>8</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>67</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>83</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="conditional-selection">Conditional Selection</h1>
+<pre><code class="python">mydf = pandas.DataFrame({'col1':[1,2,3,4,5,6,7,8],
+                   'col2':[444,555,666,444,666,111,222,222],
+                   'col3':['orange','apple','grape','mango','jackfruit','watermelon','banana','peach']})
+mydf
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>444</td>
+      <td>orange</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>555</td>
+      <td>apple</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>666</td>
+      <td>grape</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>444</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>666</td>
+      <td>jackfruit</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>111</td>
+      <td>watermelon</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>222</td>
+      <td>banana</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>222</td>
+      <td>peach</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">#What fruit corresponds to the number 555 in ‘col2’?
+
+mydf[mydf['col2']==555]['col3']
+</code></pre>
+
+<pre><code>1    apple
+Name: col3, dtype: object
+</code></pre>
+<pre><code class="python">#What fruit corresponds to the minimum number in ‘col2’?
+
+mydf[mydf['col2']==mydf['col2'].min()]['col3']
+</code></pre>
+
+<pre><code>5    watermelon
+Name: col3, dtype: object
+</code></pre>
+<h1 id="descriptor-functions">Descriptor Functions</h1>
+<pre><code class="python">#Creating a dataframe from a dictionary
+
+mydf = pandas.DataFrame({'col1':[1,2,3,4,5,6,7,8],
+                   'col2':[444,555,666,444,666,111,222,222],
+                   'col3':['orange','apple','grape','mango','jackfruit','watermelon','banana','peach']})
+mydf
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>444</td>
+      <td>orange</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>555</td>
+      <td>apple</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>666</td>
+      <td>grape</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>444</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>666</td>
+      <td>jackfruit</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>111</td>
+      <td>watermelon</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>222</td>
+      <td>banana</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>222</td>
+      <td>peach</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="head-method"><code>head</code> method</h3>
+<p>Returns the first few rows, useful to infer structure</p>
+<pre><code class="python">#Returns only the first five rows
+
+mydf.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>444</td>
+      <td>orange</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>555</td>
+      <td>apple</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>666</td>
+      <td>grape</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>444</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>666</td>
+      <td>jackfruit</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="info-method"><code>info</code> method</h3>
+<p>Returns the data model (data column count, names, data types)</p>
+<pre><code class="python">#Info about the dataframe
+
+mydf.info()
+</code></pre>
+
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 8 entries, 0 to 7
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   col1    8 non-null      int64 
+ 1   col2    8 non-null      int64 
+ 2   col3    8 non-null      object
+dtypes: int64(2), object(1)
+memory usage: 320.0+ bytes
+</code></pre>
+<h3 id="describe-method"><code>describe</code> method</h3>
+<p>Returns summary statistics of each numeric column.<br />
+Also returns the minimum and maximum value in each column, and the IQR (Interquartile Range).<br />
+Again useful to understand structure of the columns.</p>
+<pre><code class="python">#Statistics of the dataframe
+
+mydf.describe()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>8.00000</td>
+      <td>8.0000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>4.50000</td>
+      <td>416.2500</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2.44949</td>
+      <td>211.8576</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.00000</td>
+      <td>111.0000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2.75000</td>
+      <td>222.0000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>4.50000</td>
+      <td>444.0000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>6.25000</td>
+      <td>582.7500</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>8.00000</td>
+      <td>666.0000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="counting-and-sum-methods">Counting and Sum methods</h3>
+<p>There are also methods for counts and sums by specific columns</p>
+<pre><code class="python">mydf['col2'].sum() #Sum of a specified column
+</code></pre>
+
+<pre><code>3330
+</code></pre>
+<p>The <code>unique</code> method returns a list of unique values (filters out duplicates in the list, underlying dataframe is preserved)</p>
+<pre><code class="python">mydf['col2'].unique() #Returns the list of unique values along the indexed column 
+</code></pre>
+
+<pre><code>array([444, 555, 666, 111, 222])
+</code></pre>
+<p>The <code>nunique</code> method returns a count of unique values</p>
+<pre><code class="python">mydf['col2'].nunique() #Returns the total number of unique values along the indexed column 
+</code></pre>
+
+<pre><code>5
+</code></pre>
+<p>The <code>value_counts()</code> method returns the count of each unique value (kind of like a histogram, but each value is the bin)</p>
+<pre><code class="python">mydf['col2'].value_counts()  #Returns the number of occurences of each unique value
+</code></pre>
+
+<pre><code>222    2
+444    2
+666    2
+111    1
+555    1
+Name: col2, dtype: int64
+</code></pre>
+<h2 id="using-functions-in-dataframes-symbolic-apply">Using functions in dataframes - symbolic apply</h2>
+<p>The power of <strong>Pandas</strong> is an ability to apply a function to each element of a dataframe series (or a whole frame) by a technique called symbolic (or synthetic programming) application of the function.</p>
+<p>This employs principles of <strong>pattern matching</strong>, <strong>abstraction</strong>, and <strong>algorithm development</strong>; a holy trinity of Computational Thinning.</p>
+<p>It's somewhat complicated but quite handy, best shown by an example:</p>
+<pre><code class="python">def times2(x):  # A prototype function to scalar multiply an object x by 2
+    return(x*2)
+
+print(mydf)
+print('Apply the times2 function to col2')
+mydf['col2'].apply(times2) #Symbolic apply the function to each element of column col2, result is another dataframe
+</code></pre>
+
+<pre><code>   col1  col2        col3
+0     1   444      orange
+1     2   555       apple
+2     3   666       grape
+3     4   444       mango
+4     5   666   jackfruit
+5     6   111  watermelon
+6     7   222      banana
+7     8   222       peach
+Apply the times2 function to col2
+
+
+
+
+
+0     888
+1    1110
+2    1332
+3     888
+4    1332
+5     222
+6     444
+7     444
+Name: col2, dtype: int64
+</code></pre>
+<h2 id="sorts">Sorts</h2>
+<pre><code class="python">mydf.sort_values('col2', ascending = True) #Sorting based on columns 
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>111</td>
+      <td>watermelon</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>222</td>
+      <td>banana</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>222</td>
+      <td>peach</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>444</td>
+      <td>orange</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>444</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>555</td>
+      <td>apple</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>666</td>
+      <td>grape</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>666</td>
+      <td>jackfruit</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">mydf.sort_values('col3', ascending = True) #Lexiographic sort
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>555</td>
+      <td>apple</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>222</td>
+      <td>banana</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>666</td>
+      <td>grape</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>666</td>
+      <td>jackfruit</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>444</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>444</td>
+      <td>orange</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>222</td>
+      <td>peach</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>111</td>
+      <td>watermelon</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="aggregating-grouping-values-dataframe-contents">Aggregating (Grouping Values) dataframe contents</h1>
+<pre><code class="python">#Creating a dataframe from a dictionary
+
+data = {
+    'key' : ['A', 'B', 'C', 'A', 'B', 'C'],
+    'data1' : [1, 2, 3, 4, 5, 6],
+    'data2' : [10, 11, 12, 13, 14, 15],
+    'data3' : [20, 21, 22, 13, 24, 25]
+}
+
+mydf1 = pandas.DataFrame(data)
+mydf1
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+      <th>data1</th>
+      <th>data2</th>
+      <th>data3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>1</td>
+      <td>10</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>2</td>
+      <td>11</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>3</td>
+      <td>12</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>4</td>
+      <td>13</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>5</td>
+      <td>14</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>6</td>
+      <td>15</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># Grouping and summing values in all the columns based on the column 'key'
+
+mydf1.groupby('key').sum()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+      <th>data3</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>5</td>
+      <td>23</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>7</td>
+      <td>25</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>9</td>
+      <td>27</td>
+      <td>47</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python"># Grouping and summing values in the selected columns based on the column 'key'
+
+mydf1.groupby('key')[['data1', 'data2']].sum()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>5</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>7</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>9</td>
+      <td>27</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="filtering-out-missing-values">Filtering out missing values</h1>
+<p>Filtering and <em>cleaning</em> are often used to describe the process where data that does not support a narrative is removed ;typically for maintenance of profit applications, if the data are actually missing that is common situation where cleaning is justified.</p>
+<pre><code class="python">#Creating a dataframe from a dictionary
+
+df = pandas.DataFrame({'col1':[1,2,3,4,None,6,7,None],
+                   'col2':[444,555,None,444,666,111,None,222],
+                   'col3':['orange','apple','grape','mango','jackfruit','watermelon','banana','peach']})
+df
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>444.0</td>
+      <td>orange</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.0</td>
+      <td>555.0</td>
+      <td>apple</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>grape</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.0</td>
+      <td>444.0</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>666.0</td>
+      <td>jackfruit</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6.0</td>
+      <td>111.0</td>
+      <td>watermelon</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7.0</td>
+      <td>NaN</td>
+      <td>banana</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NaN</td>
+      <td>222.0</td>
+      <td>peach</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Below we drop any row that contains a <code>NaN</code> code.</p>
+<pre><code class="python">df_dropped = df.dropna()
+df_dropped
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>444.0</td>
+      <td>orange</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.0</td>
+      <td>555.0</td>
+      <td>apple</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.0</td>
+      <td>444.0</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6.0</td>
+      <td>111.0</td>
+      <td>watermelon</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Below we replace <code>NaN</code> codes with some value, in this case 0</p>
+<pre><code class="python">df_filled1 = df.fillna(0)
+df_filled1
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>444.0</td>
+      <td>orange</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.0</td>
+      <td>555.0</td>
+      <td>apple</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>grape</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.0</td>
+      <td>444.0</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>666.0</td>
+      <td>jackfruit</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6.0</td>
+      <td>111.0</td>
+      <td>watermelon</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>banana</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.0</td>
+      <td>222.0</td>
+      <td>peach</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Below we replace <code>NaN</code> codes with some value, in this case the mean value of of the column in which the missing value code resides.</p>
+<pre><code class="python">df_filled2 = df.fillna(df.mean())
+df_filled2
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.000000</td>
+      <td>444.0</td>
+      <td>orange</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.000000</td>
+      <td>555.0</td>
+      <td>apple</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.000000</td>
+      <td>407.0</td>
+      <td>grape</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.000000</td>
+      <td>444.0</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3.833333</td>
+      <td>666.0</td>
+      <td>jackfruit</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6.000000</td>
+      <td>111.0</td>
+      <td>watermelon</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7.000000</td>
+      <td>407.0</td>
+      <td>banana</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3.833333</td>
+      <td>222.0</td>
+      <td>peach</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h2 id="reading-a-file-into-a-dataframe">Reading a File into a Dataframe</h2>
+<p>Pandas has methods to read common file types, such as <code>csv</code>,<code>xlsx</code>, and <code>json</code>.<br />
+Ordinary text files are also quite manageable.</p>
+<p>On a machine you control you can write script to retrieve files from the internet and process them.</p>
+<pre><code class="python">readfilecsv = pandas.read_csv('CSV_ReadingFile.csv')  #Reading a .csv file
+print(readfilecsv)
+</code></pre>
+
+<pre><code>    a   b   c   d
+0   0   1   2   3
+1   4   5   6   7
+2   8   9  10  11
+3  12  13  14  15
+</code></pre>
+<p>Similar to reading and writing .csv files, you can also read and write .xslx files as below (useful to know this)</p>
+<pre><code class="python"># xlsx reads deprecated here is a hack using openpyxl
+readfileexcel = pandas.read_excel('Excel_ReadingFile.xlsx', sheet_name='Sheet1', engine='openpyxl') #Reading a .xlsx file
+print(readfileexcel)
+</code></pre>
+
+<pre><code>   Unnamed: 0   a   b   c   d
+0           0   0   1   2   3
+1           1   4   5   6   7
+2           2   8   9  10  11
+3           3  12  13  14  15
+</code></pre>
+<h1 id="writing-a-dataframe-to-file">Writing a dataframe to file</h1>
+<pre><code class="python">#Creating and writing to a .csv file
+readfilecsv = pandas.read_csv('CSV_ReadingFile.csv')
+readfilecsv.to_csv('CSV_WritingFile1.csv')
+readfilecsv = pandas.read_csv('CSV_WritingFile1.csv')
+print(readfilecsv)
+</code></pre>
+
+<pre><code>   Unnamed: 0   a   b   c   d
+0           0   0   1   2   3
+1           1   4   5   6   7
+2           2   8   9  10  11
+3           3  12  13  14  15
+</code></pre>
+<pre><code class="python">#Creating and writing to a .csv file by excluding row labels 
+readfilecsv = pandas.read_csv('CSV_ReadingFile.csv')
+readfilecsv.to_csv('CSV_WritingFile2.csv', index = False)
+readfilecsv = pandas.read_csv('CSV_WritingFile2.csv')
+print(readfilecsv)
+</code></pre>
+
+<pre><code>    a   b   c   d
+0   0   1   2   3
+1   4   5   6   7
+2   8   9  10  11
+3  12  13  14  15
+</code></pre>
+<pre><code class="python">#Creating and writing to a .xlsx file
+readfileexcel = pandas.read_excel('Excel_ReadingFile.xlsx', sheet_name='Sheet1', engine='openpyxl')
+readfileexcel.to_excel('Excel_WritingFile.xlsx', sheet_name='MySheet', index = False, engine='openpyxl')
+readfileexcel = pandas.read_excel('Excel_WritingFile.xlsx', sheet_name='MySheet', engine='openpyxl')
+print(readfileexcel)
+</code></pre>
+
+<pre><code>   Unnamed: 0   a   b   c   d
+0           0   0   1   2   3
+1           1   4   5   6   7
+2           2   8   9  10  11
+3           3  12  13  14  15
+</code></pre>
+<hr />
+<h2 id="downloading-files-from-websites-optional">Downloading files from websites (optional)</h2>
+<p>This section shows how to get files from a remote computer.   There are several ways to get the files, most importantly  you need the FQDN to the file.</p>
+<h3 id="method-1-get-data-from-a-file-on-a-remote-server-unencrypted">Method 1: Get data from a file on a remote server (unencrypted)</h3>
+<p>This section shows how to obtain data files from public URLs.  </p>
+<p>Prerequesites:</p>
+<ul>
+<li>You know the FQDN to the file it will be in structure of "http://server-name/.../filename.ext"</li>
+<li>The server is running ordinary (unencrypted) web services, i.e. <code>http://...</code></li>
+</ul>
+<h4 id="web-developer-notes">Web Developer Notes</h4>
+<p>If you want to distribute files (web developers) the files need to be in the server webroot, but can be deep into the heirarchial structure.</p>
+<p>Here we will do an example with a file that contains topographic data in XYZ format, without header information.</p>
+<p>The first few lines of the remote file look like:</p>
+<pre><code>74.90959724 93.21251922 0
+75.17907367 64.40278759 0
+94.9935575  93.07951286 0
+95.26234119 64.60091165 0
+54.04976655 64.21159095 0
+54.52914363 35.06934342 0
+75.44993558 34.93079513 0
+75.09317373 5.462959114 0
+74.87357468 10.43130083 0
+74.86249082 15.72938748 0
+</code></pre>
+<p>And importantly it is tab delimited.</p>
+<p>The module to manipulate url in python is called <code>urllib</code></p>
+<p>Google search to learn more, here we are using only a small component without exception trapping.</p>
+<pre><code class="python">#Step 1: import needed modules to interact with the internet
+from urllib.request import urlopen # import a method that will connect to a url and read file contents
+import pandas #import pandas
+</code></pre>
+
+<p>This next code fragment sets a string called <code>remote_url</code>; it is just a variable, name can be anything that honors python naming rules.
+Then the <code>urllib</code> function <code>urlopen</code> with read and decode methods is employed, the result is stored in an object named <code>elevationXYZ</code></p>
+<pre><code class="python">#Step 2: make the connection to the remote file (actually its implementing &quot;bash curl -O http://fqdn/path ...&quot;)
+remote_url = 'http://www.rtfmps.com/share_files/pip-corner-sumps.txt' # 
+elevationXYZ = urlopen(remote_url).read().decode().split() # Gets the file contents as a single vector, comma delimited, file is not retained locally
+</code></pre>
+
+<p>At this point the object exists as a single vector with hundreds of elements. We now need to structure the content.  Here using python primatives, and knowing how the data are supposed to look, we prepare variables to recieve the structured results</p>
+<pre><code class="python">#Step 3 Python primatives to structure the data, or use fancy modules (probably easy in numpy)
+howmany = len(elevationXYZ) # how long is the vector?
+nrow = int(howmany/3)
+xyz = [[0 for j in range(3)] for j in range(nrow)] # null space to receive data define columnX
+</code></pre>
+
+<p>Now that everything is ready, we can extract from the object the values we want into <code>xyz</code></p>
+<pre><code class="python">#Step4 Now will build xyz as a matrix with 3 columns
+index = 0
+for irow in range(0,nrow):
+    xyz[irow][0]=float(elevationXYZ[index])
+    xyz[irow][1]=float(elevationXYZ[index+1])
+    xyz[irow][2]=float(elevationXYZ[index+2])
+    index += 3 #increment the index
+</code></pre>
+
+<p><code>xyz</code> is now a 3-column float array and can now probably be treated as a data frame.
+Here we use a <code>pandas</code> method to build the dataframe.</p>
+<pre><code class="python">df = pandas.DataFrame(xyz)
+</code></pre>
+
+<p>Get some info, yep three columns (ordered triples to be precise!)</p>
+<pre><code class="python">df.info()
+</code></pre>
+
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 774 entries, 0 to 773
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   0       774 non-null    float64
+ 1   1       774 non-null    float64
+ 2   2       774 non-null    float64
+dtypes: float64(3)
+memory usage: 18.3 KB
+</code></pre>
+<p>And some summary statistics (meaningless for these data), but now have taken data from the internet and prepared it for analysis.</p>
+<pre><code class="python">df.describe()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>774.000000</td>
+      <td>774.000000</td>
+      <td>774.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>52.064621</td>
+      <td>48.770060</td>
+      <td>2.364341</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>30.883400</td>
+      <td>32.886277</td>
+      <td>1.497413</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-2.113554</td>
+      <td>-11.360960</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>25.640786</td>
+      <td>21.809579</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>55.795821</td>
+      <td>49.059950</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>76.752290</td>
+      <td>75.015933</td>
+      <td>4.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>111.726727</td>
+      <td>115.123931</td>
+      <td>4.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>And lets look at the first few rows</p>
+<pre><code class="python">df.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>74.909597</td>
+      <td>93.212519</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>75.179074</td>
+      <td>64.402788</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>94.993557</td>
+      <td>93.079513</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>95.262341</td>
+      <td>64.600912</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>54.049767</td>
+      <td>64.211591</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">
+</code></pre>
+
+<h3 id="method-2-get-the-actual-file-from-a-remote-web-server-unencrypted">Method 2: Get the actual file from a remote web server (unencrypted)</h3>
+<ul>
+<li>You know the FQDN to the file it will be in structure of "http://server-name/.../filename.ext"</li>
+<li>The server is running ordinary (unencrypted) web services, i.e. <code>http://...</code></li>
+</ul>
+<p>We will need a module to interface with the remote server, in this example lets use something different than <code>urllib</code>. Here we will use <code>requests</code> , so first we load the module</p>
+<pre><code class="python">import requests # Module to process http/https requests
+</code></pre>
+
+<p>Now we will generate a <code>GET</code> request to the remote http server.  I chose to do so using a variable to store the remote URL so I can reuse code in future projects.  The <code>GET</code> request (an http/https method) is generated with the requests method <code>get</code> and assigned to an object named <code>rget</code> -- the name is arbitrary.  Next we extract the file from the <code>rget</code> object and write it to a local file with the name of the remote file - esentially automating the download process. Then we import the <code>pandas</code> module.</p>
+<pre><code class="python">remote_url=&quot;http://54.243.252.9/engr-1330-psuedo-course/MyJupyterNotebooks/42-DataScience-EvaporationAnalysis/all_quads_gross_evaporation.csv&quot;  # set the url
+rget = requests.get(remote_url, allow_redirects=True)  # get the remote resource, follow imbedded links
+open('all_quads_gross_evaporation.csv','wb').write(rget.content) # extract from the remote the contents, assign to a local file same name
+import pandas as pd # Module to process dataframes (not absolutely needed but somewhat easier than using primatives, and gives graphing tools)
+</code></pre>
+
+<pre><code class="python"># verify file exists
+! pwd
+! ls -la
+</code></pre>
+
+<pre><code>/home/sensei/1330-textbook-webroot/docs/lesson7
+total 1412
+drwxrwxr-x  3 sensei sensei   4096 Feb 16 20:57 .
+drwxr-xr-x 10 sensei sensei   4096 Feb 16 20:30 ..
+drwxrwxr-x  2 sensei sensei   4096 Feb 16 20:53 .ipynb_checkpoints
+-rw-rw-r--  1 sensei sensei  21150 Feb 15 15:58 01-table-dataframe.png
+-rw-rw-r--  1 sensei sensei     51 Feb 15 15:58 CSV_ReadingFile.csv
+-rw-rw-r--  1 sensei sensei     55 Feb 16 20:59 CSV_WritingFile1.csv
+-rw-rw-r--  1 sensei sensei     46 Feb 16 20:59 CSV_WritingFile2.csv
+-rw-rw-r--  1 sensei sensei 693687 Feb 15 15:58 ENGR-1330-Lesson8-Dev.html
+-rw-rw-r--  1 sensei sensei 166938 Feb 15 15:58 ENGR-1330-Lesson8-Dev.ipynb
+-rw-rw-r--  1 sensei sensei   5508 Feb 15 15:58 Excel_ReadingFile.xlsx
+-rw-rw-r--  1 sensei sensei   5041 Feb 16 20:59 Excel_WritingFile.xlsx
+-rw-rw-r--  1 sensei sensei 363498 Feb 16 20:59 all_quads_gross_evaporation.csv
+-rw-rw-r--  1 sensei sensei 108222 Feb 16 20:57 lesson7.ipynb
+-rw-rw-r--  1 sensei sensei  40566 Feb 15 15:58 output_126_1.png
+</code></pre>
+<p>Now we can read the file contents and check its structure, before proceeding.</p>
+<pre><code class="python">evapdf = pd.read_csv(&quot;all_quads_gross_evaporation.csv&quot;,parse_dates=[&quot;YYYY-MM&quot;]) # Read the file as a .CSV assign to a dataframe evapdf
+evapdf.head() # check structure
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YYYY-MM</th>
+      <th>104</th>
+      <th>105</th>
+      <th>106</th>
+      <th>107</th>
+      <th>108</th>
+      <th>204</th>
+      <th>205</th>
+      <th>206</th>
+      <th>207</th>
+      <th>...</th>
+      <th>911</th>
+      <th>912</th>
+      <th>1008</th>
+      <th>1009</th>
+      <th>1010</th>
+      <th>1011</th>
+      <th>1108</th>
+      <th>1109</th>
+      <th>1110</th>
+      <th>1210</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1954-01-01</td>
+      <td>1.80</td>
+      <td>1.80</td>
+      <td>2.02</td>
+      <td>2.24</td>
+      <td>2.24</td>
+      <td>2.34</td>
+      <td>1.89</td>
+      <td>1.80</td>
+      <td>1.99</td>
+      <td>...</td>
+      <td>1.42</td>
+      <td>1.30</td>
+      <td>2.50</td>
+      <td>2.42</td>
+      <td>1.94</td>
+      <td>1.29</td>
+      <td>2.59</td>
+      <td>2.49</td>
+      <td>2.22</td>
+      <td>2.27</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1954-02-01</td>
+      <td>4.27</td>
+      <td>4.27</td>
+      <td>4.13</td>
+      <td>3.98</td>
+      <td>3.90</td>
+      <td>4.18</td>
+      <td>4.26</td>
+      <td>4.27</td>
+      <td>4.26</td>
+      <td>...</td>
+      <td>2.59</td>
+      <td>2.51</td>
+      <td>4.71</td>
+      <td>4.30</td>
+      <td>3.84</td>
+      <td>2.50</td>
+      <td>5.07</td>
+      <td>4.62</td>
+      <td>4.05</td>
+      <td>4.18</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1954-03-01</td>
+      <td>4.98</td>
+      <td>4.98</td>
+      <td>4.62</td>
+      <td>4.25</td>
+      <td>4.20</td>
+      <td>5.01</td>
+      <td>4.98</td>
+      <td>4.98</td>
+      <td>4.68</td>
+      <td>...</td>
+      <td>3.21</td>
+      <td>3.21</td>
+      <td>6.21</td>
+      <td>6.06</td>
+      <td>5.02</td>
+      <td>3.21</td>
+      <td>6.32</td>
+      <td>6.20</td>
+      <td>5.68</td>
+      <td>5.70</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1954-04-01</td>
+      <td>6.09</td>
+      <td>5.94</td>
+      <td>5.94</td>
+      <td>6.07</td>
+      <td>5.27</td>
+      <td>6.31</td>
+      <td>5.98</td>
+      <td>5.89</td>
+      <td>5.72</td>
+      <td>...</td>
+      <td>3.83</td>
+      <td>3.54</td>
+      <td>6.45</td>
+      <td>6.25</td>
+      <td>4.92</td>
+      <td>3.54</td>
+      <td>6.59</td>
+      <td>6.44</td>
+      <td>5.88</td>
+      <td>5.95</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1954-05-01</td>
+      <td>5.41</td>
+      <td>5.09</td>
+      <td>5.14</td>
+      <td>4.40</td>
+      <td>3.61</td>
+      <td>5.57</td>
+      <td>4.56</td>
+      <td>4.47</td>
+      <td>4.18</td>
+      <td>...</td>
+      <td>3.48</td>
+      <td>3.97</td>
+      <td>7.92</td>
+      <td>8.13</td>
+      <td>6.31</td>
+      <td>3.99</td>
+      <td>7.75</td>
+      <td>7.98</td>
+      <td>7.40</td>
+      <td>7.40</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 93 columns</p>
+</div>
+
+<p>Structure looks like a spreadsheet as expected; lets plot the time series for cell '911'</p>
+<pre><code class="python">evapdf.plot.line(x='YYYY-MM',y='911') # Plot quadrant 911 evaporation time series 
+</code></pre>
+
+<pre><code>&lt;AxesSubplot:xlabel='YYYY-MM'&gt;
+</code></pre>
+<p><img alt="png" src="../output_126_1.png" /></p>
+<h3 id="method-3-get-the-actual-file-from-an-encrypted-server">Method 3: Get the actual file from an encrypted server</h3>
+<p>This section is saved for future semesters</p>
+<hr />
+<h2 id="references">References</h2>
+<p>Overland, B. (2018). Python Without Fear. Addison-Wesley 
+ISBN 978-0-13-468747-6. </p>
+<p>Grus, Joel (2015). Data Science from Scratch: First Principles with Python O’Reilly
+Media. Kindle Edition.</p>
+<p>Precord, C. (2010) wxPython 2.8 Application Development Cookbook Packt Publishing Ltd. Birmingham , B27 6PA, UK 
+ISBN 978-1-849511-78-0.</p>
+<pre><code class="python"># Preamble script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>atomickitty
+sensei
+/opt/jupyterhub/bin/python3
+3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0]
+sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
+</code></pre>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

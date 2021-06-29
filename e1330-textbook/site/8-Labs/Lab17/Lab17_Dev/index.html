@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Laboratory 17 - ENGR-1330 Fall 2021</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">ENGR-1330 Fall 2021</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                            <li >
+                                <a href="../../../0-Syllabus/ENGR-1330-2021-3-Syllabus/">Syllabus</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons and Labs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Introduction</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Computational Thinking and Data Science</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson00/lesson0/">Lesson 0</a>
+</li>
+            
+<li >
+    <a href="../../Lab0/Lab0_Dev/">Laboratory 0</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Problem Solving with Computational Thinking</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson01/lesson1/">Lesson 1</a>
+</li>
+            
+<li >
+    <a href="../../Lab1/Lab1_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Programming Fundamentals</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Arithmetic</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson02/lesson2/">Lesson 2</a>
+</li>
+            
+<li >
+    <a href="../../Lab2/Lab2_Dev/">Laboratory 2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson03/lesson3/">Lesson 3</a>
+</li>
+            
+<li >
+    <a href="../../Lab3/Lab3_Dev/">Laboratory 3</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Flow Control Structures</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson04/lesson4/">Lesson 4</a>
+</li>
+            
+<li >
+    <a href="../../Lab4/Lab4_Dev/">Laboratory 4</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Files</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 5</a>
+</li>
+            
+<li >
+    <a href="../../Lab5/Lab5_Dev/">Laboratory 5</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">External Functions and Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 6</a>
+</li>
+            
+<li >
+    <a href="../../Lab6/Lab6_Dev/">Laboratory 6</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Structures using NUMPY</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson07/lesson6/">Lesson 7</a>
+</li>
+            
+<li >
+    <a href="../../Lab7/Lab7_Dev/">Laboratory 1</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Frames using PANDAS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson08/lesson7/">Lesson 8</a>
+</li>
+            
+<li >
+    <a href="../../Lab8/Lab8_Dev/">Laboratory 8</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Data Display using MATPLOTLIB</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson09/lesson8/">Lesson 9</a>
+</li>
+            
+<li >
+    <a href="../../Lab9/Lab9_Dev/">Laboratory 9</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Engineering Computation</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Implicit Equations</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson10/lesson10/">Lesson 10</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interpolation and Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson11/lesson11/">Lesson 11</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Linear Equation Systems</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson12/lesson12/">Lesson 12</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Non-Linear Equation System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson13/lesson13/">Lesson 13</a>
+</li>
+            
+<li >
+    <a href="../../Lab13/Lab13_Dev/">Laboratory 13</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Data Models and Decisions</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Models and Causality</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 14</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Descriptive Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson15/lesson15/">Lesson 15</a>
+</li>
+            
+<li >
+    <a href="../../Lab15/Lab15_Dev/">Laboratory 15</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Distributions</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 16</a>
+</li>
+            
+<li >
+    <a href="../../Lab16/Lab16_Dev/">Laboratory 16</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Probability Estimation Models</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../1-Lessons/Lesson17/lesson17/">Lesson 17</a>
+</li>
+            
+<li class="active">
+    <a href="./">Laboratory 17</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Hypothesis Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 18</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 19</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Visual Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 20</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Least Squares (Regression) Model Fitting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 21</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Prediction Interval Estimates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 22</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Logistic Regression</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 23</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Classification Engines</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">K Nearest Neighbor</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 24</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Support Vector Machines</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 25</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Artifical Neural Networks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../lesson0/lesson0/">Lesson 26</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Homeworks/Project <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../2-Homework/ES1/es1-deploy/">Exercise Set 1</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES2/es2-deploy/">Exercise Set 2</a>
+</li>
+                                    
+<li >
+    <a href="../../../2-Homework/ES3/es3-deploy/">Exercise Set 3</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ImageClassification/MyANN/">Image Classification Project (under development)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-InstrumentCalibration/InstrumentCalibration-Project/">Instrument Calibration Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-MusicClassification/genre-classification-project-problem/">Music Classification Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-ConcreteStrength/ConcreteStrength-Project/">Concrete Strength Prediction Project (reference links need update)</a>
+</li>
+                                    
+<li >
+    <a href="../../../6-Projects/P-DTMF/DTMF-Part1/">Audio File Analysis Project (under development)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../../1-Lessons/Lesson17/lesson17/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../../lesson0/lesson0/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laboratory-17-data-modeling-using-probability-functions">Laboratory 17 Data Modeling using Probability Functions</a></li>
+            <li><a href="#full-name">Full name:</a></li>
+            <li><a href="#r">R#:</a></li>
+            <li><a href="#hex">HEX:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook</a></li>
+            <li><a href="#date">Date:</a></li>
+        <li class="main "><a href="#estimate-the-magnitude-of-the-annual-peak-flow-at-spring-ck-near-spring-tx">Estimate the magnitude of the annual peak flow at Spring Ck near Spring, TX.</a></li>
+            <li><a href="#normal-distribution-data-model">Normal Distribution Data Model</a></li>
+            <li><a href="#log-normal-distribution-data-model">Log-Normal Distribution Data Model</a></li>
+            <li><a href="#gumbell-double-exponential-ev1-distribution-data-model">Gumbell Double Exponential (EV1) Distribution Data Model</a></li>
+            <li><a href="#pearson-iii-distribution-data-model">Pearson III Distribution Data Model</a></li>
+            <li><a href="#log-pearson-iii-distribution-data-model">Log-Pearson III Distribution Data Model</a></li>
+        <li class="main "><a href="#summary-of-best-data-model-based-on-graphical-fit">Summary of "Best" Data Model based on Graphical Fit</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="laboratory-17-data-modeling-using-probability-functions">Laboratory 17 Data Modeling using Probability Functions</h1>
+<h2 id="full-name">Full name:</h2>
+<h2 id="r">R#:</h2>
+<h2 id="hex">HEX:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook</h2>
+<h2 id="date">Date:</h2>
+<h3 id="important-terminology">Important Terminology:</h3>
+<p><strong>Population:</strong> In statistics, a population is the entire pool from which a statistical sample is drawn. A population may refer to an entire group of people, objects, events, hospital visits, or measurements. <br>
+<strong>Sample:</strong> In statistics and quantitative research methodology, a sample is a set of individuals or objects collected or selected from a statistical population by a defined procedure. The elements of a sample are known as sample points, sampling units or observations.<br>
+<strong>Distribution (Data Model):</strong> A data distribution is a function or a listing which shows all the possible values (or intervals) of the data. It also (and this is important) tells you how often each value occurs. <br></p>
+<p><strong><em>From https://www.investopedia.com/terms</em></strong><br>
+<strong><em>https://www.statisticshowto.com/data-distribution/</em></strong></p>
+<pre><code class="python">### Important Steps:
+1. __Get descriptive statistics- mean, variance, std. dev.__
+2. __Use plotting position formulas (e.g., weibull, gringorten, cunnane) and plot the SAMPLES (data you already have)__
+3. __Use different data models (e.g., normal, log-normal, Gumbell) and find the one that better FITs your samples- Visual or Numerical__
+4. __Use the data model that provides the best fit to infer about the POPULATION__
+</code></pre>
+
+<h1 id="estimate-the-magnitude-of-the-annual-peak-flow-at-spring-ck-near-spring-tx">Estimate the magnitude of the annual peak flow at Spring Ck near Spring, TX.</h1>
+<p>The file <code>08068500.pkf</code> is an actual WATSTORE formatted file for a USGS gage at Spring Creek, Texas. The first few lines of the file look like:</p>
+<pre><code>Z08068500                       USGS 
+H08068500       3006370952610004848339SW12040102409    409     72.6             
+N08068500       Spring Ck nr Spring, TX
+Y08068500       
+308068500       19290530  483007              34.30        1879          
+308068500       19390603    838               13.75                    
+308068500       19400612   3420               21.42                    
+308068500       19401125  42700               33.60                    
+308068500       19420409  14200               27.78                    
+308068500       19430730   8000               25.09                    
+308068500       19440319   5260               23.15                    
+308068500       19450830  31100               32.79                    
+308068500       19460521  12200               27.97
+</code></pre>
+<p>The first column are some agency codes that identify the station , the second column after the fourth row is a date in YYYYMMDD format, the third column is a discharge in CFS, the fourth and fifth column are not relevant for this laboratory exercise.  The file was downloadef from</p>
+<p>https://nwis.waterdata.usgs.gov/tx/nwis/peak?site_no=08068500&amp;agency_cd=USGS&amp;format=hn2</p>
+<p>In the original file there are a couple of codes that are manually removed:</p>
+<ul>
+<li>19290530  483007;  the trailing 7 is a code identifying a break in the series (non-sequential)</li>
+<li>20170828  784009; the trailing 9 identifies the historical peak</li>
+</ul>
+<p>The laboratory task is to fit the data models to this data, decide the best model from visual perspective, and report from that data model the magnitudes of peak flow associated with the probebilitiess below (i.e. populate the table)</p>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<p>The first step is to read the file, skipping the first part, then build a dataframe:</p>
+<pre><code class="python"># Read the data file
+amatrix = [] # null list to store matrix reads
+rowNumA = 0
+matrix1=[]
+col0=[]
+col1=[]
+col2=[]
+with open('08068500.pkf','r') as afile:
+    lines_after_4 = afile.readlines()[4:]
+afile.close() # Disconnect the file
+howmanyrows = len(lines_after_4)
+for i in range(howmanyrows):
+    matrix1.append(lines_after_4[i].strip().split())
+for i in range(howmanyrows):
+    col0.append(matrix1[i][0])
+    col1.append(matrix1[i][1])
+    col2.append(matrix1[i][2])
+# col2 is date, col3 is peak flow
+#now build a datafranem
+</code></pre>
+
+<pre><code class="python">import pandas 
+df = pandas.DataFrame(col0)
+df['date']= col1
+df['flow']= col2
+</code></pre>
+
+<pre><code class="python">df.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>date</th>
+      <th>flow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>308068500</td>
+      <td>19290530</td>
+      <td>48300</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>308068500</td>
+      <td>19390603</td>
+      <td>838</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>308068500</td>
+      <td>19400612</td>
+      <td>3420</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>308068500</td>
+      <td>19401125</td>
+      <td>42700</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>308068500</td>
+      <td>19420409</td>
+      <td>14200</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Now explore if you can plot the dataframe as a plot of peaks versus date.</p>
+<pre><code class="python"># Plot here
+</code></pre>
+
+<p>From here on you can proceede using the lecture notebook as a go-by, although you should use functions as much as practical to keep your work concise</p>
+<pre><code class="python"># Descriptive Statistics 
+</code></pre>
+
+<pre><code class="python"># Weibull Plotting Position Function
+</code></pre>
+
+<pre><code class="python"># Normal Quantile Function 
+</code></pre>
+
+<pre><code class="python"># Fitting Data to Normal Data Model 
+</code></pre>
+
+<h2 id="normal-distribution-data-model">Normal Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<pre><code class="python"># Log-Normal Quantile Function 
+</code></pre>
+
+<pre><code class="python"># Fitting Data to Normal Data Model 
+</code></pre>
+
+<h2 id="log-normal-distribution-data-model">Log-Normal Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<pre><code class="python"># Gumbell EV1 Quantile Function
+</code></pre>
+
+<pre><code class="python"># Fitting Data to Gumbell EV1 Data Model 
+</code></pre>
+
+<h2 id="gumbell-double-exponential-ev1-distribution-data-model">Gumbell Double Exponential (EV1) Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<pre><code class="python"># Gamma (Pearson Type III) Quantile Function
+</code></pre>
+
+<pre><code class="python"># Fitting Data to Pearson (Gamma) III Data Model 
+# This is new, in lecture the fit was to log-Pearson, same procedure, but not log transformed
+</code></pre>
+
+<h2 id="pearson-iii-distribution-data-model">Pearson III Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<pre><code class="python"># Fitting Data to Log-Pearson (Log-Gamma) III Data Model 
+</code></pre>
+
+<h2 id="log-pearson-iii-distribution-data-model">Log-Pearson III Distribution Data Model</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Exceedence Probability</th>
+<th align="left">Flow Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">25%</td>
+<td align="left">????</td>
+<td align="left">75% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">????</td>
+<td align="left">50% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">????</td>
+<td align="left">25% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">????</td>
+<td align="left">10% chance of greater value</td>
+</tr>
+<tr>
+<td align="left">99%</td>
+<td align="left">????</td>
+<td align="left">1% chance of greater value (in flood statistics, this is the 1 in 100-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.8%</td>
+<td align="left">????</td>
+<td align="left">0.002% chance of greater value (in flood statistics, this is the 1 in 500-yr chance event)</td>
+</tr>
+<tr>
+<td align="left">99.9%</td>
+<td align="left">????</td>
+<td align="left">0.001% chance of greater value (in flood statistics, this is the 1 in 1000-yr chance event)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<h1 id="summary-of-best-data-model-based-on-graphical-fit">Summary of "Best" Data Model based on Graphical Fit</h1></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
