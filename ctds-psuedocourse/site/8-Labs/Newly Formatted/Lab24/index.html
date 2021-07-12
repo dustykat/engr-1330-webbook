@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lab24 - Engr 1330 - Web Book</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Engr 1330 - Web Book</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson00/lesson0/">Computational Thinking and Data Science</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson01/lesson1/">Problem Solving with Computational Thinking</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python Scripting <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson02/lesson2/">Simple Computation</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson03/lesson3/">Data Structures and the MATH package</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson04/lesson4/">Program Control Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">External Functions and Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engineering and Scientific Data Files</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson07/lesson6/">Computational Linear Algebra using NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson08/lesson7/">Database Query and Manipulation using PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson09/lesson8/">Visual Display of Data using MATPLOTLIB</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson10/lesson10/">Implicit Equations</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson11/lesson11/">Interpolation and Integration</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson12/lesson12/">Linear Equation Systems</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson13/lesson13/">Non-Linear Equation Systems</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Models & Decisions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Statistical Data Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Randomness and Probability</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson15/lesson15/">Descriptive Statistics</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Distribution Models</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson17/lesson17/">Probability Estimation Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Hypothesis Testing</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Experimental Design (A/B Testing)</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Interval Estimates</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prediction <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Fitting Models to Observations</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Least Squares (Regression) Model Fitting</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Model Quality</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Estimating Probability/Quantile Regression</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classification <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Types</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">K Nearest Neighbor</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engine Update</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laboratory-24-a-tale-of-supportive-machines">Laboratory 24: "A Tale of Supportive Machines!" </a></li>
+            <li><a href="#full-name">Full name:</a></li>
+            <li><a href="#r">R#:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook</a></li>
+            <li><a href="#date">Date:</a></li>
+        <li class="main "><a href="#support-vector-machines-svm">Support Vector Machines (SVM)</a></li>
+            <li><a href="#support-vector-machine-svm-is-a-supervised-machine-learning-algorithm-which-can-be-used-for-both-classification-or-regression-challenges-however-it-is-mostly-used-in-classification-problems-in-the-svm-algorithm-we-plot-each-data-item-as-a-point-in-n-dimensional-space-where-n-is-number-of-features-you-have-with-the-value-of-each-feature-being-the-value-of-a-particular-coordinate-then-we-perform-classification-by-finding-the-hyper-plane-that-differentiates-the-two-classes-very-well-look-at-the-below-snapshot">“Support Vector Machine” (SVM) is a supervised machine learning algorithm which can be used for both classification or regression challenges. However,  it is mostly used in classification problems. In the SVM algorithm, we plot each data item as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiates the two classes very well (look at the below snapshot). </a></li>
+            <li><a href="#support-vectors-are-simply-the-co-ordinates-of-individual-observation-the-svm-classifier-is-a-frontier-which-best-segregates-the-two-classes-hyper-plane-line">Support Vectors are simply the co-ordinates of individual observation. The SVM classifier is a frontier which best segregates the two classes (hyper-plane/ line). </a></li>
+            <li><a href="#how-does-it-work">How does it work?</a></li>
+            <li><a href="#lets-see-how-to-implement-svm-in-python">Let's see how to implement SVM in Python!</a></li>
+            <li><a href="#example-re-using-the-iris-plants-classification">Example: Re-using the Iris Plants Classification </a></li>
+            <li><a href="#exercise-who-would-you-trust-a-tree-or-a-machine">Exercise: Who would you trust? A tree or a machine?  </a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from: (LINK NEEDS FIXING!)</p>
+<p><a href="https://atomickitty.ddns.net:8000/user/sensei/files/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/8-Labs/Lab8/Lab9_Dev.ipynb?_xsrf=2%7C1b4d47c3%7C0c3aca0c53606a3f4b71c448b09296ae%7C1623531240">Lab24</a></p>
+<hr />
+<h1 id="laboratory-24-a-tale-of-supportive-machines"><font color=darkred>Laboratory 24: "A Tale of Supportive Machines!" </font></h1>
+<pre><code class="python"># Preamble script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>DESKTOP-EH6HD63
+desktop-eh6hd63\farha
+C:\Users\Farha\Anaconda3\python.exe
+3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]
+sys.version_info(major=3, minor=7, micro=4, releaselevel='final', serial=0)
+</code></pre>
+<h2 id="full-name">Full name:</h2>
+<h2 id="r">R#:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook</h2>
+<h2 id="date">Date:</h2>
+<hr />
+<h1 id="support-vector-machines-svm">Support Vector Machines (SVM)</h1>
+<p><img alt="" src="https://memegenerator.net/img/instances/68631404.jpg" /> <br></p>
+<h3 id="support-vector-machine-svm-is-a-supervised-machine-learning-algorithm-which-can-be-used-for-both-classification-or-regression-challenges-however-it-is-mostly-used-in-classification-problems-in-the-svm-algorithm-we-plot-each-data-item-as-a-point-in-n-dimensional-space-where-n-is-number-of-features-you-have-with-the-value-of-each-feature-being-the-value-of-a-particular-coordinate-then-we-perform-classification-by-finding-the-hyper-plane-that-differentiates-the-two-classes-very-well-look-at-the-below-snapshot">“Support Vector Machine” (SVM) is a supervised machine learning algorithm which can be used for both classification or regression challenges. However,  it is mostly used in classification problems. In the SVM algorithm, we plot each data item as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiates the two classes very well (look at the below snapshot). <br></h3>
+<p><img alt="" src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/11/svm1.png" /> <br></p>
+<pre><code>Hyperplane:
+In geometry, a hyperplane is a subspace whose dimension is one less than that of its ambient space. If a space is 3-dimensional then its hyperplanes are the 2-dimensional planes, while if the space is 2-dimensional, its hyperplanes are the 1-dimensional lines. (@Wikipedia: https://en.wikipedia.org/wiki/Hyperplane)
+</code></pre>
+<p><img alt="" src="https://images.deepai.org/glossary-terms/3bb86574825445cba73a67222b744648/hyperplane.png" /> <br></p>
+<h3 id="support-vectors-are-simply-the-co-ordinates-of-individual-observation-the-svm-classifier-is-a-frontier-which-best-segregates-the-two-classes-hyper-plane-line">Support Vectors are simply the co-ordinates of individual observation. The SVM classifier is a frontier which best segregates the two classes (hyper-plane/ line). <br></h3>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_1.png" /> <br></p>
+<h2 id="how-does-it-work">How does it work?</h2>
+<p><img alt="" src="https://miro.medium.com/max/1200/0*MgG8zoCB6CY4Fa19.gif" /> <br></p>
+<h3 id="identify-the-right-hyper-plane-scenario-1">Identify the right hyper-plane (Scenario-1):</h3>
+<p><strong>Here, we have three hyper-planes (A, B and C). Now, identify the right hyper-plane to classify star and circle.</strong></p>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_21.png" /></p>
+<p><strong>Remember a thumb rule to identify the right hyper-plane: “Select the hyper-plane which segregates the two classes better”. In this scenario, hyper-plane “B” has excellently performed this job.</strong>  <br>     </p>
+<hr>
+
+<h3 id="identify-the-right-hyper-plane-scenario-2">Identify the right hyper-plane (Scenario-2):</h3>
+<p><strong>Here, we have three hyper-planes (A, B and C) and all are segregating the classes well. Now, How can we identify the right hyper-plane?</strong></p>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_3.png" /></p>
+<p><strong>Here, maximizing the distances between nearest data point (either class) and hyper-plane will help us to decide the right hyper-plane. This distance is called as Margin. Let’s look at the below snapshot:</strong>  <br>     </p>
+<p><img alt="" src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/11/svm-2.png" /></p>
+<p><strong>Below, you can see that the margin for hyper-plane C is high as compared to both A and B. Hence, we name the right hyper-plane as C. Another lightning reason for selecting the hyper-plane with higher margin is robustness. If we select a hyper-plane having low margin then there is high chance of miss-classification.</strong>  <br> </p>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_4.png" /></p>
+<hr>
+
+<h3 id="identify-the-right-hyper-plane-scenario-3">Identify the right hyper-plane (Scenario-3):</h3>
+<p><strong>Hint: Use the rules as discussed in previous section to identify the right hyper-plane</strong></p>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_5.png" /></p>
+<p><strong>Some of you may have selected the hyper-plane B as it has higher margin compared to A. But, here is the catch, SVM selects the hyper-plane which classifies the classes accurately prior to maximizing margin. Here, hyper-plane B has a classification error and A has classified all correctly. Therefore, the right hyper-plane is A.</strong>  <br>     </p>
+<hr>
+
+<h3 id="identify-the-right-hyper-plane-scenario-4">Identify the right hyper-plane (Scenario-4):</h3>
+<p><strong>Below, I am unable to segregate the two classes using a straight line, as one of the stars lies in the territory of other(circle) class as an outlier.</strong></p>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_61.png" /></p>
+<p><strong>As I have already mentioned, one star at other end is like an outlier for star class. The SVM algorithm has a feature to ignore outliers and find the hyper-plane that has the maximum margin. Hence, we can say, SVM classification is robust to outliers.</strong>  <br>     </p>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_71.png" /></p>
+<hr>
+
+<h3 id="identify-the-right-hyper-plane-scenario-5">Identify the right hyper-plane (Scenario-5):</h3>
+<p><strong>In the scenario below, we can’t have linear hyper-plane between the two classes, so how does SVM classify these two classes? Till now, we have only looked at the linear hyper-plane.</strong></p>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_8.png" /></p>
+<p><strong>SVM can solve this problem. Easily! It solves this problem by introducing additional feature. Here, we will add a new feature z=x^2+y^2. Now, let’s plot the data points on axis x and z:</strong>  <br>     </p>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_9.png" /></p>
+<p><strong>In above plot, points to consider are:</strong>
+- <strong>All values for z would be positive always because z is the squared sum of both x and y</strong>
+- <strong>In the original plot, red circles appear close to the origin of x and y axes, leading to lower value of z and star relatively away from the origin result to higher value of z.</strong> <br></p>
+<p><strong>In the SVM classifier, it is easy to have a linear hyper-plane between these two classes. But, another burning question which arises is, should we need to add this feature manually to have a hyper-plane. No, the SVM  algorithm has a technique called the kernel trick. The SVM kernel is a function that takes low dimensional input space and transforms it to a higher dimensional space i.e. it converts not separable problem to separable problem. It is mostly useful in non-linear separation problem. Simply put, it does some extremely complex data transformations, then finds out the process to separate the data based on the labels or outputs you’ve defined. When we look at the hyper-plane in original input space it looks like a circle:</strong>  <br>   </p>
+<p><img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_10.png" /></p>
+<p><strong>From another perspective, this is what's happening:</strong>
+<img alt="" src="https://machinelearningwithmlr.files.wordpress.com/2019/10/ch06_fig_5_mlr.png?w=656" /></p>
+<p><strong>There are different Kernel functions that can be used with SVMs:</strong>
+<img alt="" src="https://www.researchgate.net/profile/Jui-Sheng_Chou/publication/239386696/figure/tbl2/AS:667912230674445@1536254093339/SVM-Kernel-Function-Types.png" /></p>
+<p><strong>Depending on the nature of the problem, different Kernels may be advantagous:</strong>
+<img alt="" src="https://machinelearningwithmlr.files.wordpress.com/2019/10/ch06_fig_6_mlr.png?w=656" /></p>
+<h2 id="lets-see-how-to-implement-svm-in-python">Let's see how to implement SVM in Python!</h2>
+<p><img alt="" src="https://miro.medium.com/max/1200/1*Pp5ZQowsSjqKmvtjlqWEug.jpeg" /></p>
+<hr />
+<h2 id="example-re-using-the-iris-plants-classification">Example: Re-using the Iris Plants Classification <br></h2>
+<p><img alt="" src="https://www.almanac.com/sites/default/files/styles/opengraph/public/image_nodes/iris-flowers.jpg?itok=lq_po7Qz" /> <br></p>
+<h3 id="the-iris-flower-dataset-involves-predicting-the-flower-species-given-measurements-of-iris-flowers-the-iris-data-set-contains-information-on-sepal-length-sepal-width-petal-length-petal-width-all-in-cm-and-class-of-iris-plants-the-data-set-contains-3-classes-of-50-instances-each">The Iris Flower Dataset involves predicting the flower species given measurements of iris flowers. The Iris Data Set contains information on sepal length, sepal width, petal length, petal width all in cm, and class of iris plants. The data set contains 3 classes of 50 instances each.</h3>
+<p><img alt="" src="https://miro.medium.com/max/1000/1*lFC_U5j_Y8IXF4Ga87KNVg.png" /> <br></p>
+<h3 id="lets-use-svm-in-python-and-see-if-we-can-classifity-iris-plants-based-on-the-four-given-predictors">Let's use SVM in Python and see if we can classifity iris plants based on the four given predictors.</h3>
+<hr>
+
+<p><em><strong>Acknowledgements</strong></em>
+1. <em>Fisher,R.A. "The use of multiple measurements in taxonomic problems" Annual Eugenics, 7, Part II, 179-188 (1936); also in "Contributions to Mathematical Statistics" (John Wiley, NY, 1950).</em>
+2. <em>Duda,R.O., &amp; Hart,P.E. (1973) Pattern Classification and Scene Analysis. (Q327.D83) John Wiley &amp; Sons.  ISBN 0-471-22361-1.  See page 218.</em>
+3. <em>Dasarathy, B.V. (1980) "Nosing Around the Neighborhood: A New System Structure and Classification Rule for Recognition in Partially Exposed Environments".  IEEE Transactions on Pattern Analysis and Machine Intelligence, Vol. PAMI-2, No. 1, 67-71.</em>
+4. <em>Gates, G.W. (1972) "The Reduced Nearest Neighbor Rule".  IEEE Transactions on Information Theory, May 1972, 431-433.</em>    <br />
+5. <em>See also: 1988 MLC Proceedings, 54-64.  Cheeseman et al's AUTOCLASS II conceptual clustering system finds 3 classes in the data.</em></p>
+<h3 id="as-you-know-by-now-the-first-step-is-to-load-some-necessary-libraries">As you know by now, the first step is to load some necessary libraries:</h3>
+<pre><code class="python">import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+import sklearn.metrics as metrics
+import seaborn as sns
+%matplotlib inline
+from sklearn import datasets #There is a version of the iris database in the sklearn package
+
+from sklearn import svm #The function for applyin SVM
+</code></pre>
+
+<pre><code class="python"># import some data to play with
+iris = datasets.load_iris()
+X = iris.data[:, :2] # Let's say we only take the first two features: Sepal Width and Sepal Length
+
+y = iris.target
+</code></pre>
+
+<pre><code class="python"># we create an instance of SVM and fit our data. 
+svc = svm.SVC(kernel='linear').fit(X, y)
+</code></pre>
+
+<pre><code class="python"># create a mesh to plot in
+x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+h = (x_max / x_min)/100
+xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
+ np.arange(y_min, y_max, h))
+</code></pre>
+
+<pre><code class="python">plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.Paired)
+plt.xlabel('Sepal length')
+plt.ylabel('Sepal width')
+plt.xlim(xx.min(), xx.max())
+plt.title('SVC with linear kernel')
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="output_13_0.png" /></p>
+<pre><code class="python">plt.subplot(1, 1, 1)
+Z = svc.predict(np.c_[xx.ravel(), yy.ravel()])
+Z = Z.reshape(xx.shape)
+plt.contourf(xx, yy, Z, cmap=plt.cm.Paired, alpha=0.8)
+plt.scatter(X[:, 0], X[:, 1], cmap=plt.cm.Paired, c=y)
+plt.xlabel('Sepal length')
+plt.ylabel('Sepal width')
+plt.xlim(xx.min(), xx.max())
+plt.title('SVC with linear kernel')
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="output_14_0.png" /></p>
+<pre><code class="python">svc = svm.SVC(kernel='rbf').fit(X, y)
+</code></pre>
+
+<pre><code>C:\Users\Farha\Anaconda3\lib\site-packages\sklearn\svm\base.py:193: FutureWarning: The default value of gamma will change from 'auto' to 'scale' in version 0.22 to account better for unscaled features. Set gamma explicitly to 'auto' or 'scale' to avoid this warning.
+  "avoid this warning.", FutureWarning)
+</code></pre>
+<pre><code class="python">plt.subplot(1, 1, 1)
+Z = svc.predict(np.c_[xx.ravel(), yy.ravel()])
+Z = Z.reshape(xx.shape)
+plt.contourf(xx, yy, Z, cmap=plt.cm.Paired, alpha=0.8)
+plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.Paired)
+plt.xlabel('Sepal length')
+plt.ylabel('Sepal width')
+plt.xlim(xx.min(), xx.max())
+plt.title('SVC with linear kernel')
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="output_16_0.png" /></p>
+<p><strong>gamma:</strong> <br>
+Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’. Higher the value of gamma, will try to exact fit the as per training data set i.e. generalization error and cause over-fitting problem.
+<img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_15.png" /> <br></p>
+<p><strong>C:</strong> <br>
+Penalty parameter C of the error term. It also controls the trade-off between smooth decision boundaries and classifying the training points correctly.
+<img alt="" src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_18.png" /> <br></p>
+<pre><code class="python">
+</code></pre>
+
+<h3 id="trying-the-route-similar-to-what-we-did-before-we-should-read-the-dataset-and-explore-it-using-tools-such-as-descriptive-statistics">Trying the route similar to what we did before, we should read the dataset and explore it using tools such as descriptive statistics:</h3>
+<pre><code class="python">dataset = pd.read_csv('iris.csv')
+dataset.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal-length</th>
+      <th>sepal-width</th>
+      <th>petal-length</th>
+      <th>petal-width</th>
+      <th>Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="we-should-seperate-the-predictors-and-target-similar-to-what-we-did-for-logisitc-regression">We should seperate the predictors and target - similar to what we did for logisitc regression:</h3>
+<pre><code class="python">X = dataset.iloc[:, :-1].values
+y = dataset.iloc[:, 4].values
+</code></pre>
+
+<h3 id="now-we-split-the-training-and-testing-datasets-with-a-075025-ratio">Now we split the training and testing datasets with a 0.75/0.25 ratio:</h3>
+<pre><code class="python">from sklearn.model_selection import train_test_split
+
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+</code></pre>
+
+<h3 id="then-we-create-an-instance-of-svm-and-fit-our-data">Then, we create an instance of SVM and fit our data:</h3>
+<pre><code class="python">from sklearn import svm
+#create a classifier
+cls = svm.SVC(kernel=&quot;linear&quot;)
+#train the model
+cls.fit(X_train,y_train)
+#predict the response
+pred = cls.predict(X_test)
+</code></pre>
+
+<h3 id="and-we-can-evaluate-the-performance-of-our-svm-model">And we can evaluate the performance of our SVM model:</h3>
+<pre><code class="python">from sklearn.metrics import classification_report, confusion_matrix
+
+print(confusion_matrix(y_test, pred))
+print(metrics.classification_report(y_test, y_pred=pred))
+</code></pre>
+
+<pre><code>[[14  0  0]
+ [ 0 12  1]
+ [ 0  0 11]]
+                 precision    recall  f1-score   support
+
+    Iris-setosa       1.00      1.00      1.00        14
+Iris-versicolor       1.00      0.92      0.96        13
+ Iris-virginica       0.92      1.00      0.96        11
+
+       accuracy                           0.97        38
+      macro avg       0.97      0.97      0.97        38
+   weighted avg       0.98      0.97      0.97        38
+</code></pre>
+<p><hr>
+<hr></p>
+<h3 id="pros-and-cons-associated-with-svm">Pros and Cons associated with SVM ...</h3>
+<h4 id="pros">Pros:</h4>
+<ul>
+<li><strong>It works really well with a clear margin of separation.</strong></li>
+<li><strong>It is effective in high dimensional spaces.</strong></li>
+<li><strong>It is effective in cases where the number of dimensions is greater than the number of samples.</strong></li>
+<li><strong>It uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.</strong></li>
+<li><strong>It allows utilization of different kernel functions  for the decision function which also makes it versatile.</strong></li>
+</ul>
+<h4 id="cons">Cons:</h4>
+<ul>
+<li><strong>It doesn’t perform well when we have large data set because the required training time is higher.</strong></li>
+<li><strong>It also doesn’t perform very well, when the data set has more noise i.e. target classes are overlapping.</strong></li>
+</ul>
+<p><img alt="" src="https://miro.medium.com/max/2800/1*pYZhrwePzlYsaOkK-0hEXA.png" /> <br></p>
+<p><img alt="" src="https://media2.giphy.com/media/5nj4ZZWl6QwneEaBX4/source.gif" /> <br></p>
+<p><em>This notebook was inspired by several blogposts including:</em> </p>
+<ul>
+<li><strong>"Understanding Support Vector Machine(SVM) algorithm from examples (along with code)"</strong> by <strong>SUNIL RAY</strong> available at *https://www.analyticsvidhya.com/blog/2017/09/understaing-support-vector-machine-example-code/ <br></li>
+<li><strong>"A Quick Guide To Learn Support Vector Machine In Python"</strong> by <strong>Mohammad Waseem</strong> available at *https://www.edureka.co/blog/support-vector-machine-in-python/ <br></li>
+</ul>
+<p><em>Here are some great reads on these topics:</em> 
+- <strong>"Support Vector Machine – Simplified"</strong> by <strong>TAVISH SRIVASTAVA</strong> available at <em>https://www.analyticsvidhya.com/blog/2014/10/support-vector-machine-simplified/?utm_source=blog&amp;utm_medium=understandingsupportvectormachinearticle <br>
+- <strong>"Creating a simple binary SVM classifier with Python and Scikit-learn"</strong> by <strong>Chris</strong> available at </em>https://www.machinecurve.com/index.php/2020/05/03/creating-a-simple-binary-svm-classifier-with-python-and-scikit-learn/#summary <br>
+- <strong>"Support Vector Machine introduction"</strong> available at <em>https://pythonprogramming.net/support-vector-machine-intro-machine-learning-tutorial/ <br>
+- <strong>"Classifying data using Support Vector Machines(SVMs) in Python"</strong> available at </em>https://www.geeksforgeeks.org/classifying-data-using-support-vector-machinessvms-in-python/ <br>
+- <strong>"Support Vector Machines explained with Python examples"</strong> by <strong>Carolina Bento</strong> available at *https://towardsdatascience.com/support-vector-machines-explained-with-python-examples-cb65e8172c85 <br></p>
+<p><em>Here are some great videos on these topics:</em> 
+- <strong>"Support Vector Machines, Clearly Explained!!!"</strong> by <strong>StatQuest with Josh Starmer</strong> available at <em>https://www.youtube.com/watch?v=efR1C6CvhmE <br>
+- <strong>"Support Vector Machine (SVM) - Fun and Easy Machine Learning"</strong> by <strong>Augmented Startups</strong> available at </em>https://www.youtube.com/watch?v=Y6RRHw9uN9o <br>
+- <strong>"How SVM (Support Vector Machine) algorithm works"</strong> by <strong>Thales Sehn Körting</strong> available at *https://www.youtube.com/watch?v=1NxnPkZM9bc <br></p>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/dNgK7Ws7y176U/200.gif" /> <br></p>
+<h2 id="exercise-who-would-you-trust-a-tree-or-a-machine">Exercise: Who would you trust? A tree or a machine?  <br></h2>
+<h3 id="what-are-some-advantages-and-disadvantages-the-random-forest-algorithm-against-the-support-vector-machines">What are some advantages and disadvantages the Random Forest algorithm against the Support Vector Machines?</h3>
+<h4 id="make-sure-to-cite-any-resources-that-you-may-use"><em>Make sure to cite any resources that you may use.</em></h4>
+<pre><code class="python">
+</code></pre>
+
+<p><img alt="" src="https://www.quotemaster.org/images/8a/8a4a5240c603576bb2723eba06888447.png" /></p>
+<pre><code class="python">
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

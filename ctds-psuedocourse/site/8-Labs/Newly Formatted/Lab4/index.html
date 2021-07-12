@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lab4 - Engr 1330 - Web Book</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Engr 1330 - Web Book</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson00/lesson0/">Computational Thinking and Data Science</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson01/lesson1/">Problem Solving with Computational Thinking</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python Scripting <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson02/lesson2/">Simple Computation</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson03/lesson3/">Data Structures and the MATH package</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson04/lesson4/">Program Control Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">External Functions and Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engineering and Scientific Data Files</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson07/lesson6/">Computational Linear Algebra using NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson08/lesson7/">Database Query and Manipulation using PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson09/lesson8/">Visual Display of Data using MATPLOTLIB</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson10/lesson10/">Implicit Equations</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson11/lesson11/">Interpolation and Integration</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson12/lesson12/">Linear Equation Systems</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson13/lesson13/">Non-Linear Equation Systems</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Models & Decisions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Statistical Data Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Randomness and Probability</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson15/lesson15/">Descriptive Statistics</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Distribution Models</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson17/lesson17/">Probability Estimation Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Hypothesis Testing</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Experimental Design (A/B Testing)</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Interval Estimates</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prediction <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Fitting Models to Observations</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Least Squares (Regression) Model Fitting</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Model Quality</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Estimating Probability/Quantile Regression</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classification <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Types</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">K Nearest Neighbor</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engine Update</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laboratory-4-loops-looops-loooooops">Laboratory 4: Loops, Looops, Loooooops </a></li>
+            <li><a href="#full-name">Full name:</a></li>
+            <li><a href="#r">R#:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook:</a></li>
+            <li><a href="#date">Date:</a></li>
+            <li><a href="#program-flow-control-loops">Program flow control (Loops)</a></li>
+            <li><a href="#exercise-for-or-while">Exercise: FOR or WHILE? </a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from:</p>
+<p><a href="https://atomickitty.ddns.net:8000/user/sensei/files/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/8-Labs/Lab3/Lab4_Dev.ipynb?_xsrf=2%7C1b4d47c3%7C0c3aca0c53606a3f4b71c448b09296ae%7C1623531240">Lab4</a></p>
+<hr />
+<h1 id="laboratory-4-loops-looops-loooooops"><font color=darkred>Laboratory 4: Loops, Looops, Loooooops </font></h1>
+<pre><code class="python"># Preamble script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>DESKTOP-EH6HD63
+desktop-eh6hd63\farha
+C:\Users\Farha\Anaconda3\python.exe
+3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]
+sys.version_info(major=3, minor=7, micro=4, releaselevel='final', serial=0)
+</code></pre>
+<h2 id="full-name">Full name:</h2>
+<h2 id="r">R#:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook:</h2>
+<h2 id="date">Date:</h2>
+<hr />
+<p><img alt="" src="https://i.pinimg.com/originals/d0/45/12/d04512a3837fd4c7cf88efe26883e037.gif" /> <br></p>
+<h2 id="program-flow-control-loops"><font color=purple>Program flow control (Loops)</font></h2>
+<ul>
+<li>Controlled repetition</li>
+<li>Structured FOR Loop</li>
+<li>Structured WHILE Loop</li>
+</ul>
+<h3 id="count-controlled-repetition"><font color=purple>Count controlled repetition</font></h3>
+<p><img alt="" src="https://chortle.ccsu.edu/assemblytutorial/Chapter-18/countingLoop.gif" /> <br></p>
+<p>Count-controlled repetition is also called definite repetition because the number of repetitions is known before the loop begins executing. 
+When we do not know in advance the number of times we want to execute a statement, we cannot use count-controlled repetition. 
+In such an instance, we would use sentinel-controlled repetition. </p>
+<p>A count-controlled repetition will exit after running a certain number of times. 
+The count is kept in a variable called an index or counter. 
+When the index reaches a certain value (the loop bound) the loop will end. </p>
+<p>Count-controlled repetition requires</p>
+<ul>
+<li>control variable (or loop counter)</li>
+<li>initial value of the control variable</li>
+<li>increment (or decrement) by which the control variable is modified each iteration through the loop</li>
+<li>condition that tests for the final value of the control variable </li>
+</ul>
+<p>We can use both <code>for</code> and <code>while</code> loops, for count controlled repetition, but the <code>for</code> loop in combination with the <code>range()</code> function is more common.</p>
+<h4 id="structured-for-loop">Structured <code>FOR</code> loop</h4>
+<p>We have seen the for loop already, but we will formally introduce it here. The <code>for</code> loop executes a block of code repeatedly until the condition in the <code>for</code> statement is no longer true.</p>
+<h4 id="looping-through-an-iterable">Looping through an iterable</h4>
+<p>An iterable is anything that can be looped over - typically a list, string, or tuple. 
+The syntax for looping through an iterable is illustrated by an example.</p>
+<p>First a generic syntax</p>
+<pre><code>for a in iterable:
+print(a)
+</code></pre>
+<p>Notice the colon <code>:</code> and the indentation.
+Now a specific example:</p>
+<hr />
+<h3 id="example-a-loop-to-begin-with">Example: A Loop to Begin With!</h3>
+<p>Make a list with "Walter", "Jesse", "Gus, "Hank". Then, write a loop that prints all the elements of your lisk.</p>
+<pre><code class="python"># set a list
+BB = [&quot;Walter&quot;,&quot;Jesse&quot;,&quot;Gus&quot;,&quot;Hank&quot;]
+# loop thru the list
+for AllStrings in BB:
+    print(AllStrings)
+</code></pre>
+
+<pre><code>Walter
+Jesse
+Gus
+Hank
+</code></pre>
+<hr />
+<h4 id="the-range-function-to-create-an-iterable">The <code>range()</code> function to create an iterable</h4>
+<p>The <code>range(begin,end,increment)</code> function will create an iterable starting at a value of begin, in steps defined by increment (<code>begin += increment</code>), ending at <code>end</code>. </p>
+<p>So a generic syntax becomes</p>
+<pre><code>for a in range(begin,end,increment):
+print(a)
+</code></pre>
+<p>The example that follows is count-controlled repetition (increment skip if greater)</p>
+<pre><code class="python"># set a list
+BB = [&quot;Walter&quot;,&quot;Jesse&quot;,&quot;Gus&quot;,&quot;Hank&quot;]
+# loop thru the list
+for i in range(0,4,1): # Change the numbers, what happens?
+    print(BB[i])
+</code></pre>
+
+<pre><code>Walter
+Jesse
+Gus
+Hank
+</code></pre>
+<hr />
+<h3 id="example-thats-odd">Example: That's odd!</h3>
+<p>Write a loop to print all the odd numbers between 0 and 10.</p>
+<pre><code class="python"># For loop with range
+for x in range(1,10,2): # a sequence from 2 to 5 with steps of 1
+  print(x)
+</code></pre>
+
+<pre><code>1
+3
+5
+7
+9
+</code></pre>
+<hr />
+<h3 id="sentinel-controlled-repetition"><font color=purple>Sentinel-controlled repetition</font></h3>
+<p><img alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/20191119172228/Flow-Diagram-do-while-loop.jpg" /> <br></p>
+<p>When loop control is based on the value of what we are processing, sentinel-controlled repetition is used. 
+Sentinel-controlled repetition is also called indefinite repetition because it is not known in advance how many times the loop will be executed. </p>
+<p><img alt="" src="https://media0.giphy.com/media/3Xw8jY3zbFRtFd6eK8/giphy.gif" /> <br></p>
+<p>It is a repetition procedure for solving a problem by using a sentinel value (also called a signal value, a dummy value or a flag value) to indicate "end of process". 
+The sentinel value itself need not be a part of the processed data.</p>
+<p>One common example of using sentinel-controlled repetition is when we are processing data from a file and we do not know in advance when we would reach the end of the file. </p>
+<p>We can use both <code>for</code> and <code>while</code> loops, for <strong>Sentinel</strong> controlled repetition, but the <code>while</code> loop is more common.</p>
+<h4 id="structured-while-loop">Structured <code>WHILE</code> loop</h4>
+<p>The <code>while</code> loop repeats a block of instructions inside the loop while a condition remainsvtrue.</p>
+<p>First a generic syntax</p>
+<pre><code>while condition is true:
+    execute a
+    execute b
+....
+</code></pre>
+<p>Notice our friend, the colon <code>:</code> and the indentation again.</p>
+<pre><code class="python"># set a counter
+counter = 5
+# while loop
+while counter &gt; 0:
+    print(&quot;Counter = &quot;,counter)
+    counter = counter -1
+</code></pre>
+
+<pre><code>Counter =  5
+Counter =  4
+Counter =  3
+Counter =  2
+Counter =  1
+</code></pre>
+<blockquote>
+<p>The while loop structure just depicted is a "decrement, skip if equal" in lower level languages. The next structure, also a while loop is an "increment, skip if greater" structure.</p>
+</blockquote>
+<pre><code class="python"># set a counter
+counter = 0
+# while loop
+while counter &lt;= 5:  # change this line to: while counter &lt;= 5: what happens?
+    print (&quot;Counter = &quot;,counter)
+    counter = counter +1  # change this line to: counter +=1  what happens?
+
+</code></pre>
+
+<pre><code>Counter =  0
+Counter =  1
+Counter =  2
+Counter =  3
+Counter =  4
+Counter =  5
+</code></pre>
+<hr />
+<h3 id="nested-repetition-loops-within-loops"><font color=purple>Nested Repetition | Loops within Loops</font></h3>
+<p><img alt="" src="https://i.gifer.com/7kmF.gif" /> <br></p>
+<blockquote>
+<p>Round like a circle in a spiral, like a wheel within a wheel <br>
+Never ending or beginning on an ever spinning reel <br>
+Like a snowball down a mountain, or a carnival balloon <br>
+Like a carousel that's turning running rings around the moon <br>
+Like a clock whose hands are sweeping past the minutes of its face <br>
+And the world is like an apple whirling silently in space <br>
+Like the circles that you find in the windmills of your mind! <br>
+<br>
+<strong><em>Windmills of Your Mind lyrics © Sony/ATV Music Publishing LLC, BMG Rights Management</em></strong> <br>
+<strong><em>Songwriters: Marilyn Bergman / Michel Legrand / Alan Bergman</em></strong> <br>
+<strong><em>Recommended versions: Neil Diamond | Dusty Springfield | Farhad Mehrad</em></strong>  <br></p>
+</blockquote>
+<p>"Like the circles that you find in the windmills of your mind", Nested repetition is when a control structure is placed inside of the body or main part of another control structure.</p>
+<h4 id="break-to-exit-out-of-a-loop"><code>break</code> to exit out of a loop</h4>
+<p>Sometimes you may want to exit the loop when a certain condition different from the counting
+condition is met. Perhaps you are looping through a list and want to exit when you find the
+first element in the list that matches some criterion. The break keyword is useful for such
+an operation.
+For example run the following program:</p>
+<pre><code class="python">#
+j = 0
+for i in range(0,5,1):
+    j += 2
+    print (&quot;i = &quot;,i,&quot;j = &quot;,j)
+    if j == 6:
+        break
+</code></pre>
+
+<pre><code>i =  0 j =  2
+i =  1 j =  4
+i =  2 j =  6
+</code></pre>
+<pre><code class="python"># One Small Change
+j = 0
+for i in range(0,5,1):
+    j += 2
+    print( &quot;i = &quot;,i,&quot;j = &quot;,j)
+    if j == 7:
+        break
+</code></pre>
+
+<pre><code>i =  0 j =  2
+i =  1 j =  4
+i =  2 j =  6
+i =  3 j =  8
+i =  4 j =  10
+</code></pre>
+<p>In the first case, the for loop only executes 3 times before the condition j == 6 is TRUE and the loop is exited. 
+In the second case, j == 7 never happens so the loop completes all its anticipated traverses.</p>
+<p>In both cases an <code>if</code> statement was used within a for loop. Such "mixed" control structures
+are quite common (and pretty necessary). 
+A <code>while</code> loop contained within a <code>for</code> loop, with several <code>if</code> statements would be very common and such a structure is called <strong>nested control.</strong>
+There is typically an upper limit to nesting but the limit is pretty large - easily in the
+hundreds. It depends on the language and the system architecture ; suffice to say it is not
+a practical limit except possibly for general-domain AI applications.
+<hr>
+We can also do mundane activities and leverage loops, arithmetic, and format codes to make useful tables like</p>
+<h3 id="example-cosines-in-the-loop">Example: Cosines in the loop!</h3>
+<p>Write a loop to print a table of the cosines of numbers between 0 and 0.01 with steps of 0.001.</p>
+<pre><code class="python">import math # package that contains cosine
+print(&quot;     Cosines     &quot;)
+print(&quot;   x   &quot;,&quot;|&quot;,&quot; cos(x) &quot;)
+print(&quot;--------|--------&quot;)
+for i in range(0,100,1):
+    x = float(i)*0.001
+    print(&quot;%.3f&quot; % x, &quot;  |&quot;, &quot; %.4f &quot;  % math.cos(x)) # note the format code and the placeholder % and syntax of using package
+</code></pre>
+
+<hr />
+<h3 id="example-getting-the-hang-of-it">Example: Getting the hang of it!</h3>
+<p>Write a Python script that takes a real input value (a float) for x and returns the y
+value according to the rules below</p>
+<p>
+<script type="math/tex; mode=display">\begin{gather}
+y = x~for~0 <= x < 1 \\
+y = x^2~for~1 <= x < 2 \\
+y = x + 2~for~2 <= x < 3 \\
+\end{gather}</script>
+</p>
+<p>Test the script with x values of 0.0, 1.0, 1.1, and 2.1. <br>
+add functionality to <strong>automaticaly</strong> populate the table below:</p>
+<table>
+<thead>
+<tr>
+<th align="right">x</th>
+<th align="right">y(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0.0</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">1.0</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">2.0</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">3.0</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">4.0</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right">5.0</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="python">userInput = input('Enter enter a float') #ask for user's input
+x = float(userInput)
+print(&quot;x:&quot;, x)
+
+if x &gt;= 0 and x &lt; 1:
+    y = x
+    print(&quot;y is equal to&quot;,y)
+elif x &gt;= 1 and x &lt; 2:
+    y = x*x
+    print(&quot;y is equal to&quot;,y)
+else:
+    y = x+2
+    print(&quot;y is equal to&quot;,y)
+</code></pre>
+
+<pre><code class="python"># without pretty table
+
+print(&quot;---x---&quot;,&quot;|&quot;,&quot;---y---&quot;)
+print(&quot;--------|--------&quot;)
+for x in range(0,6,1):
+    if x &gt;= 0 and x &lt; 1:
+        y = x
+        print(&quot;%4.f&quot; % x, &quot;   |&quot;, &quot; %4.f &quot; % y)
+    elif x &gt;= 1 and x &lt; 2:
+        y = x*x
+        print(&quot;%4.f&quot; % x, &quot;   |&quot;, &quot; %4.f &quot; % y)
+    else:
+        y = x+2
+        print(&quot;%4.f&quot; % x, &quot;   |&quot;, &quot; %4.f &quot; % y)
+</code></pre>
+
+<pre><code class="python"># with pretty table
+
+from prettytable import PrettyTable #Required to create tables
+
+t = PrettyTable(['x', 'y']) #Define an empty table
+
+
+for x in range(0,6,1):
+    if x &gt;= 0 and x &lt; 1:
+        y = x
+        print(&quot;for x equal to&quot;, x, &quot;, y is equal to&quot;,y)
+        t.add_row([x, y]) #will add a row to the table &quot;t&quot;
+    elif x &gt;= 1 and x &lt; 2:
+        y = x*x
+        print(&quot;for x equal to&quot;, x, &quot;, y is equal to&quot;,y)
+        t.add_row([x, y])
+    else:
+        y = x+2
+        print(&quot;for x equal to&quot;, x, &quot;, y is equal to&quot;,y)
+        t.add_row([x, y])
+
+print(t)
+</code></pre>
+
+<hr />
+<h4 id="the-continue-statement">The <code>continue</code> statement</h4>
+<p>The continue instruction skips the block of code after it is executed for that iteration. 
+It is
+best illustrated by an example.</p>
+<pre><code class="python">j = 0
+for i in range(0,5,1):
+    j += 2
+    print (&quot;\n i = &quot;, i , &quot;, j = &quot;, j) #here the \n is a newline command
+    if j == 6:
+        continue
+    print(&quot; this message will be skipped over if j = 6 &quot;) # still within the loop, so the skip is implemented
+
+#When j ==6 the line after the continue keyword is not printed. 
+#Other than that one difference the rest of the script runs normally.
+</code></pre>
+
+<pre><code> i =  0 , j =  2
+ this message will be skipped over if j = 6
+
+ i =  1 , j =  4
+ this message will be skipped over if j = 6
+
+ i =  2 , j =  6
+
+ i =  3 , j =  8
+ this message will be skipped over if j = 6
+
+ i =  4 , j =  10
+ this message will be skipped over if j = 6
+</code></pre>
+<hr />
+<h4 id="the-try-except-structure">The <code>try</code>, <code>except</code> structure</h4>
+<p>An important control structure (and a pretty cool one for error trapping) is the <code>try</code>, <code>except</code>
+statement.</p>
+<p>The statement controls how the program proceeds when an error occurs in an instruction.
+The structure is really useful to trap likely errors (divide by zero, wrong kind of input) 
+yet let the program keep running or at least issue a meaningful message to the user.</p>
+<p>The syntax is:</p>
+<pre><code>try:
+do something
+except:
+do something else if ``do something'' returns an error
+</code></pre>
+<p>Here is a really simple, but hugely important example:</p>
+<pre><code class="python">#MyErrorTrap.py
+x = 12.
+y = 12.
+while y &gt;= -12.: # sentinel controlled repetition
+    try:         
+        print (&quot;x = &quot;, x, &quot;y = &quot;, y, &quot;x/y = &quot;, x/y)
+    except:
+        print (&quot;error divide by zero&quot;)
+    y -= 1
+</code></pre>
+
+<pre><code>x =  12.0 y =  12.0 x/y =  1.0
+x =  12.0 y =  11.0 x/y =  1.0909090909090908
+x =  12.0 y =  10.0 x/y =  1.2
+x =  12.0 y =  9.0 x/y =  1.3333333333333333
+x =  12.0 y =  8.0 x/y =  1.5
+x =  12.0 y =  7.0 x/y =  1.7142857142857142
+x =  12.0 y =  6.0 x/y =  2.0
+x =  12.0 y =  5.0 x/y =  2.4
+x =  12.0 y =  4.0 x/y =  3.0
+x =  12.0 y =  3.0 x/y =  4.0
+x =  12.0 y =  2.0 x/y =  6.0
+x =  12.0 y =  1.0 x/y =  12.0
+error divide by zero
+x =  12.0 y =  -1.0 x/y =  -12.0
+x =  12.0 y =  -2.0 x/y =  -6.0
+x =  12.0 y =  -3.0 x/y =  -4.0
+x =  12.0 y =  -4.0 x/y =  -3.0
+x =  12.0 y =  -5.0 x/y =  -2.4
+x =  12.0 y =  -6.0 x/y =  -2.0
+x =  12.0 y =  -7.0 x/y =  -1.7142857142857142
+x =  12.0 y =  -8.0 x/y =  -1.5
+x =  12.0 y =  -9.0 x/y =  -1.3333333333333333
+x =  12.0 y =  -10.0 x/y =  -1.2
+x =  12.0 y =  -11.0 x/y =  -1.0909090909090908
+x =  12.0 y =  -12.0 x/y =  -1.0
+</code></pre>
+<p>So this silly code starts with x fixed at a value of 12, and y starting at 12 and decreasing by
+1 until y equals -1. The code returns the ratio of x to y and at one point y is equal to zero
+and the division would be undefined. By trapping the error the code can issue us a measure
+and keep running.</p>
+<p>Modify the script as shown below,Run, and see what happens</p>
+<pre><code class="python">#NoErrorTrap.py
+x = 12.
+y = 12.
+while y &gt;= -12.: # sentinel controlled repetition
+    print (&quot;x = &quot;, x, &quot;y = &quot;, y, &quot;x/y = &quot;, x/y)
+    y -= 1
+</code></pre>
+
+<pre><code>x =  12.0 y =  12.0 x/y =  1.0
+x =  12.0 y =  11.0 x/y =  1.0909090909090908
+x =  12.0 y =  10.0 x/y =  1.2
+x =  12.0 y =  9.0 x/y =  1.3333333333333333
+x =  12.0 y =  8.0 x/y =  1.5
+x =  12.0 y =  7.0 x/y =  1.7142857142857142
+x =  12.0 y =  6.0 x/y =  2.0
+x =  12.0 y =  5.0 x/y =  2.4
+x =  12.0 y =  4.0 x/y =  3.0
+x =  12.0 y =  3.0 x/y =  4.0
+x =  12.0 y =  2.0 x/y =  6.0
+x =  12.0 y =  1.0 x/y =  12.0
+
+
+
+---------------------------------------------------------------------------
+
+ZeroDivisionError                         Traceback (most recent call last)
+
+&lt;ipython-input-31-82eeaceb9a12&gt; in &lt;module&gt;
+      3 y = 12.
+      4 while y &gt;= -12.: # sentinel controlled repetition
+----&gt; 5     print ("x = ", x, "y = ", y, "x/y = ", x/y)
+      6     y -= 1
+
+
+ZeroDivisionError: float division by zero
+</code></pre>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/5nj4ZZWl6QwneEaBX4/source.gif" /> <br></p>
+<p><em>Here are some great reads on this topic:</em> 
+- <strong>"Python for Loop"</strong> available at <em>https://www.programiz.com/python-programming/for-loop/<br>
+- <strong>"Python "for" Loops (Definite Iteration)"</strong> by <strong>John Sturtz</strong> available at </em>https://realpython.com/python-for-loop/ <br>
+- <strong>"Python "while" Loops (Indefinite Iteration)"</strong> by <strong>John Sturtz</strong> available at <em>https://realpython.com/python-while-loop/ <br>
+- <strong>"loops in python"</strong> available at </em>https://www.geeksforgeeks.org/loops-in-python/ <br>
+- <strong>"Python Exceptions: An Introduction"</strong> by <strong>Said van de Klundert</strong> available at *https://realpython.com/python-exceptions/ <br></p>
+<p><em>Here are some great videos on these topics:</em> 
+- <strong>"Python For Loops - Python Tutorial for Absolute Beginners"</strong> by <strong>Programming with Mosh</strong> available at <em>https://www.youtube.com/watch?v=94UHCEmprCY <br>
+- <strong>"Python Tutorial for Beginners 7: Loops and Iterations - For/While Loops"</strong> by <strong>Corey Schafer</strong> available at </em>https://www.youtube.com/watch?v=6iF8Xb7Z3wQ <br>
+- <strong>"Python 3 Programming Tutorial - For loop"</strong> by <strong>sentdex</strong> available at *https://www.youtube.com/watch?v=xtXexPSfcZg <br><br></p>
+<p><img alt="" src="https://media.csesoc.org.au/content/images/2019/10/learn11.gif" /> <br></p>
+<hr />
+<h2 id="exercise-for-or-while">Exercise: FOR or WHILE? <br></h2>
+<h3 id="1000-people-have-asked-to-be-enlisted-to-take-the-first-dose-of-covid-19-vaccine-you-are-asked-to-write-a-loop-and-allow-the-ones-who-meet-the-requirements-to-take-the-shot-what-kind-of-loop-will-you-use-a-for-loop-or-a-while-loop-explain-the-logic-behind-your-choice-briefly">1000 people have asked to be enlisted to take the first dose of COVID-19 vaccine. You are asked to write a loop and allow the ones who meet the requirements to take the shot. What kind of loop will you use? a FOR loop or a WHILE loop? Explain the logic behind your choice briefly.</h3>
+<h4 id="make-sure-to-cite-any-resources-that-you-may-use">* Make sure to cite any resources that you may use.</h4>
+<pre><code class="python">
+</code></pre>
+
+<p><img alt="" src="https://i.pinimg.com/originals/51/97/7b/51977b7f744a0b085b593af84b0ec943.jpg" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

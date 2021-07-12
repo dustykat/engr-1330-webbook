@@ -4,13 +4,13 @@ nav:
   - Home: index.md
 
   # - Syllabus : 0-Syllabus/ENGR-1330-2021-3-Syllabus.md
-  - Introduction: 
+  - Intro: 
 #      - About this document: about.md
       - Computational Thinking and Data Science : 1-Lessons/Lesson00/lesson0.md
               #- Laboratory 0: 8-Labs/Lab0/Lab0_Dev.md
       - Problem Solving with Computational Thinking: 1-Lessons/Lesson01/lesson1.md
               #- Laboratory 1: 8-Labs/Lab1/Lab1_Dev.md
-  - Scripting Fundamentals:
+  - Python Scripting:
       - Simple Computation : 1-Lessons/Lesson02/lesson2.md
               #- Laboratory 2: 8-Labs/Lab2/Lab2_Dev.md
       - Data Structures and the MATH package: 1-Lessons/Lesson03/lesson3.md
@@ -33,7 +33,7 @@ nav:
       - Linear Equation Systems :  1-Lessons/Lesson12/lesson12.md      
       - Non-Linear Equation Systems : 1-Lessons/Lesson13/lesson13.md 
       #        - Laboratory 13: 8-Labs/Lab13/Lab13_Dev.md
-  - Models and Decisions : 
+  - Models & Decisions : 
       - Statistical Data Modeling : lesson0/lesson0.md
       - Randomness and Probability: lesson0/lesson0.md
       - Descriptive Statistics : 1-Lessons/Lesson15/lesson15.md 

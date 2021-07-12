@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lab14 - Engr 1330 - Web Book</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Engr 1330 - Web Book</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson00/lesson0/">Computational Thinking and Data Science</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson01/lesson1/">Problem Solving with Computational Thinking</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python Scripting <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson02/lesson2/">Simple Computation</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson03/lesson3/">Data Structures and the MATH package</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson04/lesson4/">Program Control Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">External Functions and Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engineering and Scientific Data Files</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson07/lesson6/">Computational Linear Algebra using NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson08/lesson7/">Database Query and Manipulation using PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson09/lesson8/">Visual Display of Data using MATPLOTLIB</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson10/lesson10/">Implicit Equations</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson11/lesson11/">Interpolation and Integration</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson12/lesson12/">Linear Equation Systems</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson13/lesson13/">Non-Linear Equation Systems</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Models & Decisions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Statistical Data Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Randomness and Probability</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson15/lesson15/">Descriptive Statistics</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Distribution Models</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson17/lesson17/">Probability Estimation Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Hypothesis Testing</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Experimental Design (A/B Testing)</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Interval Estimates</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prediction <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Fitting Models to Observations</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Least Squares (Regression) Model Fitting</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Model Quality</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Estimating Probability/Quantile Regression</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classification <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Types</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">K Nearest Neighbor</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engine Update</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laboratory-14-a-bullet-or-a-goat-or-things-you-should-know-before-playing-with-strangers">Laboratory 14: "A Bullet or A Goat?" or "Things you should know before playing with strangers!"</a></li>
+            <li><a href="#full-name">Full name:</a></li>
+            <li><a href="#r">R#:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook:</a></li>
+            <li><a href="#date">Date:</a></li>
+        <li class="main "><a href="#python-for-simulation">Python for Simulation</a></li>
+            <li><a href="#what-is-russian-roulette">What is Russian roulette?</a></li>
+        <li class="main "><a href="#python-for-probability">Python for Probability</a></li>
+            <li><a href="#important-terminology">Important Terminology:</a></li>
+            <li><a href="#example-in-a-game-of-russian-roulette-the-chance-of-surviving-each-round-is-56-which-is-almost-83-using-a-for-loop-compute-probability-of-surviving">Example: In a game of Russian Roulette, the chance of surviving each round is 5/6 which is almost 83%. Using a for loop, compute probability of surviving</a></li>
+            <li><a href="#example-what-will-be-the-probability-of-constantly-throwing-an-even-number-with-a-d20-in">Example: What will be the probability of constantly throwing an even number with a D20 in</a></li>
+            <li><a href="#example-what-will-be-the-probability-of-throwing-at-least-one-6-with-a-d6">Example: What will be the probability of throwing at least one 6 with a D6:</a></li>
+            <li><a href="#example-what-is-the-probability-of-drawing-an-ace-at-least-once-with-replacement">Example: What is the probability of drawing an ace at least once (with replacement):</a></li>
+            <li><a href="#example">Example:</a></li>
+            <li><a href="#example-two-unbiased-dice-are-thrown-once-and-the-total-score-is-observed-define-an-appropriate-function-and-use-a-simulation-to-find-the-estimated-probability-that">Example: Two unbiased dice are thrown once and the total score is observed. Define an appropriate function and use a simulation to find the estimated probability that :</a></li>
+            <li><a href="#example-an-urn-contains-10-white-balls-20-reds-and-30-greens-we-want-to-draw-5-balls-with-replacement-use-a-simulation-10000-trials-to-find-the-estimated-probability-that">Example: An urn contains 10 white balls, 20 reds and 30 greens. We want to draw 5 balls with replacement. Use a simulation (10000 trials) to find the estimated probability that:</a></li>
+            <li><a href="#exercise-risk-or-probability">Exercise: Risk or Probability  </a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from: (LINK NEEDS FIXING!)</p>
+<p><a href="https://atomickitty.ddns.net:8000/user/sensei/files/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/8-Labs/Lab8/Lab9_Dev.ipynb?_xsrf=2%7C1b4d47c3%7C0c3aca0c53606a3f4b71c448b09296ae%7C1623531240">Lab14</a></p>
+<hr />
+<h1 id="laboratory-14-a-bullet-or-a-goat-or-things-you-should-know-before-playing-with-strangers"><font color=darkred>Laboratory 14: "A Bullet or A Goat?" or "Things you should know before playing with strangers!"</font></h1>
+<pre><code class="python"># Preamble script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>DESKTOP-EH6HD63
+desktop-eh6hd63\farha
+C:\Users\Farha\Anaconda3\python.exe
+3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]
+sys.version_info(major=3, minor=7, micro=4, releaselevel='final', serial=0)
+</code></pre>
+<h2 id="full-name">Full name:</h2>
+<h2 id="r">R#:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook:</h2>
+<h2 id="date">Date:</h2>
+<hr />
+<h1 id="python-for-simulation"><font color=purple>Python for Simulation</font></h1>
+<h2 id="what-is-russian-roulette">What is Russian roulette?</h2>
+<blockquote>
+<p>Russian roulette (Russian: русская рулетка, russkaya ruletka) is a lethal game of chance in which a player places a single round in a revolver, spins the cylinder, places the muzzle against their head, and pulls the trigger in hopes that the loaded chamber does not align with the primer percussion mechanism and the barrel, causing the weapon to discharge. Russian refers to the supposed country of origin, and roulette to the element of risk-taking and the spinning of the revolver's cylinder, which is reminiscent of a spinning roulette wheel. <br>
+- Wikipedia @ https://en.wikipedia.org/wiki/Russian_roulette</p>
+</blockquote>
+<p><img alt="" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/echoes-of-the-great-war-the-revolver-weston-westmoreland.jpg" /></p>
+<blockquote>
+<p>A game of dafts, a game of chance <br>
+One where revolver's the one to dance <br>
+Rounds and rounds, it goes and spins <br>
+Makes you regret all those sins <br> \
+A game of fools, one of lethality  <br>
+With a one to six probability <br>
+There were two guys and a gun <br>
+With six chambers but only one... <br> \
+CLICK, one pushed the gun <br>
+CLICK, one missed the fun <br>
+CLICK, "that awful sound" ... <br>
+BANG!, one had his brains all around! <br></p>
+</blockquote>
+<hr />
+<h3 id="example-simulate-a-game-of-russian-roulette">Example: Simulate a game of Russian Roulette:</h3>
+<ul>
+<li>For 2 rounds</li>
+<li>For 5 rounds</li>
+<li>For 10 rounds</li>
+</ul>
+<pre><code class="python">import numpy as np                     #import numpy
+revolver = np.array([1,0,0,0,0,0])     #create a numpy array with 1 bullet and 5 empty chambers
+print(np.random.choice(revolver,2))              #randomly select a value from revolver - simulation
+</code></pre>
+
+<pre><code>[0 0]
+</code></pre>
+<pre><code class="python">print(np.random.choice(revolver,5))
+</code></pre>
+
+<pre><code>[0 0 1 0 0]
+</code></pre>
+<pre><code class="python">print(np.random.choice(revolver,10))
+</code></pre>
+
+<pre><code>[0 0 0 1 0 0 0 0 0 0]
+</code></pre>
+<p><img alt="" src="https://blog.uvm.edu/aivakhiv/files/2020/06/d4cawex-fd18072b-6140-48d9-93d7-0fa9435abf0e.png" /></p>
+<hr />
+<h3 id="example-simulate-the-results-of-throwing-a-d6-regular-dice-for-10-times">Example: Simulate the results of throwing a D6 (regular dice) for 10 times.</h3>
+<pre><code class="python">import numpy as np                     #import numpy
+dice = np.array([1,2,3,4,5,6])         #create a numpy array with values of a D6
+np.random.choice(dice,10)              #randomly selecting a value from dice for 10 times- simulation
+</code></pre>
+
+<pre><code>array([5, 6, 5, 5, 1, 4, 6, 6, 3, 4])
+</code></pre>
+<hr />
+<h3 id="example-assume-the-following-rules">Example: Assume the following rules:</h3>
+<ul>
+<li>
+<p>If the dice shows 1 or 2 spots, my net gain is -1 dollar.</p>
+</li>
+<li>
+<p>If the dice shows 3 or 4 spots, my net gain is 0 dollars.</p>
+</li>
+<li>
+<p>If the dice shows 5 or 6 spots, my net gain is 1 dollar.</p>
+</li>
+</ul>
+<p><strong>Define a function to simulate a game with the above rules, assuming a D6, and compute the net gain of the player over any given number of rolls. <br>
+Compute the net gain for 5, 50, and 500 rolls</strong></p>
+<pre><code class="python">def D6game(nrolls):
+    import numpy as np                     #import numpy
+    dice = np.array([1,2,3,4,5,6])         #create a numpy array with values of a D6
+    rolls = np.random.choice(dice,nrolls)  #randomly selecting a value from dice for nrolls times- simulation
+    gainlist =[]                           #create an empty list for gains|losses
+    for i in np.arange(len(rolls)):        #Apply the rules 
+        if rolls[i]&lt;=2:
+            gainlist.append(-1)
+        elif rolls[i]&lt;=4:
+            gainlist.append(0)
+        elif rolls[i]&lt;=6:
+            gainlist.append(+1)
+    return (np.sum(gainlist))              #sum up all gains|losses
+#   return (gainlist,&quot;The net gain is equal to:&quot;,np.sum(gainlist))
+
+</code></pre>
+
+<pre><code class="python">D6game(5)
+</code></pre>
+
+<pre><code>2
+</code></pre>
+<pre><code class="python">D6game(50)
+</code></pre>
+
+<pre><code>-4
+</code></pre>
+<pre><code class="python">D6game(500)
+</code></pre>
+
+<pre><code>0
+</code></pre>
+<p><img alt="" src="https://www.gannett-cdn.com/media/2017/09/30/USATODAY/USATODAY/636423937425139027-XXX-D4-MONTY-HALL-27-TV.jpg?width=2560" /></p>
+<h3 id="lets-make-a-deal-game-show-and-monty-hall-problem">Let's Make A Deal Game Show and Monty Hall Problem</h3>
+<p><strong>The Monty Hall problem is a brain teaser, in the form of a probability puzzle, loosely based on the American television game show Let's Make a Deal and named after its original host, Monty Hall. The problem was originally posed (and solved) in a letter by Steve Selvin to the American Statistician in 1975 (Selvin 1975a), (Selvin 1975b).</strong></p>
+<blockquote>
+<p>"Suppose you're on a game show, and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?"</p>
+</blockquote>
+<p><strong><em>From Wikipedia: https://en.wikipedia.org/wiki/Monty_Hall_problem</em></strong></p>
+<p><img alt="" src="https://thumbs.gfycat.com/ClearcutFragrantArcherfish-size_restricted.gif" /></p>
+<p><img alt="" src="http://www.bcmath.ca/m10h/The%20Monty%20Hall%20Problem%20(Web)/data/img1.png" /></p>
+<p><img alt="" src="https://webstockreview.net/images/clipart-door-orange-door-3.png" /></p>
+<p><img alt="" src="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/UcEdvPuGYw.png" /></p>
+<hr />
+<h3 id="example-simulate-monty-hall-game-for-1000-times-use-a-barplot-and-discuss-whether-players-are-better-off-sticking-to-their-initial-choice-or-switching-doors">Example: Simulate Monty Hall Game for 1000 times. Use a barplot and discuss whether players are better off sticking to their initial choice, or switching doors?</h3>
+<pre><code class="python">def othergoat(x):         #Define a function to return &quot;the other goat&quot;!
+    if x == &quot;Goat 1&quot;:
+        return &quot;Goat 2&quot;
+    elif x == &quot;Goat 2&quot;:
+        return &quot;Goat 1&quot;
+</code></pre>
+
+<pre><code class="python">Doors = np.array([&quot;Car&quot;,&quot;Goat 1&quot;,&quot;Goat 2&quot;])     #Define a list for objects behind the doors
+goats = np.array([&quot;Goat 1&quot; , &quot;Goat 2&quot;])          #Define a list for goats!
+
+def MHgame():
+    #Function to simulate the Monty Hall Game
+    #For each guess, return [&quot;the guess&quot;,&quot;the revealed&quot;, &quot;the remaining&quot;]
+    userguess=np.random.choice(Doors)         #randomly selects a door as userguess
+    if userguess == &quot;Goat 1&quot;:
+        return [userguess, &quot;Goat 2&quot;,&quot;Car&quot;]
+    if userguess == &quot;Goat 2&quot;:
+        return [userguess, &quot;Goat 1&quot;,&quot;Car&quot;]
+    if userguess == &quot;Car&quot;:
+        revealed = np.random.choice(goats)
+        return [userguess, revealed,othergoat(revealed)]
+</code></pre>
+
+<pre><code class="python"># Check and see if the MHgame function is doing what it is supposed to do:
+for i in np.arange(1):
+    a =MHgame()
+    print(a)
+    print(a[0])
+    print(a[1])
+    print(a[2])
+</code></pre>
+
+<pre><code>['Goat 2', 'Goat 1', 'Car']
+Goat 2
+Goat 1
+Car
+</code></pre>
+<pre><code class="python">c1 = []         #Create an empty list for the userguess
+c2 = []         #Create an empty list for the revealed
+c3 = []         #Create an empty list for the remaining
+for i in np.arange(1000):         #Simulate the game for 1000 rounds - or any other number of rounds you desire
+    game = MHgame()
+    c1.append(game[0])             #In each round, add the first element to the userguess list
+    c2.append(game[1])             #In each round, add the second element to the revealed list
+    c3.append(game[2])             #In each round, add the third element to the remaining list
+
+</code></pre>
+
+<pre><code class="python">import pandas as pd
+#Create a data frame (gamedf) with 3 columns (&quot;Guess&quot;,&quot;Revealed&quot;, &quot;Remaining&quot;) and 1000 (or how many number of rounds) rows
+gamedf = pd.DataFrame({'Guess':c1,
+                       'Revealed':c2,
+                       'Remaining':c3})
+gamedf
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Guess</th>
+      <th>Revealed</th>
+      <th>Remaining</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Car</td>
+      <td>Goat 2</td>
+      <td>Goat 1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Car</td>
+      <td>Goat 2</td>
+      <td>Goat 1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Goat 1</td>
+      <td>Goat 2</td>
+      <td>Car</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Car</td>
+      <td>Goat 2</td>
+      <td>Goat 1</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Goat 2</td>
+      <td>Goat 1</td>
+      <td>Car</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>995</td>
+      <td>Goat 1</td>
+      <td>Goat 2</td>
+      <td>Car</td>
+    </tr>
+    <tr>
+      <td>996</td>
+      <td>Goat 1</td>
+      <td>Goat 2</td>
+      <td>Car</td>
+    </tr>
+    <tr>
+      <td>997</td>
+      <td>Car</td>
+      <td>Goat 1</td>
+      <td>Goat 2</td>
+    </tr>
+    <tr>
+      <td>998</td>
+      <td>Car</td>
+      <td>Goat 1</td>
+      <td>Goat 2</td>
+    </tr>
+    <tr>
+      <td>999</td>
+      <td>Goat 1</td>
+      <td>Goat 2</td>
+      <td>Car</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 3 columns</p>
+</div>
+
+<pre><code class="python"># Get the count of each item in the first and 3rd column
+original_car =gamedf[gamedf.Guess == 'Car'].shape[0]
+remaining_car =gamedf[gamedf.Remaining == 'Car'].shape[0]
+
+original_g1 =gamedf[gamedf.Guess == 'Goat 1'].shape[0]
+remaining_g1 =gamedf[gamedf.Remaining == 'Goat 1'].shape[0]
+
+original_g2 =gamedf[gamedf.Guess == 'Goat 2'].shape[0]
+remaining_g2 =gamedf[gamedf.Remaining == 'Goat 2'].shape[0]
+</code></pre>
+
+<pre><code class="python"># Let's plot a grouped barplot
+import matplotlib.pyplot as plt  
+
+# set width of bar
+barWidth = 0.25
+
+# set height of bar
+bars1 = [original_car,original_g1,original_g2]
+bars2 = [remaining_car,remaining_g1,remaining_g2]
+
+# Set position of bar on X axis
+r1 = np.arange(len(bars1))
+r2 = [x + barWidth for x in r1]
+
+# Make the plot
+plt.bar(r1, bars1, color='darkorange', width=barWidth, edgecolor='white', label='Original Guess')
+plt.bar(r2, bars2, color='midnightblue', width=barWidth, edgecolor='white', label='Remaining Door')
+
+# Add xticks on the middle of the group bars
+plt.xlabel('Item', fontweight='bold')
+plt.xticks([r + barWidth/2 for r in range(len(bars1))], ['Car', 'Goat 1', 'Goat 2'])
+
+# Create legend &amp; Show graphic
+plt.legend()
+plt.show()
+
+</code></pre>
+
+<p><img alt="png" src="output_33_0.png" /></p>
+<p><font color=crimson><strong>According to the plot, it is statitically beneficial for the players to switch doors because the initial chance for being correct is only 1/3</strong></font></p>
+<p><img alt="" src="http://imgs.xkcd.com/comics/monty_hall.png" /></p>
+<h1 id="python-for-probability"><font color=purple>Python for Probability</font></h1>
+<p><img alt="" src="https://static.insider.com/image/5d08059fdaa48259d13213a5.jpg" /></p>
+<h3 id="important-terminology"><font color=purple>Important Terminology:</font></h3>
+<p><strong>Experiment:</strong> An occurrence with an uncertain outcome that we can observe. <br>
+<em>For example, rolling a die.</em><br>
+<strong>Outcome:</strong> The result of an experiment; one particular state of the world. What Laplace calls a "case."<br>
+<em>For example: 4.</em><br>
+<strong>Sample Space:</strong> The set of all possible outcomes for the experiment.<br>
+<em>For example, {1, 2, 3, 4, 5, 6}.</em><br>
+<strong>Event:</strong> A subset of possible outcomes that together have some property we are interested in.<br>
+<em>For example, the event "even die roll" is the set of outcomes {2, 4, 6}.</em><br>
+<strong>Probability:</strong> As Laplace said, the probability of an event with respect to a sample space is the number of favorable cases (outcomes from the sample space that are in the event) divided by the total number of cases in the sample space. (This assumes that all outcomes in the sample space are equally likely.) Since it is a ratio, probability will always be a number between 0 (representing an impossible event) and 1 (representing a certain event).<br>
+<em>For example, the probability of an even die roll is 3/6 = 1/2.</em><br></p>
+<p><strong><em>From https://people.math.ethz.ch/~jteichma/probability.html</em></strong></p>
+<pre><code class="python">import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt  
+</code></pre>
+
+<hr />
+<h3 id="example-in-a-game-of-russian-roulette-the-chance-of-surviving-each-round-is-56-which-is-almost-83-using-a-for-loop-compute-probability-of-surviving">Example: In a game of Russian Roulette, the chance of surviving each round is 5/6 which is almost 83%. Using a for loop, compute probability of surviving</h3>
+<ul>
+<li>For 2 rounds</li>
+<li>For 5 rounds</li>
+<li>For 10 rounds</li>
+</ul>
+<pre><code class="python">nrounds =[]
+probs =[]
+
+for i in range(3):
+    nrounds.append(i)
+    probs.append((5/6)**i) #probability of surviving- not getting the bullet!
+
+RRDF = pd.DataFrame({&quot;# of Rounds&quot;: nrounds, &quot;Probability of Surviving&quot;: probs})
+RRDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Rounds</th>
+      <th>Probability of Surviving</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0.833333</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>0.694444</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">nrounds =[]
+probs =[]
+
+for i in range(6):
+    nrounds.append(i)
+    probs.append((5/6)**i) #probability of surviving- not getting the bullet!
+
+RRDF = pd.DataFrame({&quot;# of Rounds&quot;: nrounds, &quot;Probability of Surviving&quot;: probs})
+RRDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Rounds</th>
+      <th>Probability of Surviving</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0.833333</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>0.694444</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+      <td>0.578704</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>0.482253</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>5</td>
+      <td>0.401878</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">nrounds =[]
+probs =[]
+
+for i in range(11):
+    nrounds.append(i)
+    probs.append((5/6)**i) #probability of surviving- not getting the bullet!
+
+RRDF = pd.DataFrame({&quot;# of Rounds&quot;: nrounds, &quot;Probability of Surviving&quot;: probs})
+RRDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Rounds</th>
+      <th>Probability of Surviving</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0.833333</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>0.694444</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+      <td>0.578704</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>0.482253</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>5</td>
+      <td>0.401878</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>6</td>
+      <td>0.334898</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>7</td>
+      <td>0.279082</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>8</td>
+      <td>0.232568</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>9</td>
+      <td>0.193807</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>10</td>
+      <td>0.161506</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">RRDF.plot.scatter(x=&quot;# of Rounds&quot;, y=&quot;Probability of Surviving&quot;,color=&quot;red&quot;)
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2c7f96de308&gt;
+</code></pre>
+<p><img alt="png" src="output_44_1.png" /></p>
+<hr />
+<h3 id="example-what-will-be-the-probability-of-constantly-throwing-an-even-number-with-a-d20-in">Example: What will be the probability of constantly throwing an even number with a D20 in</h3>
+<ul>
+<li>For 2 rolls</li>
+<li>For 5 rolls</li>
+<li>For 10 rolls</li>
+<li>For 15 rolls</li>
+</ul>
+<pre><code class="python">nrolls =[]
+probs =[]
+
+for i in range(1,16,1):
+    nrolls.append(i)
+    probs.append((1/2)**i) #probability of throwing an even number-10/20 or 1/2
+
+DRDF = pd.DataFrame({&quot;# of Rolls&quot;: nrolls, &quot;Probability of constantly throwing an even number&quot;: probs})
+DRDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Rolls</th>
+      <th>Probability of constantly throwing an even number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0.500000</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>0.250000</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>0.125000</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>0.062500</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>0.031250</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6</td>
+      <td>0.015625</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>7</td>
+      <td>0.007812</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>0.003906</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>9</td>
+      <td>0.001953</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>10</td>
+      <td>0.000977</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>11</td>
+      <td>0.000488</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>12</td>
+      <td>0.000244</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>13</td>
+      <td>0.000122</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>14</td>
+      <td>0.000061</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>15</td>
+      <td>0.000031</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">DRDF.plot.scatter(x=&quot;# of Rolls&quot;, y=&quot;Probability of constantly throwing an even number&quot;,color=&quot;crimson&quot;)
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2c7f978f488&gt;
+</code></pre>
+<p><img alt="png" src="output_47_1.png" /></p>
+<hr />
+<h3 id="example-what-will-be-the-probability-of-throwing-at-least-one-6-with-a-d6">Example: What will be the probability of throwing at least one 6 with a D6:</h3>
+<ul>
+<li>For 2 rolls</li>
+<li>For 5 rolls</li>
+<li>For 10 rolls</li>
+<li>For 50 rolls - Make a scatter plot for this one!</li>
+</ul>
+<pre><code class="python">nRolls =[]
+probs =[]
+
+for i in range(1,3,1):
+    nRolls.append(i)
+    probs.append(1-(5/6)**i) #probability of at least one 6: 1-(5/6)
+
+rollsDF = pd.DataFrame({&quot;# of Rolls&quot;: nRolls, &quot;Probability of rolling at least one 6&quot;: probs})
+rollsDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Rolls</th>
+      <th>Probability of rolling at least one 6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0.166667</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>0.305556</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">nRolls =[]
+probs =[]
+
+for i in range(1,6,1):
+    nRolls.append(i)
+    probs.append(1-(5/6)**i) #probability of at least one 6: 1-(5/6)
+
+rollsDF = pd.DataFrame({&quot;# of Rolls&quot;: nRolls, &quot;Probability of rolling at least one 6&quot;: probs})
+rollsDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Rolls</th>
+      <th>Probability of rolling at least one 6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0.166667</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>0.305556</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>0.421296</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>0.517747</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>0.598122</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">nRolls =[]
+probs =[]
+
+for i in range(1,11,1):
+    nRolls.append(i)
+    probs.append(1-(5/6)**i) #probability of at least one 6: 1-(5/6)
+
+rollsDF = pd.DataFrame({&quot;# of Rolls&quot;: nRolls, &quot;Probability of rolling at least one 6&quot;: probs})
+rollsDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Rolls</th>
+      <th>Probability of rolling at least one 6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0.166667</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>0.305556</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>0.421296</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>0.517747</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>0.598122</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6</td>
+      <td>0.665102</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>7</td>
+      <td>0.720918</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>0.767432</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>9</td>
+      <td>0.806193</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>10</td>
+      <td>0.838494</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">nRolls =[]
+probs =[]
+
+for i in range(1,51,1):
+    nRolls.append(i)
+    probs.append(1-(5/6)**i) #probability of at least one 6: 1-(5/6)
+
+rollsDF = pd.DataFrame({&quot;# of Rolls&quot;: nRolls, &quot;Probability of rolling at least one 6&quot;: probs})
+</code></pre>
+
+<pre><code class="python">rollsDF.plot.scatter(x=&quot;# of Rolls&quot;, y=&quot;Probability of rolling at least one 6&quot;)
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2c7f97a3d88&gt;
+</code></pre>
+<p><img alt="png" src="output_53_1.png" /></p>
+<hr />
+<h3 id="example-what-is-the-probability-of-drawing-an-ace-at-least-once-with-replacement">Example: What is the probability of drawing an ace at least once (with replacement):</h3>
+<ul>
+<li>in 2 tries</li>
+<li>in 5 tries</li>
+<li>in 10 tries</li>
+<li>in 20 tries - make a scatter plot.</li>
+</ul>
+<pre><code class="python">nDraws =[]
+probs =[]
+
+for i in range(1,3,1):
+    nDraws.append(i)
+    probs.append(1-(48/52)**i) #probability of drawing an ace least once : 1-(48/52)
+
+DrawsDF = pd.DataFrame({&quot;# of Draws&quot;: nDraws, &quot;Probability of drawing an ace at least once&quot;: probs})
+DrawsDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Draws</th>
+      <th>Probability of drawing an ace at least once</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0.076923</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>0.147929</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">nDraws =[]
+probs =[]
+
+for i in range(1,6,1):
+    nDraws.append(i)
+    probs.append(1-(48/52)**i) #probability of drawing an ace least once : 1-(48/52)
+
+DrawsDF = pd.DataFrame({&quot;# of Draws&quot;: nDraws, &quot;Probability of drawing an ace at least once&quot;: probs})
+DrawsDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Draws</th>
+      <th>Probability of drawing an ace at least once</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0.076923</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>0.147929</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>0.213473</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>0.273975</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>0.329823</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">nDraws =[]
+probs =[]
+
+for i in range(1,11,1):
+    nDraws.append(i)
+    probs.append(1-(48/52)**i) #probability of drawing an ace least once : 1-(48/52)
+
+DrawsDF = pd.DataFrame({&quot;# of Draws&quot;: nDraws, &quot;Probability of drawing an ace at least once&quot;: probs})
+DrawsDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Draws</th>
+      <th>Probability of drawing an ace at least once</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0.076923</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>0.147929</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>0.213473</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>0.273975</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>0.329823</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6</td>
+      <td>0.381375</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>7</td>
+      <td>0.428962</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>0.472888</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>9</td>
+      <td>0.513435</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>10</td>
+      <td>0.550863</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">nDraws =[]
+probs =[]
+
+for i in range(1,21,1):
+    nDraws.append(i)
+    probs.append(1-(48/52)**i) #probability of drawing an ace at least once : 1-(48/52)
+
+DrawsDF = pd.DataFrame({&quot;# of Draws&quot;: nDraws, &quot;Probability of drawing an ace at least once&quot;: probs})
+DrawsDF
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># of Draws</th>
+      <th>Probability of drawing an ace at least once</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0.076923</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>0.147929</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>0.213473</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>0.273975</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>0.329823</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6</td>
+      <td>0.381375</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>7</td>
+      <td>0.428962</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>0.472888</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>9</td>
+      <td>0.513435</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>10</td>
+      <td>0.550863</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>11</td>
+      <td>0.585412</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>12</td>
+      <td>0.617303</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>13</td>
+      <td>0.646742</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>14</td>
+      <td>0.673915</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>15</td>
+      <td>0.698999</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>16</td>
+      <td>0.722153</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>17</td>
+      <td>0.743525</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>18</td>
+      <td>0.763254</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>19</td>
+      <td>0.781466</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>20</td>
+      <td>0.798276</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">DrawsDF.plot.scatter(x=&quot;# of Draws&quot;, y=&quot;Probability of drawing an ace at least once&quot;)
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2c7f980aac8&gt;
+</code></pre>
+<p><img alt="png" src="output_59_1.png" /></p>
+<hr />
+<h3 id="example">Example:</h3>
+<ul>
+<li>A) Write a function to find the probability of an event in percentage form based on given outcomes and sample space</li>
+<li>B) Use the function and compute the probability of rolling a 4 with a D6</li>
+<li>C) Use the function and compute the probability of drawing a King from a standard deck of cards</li>
+<li>D) Use the function and compute the probability of drawing the King of Hearts from a standard deck of cards</li>
+<li>E) Use the function and compute the probability of drawing an ace after drawing a king</li>
+<li>F) Use the function and compute the probability of drawing an ace after drawing an ace</li>
+<li>G) Use the function and compute the probability of drawing a heart OR a club</li>
+<li>F) Use the function and compute the probability of drawing a Royal Flush <br>
+*hint: (in poker) a straight flush including ace, king, queen, jack, and ten all in the same suit, which is the hand of the highest possible value</li>
+</ul>
+<p><strong>This problem is designed based on an example by <em>Daniel Poston</em> from DataCamp, accessible @ <em>https://www.datacamp.com/community/tutorials/statistics-python-tutorial-probability-1</em></strong></p>
+<pre><code class="python"># A
+# Create function that returns probability percent rounded to one decimal place
+def Prob(outcome, sampspace):
+    probability = (outcome / sampspace) * 100
+    return round(probability, 1)
+</code></pre>
+
+<pre><code class="python"># B
+outcome = 1       #Rolling a 4 is only one of the possible outcomes
+space = 6         #Rolling a D6 can have 6 different outcomes
+Prob(outcome, space)
+</code></pre>
+
+<pre><code>16.7
+</code></pre>
+<pre><code class="python"># C
+outcome = 4       #Drawing a king is four of the possible outcomes
+space = 52        #Drawing from a standard deck of cards can have 52 different outcomes
+Prob(outcome, space)
+</code></pre>
+
+<pre><code>7.7
+</code></pre>
+<pre><code class="python"># D
+outcome = 1       #Drawing the king of hearts is only 1 of the possible outcomes
+space = 52        #Drawing from a standard deck of cards can have 52 different outcomes
+Prob(outcome, space)
+</code></pre>
+
+<pre><code>1.9
+</code></pre>
+<pre><code class="python"># E
+outcome = 4       #Drawing an ace is 4 of the possible outcomes
+space = 51        #One card has been drawn
+Prob(outcome, space)
+</code></pre>
+
+<pre><code>7.8
+</code></pre>
+<pre><code class="python"># F
+outcome = 3       #Once Ace is already drawn
+space = 51        #One card has been drawn
+Prob(outcome, space)
+</code></pre>
+
+<pre><code>5.9
+</code></pre>
+<pre><code class="python"># G
+hearts = 13       #13 cards of hearts in a deck
+space = 52        #total number of cards in a deck
+clubs = 13        #13 cards of clubs in a deck
+Prob_heartsORclubs= Prob(hearts, space) + Prob(clubs, space)
+print(&quot;Probability of drawing a heart or a club is&quot;,Prob_heartsORclubs,&quot;%&quot;)
+</code></pre>
+
+<pre><code>Probability of drawing a heart or a club is 50.0 %
+</code></pre>
+<pre><code class="python"># F
+draw1 = 5       #5 cards are needed
+space1 = 52        #out of the possible 52 cards
+draw2 = 4       #4 cards are needed
+space2 = 51        #out of the possible 51 cards
+draw3 = 3       #3 cards are needed
+space3 = 50        #out of the possible 50 cards
+draw4 = 2       #2 cards are needed
+space4 = 49        #out of the possible 49 cards
+draw5 = 1       #1 cards is needed
+space5 = 48        #out of the possible 48 cards
+
+#Probability of a getting a Royal Flush
+Prob_RF= 4*(Prob(draw1, space1)/100) * (Prob(draw2, space2)/100) * (Prob(draw3, space3)/100) * (Prob(draw4, space4)/100) * (Prob(draw5, space5)/100)     
+print(&quot;Probability of drawing a royal flush is&quot;,Prob_RF,&quot;%&quot;)
+</code></pre>
+
+<pre><code>Probability of drawing a royal flush is 1.5473203199999998e-06 %
+</code></pre>
+<hr />
+<h3 id="example-two-unbiased-dice-are-thrown-once-and-the-total-score-is-observed-define-an-appropriate-function-and-use-a-simulation-to-find-the-estimated-probability-that">Example: Two unbiased dice are thrown once and the total score is observed. Define an appropriate function and use a simulation to find the estimated probability that :</h3>
+<ul>
+<li>the total score is greater than 10?</li>
+<li>the total score is even and greater than 7?</li>
+</ul>
+<p><strong>This problem is designed based on an example by <em>Elliott Saslow</em>
+from Medium.com, accessible @ <em>https://medium.com/future-vision/simulating-probability-events-in-python-5dd29e34e381</em></strong></p>
+<pre><code class="python">import numpy as np
+def DiceRoll1(nSimulation):
+    count =0
+    dice = np.array([1,2,3,4,5,6])         #create a numpy array with values of a D6
+    for i in range(nSimulation):
+        die1 = np.random.choice(dice,1)    #randomly selecting a value from dice - throw the D6 once
+        die2 = np.random.choice(dice,1)    #randomly selecting a value from dice - throw the D6 once again!
+        score = die1 + die2                #summing them up
+        if score &gt; 10:                     #if it meets our desired condition:
+            count +=1                      #add one to the &quot;count&quot;
+    return count/nSimulation               #compute the probability of the desired event by dividing count by the total number of trials
+
+nSimulation = 10000
+print(&quot;The probability of rolling a number greater than 10 after&quot;,nSimulation,&quot;rolld is:&quot;,DiceRoll1(nSimulation)*100,&quot;%&quot;)
+
+</code></pre>
+
+<pre><code>The probability of rolling a number greater than 10 after 10000 rolld is: 8.35 %
+</code></pre>
+<pre><code class="python">import numpy as np
+def DiceRoll2(nSimulation):
+    count =0
+    dice = np.array([1,2,3,4,5,6])         #create a numpy array with values of a D6
+    for i in range(nSimulation):
+        die1 = np.random.choice(dice,1)    #randomly selecting a value from dice - throw the D6 once
+        die2 = np.random.choice(dice,1)    #randomly selecting a value from dice - throw the D6 once again!
+        score = die1 + die2
+        if score %2 ==0 and score &gt; 7:      #the total score is even and greater than 7
+            count +=1
+    return count/nSimulation
+
+nSimulation = 10000
+print(&quot;The probability of rolling an even number and greater than 7 after&quot;,nSimulation,&quot; rolls is:&quot;,DiceRoll2(nSimulation)*100,&quot;%&quot;)
+</code></pre>
+
+<pre><code>The probability of rolling an even number and greater than 7 after 10000  rolls is: 24.77 %
+</code></pre>
+<hr />
+<h3 id="example-an-urn-contains-10-white-balls-20-reds-and-30-greens-we-want-to-draw-5-balls-with-replacement-use-a-simulation-10000-trials-to-find-the-estimated-probability-that">Example: An urn contains 10 white balls, 20 reds and 30 greens. We want to draw 5 balls with replacement. Use a simulation (10000 trials) to find the estimated probability that:</h3>
+<ul>
+<li>we draw 3 white and 2 red balls</li>
+<li>we draw 5 balls of the same color</li>
+</ul>
+<p><strong>This problem is designed based on an example by <em>Elliott Saslow</em>
+from Medium.com, accessible @ <em>https://medium.com/future-vision/simulating-probability-events-in-python-5dd29e34e381</em></strong></p>
+<pre><code class="python"># A
+import numpy as np
+import random
+d = {}                     #Create an empty dictionary to associate numbers and colors
+for i in range(0,60,1):     #total of 60 balls
+    if i &lt;10:                 #10 white balls
+        d[i]=&quot;White&quot;
+    elif i&gt;9 and i&lt;30:         #20 red balls
+        d[i]=&quot;Red&quot;
+    else:                         #60-30=30 green balls
+        d[i]=&quot;Green&quot;
+#
+nSimulation= 10000         #How many trials?
+outcome1= 0                #initial value on the desired outcome counter
+
+for i in range(nSimulation):
+    draw=[]                     #an empty list for the draws
+    for i in range(5):                               #how many balls we want to draw?
+        draw.append(d[random.randint(0,59)])         #randomly choose a number from 0 to 59- simulation of drawing balls
+    drawarray = np.array(draw)                       #convert the list into a numpy array
+    white = sum(drawarray== &quot;White&quot;)                 #count the white balls
+    red = sum(drawarray== &quot;Red&quot;)                     #count the red balls
+    green = sum(drawarray== &quot;Green&quot;)                 #count the green balls
+    if white ==3 and red==2:                         #If the desired condition is met, add one to the counter
+        outcome1 +=1
+print(&quot;The probability of drawing 3 white and 2 red balls is&quot;,(outcome1/nSimulation)*100,&quot;%&quot;)
+</code></pre>
+
+<pre><code>The probability of drawing 3 white and 2 red balls is 0.54 %
+</code></pre>
+<pre><code class="python"># B
+import numpy as np
+import random
+d = {}
+for i in range(0,60,1):
+    if i &lt;10:
+        d[i]=&quot;White&quot;
+    elif i&gt;9 and i&lt;30:
+        d[i]=&quot;Red&quot;
+    else:
+        d[i]=&quot;Green&quot;
+#
+nSimulation= 10000
+outcome1= 0
+outcome2= 0         #we can consider multiple desired outcomes
+
+
+for i in range(nSimulation):
+    draw=[]
+    for i in range(5):
+        draw.append(d[random.randint(0,59)])
+    drawarray = np.array(draw)
+    white = sum(drawarray== &quot;White&quot;)
+    red = sum(drawarray== &quot;Red&quot;)
+    green = sum(drawarray== &quot;Green&quot;)
+    if white ==3 and red==2:
+        outcome1 +=1
+    if white ==5 or red==5 or green==5:
+        outcome2 +=1
+
+print(&quot;The probability of drawing 3 white and 2 red balls is&quot;,(outcome1/nSimulation)*100,&quot;%&quot;)
+print(&quot;The probability of drawing 5 balls of the same color is&quot;,(outcome2/nSimulation)*100,&quot;%&quot;)
+
+</code></pre>
+
+<pre><code>The probability of drawing 3 white and 2 red balls is 0.53 %
+The probability of drawing 5 balls of the same color is 3.8 %
+</code></pre>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/5nj4ZZWl6QwneEaBX4/source.gif" /> <br></p>
+<p><em>Here are some of the resources used for creating this notebook:</em> </p>
+<ul>
+<li><strong>"Poker Probability and Statistics with Python"</strong> by <strong>Daniel Poston</strong> available at <em>https://www.datacamp.com/community/tutorials/statistics-python-tutorial-probability-1</em><br></li>
+<li><strong>"Simulating probability events in Python"</strong> by <strong>Elliott Saslow</strong> available at <em>https://medium.com/future-vision/simulating-probability-events-in-python-5dd29e34e381</em><br></li>
+</ul>
+<p><em>Here are some great reads on this topic:</em> 
+- <strong>"Simulate the Monty Hall Problem Using Python"</strong> by <strong>randerson112358</strong> available at <em>https://medium.com/swlh/simulate-the-monty-hall-problem-using-python-7b76b943640e</em> <br>
+- <strong>"The Monty Hall problem"</strong> available at <em>https://scipython.com/book/chapter-4-the-core-python-language-ii/examples/the-monty-hall-problem/</em><br>
+- <strong>"Introduction to Probability Using Python"</strong> by <strong>Lisandra Melo</strong> available at <em>https://medium.com/future-vision/simulating-probability-events-in-python-5dd29e34e381</em> <br>
+- <strong>"Introduction to probability and statistics for Data Scientists and machine learning using python : Part-1"</strong> by <strong>Arun Singh</strong> available at <em>https://medium.com/@anayan/introduction-to-probability-and-statistics-for-data-scientists-and-machine-learning-using-python-377a9b082487</em><br></p>
+<p><em>Here are some great videos on these topics:</em> 
+- <strong>"Monty Hall Problem - Numberphile"</strong> by <strong>Numberphile</strong> available at <em>https://www.youtube.com/watch?v=4Lb-6rxZxx0</em> <br>
+- <strong>"The Monty Hall Problem"</strong> by <strong>D!NG</strong> available at <em>https://www.youtube.com/watch?v=TVq2ivVpZgQ</em> <br>
+- <strong>"21 - Monty Hall - PROPENSITY BASED THEORETICAL MODEL PROBABILITY - MATHEMATICS in the MOVIES"</strong> by <strong>Motivating Mathematical Education and STEM</strong> available at <em>https://www.youtube.com/watch?v=iBdjqtR2iK4</em> <br>
+- <strong>"The Monty Hall Problem"</strong> by <strong>niansenx</strong> available at <em>https://www.youtube.com/watch?v=mhlc7peGlGg</em> <br>
+- <strong>"The Monty Hall Problem - Explained"</strong> by <strong>AsapSCIENCE</strong> available at <em>https://www.youtube.com/watch?v=9vRUxbzJZ9Y</em> <br>
+- <strong>"Introduction to Probability | 365 Data Science Online Course"</strong> by <strong>365 Data Science</strong> available at <em>https://www.youtube.com/watch?v=soZRfdnkUQg</em> <br>
+- <strong>"Probability explained | Independent and dependent events | Probability and Statistics | Khan Academy"</strong> by <strong>Khan Academy</strong> available at <em>https://www.youtube.com/watch?v=uzkc-qNVoOk</em> <br>
+- <strong>"Math Antics - Basic Probability"</strong> by <strong>mathantics</strong> available at <em>https://www.youtube.com/watch?v=KzfWUEJjG18</em> <br></p>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/dNgK7Ws7y176U/200.gif" /> <br></p>
+<h2 id="exercise-risk-or-probability">Exercise: Risk or Probability  <br></h2>
+<h3 id="are-they-the-same-are-they-different-discuss-your-opinion">Are they the same? Are they different? Discuss your opinion.</h3>
+<h4 id="make-sure-to-cite-any-resources-that-you-may-use"><em>Make sure to cite any resources that you may use.</em></h4>
+<pre><code class="python">
+</code></pre>
+
+<p><img alt="" src="https://cdn.quotes.pub/660x400/thats-too-bad-mr-hall-said-opening-door-579647.jpg" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

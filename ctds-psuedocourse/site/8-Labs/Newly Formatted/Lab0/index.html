@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lab0 - Engr 1330 - Web Book</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Engr 1330 - Web Book</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson00/lesson0/">Computational Thinking and Data Science</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson01/lesson1/">Problem Solving with Computational Thinking</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python Scripting <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson02/lesson2/">Simple Computation</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson03/lesson3/">Data Structures and the MATH package</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson04/lesson4/">Program Control Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">External Functions and Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engineering and Scientific Data Files</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson07/lesson6/">Computational Linear Algebra using NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson08/lesson7/">Database Query and Manipulation using PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson09/lesson8/">Visual Display of Data using MATPLOTLIB</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson10/lesson10/">Implicit Equations</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson11/lesson11/">Interpolation and Integration</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson12/lesson12/">Linear Equation Systems</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson13/lesson13/">Non-Linear Equation Systems</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Models & Decisions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Statistical Data Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Randomness and Probability</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson15/lesson15/">Descriptive Statistics</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Distribution Models</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson17/lesson17/">Probability Estimation Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Hypothesis Testing</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Experimental Design (A/B Testing)</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Interval Estimates</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prediction <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Fitting Models to Observations</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Least Squares (Regression) Model Fitting</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Model Quality</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Estimating Probability/Quantile Regression</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classification <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Types</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">K Nearest Neighbor</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engine Update</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laboratory-0-yes-thats-how-we-count-in-python">Laboratory 0: Yes, That's how we count in python!</a></li>
+            <li><a href="#welcome-to-your-first-jupyter-notebook-this-is-a-medium-that-we-will-be-using-throughout-the-semester">Welcome to your first Jupyter Notebook. This is a medium that we will be using throughout the semester.</a></li>
+            <li><a href="#why-is-this-called-a-notebook">Why is this called a notebook?</a></li>
+            <li><a href="#is-that-it">Is that it?</a></li>
+            <li><a href="#how-do-we-get-this">How do we get this?</a></li>
+            <li><a href="#the-environment-lets-have-a-look-around-this-window">The Environment - Let's have a look around this window!</a></li>
+            <li><a href="#code-cells">Code Cells:</a></li>
+            <li><a href="#markdown-cells">Markdown Cells:</a></li>
+        <li class="main "><a href="#title"># title</a></li>
+            <li><a href="#major-headings">## major headings</a></li>
+            <li><a href="#raw-cells">Raw Cells:</a></li>
+            <li><a href="#lets-meet-worlds-most-popular-python">Let's meet world's most popular python!</a></li>
+            <li><a href="#exercise-lets-see-who-you-are">Exercise: Let's see who you are! </a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from:</p>
+<p><a href="https://atomickitty.ddns.net:8000/user/sensei/files/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/8-Labs/Lab0/Lab0_Dev_S21.ipynb?_xsrf=2%7C1b4d47c3%7C0c3aca0c53606a3f4b71c448b09296ae%7C1623531240">Lab0</a></p>
+<hr />
+<h1 id="laboratory-0-yes-thats-how-we-count-in-python"><font color=darkred>Laboratory 0: Yes, That's how we count in python!</font></h1>
+<p><img alt="" src="https://www.efinancialcareers.co.uk/binaries/content/gallery/efinancial-careers/articles/2018/12/Python-1.jpg" /> <br></p>
+<h3 id="welcome-to-your-first-jupyter-notebook-this-is-a-medium-that-we-will-be-using-throughout-the-semester">Welcome to your first <span style='background:yellow'>Jupyter Notebook</span>. This is a medium that we will be using throughout the semester.</h3>
+<hr />
+<h2 id="why-is-this-called-a-notebook">Why is this called a notebook?</h2>
+<h3 id="because-you-can-write-stuff-in-it">Because you can write stuff in it!</h3>
+<h2 id="is-that-it">Is that it?</h2>
+<h3 id="nope-you-can-write-and-run-code-in-this-notebook-plus-a-bunch-of-other-cool-stuff-such-as-making-graphs-running-tests-and-simulations-adding-images-and-prepare-documents-such-as-this-one">Nope! you can <strong>write</strong> and <strong>run</strong> <span style='background:yellow'>CODE</span> in this notebook! Plus a bunch of other cool stuff such as making graphs, running tests and simulations, adding images, and prepare documents (such as this one!).</h3>
+<h2 id="how-do-we-get-this">How do we get this?</h2>
+<p><img alt="" src="https://assets-cdn.anaconda.com/assets/_1200x630_crop_center-center_82_none/anaconda-meta.jpg?mtime=20200506175707&amp;focal=none&amp;tmtime=20200616170545" /> <br></p>
+<h3 id="there-are-online-services-that-allow-you-create-modify-and-export-jupyter-notebooks-however-to-have-this-on-your-local-machines-computers-you-can-install-anaconda-anaconda-is-a-package-of-different-software-suits-including-jupyter-notebook-you-can-find-videos-on-how-to-install-anaconda-on-your-devices-on-blackboard">There are online services that allow you create, modify, and export Jupyter notebooks. However, to have this on your local machines (computers), you can install <span style='background:yellow'>Anaconda</span>. Anaconda is a package of different software suits including "Jupyter Notebook". You can find videos on how to install Anaconda on your devices on BlackBoard:</h3>
+<ul>
+<li>Go to Anaconda.com</li>
+<li>Scroll down to the bottom of the page or click on products &gt; individual edition</li>
+<li>Download the right version for your system: Windows, MacOS, and Linux- This may take a while depending on your connection speed</li>
+<li>Once the installer file is downloaded, run it and install Anaconda on your machine.<ul>
+<li>Anaconda requires almost 3 GB of free space</li>
+<li>Install it in a separate folder- Preferably on a drive with lots of free memory!</li>
+<li>BE PATIENT!- It will take a while. </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="the-environment-lets-have-a-look-around-this-window"><font color=purple>The Environment - Let's have a look around this window!</font></h2>
+<p><img alt="" src="https://i.pinimg.com/originals/db/db/ba/dbdbbad5798bfc3ff27a499dc5ca2b30.gif" /> <br>
+<font color=gray><em>Rami Malek in Mr. Robot</em></font></p>
+<ul>
+<li>
+<p>The tabs:</p>
+<ul>
+<li>File</li>
+<li>Edit</li>
+<li>View</li>
+<li>Insert</li>
+<li>Cell</li>
+<li>Kernel</li>
+</ul>
+</li>
+<li>
+<p>The Icons:</p>
+<ul>
+<li>Save</li>
+<li>Insert Cell Below</li>
+<li>Cut</li>
+<li>Copy</li>
+<li>Paste Cells Below</li>
+<li>Move Up</li>
+<li>Move Down</li>
+<li>Run</li>
+<li>Intruppt Kernel</li>
+<li>Restart Kernel</li>
+<li>Cell Type Selector (Dropdown list)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="the-notebook-consists-of-a-sequence-of-cells-a-cell-is-a-multiline-text-input-field-and-its-contents-can-be-executed-by-using-shift-enter-or-by-clicking-run-in-the-menu-bar-the-execution-behavior-of-a-cell-is-determined-by-the-cells-type">The notebook consists of a sequence of cells. A cell is a multiline text input field, and its contents can be executed by using Shift-Enter, or by clicking Run in the menu bar. The execution behavior of a cell is determined by the cell’s type.</h3>
+<h3 id="there-are-three-types-of-cells-code-cells-markdown-cells-and-raw-cells-every-cell-starts-off-being-a-code-cell-but-its-type-can-be-changed-by-using-a-drop-down-on-the-toolbar-which-will-be-code-initially">There are three types of cells: code cells, markdown cells, and raw cells. Every cell starts off being a code cell, but its type can be changed by using a drop-down on the toolbar (which will be “Code”, initially).</h3>
+<h2 id="code-cells">Code Cells:</h2>
+<h3 id="a-code-cell-allows-you-to-edit-and-write-new-code-with-full-syntax-highlighting-and-tab-completion-the-programming-language-you-use-depends-on-the-kernel-what-we-will-use-for-this-course-and-the-default-kernel-ipython-runs-is-python-code">A code cell allows you to edit and write new code, with full syntax highlighting and tab completion. The programming language you use depends on the kernel. What we will use for this course and the default kernel IPython runs, is Python code.</h3>
+<h3 id="when-a-code-cell-is-executed-code-that-it-contains-is-sent-to-the-kernel-associated-with-the-notebook-the-results-that-are-returned-from-this-computation-are-then-displayed-in-the-notebook-as-the-cells-output-the-output-is-not-limited-to-text-with-many-other-possible-forms-of-output-are-also-possible-including-matplotlib-figures-and-html-tables-this-is-known-as-ipythons-rich-display-capability">When a code cell is executed, code that it contains is sent to the kernel associated with the notebook. The results that are returned from this computation are then displayed in the notebook as the cell’s output. The output is not limited to text, with many other possible forms of output are also possible, including matplotlib figures and HTML tables. This is known as IPython’s rich display capability.</h3>
+<h2 id="markdown-cells">Markdown Cells:</h2>
+<h3 id="you-can-document-the-computational-process-in-a-literate-way-alternating-descriptive-text-with-code-using-rich-text-in-ipython-this-is-accomplished-by-marking-up-text-with-the-markdown-language-the-corresponding-cells-are-called-markdown-cells-the-markdown-language-provides-a-simple-way-to-perform-this-text-markup-that-is-to-specify-which-parts-of-the-text-should-be-emphasized-italics-bold-form-lists-etc-in-fact-markdown-cells-allow-a-variety-of-cool-modifications-to-be-applied">You can document the computational process in a literate way, alternating descriptive text with code, using rich text. In IPython this is accomplished by marking up text with the Markdown language. The corresponding cells are called Markdown cells. The Markdown language provides a simple way to perform this text markup, that is, to specify which parts of the text should be emphasized (italics), bold, form lists, etc. In fact, markdown cells allow a variety of cool modifications to be applied:</h3>
+<h3 id="if-you-want-to-provide-structure-for-your-document-you-can-use-markdown-headings-markdown-headings-consist-of-1-to-5-hash-signs-followed-by-a-space-and-the-title-of-your-section-the-markdown-heading-will-be-converted-to-a-clickable-link-for-a-section-of-the-notebook-it-is-also-used-as-a-hint-when-exporting-to-other-document-formats-like-pdf-here-is-how-it-looks">If you want to provide structure for your document, you can use markdown headings. Markdown headings consist of 1 to 5 hash # signs followed by a space and the title of your section. (The markdown heading will be converted to a clickable link for a section of the notebook. It is also used as a hint when exporting to other document formats, like PDF.) Here is how it looks:</h3>
+<h1 id="title"># title</h1>
+<h2 id="major-headings">## major headings</h2>
+<h3 id="subheadings">### subheadings</h3>
+<h4 id="4th-level-subheadings">#### 4th level subheadings</h4>
+<h5 id="5th-level-subheadings">##### 5th level subheadings</h5>
+<h3 id="these-codes-are-also-quite-useful">These codes are also quite useful:</h3>
+<ul>
+<li>
+<p>Use triple " * " before and after a word (without spacing) to make the word bold and italic <br>
+B&amp;I: <strong><em>string</em></strong> <br></p>
+</li>
+<li>
+<p>__ or <strong> before and after a word (without spacing) to make the word bold <br>
+Bold: <strong>string</strong> or </strong>string** <br></p>
+</li>
+<li>
+<p>_ or * before and after a word (without spacing to make the word italic <br>
+Italic: <em>string</em> or <em>string</em> <br></p>
+</li>
+<li>
+<p>Double ~ before and after a word (without spacing to make the word scratched <br>
+Scratched: ~~string~~ <br></p>
+</li>
+<li>
+<p>For line breaks use "br" in the middle of &lt;&gt; <br></p>
+</li>
+<li>
+<p>For colors use this code: <font color=blue>Text</font> <br>
+<font color=red>Text</font> <br>
+<font color=orange>Text</font> <br></p>
+</li>
+<li>
+<p>For indented quoting, use a greater than sign (&gt;) and then a space, then type the text. The text is indented and has a gray horizontal line to the left of it until the next carriage return.</p>
+<blockquote>
+<p>here is an example of how it works!</p>
+</blockquote>
+</li>
+<li>
+<p>For bullets, use the dash sign (- ) with a space after it, or a space, a dash, and a space ( - ), to create a circular bullet. To create a sub bullet, use a tab followed a dash and a space. You can also use an asterisk instead of a dash, and it works the same.</p>
+</li>
+<li>
+<p>For numbered lists, start with 1. followed by a space, then it starts numbering for you. Start each line with some number and a period, then a space. Tab to indent to get subnumbering. <br></p>
+<ol>
+<li>first</li>
+<li>second</li>
+<li>third</li>
+<li>...</li>
+</ol>
+</li>
+<li>
+<p>For horizontal lines: Use three asterisks: ***</p>
+</li>
+</ul>
+<hr />
+<hr />
+<hr />
+<ul>
+<li>For graphics, you can attach image files directly to a notebook only in Markdown cells. Drag and drop your images to the Mardown cell to attach it to the notebook.</li>
+</ul>
+<p><img alt="Anaconda.jpg" src="attachment:Anaconda.jpg" /></p>
+<ul>
+<li>You can also use images from online sources be using this format:</li>
+</ul>
+<p><img alt="" src="put the image address here.image format" /> <br></p>
+<h2 id="raw-cells">Raw Cells:</h2>
+<h3 id="raw-cells-provide-a-place-in-which-you-can-write-output-directly-raw-cells-are-not-evaluated-by-the-notebook">Raw cells provide a place in which you can write output directly. Raw cells are not evaluated by the notebook.</h3>
+<h2 id="lets-meet-worlds-most-popular-python"><font color=purple>Let's meet world's most popular python!</font></h2>
+<p><img alt="" src="https://media2.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif" /> <br></p>
+<h3 id="what-is-python">What is python?</h3>
+<blockquote>
+<p>"Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace." - Wikipedia @ https://en.wikipedia.org/wiki/Python_(programming_language)</p>
+</blockquote>
+<h3 id="how-to-have-access-to-it">How to have access to it?</h3>
+<h4 id="there-are-plenty-of-ways-from-online-compilers-to-our-beloved-jupyter-notebook-on-your-local-machines-here-are-a-few-examples-of-online-compilers">There are plenty of ways, from online compilers to our beloved Jupyter Notebook on your local machines. Here are a few examples of online compilers:</h4>
+<p>a. https://www.programiz.com/python-programming/online-compiler/</p>
+<p>b. https://www.onlinegdb.com/online_python_compiler</p>
+<p>c. https://www.w3schools.com/python/python_compiler.asp</p>
+<p>d. https://repl.it/languages/python3</p>
+<h4 id="we-can-do-the-exact-same-thing-in-this-notebook-but-we-need-a-code-cell">We can do the exact same thing in this notebook. But we need a CODE cell.</h4>
+<pre><code class="python">print(&quot;Hello World&quot;)
+</code></pre>
+
+<pre><code>Hello World
+</code></pre>
+<h4 id="this-is-the-classic-first-program-of-many-languages-the-script-input-is-quite-simple-we-instruct-the-computer-to-print-the-literal-string-hello-world-to-standard-inputoutput-device-which-is-the-console-lets-change-it-and-see-what-happens">This is the classic "first program" of many languages! The script input is quite simple, we instruct the computer to print the literal string "hello world" to standard input/output device which is the console. Let's change it and see what happens:</h4>
+<pre><code class="python">print(&quot;This is my first notebook!&quot;)
+</code></pre>
+
+<pre><code>This is my first notebook!
+</code></pre>
+<h3 id="how-to-save-a-notebook">How to save a notebook?</h3>
+<ul>
+<li>
+<p><strong>As a notebook file (.ipynb):</strong> <br>
+    Go to File &gt; Download As &gt; Notebook (.ipynb)</p>
+</li>
+<li>
+<p><strong>As an HTML file (.html):</strong> <br>
+    Go to File &gt; Download As &gt; HTML (.html)</p>
+</li>
+<li>
+<p><strong>As a Pdf (.pdf):</strong> <br>
+    Go to File &gt; Download As &gt; PDF via LaTex (.pdf)
+    or
+    Save it as an HTML file and then convert that to a pdf via a website such as https://html2pdf.com/ </p>
+</li>
+</ul>
+<p><em>Unless stated otherwise, we want you to submit your weekly lab assignments in PDF and your exam and project deliverables in both PDF and .ipynb formats.</em></p>
+<p><img alt="" src="https://i.pinimg.com/originals/1d/ae/c2/1daec2478020d74065a95359b6223283.gif" /> <br></p>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/5nj4ZZWl6QwneEaBX4/source.gif" /> <br></p>
+<p><em>This notebook was inspired by several blogposts including:</em> </p>
+<ul>
+<li><strong>"Markdown for Jupyter notebooks cheatsheet"</strong> by <strong>Inge Halilovic</strong> available at *https://medium.com/@ingeh/markdown-for-jupyter-notebooks-cheatsheet-386c05aeebed <br></li>
+<li><strong>"Jupyter Notebook: An Introduction"</strong> by <strong>Mike Driscoll</strong> available at *https://realpython.com/jupyter-notebook-introduction/ <br></li>
+</ul>
+<p><em>Here are some great reads on this topic:</em> 
+- <strong>"Jupyter Notebook Tutorial: The Definitive Guide"</strong> by <strong>Karlijn Willems</strong> available at <em>https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook <br>
+- <strong>"Introduction to Jupyter Notebooks"</strong> by <strong>Quinn Dombrowski, Tassie Gniady, and David Kloster</strong> available at </em>https://programminghistorian.org/en/lessons/jupyter-notebooks <br>
+- <strong>"12 Things to know about Jupyter Notebook Markdown"</strong> by <strong>Dayal Chand Aichara</strong> available at *https://medium.com/game-of-data/12-things-to-know-about-jupyter-notebook-markdown-3f6cef811707 <br></p>
+<p><em>Here are some great videos on these topics:</em> 
+- <strong>"Jupyter Notebook Tutorial: Introduction, Setup, and Walkthrough"</strong> by <strong>Corey Schafer</strong> available at <em>https://www.youtube.com/watch?v=HW29067qVWk <br>
+- <strong>"Quick introduction to Jupyter Notebook"</strong> by <strong>Michael Fudge</strong> available at </em>https://www.youtube.com/watch?v=jZ952vChhuI <br>
+- <strong>"What is Jupyter Notebook?"</strong> by <strong>codebasics</strong> available at *https://www.youtube.com/watch?v=q_BzsPxwLOE <br></p>
+<p><img alt="" src="https://media.csesoc.org.au/content/images/2019/10/learn11.gif" /> <br></p>
+<hr />
+<h2 id="exercise-lets-see-who-you-are">Exercise: Let's see who you are! <br></h2>
+<h3 id="similar-to-the-example-use-a-code-cell-and-print-a-paragraph-about-you-you-can-introduce-yourselves-and-write-about-interesting-things-to-and-about-you">Similar to the example, use a code cell and print a paragraph about you. You can introduce yourselves and write about interesting things to and about you!</h3>
+<pre><code class="python">
+</code></pre>
+
+<p><img alt="" src="https://i.pinimg.com/originals/84/44/f5/8444f53fa329b94ddd674ffb2e192fe8.png" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

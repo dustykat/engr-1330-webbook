@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Lab19 - Engr 1330 - Web Book</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Engr 1330 - Web Book</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson00/lesson0/">Computational Thinking and Data Science</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson01/lesson1/">Problem Solving with Computational Thinking</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python Scripting <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson02/lesson2/">Simple Computation</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson03/lesson3/">Data Structures and the MATH package</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson04/lesson4/">Program Control Structures</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">External Functions and Modules</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engineering and Scientific Data Files</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson07/lesson6/">Computational Linear Algebra using NUMPY</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson08/lesson7/">Database Query and Manipulation using PANDAS</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson09/lesson8/">Visual Display of Data using MATPLOTLIB</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson10/lesson10/">Implicit Equations</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson11/lesson11/">Interpolation and Integration</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson12/lesson12/">Linear Equation Systems</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson13/lesson13/">Non-Linear Equation Systems</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Models & Decisions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Statistical Data Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Randomness and Probability</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson15/lesson15/">Descriptive Statistics</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Distribution Models</a>
+</li>
+                                    
+<li >
+    <a href="../../../1-Lessons/Lesson17/lesson17/">Probability Estimation Modeling</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Hypothesis Testing</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Experimental Design (A/B Testing)</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Interval Estimates</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prediction <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Fitting Models to Observations</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Least Squares (Regression) Model Fitting</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Model Quality</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Estimating Probability/Quantile Regression</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classification <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Types</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">K Nearest Neighbor</a>
+</li>
+                                    
+<li >
+    <a href="../../../lesson0/lesson0/">Engine Update</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#laboratory-19-game-of-gods-and-men-on-confidence-intervals-with-a-pinch-of-theology">Laboratory 19: "Game of Gods and Men" | On Confidence Intervals with a Pinch of Theology </a></li>
+            <li><a href="#full-name">Full name:</a></li>
+            <li><a href="#r">R#:</a></li>
+            <li><a href="#hex">HEX:</a></li>
+            <li><a href="#title-of-the-notebook">Title of the notebook</a></li>
+            <li><a href="#date">Date:</a></li>
+            <li><a href="#exercise-samples-populations-men-and-gods">Exercise: Samples, Populations | Men and Gods </a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>Download</strong> (right-click, save target as ...) this page as a jupyterlab notebook from: (LINK NEEDS FIXING!)</p>
+<p><a href="https://atomickitty.ddns.net:8000/user/sensei/files/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/8-Labs/Lab8/Lab9_Dev.ipynb?_xsrf=2%7C1b4d47c3%7C0c3aca0c53606a3f4b71c448b09296ae%7C1623531240">Lab19</a></p>
+<hr />
+<h1 id="laboratory-19-game-of-gods-and-men-on-confidence-intervals-with-a-pinch-of-theology"><font color=darkred>Laboratory 19: "Game of Gods and Men" | On Confidence Intervals with a Pinch of Theology </font></h1>
+<pre><code class="python"># Preamble script block to identify host, user, and kernel
+import sys
+! hostname
+! whoami
+print(sys.executable)
+print(sys.version)
+print(sys.version_info)
+</code></pre>
+
+<pre><code>DESKTOP-EH6HD63
+desktop-eh6hd63\farha
+C:\Users\Farha\Anaconda3\python.exe
+3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)]
+sys.version_info(major=3, minor=7, micro=4, releaselevel='final', serial=0)
+</code></pre>
+<h2 id="full-name">Full name:</h2>
+<h2 id="r">R#:</h2>
+<h2 id="hex">HEX:</h2>
+<h2 id="title-of-the-notebook">Title of the notebook</h2>
+<h2 id="date">Date:</h2>
+<p><img alt="" src="https://media4.giphy.com/media/9ADoZQgs0tyww/giphy.gif" /> <br></p>
+<h3 id="italy-soccer-how-many-people-love-soccer">Italy &amp; Soccer: How many people love soccer? <br></h3>
+<p><em>inspired by an example in <strong>"A (very) friendly introduction to Confidence Intervals"</strong> by <strong>Dima Shulga</strong> available at</em> https://towardsdatascience.com/a-very-friendly-introduction-to-confidence-intervals-9add126e714 <br>
+<em>and <strong>"Introduction of Confidence Interval"</strong> by <strong>Irfan Rahman</strong> available at</em> https://medium.com/steps-towards-data-science/confidence-interval-a7fb3484d7b4 <br></p>
+<p><img alt="" src="https://about.fb.com/wp-content/uploads/2014/07/soccer_analysis.jpg?w=960" /> <br>
+*hint: According to UN estimate data, almost 60 million (60,449,841) people live in Italy <br></p>
+<h4 id="for-the-first-example-in-this-lab-we-are-going-to-look-at-a-problem-from-two-perspectives-or-two-modes-if-you-may">For the first example in this lab, we are going to look at a problem from two perspectives, or two "modes" if you may: <br></h4>
+<h4 id="the-god-mode-and-the-man-mode">The GOD mode and The MAN mode.</h4>
+<p><img alt="" src="https://media.borntowin.net/Creazione-di-Adamo-The-Creation-of-Adam-Detail-Hands.jpg" /></p>
+<h3 id="the-god-mode">The GOD MODE:</h3>
+<h4 id="in-god-mode-we-are-assuming-that-we-know-everything-about-our-population-in-this-case-the-population-of-italy-suppose-we-know-theoretically-the-exact-percentage-of-people-in-italy-that-love-soccer-and-its-75">In GOD mode, we are assuming that we know EVERYTHING about our population (in this case, the population of Italy). Suppose we know (theoretically) the exact percentage of people in Italy that love soccer and it’s 75%. <br></h4>
+<h4 id="lets-say-we-want-to-know-the-chance-of-randomly-selecting-a-group-of-1000-people-that-only-73-of-them-love-soccer">Let's say we want to know the chance of randomly selecting a group of 1000 people that only 73% of them love soccer!</h4>
+<pre><code class="python">totalpop = 60*10**6  # Total adult population of Italy (60M)
+fbl_p = 0.75           #percentage of those loving soccer|football !
+fblpop = int(totalpop * fbl_p)         #Population of those who love football
+nfblpop = int(totalpop * (1-fbl_p))     #Population of those who doesn't love football
+
+</code></pre>
+
+<h4 id="lets-create-a-numpy-array-with-60-million-elements-with-a-1-for-each-one-person-who-loves-soccer-and-zero-otherwise">Let's create a numpy array with 60 million elements, with a 1 for each one person who loves soccer, and zero otherwise.</h4>
+<pre><code class="python">import numpy as np
+fblpop_1 = np.ones(fblpop)         #An array of &quot;1&quot;s | its length is equal to the population of those who love football | DO NOT ATTEMPT TO PRINT!!!
+nfblpop_0 = np.zeros(nfblpop)      #An array of &quot;0&quot;s | its length is equal to the population of those who doesn't love football | DO NOT ATTEMPT TO PRINT!!!
+totpop_01 = np.hstack([fblpop_1,nfblpop_0])     #An array of &quot;0 &amp; 1&quot;s | its length is equal to the total population of Italy | DO NOT ATTEMPT TO PRINT!!!
+</code></pre>
+
+<h4 id="as-a-check-we-can-get-the-percentage-of-1s-in-the-array-by-calculating-the-mean-of-it-and-indeed-it-is-75">As a check, we can get the percentage of "1"s in the array by calculating the mean of it, and indeed it is 75%.</h4>
+<pre><code class="python">print(np.mean(totpop_01))
+</code></pre>
+
+<pre><code>0.75
+</code></pre>
+<h4 id="now-lets-take-few-samples-and-see-what-percentage-do-we-get">Now, lets take few samples and see what percentage do we get:</h4>
+<pre><code class="python">np.mean(np.random.choice(totpop_01, size=1000)) # Run multiple times
+</code></pre>
+
+<pre><code>0.767
+</code></pre>
+<pre><code class="python"># Let's do it in a more sophisticated/engineery/data sciency way!
+for i in range(10): #Let's take 10 samples
+    sample = np.random.choice(totpop_01, size=1000)
+    print('Sample', i, ':', np.mean(sample))
+</code></pre>
+
+<pre><code>Sample 0 : 0.727
+Sample 1 : 0.74
+Sample 2 : 0.739
+Sample 3 : 0.753
+Sample 4 : 0.776
+Sample 5 : 0.766
+Sample 6 : 0.769
+Sample 7 : 0.741
+Sample 8 : 0.769
+Sample 9 : 0.741
+</code></pre>
+<h4 id="you-can-see-that-were-getting-different-values-for-each-sample-but-the-intuition-and-statistics-theory-says-that-the-average-of-large-amount-of-samples-should-be-very-close-to-the-real-percentage-lets-do-that-lets-take-many-samples-and-see-what-happens">You can see that we’re getting different values for each sample, but the intuition (and statistics theory) says that the average of large amount of samples should be very close to the real percentage. Let’s do that! lets take many samples and see what happens:</h4>
+<pre><code class="python">values = []     #Create an empty list
+for i in range(10000):     #Let's take 10000 samples 
+    sample = np.random.choice(totpop_01, size=1000)     #Notice that the sample size is not changing
+    mean = np.mean(sample)
+    values.append(mean)     #Store the mean of each sample set
+print(np.mean(values))     #Printing the mean of means!
+values = np.array(values)
+print(values.std())       #Printing the standard deviation of means!
+</code></pre>
+
+<pre><code>0.7499531
+0.013818230725747793
+</code></pre>
+<h4 id="we-created-10000-samples-checked-the-percentage-of-people-who-love-soccer-in-each-sample-and-then-just-averaged-them-we-got-7499-which-is-very-close-to-the-real-value-75-that-we-as-the-god-knew">We created 10000 samples, checked the percentage of people who love soccer in each sample, and then just averaged them. we got 74.99% which is very close to the real value 75% that we as the GOD knew! <br></h4>
+<h4 id="lets-plot-a-histogram-of-all-the-values-we-got-in-all-the-samples-interestingly-this-histogram-is-very-similar-to-the-normal-distribution">Let’s plot a histogram of all the values we got in all the samples. Interestingly, this histogram is  very similar to the normal distribution!<br></h4>
+<pre><code class="python">import seaborn as sns
+
+sns.distplot(values,color='purple', rug=True,kde=True)
+
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x21c485c1688&gt;
+</code></pre>
+<p><img alt="png" src="output_19_1.png" /></p>
+<h4 id="if-we-do-this-process-a-very-large-number-of-times-infinite-number-of-times-we-will-get-an-histogram-that-is-very-close-to-the-normal-distribution-and-we-can-know-the-parameters-of-this-distribution">if we do this process a very large number of times (infinite number of times) we will get an histogram that is very close to the normal distribution and we can know the parameters of this distribution.</h4>
+<pre><code class="python">values = []     #Create an empty list
+for i in range(1000000):     #Let's take 1000000 samples 
+    sample = np.random.choice(totpop_01, size=1000)     #Notice that the sample size is not changing
+    mean = np.mean(sample)
+    values.append(mean)     #Store the mean of each sample set
+print(np.mean(values))     #Printing the mean of means!
+</code></pre>
+
+<pre><code>0.7500088180000001
+</code></pre>
+<pre><code class="python">import seaborn as sns
+
+sns.distplot(values,color='purple', rug=True,kde=True)
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x21c4562bcc8&gt;
+</code></pre>
+<p><img alt="png" src="output_22_1.png" /></p>
+<h6 id="first-of-all-we-can-see-that-the-center-the-mean-of-the-histogram-is-near-75-exactly-as-we-expected-but-we-are-able-to-say-much-more-just-by-looking-at-the-histogram-for-example-we-can-say-that-half-of-the-samples-are-larger-than-75-or-we-can-say-that-roughly-25-are-larger-than-76-we-can-also-say-that-almost-95-of-the-samples-are-between-72-and-78-lets-also-have-a-look-at-the-boxplot">First of all, we can see that the center (the mean) of the histogram is near 75%, exactly as we expected, but we are able to say much more just by looking at the histogram, for example, we can say, that half of the samples are larger than 75%, or, we can say that roughly 25% are larger than 76%. We can also say that almost 95% of the samples are between 72% and 78%. Let's also have a look at the boxplot:</h6>
+<pre><code class="python">import matplotlib.pyplot as plt
+fig = plt.figure(figsize =(10, 7)) 
+plt.boxplot (values,1, '')
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="output_24_0.png" /></p>
+<h4 id="at-this-point-many-people-might-ask-two-important-questions-how-can-i-take-infinite-number-of-samples-and-how-does-it-helps-me">At this point, many people might ask two important questions, “How can I take infinite number of samples?” and “How does it helps me?”. <br></h4>
+<h4 id="the-answer-to-the-first-one-is-that-if-you-are-god-there-is-no-stopping-you-if-you-are-not-god-you-cant">The answer to the first one is that if you are GOD, there is no stopping you! If you are not GOD, you can't! <br></h4>
+<h4 id="to-asnwer-the-second-question-lets-go-back-to-our-example-we-initially-took-one-sample-of-1000-people-and-got-a-value-close-to-75-but-not-exactly-75-we-wanted-to-know-what-is-the-chance-that-a-random-sample-of-1000-people-will-have-73-soccer-lovers-using-the-information-above-we-can-say-that-theres-a-chance-of-roughly-20-that-well-get-a-value-that-is-smaller-or-equal-to-73">To asnwer the second question, Let’s go back to our example, we initially took one sample of 1000 people and got a value close to 75% but not exactly 75%. We wanted to know, what is the chance that a random sample of 1000 people will have 73% soccer lovers. Using the information above, we can say that there’s a chance of (roughly) 20% that we’ll get a value that is smaller or equal to 73%. <br></h4>
+<h4 id="we-dont-actually-need-to-do-the-infinite-samples-in-other-words-you-dont-have-to-be-god-you-will-know-why-and-how-in-a-few-moments">We don’t actually need to do the infinite samples. In other words, you don't have to be GOD! You will know why and how in a few moments...</h4>
+<h3 id="the-man-mode">The MAN MODE:</h3>
+<p><img alt="" src="https://i.kym-cdn.com/photos/images/newsfeed/000/770/871/1a9.gif" /></p>
+<h4 id="back-in-our-horrid-and-miserable-man-mode-we-dont-know-the-actual-percentage-of-soccer-lovers-in-italy-in-fact-we-know-nothing-about-the-population">Back in our horrid and miserable Man mode, we don’t know the actual percentage of soccer lovers in Italy. In fact, we know nothing about the population.</h4>
+<p><img alt="" src="https://ozinparis.com/wp-content/uploads/2016/04/jon-snow-know-nothing-e1461048094110-1.jpg" /></p>
+<h4 id="we-do-know-one-thing-though-we-just-took-a-sample-and-got-73-but-how-does-it-help-us">We do know one thing though: We just took a sample and got 73%. But how does it help us? <br></h4>
+<h4 id="what-we-also-do-know-is-that-if-we-took-infinite-number-of-samples-the-distibution-of-their-means-will-look-like-this">What we also DO know, is that if we took infinite number of samples, the distibution of their means will look like this: <br></h4>
+<p><img alt="" src="https://miro.medium.com/max/548/1*txu8-J2imhlqIPDqsL3gPA.png" /> <br></p>
+<h4 id="here-is-the-population-mean-real-percentage-of-soccer-lovers-in-our-example-and-is-the-standard-deviation-of-the-population-if-we-know-this-and-we-know-the-standard-deviation-we-are-able-to-say-that-68-of-the-samples-will-fall-in-the-red-area-or-more-than-95-of-the-samples-will-fall-outside-the-green-area-in-the-middle-in-this-plot">Here μ is the population mean (real percentage of soccer lovers in our example), and σ is the standard deviation of the population. If we know this (and we know the standard deviation) we are able to say that ~68% of the samples will fall in the red area or, more than 95% of the samples will fall outside the green area (in the middle) in this plot: <br></h4>
+<p><img alt="" src="https://miro.medium.com/max/563/1*GX0Qft3_Js0O9gbd9BeCNA.png" /> <br></p>
+<h4 id="this-is-where-the-concept-of-margin-of-error-becomes-of-great-importance">This is where the concept of margin of error becomes of great importance:<br></h4>
+<p><img alt="" src="https://www.wallstreetmojo.com/wp-content/uploads/2019/03/Margin-of-Error-Formula.jpg" /> <br></p>
+<p><img alt="" src="https://www.statisticsfromatoz.com/uploads/7/3/2/1/73216723/graph-alpha-moe-jpg_1_orig.jpg" /> <br></p>
+<h4 id="lets-mix-the-god-mode-and-the-man-mode-lets-do-mad-mode">Let's mix the GOD mode and the MAN mode. LET's DO MAD MODE!</h4>
+<p><img alt="" src="https://static1.squarespace.com/static/59ab26c6ff7c50083fca77c3/5b68af2caa4a99da3bc129cc/5d66957e721ad20001fe1190/1567004323841/Jacob+Wrestles+God.jpg?format=1500w" /> <br></p>
+<h4 id="of-course-the-distance-is-symmetric-so-if-the-sample-percentage-will-fall-95-of-the-time-between-real-percentage-3-and-real-percentage-3-then-the-real-percentage-will-be-95-of-the-times-between-sample-percentage-3-and-sample-percentage-3">Of course the distance is symmetric, So if the sample percentage will fall 95% of the time between real percentage-3 and real percentage +3, then the real percentage will be 95% of the times between sample percentage -3 and sample percentage +3.</h4>
+<pre><code class="python">import seaborn as sns
+
+sns.distplot(values,color='purple', rug=True,kde=True)
+
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1ccf33b1208&gt;
+</code></pre>
+<p><img alt="png" src="output_30_1.png" /></p>
+<h4 id="if-we-took-a-sample-and-got-73-we-can-say-that-we-are-95-confident-that-the-real-percentage-is-between-70-73-3-and-76-733">If we took a sample and got 73%, we can say that we are 95% confident that the real percentage is between 70% (73 -3) and 76% (73+3).</h4>
+<h4 id="this-is-the-confidence-interval-the-interval-is-73-3-and-the-confidence-is-95">This is the Confidence Interval, the interval is 73 +- 3 and the confidence is 95%.</h4>
+<p><img alt="" src="https://ineedpeakpt.com/wp-content/uploads/2019/05/Mind-Blowing-EMR-and-Meaningful-Use-Stats-and-Facts.gif" /> <br></p>
+<h3 id="example-from-a-normally-distributed-population-we-randolmy-took-a-sample-of-500-students-with-a-mean-score-of-461-on-the-math-section-of-sat-suppose-the-standard-deviation-of-the-population-is-100-what-is-the-estimated-true-population-mean-for-the-95-confidence-interval">Example: From a normally distributed population, we randolmy took a sample of 500 students with a mean score of 461 on the math section of SAT. Suppose the standard deviation of the population is 100, what is the estimated true population mean for the 95% confidence interval.</h3>
+<pre><code class="python"># Step 1- Organize the data
+n = 500                       #Sample size
+Xbar = 461                    #Sample mean
+C = 0.95                      #Confidence level
+std = 100                     #Standard deviation (σ)
+z = 1.96                      #The z value associated with 95% Confidence Interval
+</code></pre>
+
+<pre><code class="python"># Assuming a normally distributed population
+# Assuming randomly selected samples
+# Step2- Calculate the margin of error
+import math
+margin = z*(std/math.sqrt(n))
+print('The margin of error is equal to : ',margin)
+</code></pre>
+
+<pre><code>The margin of error is equal to :  8.765386471799175
+</code></pre>
+<pre><code class="python"># Step3- Find the estimated true population mean for the 95% confidence interval
+# To find the range of values you just have to add and subtract 8.765 from 461
+low = Xbar-margin
+high = Xbar+margin
+print('the true population mean will be captured within the confidence interval of (',low,' , ',high,') and the confidence is 95%')
+</code></pre>
+
+<pre><code>the true population mean will be captured within the confidence interval of ( 452.23461352820084  ,  469.76538647179916 ) and the confidence is 95%
+</code></pre>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/5nj4ZZWl6QwneEaBX4/source.gif" /> <br></p>
+<p><strong><em>Some great reads on Confidence Intervals:</em></strong>
+-  <strong>"Confidence Intervals for Machine Learning"</strong> by <strong>Jason Brownlee</strong> available at<em> https://machinelearningmastery.com/confidence-intervals-for-machine-learning/ <br>
+-  <strong>"Comprehensive Confidence Intervals for Python Developers"</strong> available at</em> https://aegis4048.github.io/comprehensive_confidence_intervals_for_python_developers <br>
+-  <strong>"Confidence Interval"</strong> available at<em> http://napitupulu-jon.appspot.com/posts/confidence-interval-coursera-statistics.html <br>
+-  <strong>"Introduction to Confidence Intervals"</strong> available at</em> https://courses.lumenlearning.com/introstats1/chapter/introduction-confidence-intervals/ <br></p>
+<p><strong><em>Some great videos on Confidence Intervals:</em></strong>
+-  <strong>"Understanding Confidence Intervals: Statistics Help"</strong> by <strong>Dr Nic's Maths and Stats</strong> available at<em> https://www.youtube.com/watch?v=tFWsuO9f74o <br>
+-  <strong>"Confidence intervals and margin of error | AP Statistics | Khan Academy"</strong> by <strong>Khan Academy</strong> available at</em> https://www.youtube.com/watch?v=hlM7zdf7zwU <br>
+-  <strong>"StatQuest: Confidence Intervals"</strong> by <strong>StatQuest with Josh Starmer</strong> available at* https://www.youtube.com/watch?v=TqOeMYtOc1w <br></p>
+<hr />
+<p><img alt="" src="https://media2.giphy.com/media/dNgK7Ws7y176U/200.gif" /> <br></p>
+<h2 id="exercise-samples-populations-men-and-gods">Exercise: Samples, Populations | Men and Gods <br></h2>
+<h3 id="why-are-confidence-intervals-useful">Why are confidence intervals useful?</h3>
+<h4 id="make-sure-to-cite-any-resources-that-you-may-use"><em>Make sure to cite any resources that you may use.</em></h4>
+<pre><code class="python">
+</code></pre>
+
+<p><img alt="" src="https://memegenerator.net/img/instances/65025127.jpg" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../../mathjaxhelper.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
