@@ -221,6 +221,11 @@
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#document-history">Document History</a></li>
             <li><a href="#administrator-notes">Administrator Notes</a></li>
+            <li><a href="#about-engr-1330-webrootwebbook">About ENGR 1330 Webroot/Webbook</a></li>
+            <li><a href="#special-notes">Special Notes</a></li>
+            <li><a href="#how-to-use">How to Use</a></li>
+            <li><a href="#syncronization-notes">Syncronization Notes:</a></li>
+            <li><a href="#on-line-book-authors-notes">On-Line Book Author's Notes</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -245,7 +250,59 @@ Homeworks and exams must be uploaded to **blackboard.ttu.edu** to be graded.   S
 <h2 id="administrator-notes">Administrator Notes</h2>
 <p>The lead author built this webbook on a Raspberry Pi 4B (4GB) running Ubuntu 20.XX, an Apache Web Server, a JupyterHub (fully encrypted) with iPython extensions, R core, Latex, and MkDocs with extensions.  The deployment hardware is an Amazon Web Services Virtual Private Server (Lightsail Instance) in the West Virginia Server Farm (typically the container is run on x86-64 Xeon hardware)</p>
 <p>Direct editing on the AWS server is possible, but the typesetting may not render correctly; additionally running some of the notebooks will use up the daily allocation of compute time on the server and the whole thing will hang up; remember to do all development and testing on the Raspberry PI or your laptop.  The development server is hardware cloned weekly (it takes 12 hours, during which it is inaccessible) </p>
-<p>A working backup is maintained at <a href="https://github.com/dustykat/engr-1330-webbook">https://github.com/dustykat/engr-1330-webbook</a>.</p></div>
+<p>A working backup of this webbook is maintained at <a href="https://github.com/dustykat/engr-1330-webbook">https://github.com/dustykat/engr-1330-webbook</a>.</p>
+<h2 id="about-engr-1330-webrootwebbook">About ENGR 1330 Webroot/Webbook</h2>
+<p>The purpose of the webroot repository is to maintain a convienent back-up of course content for rapid migration across servers.  The webroot is <a href="https://github.com/dustykat/engr-1330-webroot">https://github.com/dustykat/engr-1330-webroot</a>; this webroot is specific to the lead author's server.  This webbook is contained WITHIN the webroot in directory <code>engr-1330-webbook</code> and the .gitignore for the webroot repository contains this directory listing.  However the book itself is stand alone, and can be copied directly into another webroot (and linked appropriately)</p>
+<h2 id="special-notes">Special Notes</h2>
+<ol>
+<li>
+<p>The structure is written to work on a web host, with hostname == <code>atomickitty.ddns.net</code>, if you clone to another server you will have the lovely task of changing the links.  The string editor <code>sed</code> will become your friend!</p>
+</li>
+<li>
+<p>Materials herein come from many sources, in particular the Data8 repository from UC Berkeley.  Sources in notebooks are at least cited by a URL.  As the content is matured, proper citations are to be inserted.</p>
+</li>
+</ol>
+<h2 id="how-to-use">How to Use</h2>
+<ol>
+<li>Clone the entire repository to /var/www/html/symlink_to_engr-1330-webbook.  Have your main index point to this directory i.e. <code>http://your-fqdn-server.org/symlink_to_engr-1330-webroot/</code>
+You can see working example at <a href="https://atomickitty.ddns.net/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/site/">https://atomickitty.ddns.net/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/site/</a> (You will have to set a browser exception to accept the self-signed certificate)</li>
+</ol>
+<h2 id="syncronization-notes">Syncronization Notes:</h2>
+<ol>
+<li>Sync with atomickitty.ddns.net:3.137.111.182 (AWS server -- primary and live website copy)</li>
+<li>Sync with 75.3.84.227:192.168.1.75/ (ATT server Raspberry Pi -- development website copy)</li>
+<li>Sync with 75.3.84.227:192.168.1.79/ (Macintosh -- developer copy)</li>
+</ol>
+<h2 id="on-line-book-authors-notes">On-Line Book Author's Notes</h2>
+<ul>
+<li>Inserting Code Fragments</li>
+</ul>
+<p>To insert a code fragment such as <code>print('Hello World')</code> simply indent in the source file used to generate the document</p>
+<pre><code>print('hello world')
+</code></pre>
+<p>These fragments can be cut-and-paste into a JupyterLab notebook.</p>
+<ul>
+<li>Inserting Images</li>
+</ul>
+<p>If the image is taken from a URL, use the following:</p>
+<pre><code>![image-name (a local tag)](url_to_image_source)
+</code></pre>
+<p>Such as:</p>
+<pre><code>![image-name](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqn40YbupkMAzY63jYtA6auEmjRfCOvCd0FA&amp;usqp=CAU)
+</code></pre>
+<p>Which will render a black swan:</p>
+<p><img alt="image-name" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqn40YbupkMAzY63jYtA6auEmjRfCOvCd0FA&amp;usqp=CAU" /></p>
+<p>If the image is local to the host replace the url with the path to the image.</p>
+<ul>
+<li>Inserting URL links</li>
+</ul>
+<p>This is a variation of images, but without the <code>!</code>, such as</p>
+<pre><code>[link-name-that-will-display](url_to_link_destimation)
+</code></pre>
+<p>For example the code below will link to the black swan search results:</p>
+<pre><code>[link-to-images-of-black-swans](https://www.google.com/search?q=images+of+black+swan&amp;client=safari&amp;rls=en&amp;sxsrf=ALeKk03oIoQ387TWjJoKzX-D_b7o1to43Q:1613002985584&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=L2P5MiS1ICLTxM%252CC6BDdJoXT9KcEM%252C_&amp;vet=1&amp;usg=AI4_-kTXrBMpj__xL5IkGCshrXTp04fX3w&amp;sa=X&amp;ved=2ahUKEwiCneivyODuAhVJBs0KHY88CaAQ9QF6BAgUEAE&amp;biw=1447&amp;bih=975#imgrc=i_lxoojURNE3XM)
+</code></pre>
+<p><a href="https://www.google.com/search?q=images+of+black+swan&amp;client=safari&amp;rls=en&amp;sxsrf=ALeKk03oIoQ387TWjJoKzX-D_b7o1to43Q:1613002985584&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=L2P5MiS1ICLTxM%252CC6BDdJoXT9KcEM%252C_&amp;vet=1&amp;usg=AI4_-kTXrBMpj__xL5IkGCshrXTp04fX3w&amp;sa=X&amp;ved=2ahUKEwiCneivyODuAhVJBs0KHY88CaAQ9QF6BAgUEAE&amp;biw=1447&amp;bih=975#imgrc=i_lxoojURNE3XM">link-to-images-of-black-swans</a></p></div>
         </div>
 
         <footer class="col-md-12">
@@ -330,5 +387,5 @@ Homeworks and exams must be uploaded to **blackboard.ttu.edu** to be graded.   S
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2021-07-12 20:18:05
+Build Date UTC : 2021-07-12 20:34:56
 -->
