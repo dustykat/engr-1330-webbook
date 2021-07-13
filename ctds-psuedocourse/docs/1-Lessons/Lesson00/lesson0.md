@@ -1,50 +1,13 @@
 **Download** (right-click, save target as ...) this page as a jupyterlab notebook from:
 
-[https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.ipynb](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/lesson0.ipynb)
+[https://3.137.111.182/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/1-Lessons/Lesson00/lesson0.ipynb](https://3.137.111.182/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/1-Lessons/Lesson00/lesson0.ipynb)
 
 
-# ENGR 1330 Computational Thinking with Data Science 
+## Introduction to Computational Thinking with Data Science: 
+
 Copyright © 2021 Theodore G. Cleveland, Farhang Forghanparast, Dinesh Sundaravadivelu Devarajan, Turgut Batuhan Baturalp (Batu), Tanja Karp, Long Nguyen, and Mona Rizvi. *The contents of this book are licensed for free consumption under the following license:* [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-Last GitHub Commit Date: 8 June 2021
-
-
-## Lesson 0 Introduction to Computational Thinking with Data Science: 
-- Computational thinking concepts 
-- Data science and practices 
-- JupyterLab (iPython) as a programming environment 
-- Programming as a problem solving process
-- CCMR Approach
-
-### Special Script Blocks
-
-In the lesson notebooks there will usually be two script blocks, identical to the ones below.  
-
-- The first block identifies the particular computer, the user, and the python kernel in use.
-- The second block sets markdown tables to left edge when rendering.
-
-I usually put both blocks at the top of the notebook, just after some kind of title block, as done here.
-Admittedly these clutter up the webbook, but are needed for structure and debugging codes; you can remove them from your copies of the notebooks if you wish!
-
-
-```python
-# Script block to identify host, user, and kernel
-import sys
-! hostname
-! whoami
-! pwd
-print(sys.executable)
-print(sys.version)
-print(sys.version_info)
-```
-
-    atomickitty
-    sensei
-    /home/sensei/1330-textbook-webroot/ctds-psuedocourse/docs/1-Lessons/Lesson00
-    /opt/jupyterhub/bin/python3
-    3.8.5 (default, Jan 27 2021, 15:41:15) 
-    [GCC 9.3.0]
-    sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
+Last GitHub Commit Date: 13 July 2021
 
 
 
@@ -68,9 +31,9 @@ print(sys.version_info)
 
 Computational thinking (CT) refers to the thought processes involved in expressing solutions as computational steps or algorithms that can be carried out by a computer. 
 
-Much of what follows is borrowed from (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/).
+Much of what follows is borrowed from [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2696102/).
 
-Computational thinking is taking an approach to solving problems, designing systems and understanding human behaviour that draws on concepts fundamental to computing (http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf).
+Computational thinking is taking an approach to solving problems, designing systems and understanding human behaviour that draws on concepts fundamental to computing [http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf](http://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf).
 
 Computational thinking is a kind of analytical thinking:
 
@@ -92,6 +55,7 @@ CT is literally a process for breaking down a problem into smaller parts, lookin
 
 #### Decomposition
 Decomposition is the process of taking a complex problem and breaking it into more manageable sub-problems. Examples include:  
+
 - Writing a paper:  
  - Introduction 
  - Body 
@@ -106,7 +70,7 @@ Decomposition often leaves a **framework** of sub-problems that later have to be
 #### Pattern Recognition
 Refers to finding similarities, or shared characteristics of problems.  Allows a complex problem to become easier to solve. Allows use of same solution method for each occurrence of the pattern. 
 
-Pattern recognition allows use of **automation** to process things - its a fundamental drilled shaft of CT.  It also provides a way to use analogs from old problems to address new situations; it also will require **assembly (system integration)** to produce a desired solution.
+Pattern recognition allows use of **automation** to process things - its a fundamental drilled shaft of CT.  It also provides a way to use analogs from old problems to address new situations; it too will require **assembly (system integration)** to produce a desired solution.
 
 #### Abstraction
 
@@ -126,9 +90,9 @@ Books in an online bookstore
 Step-by-step instructions of how to solve a problem (https://en.wikipedia.org/wiki/Algorithm). 
 Identifies what is to be done, and the order in which they should be done.
 
-![https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/algorithm.png](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/algorithm.png)
+![https://3.137.111.182/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/1-Lessons/Lesson00/algorithm.png](https://3.137.111.182/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/1-Lessons/Lesson00/algorithm.png)
 
-||Image from https://www.newyorker.com/magazine/2021/01/18/whats-wrong-with-the-way-we-work?utm_source=pocket-newtab||
+||Image from [https://www.newyorker.com/magazine/2021/01/18/whats-wrong-with-the-way-we-work?utm_source=pocket-newtab](https://www.newyorker.com/magazine/2021/01/18/whats-wrong-with-the-way-we-work?utm_source=pocket-newtab)||
 |---|------------|---|
 
 An algorithm is a **finite** sequence of defined, instructions, typically to solve a class of problems or to perform a computation. Algorithms are unambiguous and are used as specifications for performing calculations, data processing, automated reasoning, and other tasks. Starting from an initial state and initial input (perhaps empty), the instructions describe a computation that, when executed, proceeds through a finite number of defined successive states, eventually producing "output" and terminating at a final ending state. The transition from one state to the next is not necessarily deterministic; some algorithms, known as randomized algorithms, can incorporate random input.
@@ -143,7 +107,7 @@ Data science is leveraging existing data sources, to create new ones as needed i
 
 Why is this important for engineers? Because engineering is a business! 
 
-A list of typical skills (https://elitedatascience.com/data-science-resources):
+A list of typical skills [https://elitedatascience.com/data-science-resources](https://elitedatascience.com/data-science-resources):
 
 - Foundational Skills
     - **Programming and Data Manipulation** 
@@ -169,76 +133,10 @@ A list of typical skills (https://elitedatascience.com/data-science-resources):
 
 
 
-## JupyterLab (iPython) Environment
-
-### The tools:
-**JupyterLab** (https://jupyter.org/) is a web-based interactive development environment for Jupyter notebooks, code, and data. 
-
-**Jupyter Notebook** is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data organizing and transformation, numerical simulation, statistical modeling, visualization, machine learning, and other similar types of uses. 
-
-**JupyterHub** (https://github.com/jupyterhub/jupyterhub) is a multi-user Hub that spawns, manages, and proxies multiple instances of the single-user Jupyter notebook server.
-
-All these tools allow use of various coding languages; Python is the choice for ENGR 1330.  Installing JupyterLab on your own computer is relatively straightforward if it is an Intel-based Linux, Macintosh, or Windows machine - simply use Anaconda (https://www.anaconda.com/) as the installer.
-
-Installing onto an ARM-based machine is more difficult, but possible (this notebook was created on a Raspberry Pi). With both Apple and Microsoft abandoning Intel you can expect Anaconda builds for aarch64 (ARM) in the future.  
-
-### This course:
-
-You will create and use Jupyter Notebooks that use the **ipython** kernel, the notebook files will look like `filename.ipynb`; these are ASCII files that the JupyterLab interprets and runs.
-
-## Python
-
-The programming language we will use is Python (actually iPython). Python is an example of a high-level language; other high-level languages include C, C++, PHP, FORTRAN, ADA, Pascal, Go, Java, etc (there are a lot).
-
-As you might infer from the name high-level language, there are also low-level languages, sometimes referred to as machine languages or assembly languages. Machine language is the encoding of instructions in binary so that they can be directly executed by the computer. Assembly language uses a slightly easier format to refer to the low level instructions. Loosely speaking, computers can only execute programs written in low-level languages. To be exact, computers can actually only execute programs written in machine language. Thus, programs written in a high-level language (and even those in assembly language) have to be processed before they can run. This extra processing takes some time, which is a small disadvantage of high-level languages. However, the advantages to high-level languages are enormous.
-
-First, it is much easier to program in a high-level language. Programs written in a high-level language take less time to write, they are shorter and easier to read, and they are more likely to be correct. Second, high-level languages are portable, meaning that they can run on different kinds of computers with few or no modifications. Low-level programs can run on only one kind of computer and have to be rewritten to run on another.
-
-Due to these advantages, almost all programs are written in high-level languages. Low-level languages are used only for a few specialized applications, and for device drivers.
-
-Two kinds of programs process high-level languages into low-level languages: interpreters and compilers. An interpreter reads a high-level program and executes it, meaning that it does what the program says. It processes the program a little at a time, alternately reading lines and performing computations.
-
-![https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/interpreter.png](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/interpreter.png)
-
-||Interpreted Program. Image from (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)||
-|---|------------|---|
-
-A compiler reads the program and translates it completely before the program starts running. In this case, the high-level program is called the source code, and the translated program is called the object code or the executable. Once a program is compiled, you can execute it repeatedly without further translation.
-
-![https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/compiler.png](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/compiler.png)
-
-||Compiled Prorgam. Image from: (https://runestone.academy/runestone/books/published/thinkcspy/GeneralIntro/ThePythonProgrammingLanguage.html)||
-|---|------------|---|
-
-Many modern languages use both processes. They are first compiled into a lower level language, called byte code, and then interpreted by a program called a virtual machine. Python uses both processes, but because of the way programmers interact with it, it is usually considered an interpreted language.
-
-As a language, python is a formal language that has certain requirements and structure called "syntax."
-
-Formal languages are languages that are designed by people for specific applications. For example, the notation that mathematicians use is a formal language that is particularly good at denoting relationships among numbers and symbols. Chemists use a formal language to represent the chemical structure of molecules. Programming languages are formal languages that have been designed to express computations.
-
-Formal languages have strict rules about syntax. For example, 3+3=6 is a syntactically correct mathematical statement, but 3=+6& is not. 
-
-Syntax rules come in two flavors, pertaining to **tokens** and **structure**. **Tokens** are the basic elements of the language, such as words, numbers, and chemical elements. One of the problems with 3=+6& is that & is not a legal token in mathematics (at least as far as we know). 
-
-The second type of syntax rule pertains to the structure of a statement— that is, the way the tokens are arranged. The statement 3=+6& is structurally illegal (in mathematics) because you don’t place a plus sign immediately after an equal sign (of course we will in python!). 
-
-When you read a sentence in English or a statement in a formal language, you have to figure out what the structure of the sentence is; This process is called **parsing**.
-
-For example, when you hear the sentence, “The other shoe fell”, you understand that the other shoe is the subject and fell is the verb. Once you have parsed a sentence, you can figure out what it means, or the semantics of the sentence. Assuming that you know what a shoe is and what it means to fall, you will understand the general implication of this sentence.
-
-### Good Resources:
-
-- Learn Python the Hard Way (Online Book) (https://learnpythonthehardway.org/book/)  Recommended for beginners who want a complete course in programming with Python.
-- LearnPython.org (Interactive Tutorial) (https://www.learnpython.org/)  Short, interactive tutorial for those who just need a quick way to pick up Python syntax.
-- How to Think Like a Computer Scientist (Interactive Book) (https://runestone.academy/runestone/books/published/thinkcspy/index.html) Interactive "CS 101" course taught in Python that really focuses on the art of problem solving. 
-- How to Learn Python for Data Science, The Self-Starter Way (https://elitedatascience.com/learn-python-for-data-science) 
-
-
-
 ## Programming as a problem solving process
 The entire point of this course is to develop problem solving skills and begin using some tools (Statistics, Numerical Methods, Data Science, implemented as JupyterLab/Python programs).
 
-The scientific method (https://en.wikipedia.org/wiki/Scientific_method) is one example of an effective problem solving strategy. Stated as a protocol it goes something like:
+The scientific method [https://en.wikipedia.org/wiki/Scientific_method](https://en.wikipedia.org/wiki/Scientific_method) is one example of an effective problem solving strategy. Stated as a protocol it goes something like:
 
 1. Observation: Formulation of a question
 2. Hypothesis: A  conjecture that may explain observed behavior. Falsifiable by an experiment whose outcome conflicts with predictions deduced from the hypothesis
@@ -257,13 +155,10 @@ This protocol can be directly adapted to CT/DS problems as:
 For actual computational methods the protocol becomes:
 
 1. Explicitly state the problem
-2. State:
-  - Input information
-  - Governing equations or principles, and 
-  - The required output information.
+2. Gather and state Input information, Governing equations or principles, and the required output information.
 3. Work a sample problem by-hand for testing the general solution.
 4. Develop a general solution method (coding).
-5. Test the general solution against the by-hand example, then apply to the real problem.
+5. Test the general solution against the by-hand example(s), then apply to the real problem.
 
 Oddly enough the first step is the most important and sometimes the most difficult. In a practical problem, step 2 is sometimes difficult because a skilled programmer is needed to translate the governing principles into an algorithm for the general solution (step 4).
 
@@ -298,7 +193,7 @@ The by-hand exercise helps identify the required steps in an “algorithm” or 
 
 In a flow-chart it would look like:
 
-![https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/Lesson1-flowchart.png](https://3.137.111.182/engr-1330-webbook/1-Lessons/Lesson00/Lesson1-flowchart.png)
+![https://3.137.111.182/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/1-Lessons/Lesson00/Lesson1-flowchart.png](https://3.137.111.182/engr-1330-webroot/engr-1330-webbook/ctds-psuedocourse/docs/1-Lessons/Lesson00/Lesson1-flowchart.png)
 
 ||Flowchart for Artihmetic Mean Algorithm||
 |---|------------|---|
@@ -401,8 +296,8 @@ A lot of the problems we will encounter from a CT/DS perspective have already be
 3. **Modify:** Modify the original cited work for your specific needs.  Note the changes in the code using comment statements.
 4. **Run:** Apply the modified code to the problem of interest. 
 
-In cases where we use CCMR we are not so much programming and developing our own work as scaffolding parts (https://en.wikipedia.org/wiki/Scaffold_(programming)) - a legitimate and valuable engineering activity.
+In cases where we use CCMR we are not so much programming and developing our own work as scaffolding parts [https://en.wikipedia.org/wiki/Scaffold_(programming)](https://en.wikipedia.org/wiki/Scaffold_(programming)) - a legitimate and valuable engineering activity.
 
 ## Readings
 
-Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 https://www.inferentialthinking.com/chapters/01/what-is-data-science.html
+Computational and Inferential Thinking Ani Adhikari and John DeNero, Computational and Inferential Thinking, The Foundations of Data Science, Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND) Chapter 1 [ https://www.inferentialthinking.com/chapters/01/what-is-data-science.html](https://www.inferentialthinking.com/chapters/01/what-is-data-science.html)
